@@ -1,65 +1,97 @@
-# Prompt Template
+# Professional Project Management Prompt Template
 
-Use this template for every reusable prompt in the repository.
+Use this template for every reusable prompt in the AI Project Management Playbook.
 
-The objective is to make each prompt:
+The objective is to ensure that each prompt is:
 
-- clear,
-- reusable,
-- reviewable,
-- professionally governed,
-- and suitable for different project environments.
-
----
-
-## 1. Prompt Name
-
-**Example:** Risk Register Review
+- professionally relevant,
+- reusable across projects,
+- structured for review,
+- appropriate for the delivery environment,
+- and governed as a project-management asset.
 
 ---
 
-## 2. Business Purpose
+# 1. Prompt Name
 
-Describe the project-management problem this prompt is designed to solve.
+Use a clear name based on the management problem being addressed.
 
-**Example:**
+**Examples:**
 
-> Support the Project Manager in reviewing a project risk register, identifying weak or incomplete entries, and prioritising risks that require management attention.
-
----
-
-## 3. Best Used For
-
-**Project phase:**  
-Initiation / Planning / Delivery / Testing / Deployment / Close-out
-
-**Project type:**  
-Small IT project / Enterprise IT project / Software implementation / Digital transformation / Data project
-
-**Primary user:**  
-Project Manager / Project Coordinator / PMO / Delivery Manager / Business Analyst
-
-**Recommended frequency:**  
-Ad hoc / Weekly / Monthly / Before steering committee / Before go-live
+- Risk Register Review
+- Delivery Delay Analysis
+- UAT Readiness Assessment
+- Vendor Performance Review
+- Executive Status Report
+- Stakeholder Engagement Analysis
 
 ---
 
-## 4. Professional Role
+# 2. Business Problem
 
-Define the perspective the AI should use.
+Explain why the prompt exists.
+
+Focus on the project-management problem rather than the AI task.
+
+### Example
+
+> The Project Manager needs to identify which project risks require immediate management attention and whether current mitigation actions are sufficient.
+
+A strong business problem explains:
+
+- what decision is required,
+- why the issue matters,
+- who will use the result,
+- and what project outcome could be affected.
+
+---
+
+# 3. Best Used For
+
+Define the operating context.
+
+```text
+Project phase:
+[Initiation / Planning / Delivery / Testing / Deployment / Close-out]
+
+Project environment:
+[Software Development / Digital Transformation / Data / Infrastructure / ERP / Product]
+
+Delivery approach:
+[Predictive / Agile / Scrum / Kanban / Hybrid / Other]
+
+Project complexity:
+[Small / Medium / Enterprise / Programme]
+
+Primary user:
+[Project Manager / Project Coordinator / Delivery Manager / PMO / Business Analyst / Product Owner]
+
+Recommended frequency:
+[Ad hoc / Daily / Weekly / Monthly / Milestone-based]
+```
+
+Only include delivery-framework terminology when it is relevant.
+
+---
+
+# 4. Professional Role
+
+Define the professional perspective required.
 
 ### Template
 
-```text id="zllrlq"
-You are a senior IT Project Manager with experience delivering
-complex software and digital transformation projects.
+```text
+ROLE
 
-You have expertise in project planning, risk management,
-stakeholder coordination, software delivery, quality assurance,
-and project governance.
+You are a senior IT Project Manager experienced in international
+software and digital delivery.
+
+You have expertise in project planning, delivery management,
+risk management, stakeholder coordination, quality assurance,
+vendor management, and project governance.
 ```
 
-Adapt the role only when the task requires specialist expertise.
+For specialist tasks, use the most relevant role.
 
 Examples:
 
@@ -67,260 +99,456 @@ Examples:
 - Delivery Manager
 - PMO Lead
 - Business Analyst
-- QA Manager
 - Product Owner
+- Scrum Master
+- Kanban Delivery Lead
+- QA Manager
 - Vendor Manager
+- Solution Architect
+
+### Rule
+
+Use the **most relevant expertise**, not automatically the most senior title.
 
 ---
 
-## 5. Task
+# 5. Task
 
-Define **one primary task**.
+Define one primary task.
 
 ### Template
 
-```text id="m7iy3c"
-TASK:
+```text
+TASK
 
-Review the project information below and identify the project risks
-that require immediate management attention.
+Review the project information below and identify the issues
+requiring immediate management attention.
 ```
 
-Avoid combining unrelated tasks into one prompt.
+A strong task should make clear:
 
-A good task should be:
+- what should be analysed,
+- what decision should be supported,
+- what time horizon matters,
+- and what result is required.
 
-- specific,
-- measurable where possible,
-- directly linked to a project decision,
-- and clear about what the AI should analyse.
+Avoid combining unrelated activities into one prompt.
 
 ---
 
-## 6. Project Context
+# 6. Project Context
 
-Provide enough information for meaningful analysis.
+Provide only the information that can materially affect the analysis.
 
 ### Template
 
-```text id="pybdr5"
-PROJECT CONTEXT:
+```text
+PROJECT CONTEXT
 
 Project:
-[Project description]
+[PROJECT NAME OR ANONYMISED DESCRIPTION]
 
-Objective:
-[Business objective]
+Business objective:
+[OBJECTIVE]
 
 Current phase:
-[Initiation / Planning / Development / Testing / Deployment]
+[PHASE]
 
-Delivery methodology:
-[Agile / Scrum / Waterfall / Hybrid]
-
-Timeline:
-[Key dates and milestones]
-
-Team:
-[Team size and roles]
-
-Stakeholders:
-[Key stakeholders]
+Delivery approach:
+[METHODOLOGY / FRAMEWORK]
 
 Current status:
-[Green / Amber / Red]
+[GREEN / AMBER / RED OR OTHER]
 
-Known risks or issues:
-[List]
+Timeline:
+[KEY DATES]
+
+Budget:
+[IF RELEVANT]
+
+Team:
+[TEAM STRUCTURE]
+
+Stakeholders:
+[KEY STAKEHOLDERS]
 
 Dependencies:
-[List]
+[DEPENDENCIES]
+
+Known risks:
+[RISKS]
+
+Known issues:
+[ISSUES]
 
 Constraints:
-[List]
+[CONSTRAINTS]
+
+Relevant metrics:
+[METRICS]
 ```
 
-Only include information relevant to the task.
-
-Do not include confidential or sensitive project information in public AI tools.
+Do not provide unnecessary confidential information.
 
 ---
 
-## 7. Analysis Requirements
+# 7. Framework-Specific Context
 
-Specify how the AI should think about the problem.
+Use this section only when relevant.
+
+## Agile / Scrum Example
+
+```text
+Sprint Goal:
+[GOAL]
+
+Sprint:
+[NUMBER / DATES]
+
+Backlog status:
+[DETAILS]
+
+Velocity / throughput:
+[METRIC]
+
+Blocked items:
+[DETAILS]
+```
+
+## Kanban Example
+
+```text
+WIP:
+[CURRENT WIP]
+
+WIP limits:
+[LIMITS]
+
+Cycle time:
+[METRIC]
+
+Lead time:
+[METRIC]
+
+Throughput:
+[METRIC]
+
+Blocked work:
+[ITEMS]
+
+Work item age:
+[DETAILS]
+
+Service Level Expectation:
+[SLE]
+```
+
+## Predictive Example
+
+```text
+Baseline schedule:
+[DETAILS]
+
+Milestone variance:
+[VARIANCE]
+
+Budget variance:
+[VARIANCE]
+
+Critical path:
+[DETAILS]
+```
+
+Do not force framework-specific information into a prompt where it does not belong.
+
+---
+
+# 8. Required Analysis
+
+Define how the information should be analysed.
 
 ### Example
 
-```text id="vm988r"
-For each risk:
+```text
+REQUIRED ANALYSIS
+
+For each issue:
 
 1. Identify the underlying cause.
-2. Describe the potential project impact.
-3. Estimate probability.
-4. Estimate severity.
-5. Identify early warning indicators.
-6. Recommend a mitigation action.
-7. Assign an appropriate owner role.
-8. Define when escalation is required.
+2. Distinguish symptoms from root causes.
+3. Assess the project impact.
+4. Identify affected dependencies.
+5. Assess urgency.
+6. Recommend an action.
+7. Identify an accountable owner.
+8. Define an escalation trigger where appropriate.
 ```
 
-This section converts a generic request into structured decision support.
+The analysis criteria should match the management decision.
 
 ---
 
-## 8. Output Format
+# 9. Decision Criteria
 
-Always define the required output.
+For significant project decisions, define explicit criteria.
 
 ### Example
 
-```text id="meao37"
-OUTPUT FORMAT:
+```text
+DECISION CRITERIA
 
-Provide a table with the following columns:
+Do not recommend production release if:
 
-Risk ID
-Risk Description
+- any Severity 1 defect remains unresolved,
+- rollback testing is incomplete,
+- critical security approval is missing,
+- business readiness is not confirmed,
+- or a critical operational dependency remains unresolved.
+```
+
+Decision criteria make the output more transparent and repeatable.
+
+---
+
+# 10. Output Format
+
+Always define how the answer should be presented.
+
+### Example
+
+```text
+OUTPUT FORMAT
+
+Provide a table:
+
+Issue
 Root Cause
-Probability
 Impact
-Risk Rating
-Early Warning Indicator
-Mitigation
+Priority
+Recommended Action
 Owner
+Due Date
 Escalation Trigger
 ```
 
-If an executive summary is required:
+Then provide:
 
-```text id="icqggb"
-After the table provide:
-
-1. Overall project risk assessment
+```text
+1. Overall assessment
 2. Top three management priorities
 3. Decisions required
+4. Information still missing
 ```
+
+The output format should reflect the intended audience.
 
 ---
 
-## 9. Assumptions
+# 11. Assumptions and Information Gaps
 
-Require assumptions to be explicit.
+Require missing information to be visible.
 
 ### Template
 
-```text id="x7y4nh"
+```text
 Do not invent missing project information.
 
-Where information is unavailable:
+Clearly separate:
 
-- identify the gap,
-- state the assumption separately,
-- explain how the assumption affects the analysis.
+- Confirmed facts
+- Assumptions
+- Information gaps
+- Recommendations
+
+If an important conclusion cannot be reached because information
+is missing, state what information is required.
 ```
 
-This is especially important for professional project-management use.
+---
+
+# 12. Risk and Dependency Check
+
+Where relevant, require the AI to consider:
+
+```text
+Schedule impact
+Budget impact
+Scope impact
+Quality impact
+Resource impact
+Technical impact
+Security impact
+Vendor impact
+Stakeholder impact
+Dependency impact
+Operational impact
+```
+
+Not every category needs to appear in every prompt.
 
 ---
 
-## 10. Quality Review
+# 13. Quality Review
 
-Before accepting the AI output, verify:
+Before finalising the result, require a quality check.
 
-- Are facts separated from assumptions?
-- Are recommendations specific?
-- Are owners defined?
-- Are actions realistic?
-- Are deadlines or escalation triggers included?
-- Are risks linked to actual project context?
-- Is the language suitable for the intended audience?
-- Is anything presented as fact without supporting information?
+### Template
+
+```text
+QUALITY REVIEW
+
+Before finalising:
+
+- identify contradictions,
+- identify unsupported assumptions,
+- flag missing information,
+- ensure recommendations are actionable,
+- ensure ownership is clear,
+- check whether proposed actions address root causes,
+- highlight conclusions requiring independent validation.
+```
 
 ---
 
-## 11. Human Review Required
+# 14. Human Review
 
-The Project Manager must review the result before use.
+Define where professional judgement remains mandatory.
 
-Human validation is mandatory when the output affects:
+### Template
 
-- project budget,
-- contractual commitments,
-- scope decisions,
+```text
+HUMAN REVIEW REQUIRED
+
+The AI-generated output is decision support only.
+
+The Project Manager or accountable stakeholder must validate
+the output before it influences:
+
+- budget,
+- scope,
+- contracts,
+- project commitments,
 - risk acceptance,
 - staffing,
-- client communication,
 - executive reporting,
-- security,
-- production deployment,
+- production release,
+- security decisions,
 - or go-live approval.
+```
 
 ---
 
-## 12. Confidentiality Check
+# 15. Confidentiality and Data Protection
 
-Before submitting project information to an AI tool, remove or anonymise:
+Before using the prompt, remove or anonymise:
 
-- customer names,
-- employee personal data,
+- personal data,
+- customer-identifying information,
 - passwords,
 - credentials,
 - API keys,
-- confidential financial information,
+- confidential financial data,
 - commercially sensitive pricing,
-- confidential contractual information,
-- proprietary technical architecture,
-- security-sensitive information.
+- protected contract information,
+- security-sensitive architecture,
+- proprietary source code where restricted.
+
+Use placeholders where appropriate.
+
+Examples:
+
+```text
+Client A
+Vendor B
+Project X
+€XM programme
+External API provider
+Critical production system
+```
 
 ---
 
-## 13. Example Input
+# 16. Standards and Framework Alignment
 
-Provide a short fictional example.
+Each prompt should identify relevant standards or practices only where they genuinely apply.
 
-```text id="w0t8xp"
+### Template
+
+```text
+## Standards / Framework Alignment
+
+PMI / PMP relevance:
+[RELEVANT DOMAIN OR COMPETENCY]
+
+PMBOK relevance:
+[RELEVANT PRINCIPLE / PERFORMANCE AREA]
+
+Delivery framework:
+[Agile / Scrum / Kanban / Predictive / Hybrid / Framework-neutral]
+
+Additional practices:
+[Testing / DevOps / Risk / Product / Governance / Other]
+```
+
+Avoid claiming:
+
+- PMI approval,
+- PMP certification of the prompt,
+- or formal compliance unless independently verified.
+
+Use wording such as:
+
+> "Aligned with relevant PMI/PMP project-management concepts."
+
+---
+
+# 17. Example Input
+
+Include one short fictional or anonymised project example.
+
+```text
 Project:
-Customer self-service portal implementation
+Customer Self-Service Portal
 
-Phase:
-System integration testing
-
-Team:
-1 Project Manager
-1 Product Owner
-5 Developers
-2 QA Engineers
+Current phase:
+System Integration Testing
 
 Current status:
 Amber
 
-Known issue:
-Payment API integration is two weeks behind schedule.
+Planned UAT:
+Three weeks
 
-Dependency:
-External payment provider must complete certification before UAT.
+Known issue:
+External payment API certification is 10 working days behind plan.
+
+Dependencies:
+UAT requires successful API certification.
+
+Open defects:
+2 Critical
+8 High
+19 Medium
 ```
 
 ---
 
-## 14. Example Output
+# 18. Example Output
 
-Include a short example showing what good output looks like.
+Keep the example concise.
 
-| Risk | Impact | Recommended Action | Owner |
+| Issue | Impact | Action | Owner |
 |---|---|---|---|
-| Payment API certification delay | UAT start may slip | Escalate certification timeline with supplier and create fallback test plan | Integration Lead |
-
-Examples should remain fictional and concise.
+| API certification delay | UAT start at risk | Agree recovery plan with vendor and evaluate controlled test workaround | Integration Lead |
+| Critical defects | Readiness risk | Prioritise resolution and retest before UAT entry decision | QA Lead |
 
 ---
 
-## 15. Prompt Metadata
+# 19. Prompt Metadata
 
-Every reusable prompt should include:
+Every prompt should include:
 
-```text id="83f2fe"
+```text
 Prompt ID:
 Category:
 Version:
@@ -330,13 +558,14 @@ Reviewer:
 Created:
 Last Reviewed:
 Project Type:
+Delivery Approach:
 Risk Level:
 AI Model Tested:
 ```
 
-### Status values
+### Recommended Status Values
 
-```text id="w2v462"
+```text
 Draft
 Tested
 Reviewed
@@ -346,40 +575,50 @@ Retired
 
 ---
 
-## 16. Version History
+# 20. Version History
 
 | Version | Date | Change |
 |---|---|---|
 | 1.0 | YYYY-MM-DD | Initial version |
-| 1.1 | YYYY-MM-DD | Improved output structure |
-| 1.2 | YYYY-MM-DD | Added governance and review criteria |
+| 1.1 | YYYY-MM-DD | Improved analysis criteria |
+| 1.2 | YYYY-MM-DD | Added governance controls |
 
 ---
 
-## Standard Prompt Structure
+# Standard Prompt Flow
 
-Every prompt in this repository should follow this sequence:
+Every reusable prompt should broadly follow:
 
-```text id="d81wv4"
-ROLE
-↓
+```text
+BUSINESS PROBLEM
+        ↓
+PROFESSIONAL ROLE
+        ↓
 TASK
-↓
-CONTEXT
-↓
-ANALYSIS REQUIREMENTS
-↓
+        ↓
+PROJECT CONTEXT
+        ↓
+FRAMEWORK-SPECIFIC CONTEXT
+        ↓
+REQUIRED ANALYSIS
+        ↓
+DECISION CRITERIA
+        ↓
 OUTPUT FORMAT
-↓
-ASSUMPTIONS
-↓
-QUALITY CHECK
-↓
-HUMAN REVIEW
+        ↓
+ASSUMPTIONS / INFORMATION GAPS
+        ↓
+QUALITY REVIEW
+        ↓
+HUMAN GOVERNANCE
 ```
 
-The purpose of the structure is consistency.
+---
 
-A reusable professional prompt should not only generate an answer.
+# Key Principle
 
-It should help the Project Manager produce a **structured, reviewable and actionable decision-support output**.
+A professional prompt is not valuable because it is long or complex.
+
+It is valuable when it consistently helps the Project Manager produce an output that is:
+
+**relevant → structured → evidence-based → actionable → reviewable → governable.**

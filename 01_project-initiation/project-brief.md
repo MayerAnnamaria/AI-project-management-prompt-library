@@ -2,31 +2,37 @@
 
 ## Purpose
 
-Use this prompt to convert rough stakeholder notes, meeting outputs, or early project information into a structured IT project brief.
+Use this prompt to convert early stakeholder input, rough project notes, meeting outputs, or incomplete business information into a structured IT project brief.
 
-The project brief should give stakeholders a concise view of:
+The project brief should provide enough clarity to support:
 
-- why the project exists,
-- what it is expected to deliver,
-- what is included and excluded,
-- what constraints and dependencies exist,
-- and what needs clarification before planning begins.
+- initial stakeholder alignment,
+- project evaluation,
+- early scope discussion,
+- delivery planning,
+- governance setup,
+- and identification of information gaps.
+
+The brief is not a substitute for approved scope or a full project charter.
 
 ---
 
 ## Best Used For
 
 **Project phase:**  
-Initiation
+Initiation / Discovery
 
 **Project type:**  
-Software development / System implementation / Digital transformation / Data project / Process automation
+Software development / System implementation / Digital transformation / Data project / Infrastructure project / Product initiative
 
 **Primary user:**  
-Project Manager / Project Coordinator / Business Analyst / PMO
+Project Manager / Project Coordinator / Delivery Manager / Business Analyst / PMO
+
+**Delivery approach:**  
+Predictive / Agile / Scrum / Kanban / Hybrid
 
 **Recommended frequency:**  
-At project initiation or when a new initiative is being evaluated
+At the start of a new initiative or when an existing initiative requires clarification
 
 ---
 
@@ -35,58 +41,69 @@ At project initiation or when a new initiative is being evaluated
 ```text
 ROLE
 
-You are a senior IT Project Manager experienced in software delivery,
-digital transformation, stakeholder management, requirements clarification,
-and project governance.
+You are a senior IT Project Manager experienced in international
+software delivery, digital transformation, stakeholder management,
+requirements clarification, and project governance.
 
 TASK
 
-Convert the raw project information below into a professional project brief.
+Convert the project information below into a structured professional project brief.
 
-PROJECT CONTEXT — RAW NOTES
+PROJECT CONTEXT — RAW INPUT
 
-[PASTE RAW NOTES HERE]
+[PASTE PROJECT NOTES, MEETING NOTES, EMAIL SUMMARY, OR EARLY PROJECT INFORMATION HERE]
 
-The notes may include:
+The input may include:
 
 - business problem,
-- objectives,
-- stakeholder requests,
-- technical requirements,
+- strategic objective,
+- expected business value,
+- users,
+- stakeholders,
+- scope ideas,
+- requirements,
+- technical systems,
 - timelines,
+- budget information,
 - dependencies,
+- vendors,
+- constraints,
 - assumptions,
 - risks,
-- constraints,
-- vendor information,
-- budget information,
 - unresolved questions.
 
-Do not invent missing information.
+Do not invent missing project information.
 
-Where information is unclear or incomplete, flag it explicitly.
+Where information is incomplete, unclear, contradictory, or unconfirmed,
+flag it explicitly.
 
 OUTPUT FORMAT
 
-Create the project brief with the following sections:
+Create the project brief using the following sections:
 
 1. Project Overview
 
-Provide a concise summary of:
+Summarise:
 
-- business problem,
-- project purpose,
-- expected business value.
+- the business problem,
+- the proposed initiative,
+- the intended outcome,
+- the expected business value.
 
 2. Project Objectives
 
-List the main objectives.
+List the known project objectives.
 
-Where possible, convert vague objectives into measurable statements.
+For each objective identify:
 
-Flag objectives that are not yet measurable.
+- objective,
+- expected outcome,
+- measurement method if available,
+- owner if known.
 
-3. Scope
+Flag objectives that are not measurable.
+
+3. High-Level Scope
 
 Separate into:
 
@@ -96,6 +113,8 @@ OUT OF SCOPE
 
 TO BE CONFIRMED
 
+Do not infer scope boundaries that have not been agreed.
+
 4. Key Deliverables
 
 Provide:
@@ -104,77 +123,153 @@ Deliverable | Description | Expected Outcome | Owner | Target Date
 
 5. Key Requirements
 
-Separate into:
+Group known requirements into:
 
-- Business requirements
-- Functional requirements
-- Technical requirements
-- Security requirements
-- Operational requirements
+- Business
+- Functional
+- Technical
+- Data
+- Security
+- Operational
+- Compliance
 
-If a category is not supported by the available information, mark it as:
+Where a category is not supported by the available information,
+state:
+
 "Not yet defined."
 
 6. Key Constraints
 
-Assess:
+Assess known constraints across:
 
-- Timeline
+- Schedule
 - Budget
 - Resources
 - Technology
 - Security
-- Regulatory / Compliance
+- Compliance
 - Vendor availability
 - Business availability
+- Operational environment
 
-7. Dependencies
+7. Key Dependencies
 
 Provide:
 
-Dependency | Type | Impact | Owner | Required By
+Dependency
+Type
+Potential Impact
+Owner
+Required By
+Status
 
 8. Key Stakeholders
 
 Provide:
 
-Stakeholder | Role | Interest | Decision Authority | Engagement Need
+Stakeholder
+Role
+Primary Interest
+Decision Authority
+Engagement Requirement
 
 9. High-Level Risks
 
 Provide:
 
-Risk | Cause | Potential Impact | Initial Response | Owner
+Risk
+Cause
+Potential Impact
+Initial Response
+Owner
 
 10. Assumptions
 
 Provide:
 
-Assumption | Impact if Incorrect | Validation Required | Owner
+Assumption
+Reason
+Impact if Incorrect
+Validation Required
+Owner
 
-11. Open Questions
+11. Delivery Approach Considerations
 
-List all unresolved questions that should be answered before detailed planning begins.
+Based only on the available information, identify any considerations
+relevant to the stated delivery approach.
 
-12. Recommended Next Steps
+Do not recommend changing methodology unless there is clear evidence.
 
-Provide the five most important actions required to move the project forward.
+12. Open Questions
+
+List unresolved questions that should be answered before detailed
+planning or delivery begins.
+
+13. Recommended Next Steps
+
+Identify the five most important actions required to move the initiative forward.
 ```
+
+---
+
+# Delivery-Approach Considerations
+
+Use this section only where relevant.
+
+## Agile / Scrum
+
+Consider:
+
+- product vision,
+- Product Owner,
+- backlog ownership,
+- incremental delivery,
+- release objectives,
+- user feedback,
+- Definition of Done.
+
+## Kanban
+
+Consider:
+
+- service delivery objective,
+- incoming demand,
+- workflow,
+- WIP policy,
+- classes of service,
+- Service Level Expectations,
+- flow constraints.
+
+## Predictive
+
+Consider:
+
+- scope baseline,
+- schedule baseline,
+- milestone commitments,
+- critical dependencies,
+- formal change control.
+
+## Hybrid
+
+Consider the interaction between fixed governance commitments and iterative or flow-based delivery.
 
 ---
 
 # Analysis Rules
 
-When creating the project brief:
+When creating the brief:
 
-1. Preserve confirmed project facts.
-2. Do not invent missing project information.
+1. Preserve confirmed facts.
+2. Do not invent missing information.
 3. Separate facts from assumptions.
-4. Identify contradictory information.
-5. Highlight unclear scope boundaries.
-6. Identify dependencies that could affect delivery.
-7. Flag requirements that are too vague for planning.
-8. Identify decisions that require sponsor or business-owner input.
+4. Flag contradictions.
+5. Highlight unclear scope.
+6. Identify unresolved ownership.
+7. Identify dependencies that could affect delivery.
+8. Flag requirements that are too vague for planning.
+9. Distinguish business outcomes from project outputs.
+10. Highlight missing governance decisions.
 
 ---
 
@@ -184,17 +279,17 @@ When creating the project brief:
 Need customer portal this year.
 
 Customers currently email support for address changes, invoice copies,
-payment-status questions and account updates.
+payment-status questions, and account updates.
 
-Customer service says volume is too high.
+Customer Service says volume is too high.
 
-IT says we can probably reuse existing login.
+IT says existing login may be reusable.
 
 CRM API is old and may need changes.
 
 Security must approve authentication.
 
-External vendor can start development in March.
+External development partner can start in March.
 
 Budget approximately €500k but Finance has not confirmed final amount.
 
@@ -213,13 +308,13 @@ No agreement yet about whether customers can change bank details online.
 
 ## Project Overview
 
-The proposed Customer Self-Service Portal aims to reduce manual customer-service workload by enabling customers to complete selected account-management activities online.
+The proposed Customer Self-Service Portal is intended to reduce manual customer-service demand by enabling customers to complete selected routine account activities digitally.
 
-The project is expected to improve customer response times and reduce operational dependency on email-based support processes.
+The expected business value includes reduced service workload, faster response times, and improved digital access for customers.
 
 ---
 
-## Scope
+## High-Level Scope
 
 ### In Scope
 
@@ -231,54 +326,97 @@ The project is expected to improve customer response times and reduce operationa
 
 ### Out of Scope
 
-No confirmed out-of-scope items have yet been identified.
+No confirmed out-of-scope items are available from the current information.
 
 ### To Be Confirmed
 
 - Online bank-detail changes
 - Reporting dashboard scope
-- CRM API enhancement requirements
+- Required CRM API enhancements
 
 ---
 
 ## Open Questions
 
 1. Is the €500k budget formally approved?
-2. Which customer transactions require additional security controls?
-3. Can the existing authentication solution support the required user volume?
-4. Is the September launch date fixed or target-based?
-5. Who has final authority over scope approval?
+2. Is the September launch date fixed or target-based?
+3. Can the existing authentication platform support the required user volume?
+4. Who has final authority over scope approval?
+5. Is the reporting dashboard part of the initial release or a later phase?
 
 ---
 
 # Quality Review
 
-Before using the project brief, confirm:
+Before using the brief, confirm:
 
 - [ ] Business problem is clearly stated
-- [ ] Objectives are measurable
-- [ ] Scope boundaries are explicit
+- [ ] Expected value is visible
+- [ ] Objectives are understandable
+- [ ] Scope boundaries are visible
 - [ ] Major dependencies are identified
 - [ ] Key stakeholders are included
-- [ ] Open questions are visible
-- [ ] No unsupported assumptions are presented as facts
-- [ ] Recommended next steps are actionable
+- [ ] Assumptions are separated from facts
+- [ ] Open questions are explicit
+- [ ] No unsupported details were invented
+- [ ] Recommended actions are actionable
+
+---
+
+# Standards / Framework Alignment
+
+## PMI / PMP Relevance
+
+Relevant themes may include:
+
+- stakeholder identification,
+- business value,
+- project initiation,
+- scope clarification,
+- risk identification,
+- governance,
+- delivery planning.
+
+## PMBOK Relevance
+
+This prompt supports early project definition around:
+
+- value,
+- stakeholders,
+- scope,
+- planning,
+- risk,
+- governance,
+- accountability.
+
+## Delivery Framework
+
+Framework-neutral.
+
+Adaptable to:
+
+- Predictive
+- Agile
+- Scrum
+- Kanban
+- Hybrid
 
 ---
 
 # Human Review Required
 
-The Project Manager should validate the brief with:
+Validate the brief with relevant stakeholders, including:
 
 - Project Sponsor
 - Business Owner
+- Product Owner where relevant
+- Business Analyst
 - IT / Architecture
 - Information Security
 - Finance
-- Product Owner or Business Analyst
-- Relevant vendors
+- Vendor representatives where applicable
 
-The brief should not be treated as approved project scope until accountable stakeholders confirm it.
+The brief should not be treated as approved scope until accountable stakeholders confirm it.
 
 ---
 
@@ -286,16 +424,17 @@ The brief should not be treated as approved project scope until accountable stak
 
 Do not include:
 
-- customer personal data,
-- employee personal data,
+- personal data,
+- customer-identifying information,
 - passwords,
+- credentials,
 - API keys,
 - confidential supplier pricing,
-- confidential contracts,
-- proprietary architecture,
-- security-sensitive technical details.
+- confidential contract terms,
+- proprietary technical architecture,
+- security-sensitive details.
 
-Use anonymised project information where required.
+Anonymise project information where required.
 
 ---
 
@@ -307,8 +446,9 @@ Category: Project Initiation
 Version: 1.0
 Status: Draft
 Owner: Project Manager
-Reviewer: Sponsor / PMO / Business Owner
+Reviewer: Sponsor / Business Owner / PMO
 Project Type: IT / Digital Transformation
+Delivery Approach: Framework-neutral
 Risk Level: Low
 AI Model Tested:
 Last Reviewed:

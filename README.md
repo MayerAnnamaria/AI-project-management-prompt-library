@@ -1,4 +1,4 @@
-# AI Project Management Playbook
+# AI Project Management Prompt Library
 
 A practical library of **AI-assisted prompts, frameworks, and workflows for IT project management**.
 

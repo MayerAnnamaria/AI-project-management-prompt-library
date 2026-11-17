@@ -2,9 +2,18 @@
 
 ## Purpose
 
-Use this prompt to create a structured project charter for an IT or digital transformation initiative.
+Use this prompt to create a structured project charter for an IT or digital initiative.
 
-A project charter should establish the project mandate, business purpose, high-level scope, objectives, major risks, governance, and decision authority before detailed delivery begins.
+The project charter should establish:
+
+- why the project exists,
+- what value it is expected to create,
+- what is in and out of scope,
+- who is accountable,
+- what constraints and risks exist,
+- and how project authority is defined.
+
+The charter should support alignment before detailed planning and delivery begin.
 
 ---
 
@@ -14,13 +23,16 @@ A project charter should establish the project mandate, business purpose, high-l
 Initiation
 
 **Project type:**  
-IT implementation / Software development / Digital transformation / Data project / System migration
+Software implementation / Digital transformation / System migration / Data project / Infrastructure project / Product initiative
 
 **Primary user:**  
-Project Manager / Project Coordinator / PMO / Delivery Manager
+Project Manager / Project Coordinator / Delivery Manager / PMO
+
+**Delivery approach:**  
+Predictive / Agile / Scrum / Kanban / Hybrid
 
 **Recommended frequency:**  
-Once at project initiation, then reviewed after major scope or governance changes
+At project initiation and after major scope or governance changes
 
 ---
 
@@ -29,9 +41,9 @@ Once at project initiation, then reviewed after major scope or governance change
 ```text id="charter-01"
 ROLE
 
-You are a senior IT Project Manager experienced in software implementation,
-digital transformation, cross-functional delivery, stakeholder management,
-risk management, and project governance.
+You are a senior IT Project Manager experienced in international
+software delivery, digital transformation, stakeholder management,
+risk management, quality assurance, and project governance.
 
 TASK
 
@@ -43,28 +55,34 @@ Project name:
 [PROJECT NAME]
 
 Sponsor:
-[SPONSOR / BUSINESS OWNER]
+[SPONSOR]
 
 Project Manager:
 [PROJECT MANAGER]
 
+Business owner:
+[BUSINESS OWNER]
+
 Project type:
-[SOFTWARE IMPLEMENTATION / DIGITAL TRANSFORMATION / SYSTEM MIGRATION / DATA PROJECT]
+[PROJECT TYPE]
 
 Business problem:
-[PROBLEM THE PROJECT IS INTENDED TO SOLVE]
+[BUSINESS PROBLEM]
 
 Strategic purpose:
-[WHY THE ORGANISATION IS INVESTING IN THE PROJECT]
+[WHY THE PROJECT EXISTS]
+
+Expected business value:
+[EXPECTED VALUE / BENEFITS]
 
 Target completion:
 [DATE]
 
 Budget:
-[BUDGET OR BUDGET RANGE]
+[BUDGET OR RANGE]
 
-Delivery methodology:
-[AGILE / SCRUM / WATERFALL / HYBRID]
+Delivery approach:
+[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
 
 Key stakeholders:
 [LIST]
@@ -80,18 +98,19 @@ Known risks:
 
 OUTPUT FORMAT
 
-Create the project charter with the following sections:
+Create the charter with the following sections:
 
 1. Project Purpose and Business Justification
 
 Explain:
 - the business problem,
 - why the project is required,
-- and the expected organisational benefit.
+- expected organisational value,
+- and the consequence of not proceeding.
 
 2. Project Objectives
 
-Create 3-5 SMART objectives.
+Create 3-5 measurable objectives.
 
 For each objective include:
 - objective,
@@ -101,16 +120,15 @@ For each objective include:
 
 3. High-Level Scope
 
-Separate clearly into:
+Separate into:
 
 IN SCOPE
 OUT OF SCOPE
-
-Identify any scope boundaries that require clarification.
+TO BE CONFIRMED
 
 4. Key Deliverables
 
-Provide a table:
+Provide:
 
 Deliverable | Description | Target Date | Owner
 
@@ -129,7 +147,7 @@ Assess constraints across:
 - Resources
 - Technology
 - Security
-- Regulatory / Compliance
+- Compliance
 - Vendors
 - Business Availability
 
@@ -139,20 +157,21 @@ Provide:
 
 Risk | Probability | Impact | Initial Response | Owner
 
-Do not invent project-specific risks without explaining the assumption.
-
-8. High-Level Milestones
+8. Key Milestones or Delivery Checkpoints
 
 Provide:
 
-Milestone | Target Date | Dependency | Owner
+Milestone / Checkpoint
+Target Date
+Dependency
+Owner
 
 9. Budget Summary
 
-Summarise the available project budget.
+Summarise the available budget and any major financial constraints.
 
-Where detailed financial information is unavailable, identify the information gap
-rather than inventing figures.
+If detailed financial information is not available, identify the gap
+instead of inventing figures.
 
 10. Key Stakeholders and Governance
 
@@ -165,17 +184,18 @@ Engagement Requirement
 
 11. Project Manager Authority
 
-Define what decisions the Project Manager can make independently and what
-requires sponsor or steering committee approval.
+Define:
+
+- decisions the Project Manager can make independently,
+- decisions requiring sponsor approval,
+- decisions requiring steering committee or governance approval.
 
 12. Success Criteria
 
-Define the conditions that must be met for the project to be considered successful.
+Define success across:
 
-Include:
-
-- business outcome,
-- schedule,
+- business value,
+- delivery,
 - budget,
 - quality,
 - operational readiness,
@@ -194,6 +214,49 @@ Charter Version:
 
 ---
 
+# Delivery-Approach Considerations
+
+Use these only where relevant.
+
+## Agile / Scrum
+
+Consider:
+
+- product vision,
+- Product Owner accountability,
+- iterative delivery,
+- backlog ownership,
+- release goals,
+- Definition of Done,
+- incremental value delivery.
+
+## Kanban
+
+Consider:
+
+- service delivery objective,
+- flow-based work management,
+- WIP policies,
+- Service Level Expectations,
+- operational demand,
+- continuous delivery constraints.
+
+## Predictive
+
+Consider:
+
+- baseline schedule,
+- milestone commitments,
+- defined scope baseline,
+- critical path,
+- formal change control.
+
+## Hybrid
+
+Consider both fixed governance commitments and iterative delivery mechanisms.
+
+---
+
 # Analysis Rules
 
 When producing the charter:
@@ -203,17 +266,16 @@ When producing the charter:
 3. Flag contradictory project information.
 4. Highlight unclear scope boundaries.
 5. Identify objectives that are not measurable.
-6. Identify dependencies that could affect the project start or completion date.
-7. Highlight governance gaps where decision ownership is unclear.
-8. Use concise professional business language.
+6. Identify dependencies that could affect project success.
+7. Highlight governance gaps where accountability is unclear.
+8. Distinguish business outcomes from project deliverables.
+9. Use concise professional business language.
 
 ---
 
 # Quality Review
 
-After creating the charter, perform a short quality review.
-
-Use this format:
+After creating the charter, perform a structured review.
 
 | Review Area | Status | Observation | Recommended Action |
 |---|---|---|---|
@@ -232,6 +294,47 @@ Then provide:
 
 ---
 
+# Standards / Framework Alignment
+
+## PMI / PMP Relevance
+
+Relevant themes may include:
+
+- business value,
+- stakeholder alignment,
+- governance,
+- risk,
+- scope,
+- delivery planning,
+- accountability,
+- decision-making.
+
+## PMBOK Relevance
+
+This prompt supports project initiation and early alignment around:
+
+- value,
+- stakeholders,
+- governance,
+- scope,
+- risk,
+- planning,
+- accountability.
+
+## Delivery Framework
+
+Framework-neutral.
+
+Adaptable to:
+
+- Predictive
+- Agile
+- Scrum
+- Kanban
+- Hybrid
+
+---
+
 # Example Input
 
 ```text id="charter-example-input"
@@ -244,15 +347,21 @@ Director of Customer Operations
 Project Manager:
 Project Manager
 
+Business Owner:
+Customer Operations
+
 Project Type:
 Software implementation
 
 Business Problem:
-Customers currently rely on email and telephone support for account changes,
-creating long response times and high service workload.
+Customers currently rely heavily on email and telephone support
+for routine account-management requests.
 
 Strategic Purpose:
-Introduce digital self-service capabilities and reduce manual support demand.
+Reduce manual service demand and improve digital customer access.
+
+Expected Business Value:
+Lower service workload and faster customer response times.
 
 Target Completion:
 30 September 2027
@@ -260,7 +369,7 @@ Target Completion:
 Budget:
 €750,000
 
-Delivery Methodology:
+Delivery Approach:
 Hybrid Agile
 
 Key Stakeholders:
@@ -294,39 +403,38 @@ Incomplete business requirements
 
 ## Project Purpose and Business Justification
 
-The Customer Self-Service Portal project will introduce secure digital
-self-service functionality for common customer account activities.
+The Customer Self-Service Portal project will introduce secure digital self-service capabilities for routine account-management activities.
 
-The project is intended to reduce dependency on manual customer-service
-processes, improve response times, and provide customers with a more scalable
-digital service channel.
+The project is intended to reduce manual service demand, improve response times, and create a more scalable digital customer-service model.
 
 ---
 
-## SMART Objective Example
+## Example Objective
 
 | Objective | Success Measure | Target Date | Owner |
 |---|---|---|---|
-| Launch the customer portal | Production release completed and approved | 30 Sep 2027 | Project Manager |
-| Reduce manual account-change requests | 30% reduction within 6 months of launch | 31 Mar 2028 | Customer Operations |
-| Achieve security readiness | All critical security findings resolved before production | Before go-live | Security Lead |
+| Launch customer self-service portal | Production deployment completed and approved | 30 Sep 2027 | Project Manager |
+| Reduce manual requests | Agreed reduction in eligible manual service requests | 6 months after go-live | Customer Operations |
+| Achieve production readiness | No unresolved critical release blockers | Before go-live | QA / Delivery Lead |
 
 ---
 
 # Human Review Required
 
-Before approving the charter, validate:
+Validate the charter with:
 
-- business objectives with the sponsor,
-- budget with Finance,
-- technical dependencies with IT,
-- security requirements with Information Security,
-- operational readiness with the business owner,
-- governance authority with the steering committee.
+- Project Sponsor
+- Business Owner
+- Finance
+- IT / Architecture
+- Information Security
+- Product Owner where relevant
+- Delivery Lead
+- PMO or governance body where applicable
 
 The AI-generated charter is a drafting and decision-support tool.
 
-Formal approval remains with the accountable project stakeholders.
+Formal project authorization remains with the accountable project stakeholders.
 
 ---
 
@@ -334,12 +442,12 @@ Formal approval remains with the accountable project stakeholders.
 
 Do not include:
 
-- production credentials,
+- credentials,
 - API keys,
 - confidential customer data,
 - personal employee data,
 - commercially sensitive supplier pricing,
-- confidential contract terms,
+- protected contractual information,
 - security-sensitive architecture.
 
 Anonymise project information where required.
@@ -354,8 +462,9 @@ Category: Project Initiation
 Version: 1.0
 Status: Draft
 Owner: Project Manager
-Reviewer: PMO / Project Sponsor
+Reviewer: Sponsor / PMO / Business Owner
 Project Type: IT / Digital Transformation
+Delivery Approach: Framework-neutral
 Risk Level: Medium
 AI Model Tested:
 Last Reviewed:

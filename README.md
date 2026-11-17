@@ -4,6 +4,8 @@ A practical library of AI-assisted frameworks, prompts, and decision-support tem
 
 The purpose of this repository is not to replace professional project management judgement. It demonstrates how AI can be used systematically to support planning, delivery, risk management, stakeholder communication, reporting, quality assurance, and project governance.
 
+The playbook is designed for modern IT delivery environments and can be adapted to predictive, Agile, hybrid, Scrum, or Kanban-based ways of working where appropriate.
+
 ---
 
 ## Why This Repository Exists
@@ -57,7 +59,7 @@ Examples:
 
 ### 2. Project Planning
 
-Frameworks for converting objectives into an executable delivery plan.
+Frameworks for translating objectives into an executable delivery approach.
 
 Examples:
 
@@ -67,6 +69,7 @@ Examples:
 - RACI matrix
 - Resource planning
 - Communication planning
+- Release or iteration planning where relevant
 
 ---
 
@@ -92,6 +95,7 @@ Frameworks for identifying blockers, delivery risks, and execution problems.
 Examples:
 
 - Sprint health check
+- Flow health check
 - Blocker analysis
 - Dependency review
 - Delivery delay analysis
@@ -334,6 +338,24 @@ A structured project-management prompt would ask:
 The goal is not simply better AI output.
 
 The goal is **better structured project thinking**.
+
+---
+
+# Standards and Delivery Framework Alignment
+
+Individual prompts in this repository may reference established project-management and delivery practices where relevant.
+
+These may include:
+
+- PMI and PMP-relevant project-management concepts
+- Agile delivery principles
+- Scrum practices
+- Kanban flow-management concepts
+- hybrid delivery models
+- software quality and testing practices
+- governance and stakeholder-management standards
+
+The repository itself remains framework-neutral so that each prompt can be adapted to the actual delivery environment.
 
 ---
 

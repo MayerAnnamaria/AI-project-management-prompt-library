@@ -1,17 +1,19 @@
 # RACE Prompt Framework for Project Management
 
-The RACE framework provides a simple structure for creating clear, reusable, and professionally useful AI prompts.
+The RACE framework provides a simple and repeatable structure for creating high-quality AI prompts for project-management work.
 
-It is built around four elements:
+RACE stands for:
 
 **R — Role**  
 **A — Ask**  
 **C — Context**  
 **E — Expected Output**
 
-The purpose is not to make prompts longer.
+The framework is intentionally simple.
 
-The purpose is to make project-management requests more precise.
+Its purpose is not to make prompts longer.
+
+Its purpose is to make project-management requests more precise, reusable, and easier to review.
 
 ---
 
@@ -19,23 +21,23 @@ The purpose is to make project-management requests more precise.
 
 Define the professional perspective required for the task.
 
-A generic role usually produces generic output.
+A generic role often produces generic output.
 
-### Weak
+## Weak
 
-```text id="avtclt"
+```text id="race-role-weak"
 You are a project manager.
 ```
 
-### Stronger
+## Stronger
 
-```text id="psf65n"
-You are a senior IT Project Manager experienced in software
-implementation, cross-functional delivery, risk management,
-stakeholder coordination, and project governance.
+```text id="race-role-strong"
+You are a senior IT Project Manager experienced in international
+software delivery, stakeholder management, risk management,
+quality assurance, vendor coordination, and project governance.
 ```
 
-The role should reflect the expertise required for the specific task.
+The role should match the actual task.
 
 Examples:
 
@@ -44,11 +46,13 @@ Examples:
 - PMO Lead
 - Business Analyst
 - Risk Manager
-- QA Manager
 - Product Owner
+- Scrum Master
+- Kanban Delivery Lead
+- QA Manager
 - Vendor Manager
 
-### Principle
+## Principle
 
 Use the **most relevant professional perspective**, not the most impressive title.
 
@@ -58,39 +62,45 @@ Use the **most relevant professional perspective**, not the most impressive titl
 
 Define one clear task.
 
-### Weak
+## Weak
 
-```text id="acbd56"
+```text id="race-ask-weak"
 Review my project and tell me what is wrong.
 ```
 
-### Stronger
+## Stronger
 
-```text id="0vl1v1"
+```text id="race-ask-strong"
 Review the current project status and identify the five delivery
-risks requiring immediate management attention.
+risks that require immediate management attention.
 ```
 
-A strong Ask should answer:
+A strong Ask should make clear:
 
-- What should be analysed?
-- What decision should it support?
-- What should the AI produce?
+- what should be analysed,
+- what decision should be supported,
+- what time horizon matters,
+- and what result is required.
 
-Avoid combining several unrelated activities into one prompt.
+Avoid combining unrelated tasks.
 
-### Example
+## Weak
 
-Instead of:
-
-```text id="7ot2yc"
-Analyse the risks, write a status report, create a stakeholder
-matrix, and prepare an escalation email.
+```text id="race-multi-task"
+Review the risks, write a status report, create a stakeholder matrix,
+and prepare an escalation email.
 ```
 
-Use four separate prompts.
+## Better
 
-This makes the output easier to review and reuse.
+Use separate prompts for:
+
+1. Risk review
+2. Status reporting
+3. Stakeholder analysis
+4. Escalation communication
+
+This makes each output easier to review, reuse, and version.
 
 ---
 
@@ -100,55 +110,56 @@ Context determines how relevant the output will be.
 
 Useful project context may include:
 
-```text id="c1veza"
+```text id="race-context-list"
 Project objective
 Project phase
 Delivery methodology
-Team structure
+Project size
 Timeline
-Budget constraints
-Current status
-Milestones
+Budget
+Team structure
+Stakeholders
 Dependencies
 Known risks
-Issues
-Stakeholders
+Known issues
 Vendors
 Technical constraints
+Security constraints
 Regulatory requirements
+Relevant metrics
 ```
 
-Not every prompt requires every field.
+Not every prompt needs every field.
 
-Include only the information that can materially affect the analysis.
+Only include information that can materially affect the analysis.
 
 ---
 
-## Example
+## Example Without Context
 
-### Without Context
-
-```text id="3lcw05"
+```text id="race-no-context"
 Identify risks in a software project.
 ```
 
-Likely result:
+Likely output:
 
 - schedule delay,
 - budget overrun,
 - scope creep,
 - resource shortage.
 
-These may be valid, but they are too generic for meaningful project management.
+These may be valid but are too generic for meaningful project-management use.
 
-### With Context
+---
 
-```text id="ijqq1d"
+## Example With Context
+
+```text id="race-with-context"
 Project:
 Customer onboarding platform replacement
 
 Current phase:
-System integration testing
+System Integration Testing
 
 Go-live:
 6 weeks
@@ -158,34 +169,34 @@ Teams:
 2 QA teams
 External identity-verification vendor
 
-Current issue:
-Vendor API certification is 12 working days behind schedule.
+Known issue:
+Vendor API certification is 12 working days behind plan.
 
 Dependency:
 UAT cannot begin until certification is complete.
 
-Current project status:
+Current status:
 Amber
 ```
 
-The resulting analysis can now focus on the real delivery environment.
+Now the analysis can focus on the actual delivery environment.
 
 ---
 
 # 4. E — Expected Output
 
-Define exactly how the information should be presented.
+Define exactly how the result should be presented.
 
-Without an output instruction, the AI decides the format.
+Without an output instruction, the AI decides the structure.
 
-That may produce useful content but an unusable deliverable.
+That may produce useful information but an unusable project artifact.
 
 ---
 
-## Example: Risk Analysis
+## Example — Risk Analysis
 
-```text id="8zzbp7"
-OUTPUT FORMAT:
+```text id="race-output-risk"
+OUTPUT FORMAT
 
 Provide a table with:
 
@@ -201,26 +212,28 @@ Escalation Trigger
 
 ---
 
-## Example: Executive Reporting
+## Example — Executive Reporting
 
-```text id="j1zcgt"
-OUTPUT FORMAT:
+```text id="race-output-exec"
+OUTPUT FORMAT
 
 1. Executive Summary
 2. Overall RAG Status
 3. Key Achievements
 4. Top Risks and Issues
 5. Decisions Required
-6. Priorities for Next Reporting Period
+6. Priorities for the Next Reporting Period
 ```
+
+The required format should match the intended audience.
 
 ---
 
 # RACE in Practice
 
-A basic project-management prompt may look like this:
+A structured prompt may look like this:
 
-```text id="8sjmp8"
+```text id="race-example"
 ROLE
 
 You are a senior IT Project Manager experienced in international
@@ -258,19 +271,74 @@ Available
 Test data:
 Incomplete for two business units
 
-OUTPUT
+EXPECTED OUTPUT
 
 Provide:
 
-1. Overall UAT readiness: Ready / Ready with Conditions / Not Ready
+1. Overall UAT readiness:
+   Ready / Ready with Conditions / Not Ready
 2. Key blockers
 3. Risks
 4. Required actions
 5. Owner for each action
-6. Recommended go/no-go decision
+6. Recommended decision
 ```
 
-The output can now support a real project decision.
+The output can now support an actual management decision.
+
+---
+
+# RACE Across Delivery Frameworks
+
+The RACE structure remains the same regardless of the delivery approach.
+
+What changes is the context and the decision criteria.
+
+## Predictive Example
+
+Relevant context may include:
+
+- baseline schedule,
+- milestone variance,
+- critical path,
+- cost variance,
+- change requests.
+
+## Scrum Example
+
+Relevant context may include:
+
+- Sprint Goal,
+- backlog status,
+- blocked work,
+- velocity,
+- acceptance criteria,
+- Definition of Done.
+
+## Kanban Example
+
+Relevant context may include:
+
+- WIP,
+- WIP limits,
+- cycle time,
+- lead time,
+- throughput,
+- blocked work,
+- work item age,
+- Service Level Expectation.
+
+## Hybrid Example
+
+Relevant context may include:
+
+- fixed governance milestones,
+- iterative development,
+- release cadence,
+- cross-team dependencies,
+- contractual commitments.
+
+The framework should be adapted to the delivery environment rather than forcing every project into the same model.
 
 ---
 
@@ -279,81 +347,108 @@ The output can now support a real project decision.
 | Ad-Hoc Prompting | RACE-Based Prompting |
 |---|---|
 | Generic role | Relevant professional role |
-| Vague request | Defined task |
-| Little context | Project-specific context |
-| AI chooses format | PM defines output |
-| Difficult to reuse | Repeatable framework |
-| Difficult to review | Structured review possible |
+| Vague request | Defined management task |
+| Limited context | Project-specific context |
+| AI chooses format | PM defines the output |
+| Hard to reuse | Repeatable structure |
+| Hard to review | Structured review possible |
 
 ---
 
 # Senior-Level Extension
 
-For complex projects, RACE should be supplemented with explicit decision criteria.
+For complex projects, RACE should be supplemented with explicit management criteria.
 
 Add:
 
-```text id="l7ppd4"
+```text id="race-senior-extension"
 Assumptions
 Constraints
 Dependencies
 Risk tolerance
+Decision criteria
 Escalation thresholds
 Decision deadline
 Required evidence
 ```
 
-For example:
+This improves transparency and reduces unsupported recommendations.
 
-```text id="kkxn5h"
-Do not recommend go-live if:
+---
 
-- any Severity 1 defect remains open,
-- data migration reconciliation is below 99.5%,
-- rollback testing is incomplete,
-- or the business owner has not approved operational readiness.
+# Example — Decision Criteria
+
+Instead of asking:
+
+```text id="race-opinion"
+Should we go live?
+```
+
+Use:
+
+```text id="race-decision"
+Assess go-live readiness against these criteria:
+
+- no open Severity 1 defects,
+- critical business processes tested,
+- data migration reconciliation above the agreed threshold,
+- rollback testing complete,
+- operational support ready,
+- security approval received,
+- business owner approval received.
+
+Identify any failed criteria.
+
+Separate blockers from manageable risks.
+
+Provide a recommendation with rationale.
 ```
 
 This changes the AI task from:
 
-> Give me your opinion.
+> Give me an opinion.
 
 to:
 
-> Evaluate the project against explicit management criteria.
-
-That is far more useful in professional project environments.
+> Evaluate the project against defined management criteria.
 
 ---
 
-# Example: Small IT Project
+# Small vs Enterprise Use
 
-```text id="m7tcga"
+## Small IT Project
+
+Keep the RACE prompt lightweight.
+
+Example:
+
+```text id="race-small"
 ROLE:
 You are an IT Project Manager supporting a six-person development team.
 
 ASK:
-Identify the three most important delivery risks for the next sprint.
+Identify the three most important delivery risks this week.
 
 CONTEXT:
-- Two-week sprint
 - 3 developers
 - 1 QA
 - 1 Product Owner
-- Payment integration unfinished
-- One developer unavailable for three days
+- payment integration unfinished
+- one developer unavailable for three days
 
 OUTPUT:
 Risk | Impact | Action | Owner
 ```
 
-The framework remains lightweight.
-
 ---
 
-# Example: Enterprise IT Project
+## International Enterprise Project
 
-```text id="gad9l2"
+Provide more structured context.
+
+Example:
+
+```text id="race-enterprise"
 ROLE:
 You are a senior Delivery Manager responsible for an international
 digital transformation programme.
@@ -367,8 +462,8 @@ CONTEXT:
 - 45 project team members
 - 3 external vendors
 - €7M programme budget
-- Go-live in 12 weeks
-- Data migration and API integration on critical path
+- go-live in 12 weeks
+- data migration and API integration on the critical path
 
 OUTPUT:
 
@@ -383,31 +478,49 @@ Owner
 Decision Deadline
 ```
 
-The same framework scales with project complexity.
+---
+
+# Standards and Framework Alignment
+
+The RACE framework itself is framework-neutral.
+
+Individual prompts may reference relevant concepts from:
+
+- PMI / PMP
+- PMBOK
+- Agile
+- Scrum
+- Kanban
+- hybrid delivery
+- software quality
+- DevOps
+- risk management
+- governance practices
+
+Use these only where they are relevant to the specific project-management problem.
 
 ---
 
-# Quality Standard
+# Quality Check
 
-Before using a RACE prompt, check:
+Before using a RACE prompt, verify:
 
 ### Role
-
-Is the professional perspective relevant to the task?
+Is the professional perspective relevant?
 
 ### Ask
-
-Is there one clear primary objective?
+Is there one clear primary task?
 
 ### Context
-
-Has enough information been provided to avoid generic output?
+Has enough project information been provided?
 
 ### Expected Output
+Is the result structured for the intended audience?
 
-Can the result be directly reviewed, discussed, or converted into a project action?
+### Decision Logic
+Are assumptions, dependencies, risks, and decision criteria visible where relevant?
 
-If the answer to any of these questions is **No**, improve the prompt before using it.
+If the answer to any of these is **No**, improve the prompt before use.
 
 ---
 
@@ -415,10 +528,8 @@ If the answer to any of these questions is **No**, improve the prompt before usi
 
 RACE improves AI output because it improves the quality of the project-management request.
 
-The real value is not:
-
-> better wording from AI.
+The real value is not better wording.
 
 The real value is:
 
-> clearer thinking, structured analysis, and more consistent decision support.
+**clearer thinking, structured analysis, consistent outputs, and better decision support.**

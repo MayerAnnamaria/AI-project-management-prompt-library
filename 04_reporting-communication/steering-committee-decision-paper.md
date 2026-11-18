@@ -1,771 +1,375 @@
 # Steering Committee Decision Paper
 
-## Purpose
+**Prompt ID:** REPORT-003 | **Category:** Reporting & Communication | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to prepare a formal decision paper for a steering committee, project board, sponsor, or executive governance forum.
+## 1. Ready-to-Use Prompt
 
-The paper should help senior stakeholders:
+**Purpose:** Present evidence-based options, trade-offs, and recommendations to support timely steering committee decisions on material project issues.
 
-- understand the issue,
-- compare realistic options,
-- understand trade-offs,
-- see the Project Manager's recommendation,
-- and make a clear decision within the required timeframe.
+**Use case:** Request governance approval for changes to project funding, schedule, scope, resources, or delivery approach when decisions exceed the Project Manager's authority.
 
-The objective is not simply to describe a problem.
-
-The objective is to support a **governance decision**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery / Testing / Deployment
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Multi-vendor programme
-
-**Primary user:**  
-Project Manager / Delivery Manager / Programme Manager / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-As required for material project decisions
-
----
-
-# Prompt
+Copy the prompt and replace the placeholders with your project information.
 
 ```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, executive governance, commercial decision-making,
+You are a Senior IT Project Manager specializing in software
+delivery, executive governance, financial decision-making,
 risk management, and stakeholder communication.
 
-TASK
+CONTEXT
 
-Prepare a formal steering committee decision paper for the issue
-described below.
+Project: [PROJECT NAME]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target milestone: [DATE]
+Overall RAG status: [GREEN / AMBER / RED / UNKNOWN]
 
-PROJECT CONTEXT
-
-Project:
-[PROJECT NAME]
-
-Current phase:
-[PHASE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Target milestone:
-[MILESTONE / DATE]
-
-Overall status:
-[GREEN / AMBER / RED]
-
-ISSUE REQUIRING DECISION
-
-[DESCRIBE ISSUE]
-
-WHY A DECISION IS REQUIRED
-
-[EXPLAIN]
-
-DECISION DEADLINE
-
-[DATE]
+Decision required: [SPECIFIC APPROVAL / DIRECTION]
+Current issue: [DESCRIPTION]
+Verified facts: [EVIDENCE]
+Business impact: [SCHEDULE / COST / SCOPE / QUALITY]
+Actions already taken: [LIST]
+Decision deadline: [DATE]
+Impact if delayed: [CONSEQUENCE]
+Decision authority: [ROLE / GOVERNANCE BODY]
+Constraints and dependencies: [LIST]
 
 OPTIONS
 
-Option A:
-[DESCRIPTION]
+Option A: [DESCRIPTION]
+Cost impact: [AMOUNT / ESTIMATE]
+Schedule impact: [DETAILS]
+Scope / quality impact: [DETAILS]
+Risks and benefits: [DETAILS]
 
-Cost impact:
-[DETAILS]
+Option B: [DESCRIPTION]
+Cost impact: [AMOUNT / ESTIMATE]
+Schedule impact: [DETAILS]
+Scope / quality impact: [DETAILS]
+Risks and benefits: [DETAILS]
 
-Schedule impact:
-[DETAILS]
+Additional options: [IF APPLICABLE]
+PM recommendation: [OPTION / NOT YET DETERMINED]
+Supporting evidence: [REPORTS / FORECASTS / ASSESSMENTS]
 
-Scope impact:
-[DETAILS]
+TASK
 
-Risk:
-[DETAILS]
+Prepare a concise Steering Committee Decision Paper.
 
-Option B:
-[DESCRIPTION]
+1. State the exact decision required and why governance
+   approval is necessary.
+2. Summarize the issue, verified facts, actions taken,
+   and current project impact.
+3. Explain why the decision is time-sensitive.
+4. Compare realistic, actionable options consistently across:
+   - Cost and funding
+   - Schedule and milestones
+   - Scope and quality
+   - Business value
+   - Risk and dependencies
+   - Implementation feasibility
+5. Distinguish confirmed facts, estimates, assumptions,
+   and unresolved information gaps.
+6. Challenge unrealistic options and unsupported benefits.
+7. Recommend the preferred option using evidence,
+   business value, and explicit trade-offs.
+8. State residual risks and conditions for implementation.
+9. Specify the decision owner, deadline, and consequence of delay.
+10. Define implementation actions following approval.
+11. Identify supporting attachments and required follow-up
+    in the project Decision Log.
 
-Cost impact:
-[DETAILS]
+For Agile projects, escalate only decisions beyond normal
+Product Owner or delivery-team authority.
 
-Schedule impact:
-[DETAILS]
+Do not invent cost estimates, schedule recovery,
+contractual obligations, or approvals.
 
-Scope impact:
-[DETAILS]
-
-Risk:
-[DETAILS]
-
-Additional options:
-[IF APPLICABLE]
-
-PROJECT MANAGER RECOMMENDATION
-
-[IF ALREADY KNOWN]
+If evidence is insufficient for a firm recommendation,
+identify what must be validated before approval.
 
 OUTPUT FORMAT
 
-Create a formal decision paper with:
+1. DECISION SUMMARY
 
-1. Purpose
-2. Background
-3. Decision Context
-4. Options Analysis
-5. Risk and Impact Analysis
-6. Recommendation
-7. Decision Required
-8. Decision Deadline and Consequence of Delay
-9. Implementation Actions Following Decision
-10. Referenced Attachments / Evidence
+Decision Required | Recommended Option |
+Decision Authority | Deadline | Impact if Delayed
+
+2. BACKGROUND AND DECISION CONTEXT
+
+Issue | Verified Facts | Current Impact |
+Actions Taken | Why Governance Approval Is Required
+
+3. OPTIONS COMPARISON
+
+Option | Cost Impact | Schedule Impact |
+Scope / Quality Impact | Business Benefit |
+Key Risk | Feasibility
+
+4. RISK, ASSUMPTIONS, AND TRADE-OFFS
+
+Option | Confirmed Evidence | Assumptions |
+Dependencies | Residual Exposure
+
+5. PROJECT MANAGER RECOMMENDATION
+
+Preferred Option | Supporting Rationale |
+Main Trade-Off | Conditions | Remaining Risk
+
+6. FORMAL DECISION REQUEST
+
+Approval Requested | Decision Owner |
+Deadline | Funding / Authority Required
+
+7. IMPLEMENTATION ACTIONS
+
+Action | Proposed Owner | Due Date |
+Dependency | Expected Outcome
+
+8. SUPPORTING EVIDENCE
+
+Document | Relevance | Availability
+
+9. DECISION LOG ENTRY
+
+Decision ID | Decision | Date | Approver |
+Conditions | Follow-Up | Status
+
+Use concise Markdown tables and executive-level language.
+Mark unapproved decisions as "Pending".
+Keep the main decision paper suitable for a short governance review.
 ```
 
 ---
 
-# 1. Purpose
+## 2. Quality Check
 
-State exactly why the paper is being presented.
-
-Example:
-
-> The purpose of this paper is to obtain Steering Committee approval for the preferred recovery approach following the two-week delay to the data-migration workstream.
-
-Avoid vague wording such as:
-
-> This paper provides an update.
-
-A decision paper should clearly state the decision sought.
-
----
-
-# 2. Background
-
-Summarise only the information required to understand the decision.
-
-Include:
+Use this independent review before distributing the decision paper.
 
 ```text
-What happened
-When it happened
-Current project impact
-Actions already taken
-Why the project team cannot resolve the matter without governance input
-```
+QUALITY CHECK
 
-Keep detailed chronology in an attachment where necessary.
+Act as a Senior PMO Director reviewing a Steering Committee
+Decision Paper.
+
+Verify:
+
+1. Clarity: The requested decision and authority are explicit.
+2. Evidence: Facts, estimates, assumptions, and information
+   gaps are distinguished.
+3. Options: Alternatives are realistic and compared fairly.
+4. Financials: Cost estimates are supported and comparable.
+5. Schedule: Milestone impacts and recovery assumptions
+   are defensible.
+6. Risk: Material trade-offs, dependencies, and residual
+   exposure are visible.
+7. Recommendation: The preferred option is supported
+   by business value and evidence, not bias.
+8. Governance: Deadline, approval authority,
+   implementation ownership, and follow-up are defined.
+
+Challenge whether maintaining the current approach
+is a legitimate alternative.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Do not invent evidence, budgets, commitments, or approvals.
+```
 
 ---
 
-# 3. Decision Context
+## 3. Practical IT Use Case
 
-Explain why the decision matters now.
+### Software Development — QA Capacity vs. Release Delay
 
-Consider:
+**Scenario:** A software team is preparing a reporting enhancement for production. Regression testing is behind schedule because two critical defects required additional investigation and retesting.
+
+The Project Manager must seek a governance decision on whether to fund temporary QA support or revise the release schedule.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Web Application Reporting Enhancement |
+| Phase | Regression Testing |
+| Delivery approach | Hybrid |
+| Planned release | 30 September 2027 |
+| Current status | Amber |
+| Key issue | Regression testing behind schedule |
+| Decision authority | Project Steering Committee |
+| Decision required | Additional QA capacity or release delay |
+
+### Example Input
 
 ```text
-Schedule
-Budget
-Scope
-Quality
-Security
-Compliance
-Operations
-Customer impact
-Business value
-Vendor commitments
-Other dependencies
+Project: Web Application Reporting Enhancement
+
+Phase: Regression Testing
+Target release: 30 September 2027
+Overall status: Amber
+
+Current issue:
+Regression testing is five working days behind plan.
+
+Cause:
+Additional investigation and retesting of two
+critical defects required unplanned QA effort.
+
+Current impact:
+The original test completion milestone is at risk.
+
+Option A — Maintain Existing Capacity:
+- No additional staffing cost.
+- Forecast release delay: 1 week.
+- Lower onboarding and coordination effort.
+- Business launch delayed.
+
+Option B — Add Temporary QA Capacity:
+- Proposed additional cost: €12,000.
+- Two QA engineers for three weeks.
+- Potential recovery: 3–5 working days.
+- Recovery depends on onboarding and defect readiness.
+
+Business constraint:
+September release is preferred but not contractually fixed.
+
+Recommendation:
+Option B, subject to capacity and recovery validation.
+
+Decision deadline:
+15 September 2027.
+
+Decision authority:
+Steering Committee.
 ```
 
-Also explain:
+### Example Output — Steering Committee Decision Paper
 
-- what happens if no decision is made,
-- whether the opportunity to act is time-limited,
-- what authority is required.
+#### 1. Decision Summary
 
----
+| Field | Decision Requirement |
+|---|---|
+| Decision required | Approve additional QA capacity or accept a revised release date |
+| Recommended option | B — Temporary QA support, conditional |
+| Funding requested | Up to €12,000 |
+| Decision authority | Steering Committee |
+| Deadline | 15 September 2027 |
+| Impact if delayed | Reduced time to mobilize resources and recover testing |
 
-# 4. Options Analysis
+#### 2. Background and Decision Context
 
-Provide:
+Regression testing is five working days behind the original plan following additional investigation and retesting of two critical defects.
 
-| Option | Cost Impact | Schedule Impact | Scope Impact | Key Risk | Benefit | Overall Assessment |
-|---|---:|---|---|---|---|---|
+The release remains targeted for 30 September, but the existing testing capacity may not support completion within the current schedule.
 
-Do not present unrealistic options merely to create the appearance of choice.
+The Project Manager requires Steering Committee direction because the preferred recovery approach involves additional project expenditure.
 
-Each option should be genuinely actionable.
+#### 3. Options Comparison
 
----
+| Criterion | Option A — Accept Delay | Option B — Add QA Capacity |
+|---|---|---|
+| Additional staffing cost | €0 | €12,000 estimated |
+| Schedule impact | Forecast one-week delay | Potential recovery of 3–5 working days |
+| Scope | Unchanged | Unchanged |
+| Quality | Existing testing approach | Additional test capacity |
+| Main benefit | Avoids additional staffing cost | Opportunity to protect release |
+| Main risk | Delayed business launch | Recovery not guaranteed |
+| Feasibility | Dependent on revised release approval | Dependent on resource availability |
 
-# Option Design Principles
+**Assessment:** Option A is financially conservative. Option B may better protect the planned release but introduces cost and execution uncertainty.
 
-A useful option should explain:
-
-```text
-What changes
-What it costs
-What time it saves or loses
-What value it protects
-What new risk it creates
-What decision or authority it requires
-```
-
----
-
-# Example
-
-```text
-Option A — Accept Delay
-
-Impact:
-- Release moves by two weeks.
-- No additional delivery capacity required.
-- Lower execution risk.
-- Business launch date affected.
-
-Option B — Add Temporary Capacity
-
-Impact:
-- Additional cost of €80,000.
-- Potential recovery of one to two weeks.
-- Higher coordination overhead.
-- Current launch date may remain achievable.
-```
-
----
-
-# 5. Risk and Impact Analysis
-
-For each option assess relevant dimensions:
+#### 4. Risk, Assumptions, and Trade-Offs
 
 | Area | Option A | Option B |
 |---|---|---|
-| Schedule | | |
-| Cost | | |
-| Scope | | |
-| Quality | | |
-| Security | | |
-| Business Value | | |
-| Vendor Risk | | |
-| Operational Risk | | |
+| Schedule | Later release likely | Recovery possible but uncertain |
+| Cost | No additional staffing cost assumed | €12,000 estimated |
+| Quality | Testing time can be preserved through delay | Testing coverage must remain unchanged |
+| Dependencies | Approval of revised release | QA availability, onboarding, test readiness |
+| Residual risk | Business launch delay | Incomplete schedule recovery |
 
-Do not imply precision where evidence is limited.
+**Information gaps:** Availability of qualified QA engineers, realistic onboarding time, remaining test effort, and whether critical defects are ready for retesting.
 
-Clearly identify assumptions.
+#### 5. Project Manager Recommendation
 
----
+**Recommend Option B — Temporary QA Capacity, subject to validation.**
 
-# Assumption Check
+The proposed investment provides an opportunity to protect the September release while maintaining the planned testing scope.
 
-For each option identify:
+Approval should be conditional on confirming that the additional engineers can contribute within the remaining schedule and that the recovery forecast is technically credible.
 
-```text
-Confirmed Facts
-Assumptions
-Dependencies
-Information Gaps
-```
+**Main trade-off:** Additional cost in exchange for potential schedule recovery.
 
-This prevents an option from appearing more certain than it really is.
+**Residual risk:** The planned release may still be delayed if critical fixes or remaining tests cannot be completed.
 
----
+#### 6. Formal Decision Request
 
-# 6. Recommendation
+The Steering Committee is requested to approve **up to €12,000 for two temporary QA engineers for three weeks**, conditional on:
 
-The Project Manager should normally provide a clear recommendation.
+- Confirmed resource availability and onboarding feasibility.
+- Validated remaining regression effort.
+- An updated testing and release forecast.
+- Continued compliance with release quality criteria.
 
-Use:
+**Decision deadline:** 15 September 2027.
 
-```text
-RECOMMENDATION
+Decision status: **Pending approval**.
 
-Recommend Option:
-[OPTION]
+#### 7. Implementation Actions
 
-Reason:
-
-1. [REASON]
-2. [REASON]
-3. [REASON]
-
-Main Trade-Off:
-[TRADE-OFF]
-
-Residual Risk:
-[DETAILS]
-```
-
-Avoid:
-
-> The Steering Committee should choose whichever option it prefers.
-
-Governance stakeholders typically expect the Project Manager to analyse the evidence and recommend a course of action.
-
----
-
-# Recommendation Quality Test
-
-A strong recommendation should answer:
-
-```text
-Why this option?
-
-Why now?
-
-Why not the alternatives?
-
-What value does it protect?
-
-What risk remains?
-
-What evidence supports the recommendation?
-```
-
----
-
-# 7. Decision Required
-
-State the decision in explicit approval language.
-
-### Weak
-
-```text
-Please review the options.
-```
-
-### Better
-
-```text
-Decision Required:
-
-Approve Option B — temporary expansion of the migration team
-for six weeks at an estimated additional cost of €80,000.
-```
-
-Where appropriate include:
-
-```text
-Approved
-Rejected
-Deferred
-Approved with Conditions
-```
-
----
-
-# 8. Decision Deadline and Consequence of Delay
-
-Always include:
-
-```text
-Decision Deadline:
-[DATE]
-
-Impact if Decision Is Delayed:
-[IMPACT]
-```
-
-Example:
-
-> If approval is not received by 15 August, the additional resources cannot be mobilised in time to protect the planned UAT start.
-
-This gives governance the timing context required to act.
-
----
-
-# 9. Implementation Actions Following Decision
-
-For the recommended option provide:
-
-| Action | Owner | Due Date | Dependency |
+| Action | Proposed Owner | Due Date | Expected Outcome |
 |---|---|---|---|
+| Validate QA availability and rates | Project Manager | Before approval | Confirm resource feasibility |
+| Confirm remaining test effort | QA Lead | Before approval | Validate recovery assumptions |
+| Mobilize approved QA resources | Resource Manager | After approval | Additional testing capacity |
+| Update test schedule | QA Lead | After mobilization | Revised completion forecast |
+| Review release readiness | Project Manager / QA Lead | Before go/no-go | Evidence-based release decision |
 
-This ensures that approval leads directly to execution.
+#### 8. Supporting Evidence
 
-Example:
-
-| Action | Owner | Due |
+| Document | Relevance | Availability |
 |---|---|---|
-| Approve purchase order | Sponsor / Procurement | 15 Aug |
-| Mobilise vendor resources | Vendor Lead | 18 Aug |
-| Re-baseline migration activities | Project Manager | 20 Aug |
-| Confirm UAT impact | Business Lead | 22 Aug |
+| Regression test report | Remaining testing and defects | Requires validation |
+| Project schedule | Baseline and recovery forecast | Referenced in scenario |
+| QA resource proposal | Capacity and cost | Requires confirmation |
+| Risk register | Residual release exposure | Not provided |
+| Budget forecast | Funding implications | Not provided |
 
----
+#### 9. Decision Log Entry
 
-# 10. Referenced Evidence
+| Field | Value |
+|---|---|
+| Decision ID | To be assigned |
+| Decision | Additional QA capacity versus revised release date |
+| Decision date | Pending |
+| Approver | Steering Committee |
+| Conditions | Validate resources, test effort, and recovery |
+| Status | Pending |
+| Follow-up | Record approval conditions and update delivery plan |
 
-Possible supporting evidence:
+### Management Decisions
 
-```text
-Project schedule
-Risk register
-Issue log
-Financial analysis
-Vendor recovery plan
-Technical assessment
-Test results
-Security assessment
-Change request
-Forecast data
-```
+1. **Funding:** Determine whether the potential schedule benefit justifies the estimated €12,000 additional cost.
+2. **Recovery feasibility:** Confirm whether temporary resources can realistically recover the remaining testing delay.
+3. **Release governance:** Preserve mandatory quality criteria regardless of the selected option.
+4. **Execution:** Record the decision and activate the approved recovery or revised-release plan.
 
-Do not overload the main decision paper with detailed raw data.
+### Applied Quality Review
 
-Reference supporting evidence where needed.
+**Quality verdict: REVISE**
 
----
+**Findings:** The paper presents two credible options, consistent cost and schedule comparisons, and a conditional recommendation. However, recovery feasibility and staffing availability are not yet validated.
 
-# Example Input
+**Required corrections:** Confirm resource costs, onboarding time, remaining test effort, updated budget forecast, and the impact of either option on release readiness.
 
-```text
-Project:
-CRM Replacement
+**Approval blockers:** Unverified recovery assumptions and incomplete financial and capacity evidence.
 
-Current Phase:
-System Integration Testing
+**Governance:** Supports PMI-aligned project governance, financial management, schedule recovery, risk assessment, and executive decision-making.
 
-Overall Status:
-Amber
-
-Issue:
-Data migration preparation is two weeks behind schedule.
-
-Cause:
-Unexpected source-data quality problems.
-
-Current Impact:
-UAT start is at risk.
-
-Option A:
-Accept two-week delay.
-
-Cost Impact:
-Minimal additional project cost.
-
-Schedule Impact:
-Go-live likely moves by two weeks.
-
-Option B:
-Add two temporary migration specialists for six weeks.
-
-Cost Impact:
-€80,000.
-
-Schedule Impact:
-Potential recovery of one to two weeks.
-
-Risk:
-Resources may not recover the full delay.
-
-Business Constraint:
-October go-live supports a major customer-service launch.
-
-Decision Deadline:
-15 August.
-```
-
----
-
-# Example Output Excerpt
-
-## Purpose
-
-This paper seeks Steering Committee approval for the preferred recovery strategy following the two-week delay to data-migration preparation.
-
-## Options Analysis
-
-| Option | Cost | Schedule | Main Risk |
-|---|---:|---|---|
-| A — Accept delay | Low incremental cost | Go-live likely moves by 2 weeks | Business launch impact |
-| B — Add migration capacity | +€80k | Potential recovery of 1–2 weeks | Recovery not guaranteed |
-
-## Recommendation
-
-**Recommend Option B.**
-
-The additional cost provides the only current option with a realistic opportunity to protect the October launch date. The approach still carries residual recovery risk, so weekly migration checkpoints and an updated forecast should be required.
-
-## Decision Required
-
-Approve up to €80,000 for two temporary migration specialists for six weeks.
-
-**Decision deadline:** 15 August.
-
----
-
-# Prompt 2 — Options Challenge
-
-Before issuing the paper, test whether the analysis is balanced.
-
-```text
-ROLE
-
-You are an independent PMO Director reviewing a steering committee
-decision paper.
-
-TASK
-
-Challenge the options analysis below.
-
-[PASTE PAPER]
-
-Check:
-
-- Are all realistic options represented?
-- Is one option unfairly favoured?
-- Are assumptions explicit?
-- Are costs comparable?
-- Are schedule impacts comparable?
-- Are risks comparable?
-- Is the recommendation supported by evidence?
-- Is doing nothing a legitimate option?
-- Is the decision deadline justified?
-
-OUTPUT FORMAT
-
-Finding
-Evidence
-Potential Bias / Gap
-Recommended Correction
-```
-
----
-
-# Prompt 3 — Executive Simplification
-
-For complex decisions:
-
-```text
-ROLE
-
-You are a senior executive communications advisor.
-
-TASK
-
-Reduce the decision paper below to a one-page executive version.
-
-Preserve:
-
-- decision required,
-- context,
-- options,
-- recommendation,
-- cost / schedule impact,
-- key risks,
-- deadline.
-
-Remove unnecessary operational detail.
-```
-
----
-
-# Agile / Scrum Considerations
-
-Steering decisions may relate to:
-
-- release scope,
-- capacity,
-- strategic priorities,
-- product funding,
-- major dependencies.
-
-Avoid escalating normal team-level prioritisation decisions that belong with the Product Owner or delivery team.
-
-Governance escalation should be reserved for matters beyond normal delivery authority.
-
----
-
-# Kanban Considerations
-
-Decision evidence may include:
-
-```text
-Persistent bottlenecks
-WIP pressure
-Ageing work
-Throughput decline
-SLE breaches
-Blocked dependencies
-```
-
-Translate these signals into business or delivery impact rather than presenting flow metrics without interpretation.
-
----
-
-# Predictive Considerations
-
-Options may involve:
-
-- schedule re-baselining,
-- critical-path recovery,
-- contingency use,
-- resource changes,
-- scope change.
-
----
-
-# Hybrid Considerations
-
-A decision may combine:
-
-```text
-Project-level governance
-+
-Adaptive delivery response
-```
-
-Example:
-
-> Steering Committee approves additional budget while the delivery team determines how to reprioritise work within the approved recovery envelope.
-
----
-
-# Decision Log Integration
-
-After the Steering Committee decides, capture:
-
-| Decision ID | Decision | Date | Decision Owner | Conditions | Follow-Up |
-|---|---|---|---|---|---|
-
-The final approved decision should not remain only in meeting minutes.
-
----
-
-# Quality Checklist
-
-Before issuing the paper, confirm:
-
-- [ ] Purpose is explicit
-- [ ] Decision required is clear
-- [ ] Background is concise
-- [ ] Options are genuinely viable
-- [ ] Options are assessed consistently
-- [ ] Cost implications are visible
-- [ ] Schedule implications are visible
-- [ ] Risks are explicit
-- [ ] Assumptions are visible
-- [ ] Project Manager recommendation is included
-- [ ] Trade-offs are explained
-- [ ] Decision owner is clear
-- [ ] Decision deadline is clear
-- [ ] Impact of delay is stated
-- [ ] Implementation actions are defined
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- governance,
-- decision-making,
-- stakeholder engagement,
-- risk management,
-- financial management,
-- schedule management,
-- business value,
-- leadership.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- governance,
-- finance,
-- risk,
-- schedule,
-- stakeholders,
-- delivery,
-- value.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Before distribution, validate:
-
-- option assumptions,
-- financial impact,
-- schedule impact,
-- technical feasibility,
-- legal or contractual implications where relevant,
-- recommendation,
-- decision authority.
-
-AI can structure and challenge the decision paper.
-
-It cannot make the governance decision or approve project expenditure.
-
----
-
-# Confidentiality
-
-Decision papers may contain highly sensitive information.
-
-Protect:
-
-- commercial strategy,
-- vendor negotiations,
-- budget information,
-- security concerns,
-- contractual positions,
-- executive discussions,
-- personal information.
-
-Use anonymised information in public AI tools where required.
-
----
-
-# Prompt Metadata
-
-```text
-Prompt ID: REPORT-003
-Category: Reporting & Communication
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: PMO / Sponsor
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT steering committee decision-paper framework |
+AI can structure and challenge decision papers but cannot authorize expenditure, accept residual risks, or replace Steering Committee approval. Validate financial, technical, contractual, and schedule assumptions before formal submission. Protect confidential commercial, vendor, customer, and project information.

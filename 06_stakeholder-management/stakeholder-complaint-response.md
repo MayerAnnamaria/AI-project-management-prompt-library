@@ -1,895 +1,426 @@
 # Stakeholder Complaint Response
 
-## Purpose
+**Prompt ID:** STAKE-004 | **Category:** Stakeholder Management | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to prepare a professional response to a formal stakeholder complaint relating to an IT project, implementation, service transition, system change, or delivery issue.
+## 1. Ready-to-Use Prompt
 
-Typical complaints may concern:
+**Purpose:** Prepare professional, factual, and empathetic responses to stakeholder complaints while ensuring clear accountability, corrective actions, and follow-up commitments.
 
-- service disruption,
-- missed commitments,
-- delayed delivery,
-- poor communication,
-- system defects,
-- data issues,
-- failed migration,
-- user impact,
-- vendor performance,
-- inadequate support.
+**Use case:** Respond to formal concerns about IT service disruptions, project delays, system defects, poor communication, implementation failures, or vendor performance during delivery, deployment, or operational transition.
 
-The objective is to respond in a way that is:
+Copy the prompt and replace the placeholders with your project information.
 
-- honest,
-- accountable,
-- empathetic,
-- factual,
-- solution-oriented,
-- and non-defensive.
-
-The goal is not simply to defend the project team.
-
-The goal is to **address the concern, rebuild confidence, and prevent unnecessary escalation**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Delivery / Testing / Deployment / Hypercare / Operations Transition
-
-**Project type:**  
-Software implementation / SaaS / ERP / Cloud / Infrastructure / Data / Digital Transformation
-
-**Primary user:**  
-Project Manager / Delivery Manager / Programme Manager / Change Lead / Service Manager
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-When a formal or material stakeholder complaint is received
-
----
-
-# Prompt
-
-```text id="complaint-response-01"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in stakeholder
-management, service recovery, difficult communication, escalation,
-and international technology delivery.
+You are a Senior IT Project Manager experienced in stakeholder
+management, service recovery, difficult communication,
+incident escalation, and international technology delivery.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Project phase: [DELIVERY / TESTING / DEPLOYMENT / HYPERCARE]
+Delivery approach: [AGILE / PREDICTIVE / KANBAN / HYBRID]
+Stakeholder role: [ROLE]
+Complaint category: [SERVICE / QUALITY / DELAY / COMMUNICATION / OTHER]
+Complaint received: [DATE / TIME]
+Response deadline: [DATE / TIME / NOT PROVIDED]
+
+STAKEHOLDER COMPLAINT
+
+[PASTE EXACT COMPLAINT]
+
+INVESTIGATION AND RESPONSE DATA
+
+Confirmed facts: [VERIFIED INFORMATION]
+Unverified claims: [DETAILS]
+Known business impact: [DETAILS]
+Immediate cause: [IF CONFIRMED]
+Root cause: [CONFIRMED / UNDER INVESTIGATION]
+Confirmed process failures: [DETAILS]
+Corrective actions completed: [LIST]
+Investigation still required: [DETAILS]
+Planned preventive actions: [LIST]
+Next update commitment: [DATE / TIME]
+Responsible contact: [ROLE / CHANNEL]
+Relevant incident / issue reference: [IF AVAILABLE]
+Required escalation or review: [DETAILS]
 
 TASK
 
-Draft a professional response to the stakeholder complaint below.
+Prepare a professional stakeholder complaint response
+and identify the necessary management follow-up.
 
-COMPLAINT RECEIVED
+STEP 1 — ASSESS THE COMPLAINT
 
-[PASTE COMPLAINT]
+1. Identify the stakeholder's main concerns and business impact.
+2. Distinguish:
+   - Verified facts
+   - Confirmed failures
+   - Unverified allegations
+   - Ongoing investigations
+3. Separate the complaint from the technical incident record.
+4. Determine whether the issue requires escalation
+   to Service Management, Security, Legal, Compliance,
+   Communications, or executive governance.
+5. Identify missing evidence before making conclusions.
 
-CONFIRMED FACTS
+STEP 2 — DRAFT THE RESPONSE
 
-[LIST ONLY VERIFIED FACTS]
+6. Acknowledge the concern and its operational impact.
+7. Explain verified facts in clear, non-technical language.
+8. Accept responsibility for confirmed process failures
+   without making unsupported legal admissions.
+9. Explain corrective actions already completed.
+10. Describe ongoing investigations and next steps.
+11. Provide a specific next-update commitment.
+12. Include an appropriate stakeholder contact.
+13. Maintain a professional, empathetic, accountable,
+    factual, and non-defensive tone.
 
-WHAT WENT WRONG
+STEP 3 — DEFINE CORRECTIVE AND PREVENTIVE ACTIONS
 
-[DETAILS]
+14. Distinguish immediate service restoration from
+    long-term root cause prevention.
+15. Identify actions, responsible roles, and target dates.
+16. Recommend process improvements for recurring issues.
+17. Define the evidence needed to validate corrective actions.
+18. Identify when stakeholder feedback or formal closure
+    confirmation should be requested.
+19. Update the complaint register and link relevant
+    incident, issue, risk, or vendor records.
 
-WHAT HAS ALREADY BEEN DONE
+STEP 4 — VALIDATE COMMUNICATION QUALITY
 
-[CORRECTIVE ACTIONS]
+20. Review the draft for:
+    - Defensive or dismissive wording
+    - Unsupported blame
+    - Excessive technical detail
+    - Unverified explanations
+    - Vague corrective actions
+    - Unrealistic promises
+    - Missing update commitments
+21. Recommend targeted revisions before distribution.
 
-WHAT IS STILL BEING INVESTIGATED
+RULES
 
-[DETAILS]
-
-NEXT ACTIONS
-
-[DETAILS]
-
-EXPECTED RESOLUTION / UPDATE
-
-[DATE / TIME]
-
-CONTACT
-
-[NAME / ROLE / CHANNEL]
-
-OUTPUT REQUIREMENTS
-
-The response must:
-
-- acknowledge the concern,
-- acknowledge confirmed failures honestly,
-- distinguish confirmed facts from ongoing investigation,
-- explain corrective actions,
-- explain next steps,
-- provide a clear update timeline,
-- provide direct contact where appropriate,
-- remain professional and empathetic,
-- avoid defensive or dismissive language.
+- Do not invent facts, causes, actions, dates, or commitments.
+- Do not treat every complaint allegation as confirmed.
+- Do not claim the root cause is known if investigation continues.
+- Acknowledge impact without assuming contractual liability.
+- Avoid assigning blame to individuals or vendors without evidence.
+- Do not promise that an issue will never recur.
+- Commit to an update date when resolution timing is uncertain.
+- Escalate sensitive matters through organizational procedures.
+- Keep confidential or personal information appropriately protected.
 
 OUTPUT FORMAT
 
-1. Subject
-2. Acknowledgement
-3. Confirmed Facts
-4. Explanation
-5. Corrective Actions
-6. Next Steps
-7. Update Commitment
-8. Contact / Close
+1. STAKEHOLDER RESPONSE — READY TO SEND
+
+Subject: [SPECIFIC COMPLAINT REFERENCE]
+
+Dear [STAKEHOLDER],
+
+[Acknowledge complaint and operational impact]
+
+[Summarize confirmed facts and explain what happened]
+
+[Acknowledge confirmed process failures]
+
+[Describe corrective actions already completed]
+
+[Explain ongoing investigation and next steps]
+
+[Provide next update date and responsible contact]
+
+Kind regards,
+[AUTHORIZED PROJECT REPRESENTATIVE]
+
+2. COMPLAINT ASSESSMENT
+
+Concern | Confirmed Facts | Unverified Information |
+Business Impact | Required Investigation
+
+3. CORRECTIVE AND PREVENTIVE ACTION PLAN
+
+Action | Type | Proposed Owner |
+Target Date | Verification Evidence | Status
+
+Type:
+Immediate Correction / Corrective Action /
+Preventive Improvement
+
+4. ESCALATION AND GOVERNANCE
+
+Issue | Severity / Impact | Escalation Required |
+Responsible Role | Linked Project Record
+
+5. STAKEHOLDER FOLLOW-UP
+
+Next Update | Responsible Contact |
+Closure Criteria | Stakeholder Confirmation Required
+
+6. COMPLAINT REGISTER ENTRY
+
+Complaint ID | Category | Date Received |
+Owner | Current Status | Resolution / Next Action
+
+MANAGEMENT SUMMARY
+
+- Main stakeholder concern
+- Confirmed service or project failure
+- Current corrective actions
+- Remaining investigation gaps
+- Next communication and escalation requirements
+
+Use professional, concise language.
+Separate stakeholder-facing text from internal management analysis.
 ```
 
 ---
 
-# Core Response Principle
+## 2. Quality Check
 
-Use:
+Apply this independent review before issuing the response.
 
-```text id="complaint-flow"
-Listen
-↓
-Acknowledge
-↓
-Verify
-↓
-Own Confirmed Failures
-↓
-Correct
-↓
-Follow Up
-```
+```text
+QUALITY CHECK
 
-Avoid:
+Act as a Senior PMO Quality Assurance Manager
+specializing in stakeholder communication and service recovery.
 
-```text id="complaint-bad-flow"
-Defend
-↓
-Blame
-↓
-Minimise
-↓
-Argue
-```
+Review the response against the original complaint
+and available investigation evidence.
 
----
+Verify:
 
-# 1. Acknowledge the Complaint
+1. Accuracy: All factual statements are supported
+   by the provided evidence.
 
-Start by demonstrating that the concern has been understood.
+2. Acknowledgment: The response recognizes the
+   stakeholder's concern and actual business impact.
 
-Example:
+3. Accountability: Confirmed failures are acknowledged
+   without unsupported blame or legal admissions.
 
-```text id="complaint-acknowledgement"
-Thank you for raising your concerns regarding the service
-interruption and the lack of timely communication during yesterday's
-deployment.
+4. Clarity: Technical explanations are understandable
+   to the intended audience.
 
-We recognise the impact this caused to your team.
-```
+5. Corrective Actions: Completed actions are distinguished
+   from planned or proposed improvements.
 
-This does not require accepting every allegation before investigation.
+6. Commitments: Next steps, update deadlines, and
+   responsible contacts are explicit and realistic.
 
----
+7. Tone: Wording is professional, empathetic,
+   non-defensive, and solution-oriented.
 
-# Acknowledge Impact vs Admit Unsupported Fault
+8. Escalation: Security, legal, regulatory, privacy,
+   and other sensitive matters are appropriately flagged.
 
-Distinguish:
+9. Governance: Complaint, incident, and corrective-action
+   records remain traceable and consistent.
 
-```text id="complaint-distinction"
-Acknowledging impact
-```
+OUTPUT
 
-from:
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Unverified Statements: [FACTUAL GAPS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
 
-```text id="complaint-admission"
-Admitting legal / contractual liability
-```
-
-Example:
-
-> We recognise that the outage affected your team's ability to process customer requests.
-
-This acknowledges impact without making unsupported legal conclusions.
-
----
-
-# 2. Confirmed Facts
-
-State only what has been verified.
-
-Example:
-
-```text id="complaint-confirmed"
-Our review confirms that:
-
-- the system became unavailable at 09:17,
-- service was restored at 10:42,
-- the planned stakeholder notification was not issued before the
-  maintenance activity,
-- the incident escalation reached the Service Manager later than
-  required by the project process.
+Do not invent facts, completed actions,
+root causes, approvals, or response commitments.
 ```
 
 ---
 
-# Fact Discipline
+## 3. Practical IT Use Case
 
-Use:
+### CRM Implementation — Service Interruption and Communication Failure
 
-```text id="complaint-fact-rule"
-Confirmed Fact
-Assumption
-Unverified Claim
-```
+**Scenario:** During a CRM rollout, a production configuration change causes a service interruption. Customer service agents cannot access CRM records, and the project team fails to provide timely stakeholder communication.
 
-Keep them separate.
+The Customer Service Director submits a formal complaint. The Project Manager must acknowledge the operational impact, explain confirmed facts, describe immediate recovery actions, and commit to further updates.
 
-Do not present assumptions as conclusions.
+### Project Context
 
----
+| Attribute | Details |
+|---|---|
+| Project | CRM System Replacement |
+| Phase | Deployment / Hypercare |
+| Incident | CRM Service Interruption |
+| Service interruption | 09:17–10:42 |
+| Duration | 85 minutes |
+| Main concern | Service availability and poor communication |
+| Stakeholder | Customer Service Director |
+| Response owner | Project Manager |
+| Root cause | Under investigation |
+| Management objective | Restore confidence and prevent repeated communication failures |
 
-# 3. Explain What Happened
+### Example Input
 
-Provide enough information to create understanding.
+```text
+Project: CRM System Replacement
+Phase: Deployment / Hypercare
 
-Avoid unnecessary technical detail unless the audience requires it.
+Complaint received:
 
-### Too Technical
+"The CRM was unavailable for more than an hour
+this morning without warning.
 
-```text id="complaint-technical"
-The Kubernetes ingress controller failed after a certificate
-rotation created an invalid upstream TLS dependency.
-```
+Our agents could not access customer records,
+and we received no update from the project team
+until after the service was restored.
 
-### Stakeholder Appropriate
-
-```text id="complaint-plain"
-The interruption occurred after a configuration change affected
-the application's connection to a supporting service.
-```
-
-Detailed technical analysis can be provided separately where appropriate.
-
----
-
-# 4. Accept Confirmed Failures
-
-Where the project genuinely failed to meet an agreed expectation, acknowledge it directly.
-
-Example:
-
-```text id="complaint-own-failure"
-The planned communication should have been issued before the
-maintenance activity.
-
-That did not happen, and we have addressed this with the project
-and service teams.
-```
-
-Avoid:
-
-```text id="complaint-defensive"
-Unfortunately, these things sometimes happen during complex IT
-projects.
-```
-
-This can sound dismissive.
-
----
-
-# 5. Corrective Actions
-
-Explain what has already been done.
-
-Examples:
-
-```text id="complaint-corrective-actions"
-Configuration corrected
-
-Service restored
-
-Vendor escalated
-
-Deployment paused
-
-Additional testing introduced
-
-Change approval strengthened
-
-Support coverage increased
-
-Communication process updated
-
-Monitoring enhanced
-```
-
----
-
-# Corrective Action Quality
-
-### Weak
-
-```text id="complaint-action-weak"
-We will ensure this does not happen again.
-```
-
-### Better
-
-```text id="complaint-action-good"
-All production changes now require confirmation that the stakeholder
-notification has been issued before the deployment is authorised.
-```
-
-Specific controls build more confidence than generic promises.
-
----
-
-# 6. Next Steps
-
-Explain what happens next.
-
-Use:
-
-```text id="complaint-next-steps"
-Investigation
-
-Root cause analysis
-
-Corrective action
-
-Validation
-
-Stakeholder update
-
-Closure
-```
-
-Example:
-
-> A full root-cause review is currently in progress. We will validate the corrective actions with the service and infrastructure teams before formally closing the incident.
-
----
-
-# 7. Provide an Update Commitment
-
-Do not leave the stakeholder uncertain.
-
-Example:
-
-```text id="complaint-update"
-We will provide the next written update by 15:00 CET on
-18 November, including the confirmed root cause and any additional
-preventive actions.
-```
-
-If resolution timing is uncertain, commit to the **next update**, not an unsupported resolution date.
-
----
-
-# 8. Offer a Direct Contact
-
-Where appropriate:
-
-```text id="complaint-contact"
-If you would like to discuss the impact directly, please contact
-[ROLE / CONTACT].
-```
-
-For significant complaints, personal engagement can help de-escalate the issue.
-
----
-
-# Example Input
-
-```text id="complaint-example-input"
-Complaint:
-
-"The CRM was unavailable for more than an hour this morning without
-warning. Our agents could not access customer records and we received
-no update from the project team until after the service was restored.
-This is the second communication problem during this rollout."
+This is the second communication problem
+during this rollout."
 
 Confirmed facts:
 
-- CRM unavailable 09:17–10:42.
-- issue occurred after production configuration change.
-- service restored.
-- stakeholder notification was not sent.
-- incident communication began at 10:15.
-- root cause review still in progress.
+- CRM unavailable from 09:17 to 10:42.
+- Interruption occurred after a production
+  configuration change.
+- CRM service has been restored.
+- Planned stakeholder notification was not issued.
+- Incident communication began at 10:15.
+- Root cause review remains in progress.
 
-Corrective actions:
+Corrective actions completed:
 
-- configuration reverted.
-- production changes temporarily paused.
-- deployment checklist updated.
-- Service Manager added to approval process.
+- Configuration change reverted.
+- Further production changes temporarily paused.
+- Deployment checklist updated.
+- Service Manager added to the approval process.
 
 Next update:
-Tomorrow at 15:00 CET.
+15:00 CET on 18 November 2026.
+
+Contact:
+Project Manager / Service Manager.
+
+Investigation gaps:
+- Exact technical root cause
+- Effectiveness of new approval controls
+- Whether the alleged previous communication issue
+  is documented
 ```
 
----
+### Example Output — Stakeholder Complaint Response
 
-# Example Output
+#### 1. Stakeholder Response — Ready to Send
 
-## Subject
+**Subject: Response to CRM Service Interruption and Communication Concerns**
 
-**Response to CRM Service Interruption and Communication Concern**
+Dear [Customer Service Director],
 
-Dear [Name],
+Thank you for raising your concerns regarding the CRM service interruption and the communication provided during the incident.
 
-Thank you for raising your concerns regarding this morning's CRM service interruption and the communication provided during the incident.
+We recognize that the outage affected your team's ability to access customer information and that the lack of timely communication made the situation more difficult to manage.
 
-We recognise that the outage affected your team's ability to access customer information and that the absence of an early project update made the situation more difficult to manage.
+Our investigation confirms that the CRM was unavailable between **09:17 and 10:42 CET**, following a production configuration change. Service has since been restored.
 
-Our review confirms that the CRM was unavailable between **09:17 and 10:42 CET** following a production configuration change. The service has now been restored.
+We have also confirmed that the planned stakeholder notification was not issued. This did not meet the expected communication process, and we recognize the need to address it.
 
-We have also confirmed that the planned stakeholder communication was not issued promptly. This did not meet the communication standard expected for the rollout.
+As immediate corrective measures, the configuration change has been reverted, further production changes have been temporarily paused, and the deployment checklist has been updated. The Service Manager has also been added to the approval process.
 
-The configuration change has been reverted, further production changes have temporarily been paused, and the deployment checklist has been updated to require communication confirmation before production approval. The Service Manager has also been added to the approval process.
+The technical root cause investigation remains ongoing. We will provide a further written update by **15:00 CET on 18 November 2026**, including the investigation findings available at that time and any additional preventive actions.
 
-A full root-cause review remains in progress. We will provide a further written update by **15:00 CET tomorrow**, including the confirmed cause and any additional preventive measures.
+If you would like to discuss the operational impact directly, please contact the Project Manager or Service Manager.
 
-If you would like to discuss the operational impact directly, please contact [Project Manager / Service Manager].
-
-Thank you for raising the issue and for your patience while we complete the review.
+Thank you for bringing these concerns to our attention.
 
 Kind regards,  
 [Project Manager]
 
----
+#### 2. Complaint Assessment
 
-# Prompt 2 — De-Escalation Review
-
-```text id="complaint-deescalation-review"
-ROLE
-
-You are an experienced stakeholder-relations lead reviewing a
-response to a formal complaint.
-
-TASK
-
-Review the response below.
-
-[PASTE RESPONSE]
-
-Check for:
-
-- defensive language,
-- dismissive language,
-- unnecessary blame,
-- weak acknowledgement,
-- vague corrective actions,
-- unsupported promises,
-- unclear next steps,
-- missing update commitment,
-- wording likely to escalate conflict.
-
-OUTPUT FORMAT
-
-Finding
-Likely Stakeholder Reaction
-Why It Matters
-Recommended Revision
-```
-
----
-
-# Prompt 3 — Complaint Investigation Gap Review
-
-```text id="complaint-investigation"
-ROLE
-
-You are a senior IT Project Manager reviewing a stakeholder
-complaint before responding.
-
-TASK
-
-Compare the complaint with the confirmed facts below.
-
-COMPLAINT
-
-[PASTE]
-
-CONFIRMED FACTS
-
-[PASTE]
-
-Identify:
-
-1. Claims confirmed by evidence
-2. Claims not yet confirmed
-3. Missing facts
-4. Information requiring investigation
-5. Immediate corrective actions
-6. Appropriate response commitments
-
-Do not assume unverified allegations are true or false.
-```
-
----
-
-# Complaint vs Incident
-
-A complaint may relate to a technical incident, but the two records serve different purposes.
-
-```text id="complaint-vs-incident"
-Incident Record
-=
-Technical / operational event
-
-Complaint Record
-=
-Stakeholder concern and organisational response
-```
-
-Link them where appropriate, but do not treat them as identical.
-
----
-
-# Complaint Categorisation
-
-Possible categories:
-
-```text id="complaint-categories"
-Service disruption
-
-Project delay
-
-Quality
-
-Communication
-
-Data
-
-Support
-
-Scope / expectation
-
-Vendor performance
-
-User experience
-
-Change impact
-```
-
----
-
-# Complaint Register
-
-For significant projects maintain:
-
-| Complaint ID | Stakeholder | Category | Date | Owner | Status | Resolution |
-|---|---|---|---|---|---|---|
-
-Suggested statuses:
-
-```text id="complaint-status"
-Received
-Acknowledged
-Investigating
-Action in Progress
-Responded
-Closed
-Escalated
-```
-
----
-
-# Response Timing
-
-Do not leave serious complaints unanswered while the full investigation is completed.
-
-Use:
-
-```text id="complaint-response-timing"
-Complaint received
-↓
-Acknowledge
-↓
-Investigate
-↓
-Interim update if needed
-↓
-Full response
-↓
-Close
-```
-
-Where organisational procedures specify response times, follow those requirements.
-
----
-
-# Interim Response
-
-When investigation will take time:
-
-```text id="complaint-interim"
-Thank you for raising this issue.
-
-We are currently reviewing the incident and the communication
-process surrounding it.
-
-We will provide a full response by [DATE].
-
-In the meantime, [IMMEDIATE ACTION] has already been implemented.
-```
-
----
-
-# Accountability Without Over-Promising
-
-Use:
-
-```text id="complaint-accountability"
-We have confirmed that the notification process was not followed.
-```
-
-Avoid:
-
-```text id="complaint-overpromise"
-This will never happen again.
-```
-
-Prefer:
-
-```text id="complaint-prevention"
-We have implemented additional controls designed to reduce the
-likelihood of recurrence.
-```
-
----
-
-# Root Cause vs Immediate Cause
-
-Example:
-
-```text id="complaint-root-cause"
-Immediate Cause:
-Incorrect configuration deployed.
-
-Root Cause:
-Change-control checklist did not require independent verification
-of the affected configuration.
-
-Corrective Action:
-Independent verification added to the production-change process.
-```
-
-Where root cause analysis is not complete, say so.
-
----
-
-# Stakeholder Recovery
-
-For serious complaints, consider whether additional engagement is required.
-
-Possible actions:
-
-```text id="complaint-recovery"
-1:1 discussion
-
-Executive follow-up
-
-Service review
-
-Demonstration of corrective controls
-
-Written closure confirmation
-
-Operational readiness review
-```
-
----
-
-# Vendor-Caused Complaint
-
-If a supplier caused the underlying event, do not automatically blame the vendor in the stakeholder response.
-
-Externally:
-
-> The issue has been escalated to the responsible delivery partner and corrective actions are being implemented.
-
-Internally:
-
-Track supplier responsibility through vendor governance and contractual processes.
-
----
-
-# Sensitive Complaints
-
-Escalate complaints involving:
-
-```text id="complaint-sensitive"
-Personal data
-
-Security incidents
-
-Legal allegations
-
-Regulatory concerns
-
-Discrimination
-
-Employee misconduct
-
-Financial loss
-
-Media enquiries
-```
-
-to the appropriate specialist teams.
-
-Do not rely solely on AI-generated wording for these cases.
-
----
-
-# Agile / Scrum Considerations
-
-Complaints may reveal:
-
-- product misunderstanding,
-- poor release communication,
-- unmet user expectations,
-- quality issues.
-
-Feed legitimate lessons into:
-
-- backlog refinement,
-- retrospectives,
-- release planning,
-- stakeholder engagement.
-
----
-
-# Kanban / Service Considerations
-
-Track recurring complaints against:
-
-- service demand,
-- incident patterns,
-- ageing work,
-- SLA / SLE performance.
-
-Repeated complaints may indicate systemic service-design issues rather than isolated incidents.
-
----
-
-# Predictive Considerations
-
-Complaints may relate to:
-
-- missed milestones,
-- acceptance,
-- change impacts,
-- stakeholder communication.
-
-Formal governance may require complaint escalation or reporting.
-
----
-
-# Hybrid Considerations
-
-Use operational feedback from adaptive delivery while maintaining formal complaint and escalation controls where required.
-
----
-
-# Quality Checklist
-
-Before issuing the response, confirm:
-
-- [ ] Complaint has been acknowledged
-- [ ] Stakeholder impact is recognised
-- [ ] Confirmed failures are acknowledged
-- [ ] Facts are verified
-- [ ] Unverified claims are not presented as facts
-- [ ] Explanation is understandable
-- [ ] Corrective actions are specific
-- [ ] Next steps are clear
-- [ ] Next update is dated
-- [ ] Tone is professional and empathetic
-- [ ] Language is not defensive
-- [ ] Language is not dismissive
-- [ ] Unsupported promises are avoided
-- [ ] Appropriate escalation has occurred
-- [ ] Direct contact is provided where appropriate
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- stakeholder engagement,
-- communication,
-- conflict management,
-- issue management,
-- leadership,
-- governance.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- stakeholders,
-- team,
-- communication,
-- delivery,
-- governance.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Material complaints should be reviewed by appropriate stakeholders such as:
-
-- Project Manager
-- Service Manager
-- Business Owner
-- Communications
-- Legal / Compliance where applicable
-- Information Security where applicable
-- Senior management for escalated matters
-
-AI can help structure a calm, clear response.
-
-It should not determine legal liability, regulatory response, or disciplinary action.
-
----
-
-# Confidentiality
-
-Complaints may contain:
-
-- personal information,
-- security information,
-- customer data,
-- employee information,
-- commercial disputes,
-- sensitive operational details.
-
-Share complaint records only with appropriate stakeholders.
-
----
-
-# Prompt Metadata
-
-```text id="complaint-metadata"
-Prompt ID: STAKE-004
-Category: Stakeholder Management
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Service Manager
-Reviewer: Business Owner / Communications
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium / High depending on complaint
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Concern | Confirmed Position | Further Investigation |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT stakeholder complaint-response framework |
+| CRM outage | Service unavailable for 85 minutes | Detailed technical root cause |
+| Business impact | Customer records inaccessible | Full operational impact |
+| Missing notification | Planned notification not issued | Communication process failure |
+| Incident communication | Started at 10:15 | Timeliness against required process |
+| Previous communication failure | Stakeholder reports recurrence | Confirm historical records |
+
+**Management assessment:** The complaint includes a confirmed service disruption and communication failure. The reported recurrence requires verification before being treated as an established pattern.
+
+#### 3. Corrective and Preventive Action Plan
+
+| Action | Type | Proposed Owner | Status |
+|---|---|---|---|
+| Revert affected configuration | Immediate Correction | Technical Lead | Completed |
+| Restore CRM availability | Immediate Correction | Service Team | Completed |
+| Pause further production changes | Containment | Project Manager | Completed |
+| Update deployment checklist | Corrective Action | Project Manager | Completed |
+| Add Service Manager to approval process | Corrective Action | Project Manager | Completed |
+| Complete technical root cause analysis | Investigation | Technical / Service Lead | In Progress |
+| Validate revised communication controls | Preventive Improvement | Service Manager | Proposed |
+| Review historical complaints | Investigation | Project Manager | Proposed |
+
+Proposed owners and planned improvements require confirmation.
+
+#### 4. Escalation and Governance
+
+| Issue | Potential Impact | Required Action | Linked Record |
+|---|---|---|---|
+| CRM outage | Operational disruption | Complete incident review | Incident Record |
+| Missing notification | Stakeholder confidence | Verify process controls | Complaint Register |
+| Production-change risk | Potential recurrence | Review change authorization | Change Register |
+| Repeated communication concern | Escalation risk | Examine previous incidents | Complaint History |
+
+**Governance principle:** The technical incident and stakeholder complaint should remain distinct but linked records.
+
+#### 5. Stakeholder Follow-Up
+
+| Item | Commitment |
+|---|---|
+| Next update | 18 November 2026, 15:00 CET |
+| Responsible contact | Project Manager / Service Manager |
+| Root cause review | In progress |
+| Corrective-action validation | Required |
+| Complaint closure | Pending investigation and follow-up |
+| Stakeholder confirmation | To be requested after response |
+
+The update deadline is a communication commitment, not a guaranteed root cause resolution date.
+
+#### 6. Complaint Register Entry
+
+| Field | Value |
+|---|---|
+| Complaint ID | To be assigned |
+| Category | Service Disruption / Communication |
+| Stakeholder | Customer Service Director |
+| Owner | Project Manager |
+| Status | Investigating / Response Drafted |
+| Related incident | To be linked |
+| Next action | Complete investigation and provide update |
+| Closure status | Open |
+
+### Management Decisions
+
+1. **Service recovery:** Confirm that the restored CRM service remains stable and that appropriate monitoring is active.
+2. **Communication control:** Validate the revised deployment notification and approval process.
+3. **Root cause analysis:** Establish why the disruption occurred and whether additional preventive measures are required.
+4. **Stakeholder confidence:** Provide the committed update and verify whether the stakeholder's concerns have been adequately addressed.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The response acknowledges the operational impact, communicates verified facts, and describes completed recovery actions. However, the root cause investigation remains incomplete, and the effectiveness of the revised communication controls has not yet been demonstrated.
+
+**Required corrections:**
+- Validate that the deployment checklist and approval changes are operational.
+- Confirm the remaining root cause investigation timeline.
+- Investigate the reported previous communication failure.
+- Confirm complaint ownership and relevant escalation requirements.
+- Review the final response with the appropriate Service or Business Manager.
+
+**Approval blockers:** Unconfirmed effectiveness of preventive measures and incomplete investigation evidence for any definitive root-cause statements.
+
+**Governance:** Supports PMI-aligned stakeholder engagement, communication management, issue resolution, conflict management, service recovery, and project governance.
+
+Stakeholder complaint responses must be based on verified information and authorized communication commitments. AI cannot determine legal liability, regulatory obligations, or disciplinary responsibility. Protect confidential customer information, security details, incident records, and sensitive stakeholder communications.

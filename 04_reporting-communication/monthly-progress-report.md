@@ -1,840 +1,437 @@
 # Monthly Project Progress Report
 
-## Purpose
+**Prompt ID:** REPORT-002 | **Category:** Reporting & Communication | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to create a structured monthly project report for management, sponsors, PMO, steering committees, or other governance stakeholders.
+## 1. Ready-to-Use Prompt
 
-The monthly report should provide a more complete view than a weekly update.
+**Purpose:** Convert project performance data into a concise, evidence-based monthly report that supports executive oversight, delivery forecasting, and timely management decisions.
 
-It should explain:
+**Use case:** Prepare monthly reports for IT project sponsors, PMOs, and steering committees when management needs visibility into milestones, costs, quality, risks, dependencies, and upcoming decisions.
 
-- overall project health,
-- progress against commitments,
-- financial position,
-- major risks and issues,
-- quality and readiness,
-- vendor performance,
-- key decisions,
-- and the forward outlook.
+Copy the prompt and replace the placeholders with your project information.
 
-The objective is to support **governance and informed decision-making**, not simply document activity.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery / Testing / Deployment / Hypercare
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Multi-vendor programme
-
-**Primary user:**  
-Project Manager / Delivery Manager / PMO / Programme Manager
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-Monthly
-
----
-
-# Prompt
-
-```text id="monthly-01"
+```text id="monthlyreport02"
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, executive reporting, project governance,
-financial management, risk management, quality assurance,
-and stakeholder communication.
+You are a Senior IT Project Manager specializing in software
+delivery, executive reporting, financial oversight, risk
+management, delivery forecasting, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Reporting period: [MONTH / DATE RANGE]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target completion: [DATE]
+Approved baseline: [IF AVAILABLE]
+Previous monthly report: [PASTE / NOT AVAILABLE]
+Reported overall RAG: [GREEN / AMBER / RED / UNKNOWN]
+
+PROJECT PERFORMANCE DATA
+
+Achievements and progress: [DETAILS]
+Milestones and forecasts: [DETAILS]
+Schedule variances: [DETAILS]
+Scope and approved changes: [DETAILS]
+Approved budget: [AMOUNT]
+Actual and committed costs: [AMOUNTS]
+Forecast at completion: [AMOUNT]
+Contingency and pending changes: [DETAILS]
+Quality and testing: [METRICS / FINDINGS]
+Security and compliance: [STATUS]
+Business and operational readiness: [STATUS]
+Resources: [STATUS]
+Vendors and external dependencies: [DETAILS]
+Risks and issues: [REGISTER EXCERPTS]
+Decisions and actions: [LIST]
+Next-period priorities: [LIST]
+Delivery forecast: [DETAILS]
 
 TASK
 
-Create a professional monthly project progress report from the
-project information below.
+Create a professional Monthly Project Progress Report.
 
-PROJECT CONTEXT
+1. Summarize overall delivery health, key achievements,
+   material concerns, financial position, and decisions required.
+2. Assess overall and individual RAG status using
+   available evidence and approved thresholds.
+3. Compare baseline milestones with current forecasts;
+   explain variances, causes, impacts, and recovery actions.
+4. Summarize meaningful workstream achievements,
+   blockers, and next priorities without listing every task.
+5. Analyze budget, actual spend, commitments, forecast
+   at completion, contingency, and approved changes.
+6. Evaluate quality, testing, security, and business
+   or operational readiness using relevant evidence.
+7. Highlight material risks and issues, their trends,
+   ownership, mitigation, and resolution actions.
+8. Assess vendor commitments and critical dependencies.
+9. Identify decisions, actions, escalations, responsible
+   authorities, deadlines, and consequences of delay.
+10. Forecast next-period milestones, priorities, risks,
+    and management requirements.
+11. Compare current and previous reporting periods
+    where historical data is available.
+12. Identify contradictory data, missing evidence,
+    and assumptions requiring validation.
 
-Project:
-[PROJECT NAME]
+Adapt reporting to the delivery approach:
+- Agile / Scrum: Release goals, increments, backlog readiness,
+  delivery trends, quality, and cross-team dependencies.
+- Kanban: Throughput, cycle time, WIP, ageing work,
+  blocked items, and service expectations.
+- Predictive: Baseline variance, critical path,
+  milestone forecasts, and approved changes.
+- Hybrid: Combine delivery metrics with governance commitments.
 
-Reporting period:
-[MONTH / DATE RANGE]
+Do not use velocity or similar metrics without context.
+Translate metrics into business and delivery implications.
 
-Current phase:
-[PHASE]
+Do not invent progress percentages, financial values,
+milestone dates, recovery actions, or approvals.
+Do not automatically repeat last month's RAG status.
+Flag inconsistencies between reported status and evidence.
 
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
+OUTPUT FORMAT
 
-Target completion / release:
-[DATE]
+1. EXECUTIVE SUMMARY
 
-Overall RAG status:
-[IF KNOWN]
+Write 3–5 sentences covering:
+- Overall project health
+- Major achievement
+- Principal risk or issue
+- Schedule and financial outlook
+- Management decision required
 
-PROJECT DATA
+2. OVERALL PROJECT HEALTH
 
-Progress:
-[DETAILS]
+Area | RAG Status | Current Position |
+Trend | Management Concern
+
+Include relevant areas:
+Overall, Schedule, Budget, Scope, Quality,
+Risk, Resources, Vendor, Security, Business Readiness.
+
+Trend: Improving / Stable / Deteriorating / Unknown.
+
+3. MILESTONE PERFORMANCE
+
+Milestone | Baseline Date | Current Forecast |
+Variance | Status | Recovery / Commentary
+
+4. DELIVERY / WORKSTREAM PROGRESS
+
+Workstream | Status | Key Achievement |
+Current Blocker | Next Priority
+
+5. FINANCIAL SUMMARY
+
+Financial Measure | Budget / Baseline |
+Actual / Forecast | Variance | Commentary
+
+6. QUALITY AND READINESS
+
+Area | Status | Supporting Evidence |
+Concern | Required Action
+
+7. KEY RISKS AND ISSUES
+
+Type | Description | Impact | Rating / Priority |
+Trend | Action | Owner
+
+8. VENDOR AND EXTERNAL DEPENDENCIES
+
+Vendor / Dependency | Commitment | Current Status |
+Delivery Impact | Required Action
+
+9. DECISIONS AND ACTIONS REQUIRED
+
+Type | Decision / Action | Recommended Response |
+Decision Owner | Deadline | Impact if Delayed
+
+Type: Decision / Action / Escalation.
+
+10. NEXT-PERIOD FORECAST
+
+Expected Milestone / Priority | Forecast |
+Critical Dependency | Confidence |
+Management Attention Required
+
+11. MONTH-ON-MONTH CHANGES
+    (ONLY IF PREVIOUS REPORT PROVIDED)
+
+Area | Previous Position | Current Position |
+Trend | Management Significance
+
+MANAGEMENT SUMMARY
+
+- Current project health and supporting evidence
+- Major deviations from plan
+- Financial and delivery exposure
+- Critical decisions and escalation
+- Next-month management priorities
+
+Use concise Markdown tables.
+Mark unavailable information as "Not provided".
+Distinguish approved commitments from forecasts.
+```
+
+---
+
+## 2. Quality Check
+
+Apply this independent review before issuing the monthly report.
+
+```text id="monthlyqa02"
+QUALITY CHECK
+
+Act as a Senior PMO Director reviewing an executive
+Monthly Project Progress Report.
+
+Verify:
+
+1. Accuracy: All facts, dates, calculations, and
+   performance metrics match the supplied project data.
+2. RAG Assessment: Status is supported by evidence
+   and consistent with the organization's thresholds.
+3. Milestones: Variances, recovery plans, and forecast
+   changes are explained.
+4. Financials: Budget, actuals, commitments, forecasts,
+   and variances reconcile where sufficient data exists.
+5. Delivery: Progress is outcome-focused rather
+   than an excessive task-level summary.
+6. Risks and Issues: Material concerns have clear
+   owners, impact, trend, and response actions.
+7. Decisions: Management requests, authority,
+   deadlines, and consequences are explicit.
+8. Forecast: Next-period outlook is realistic,
+   forward-looking, and supported by evidence.
+9. Consistency: No contradictions, unsupported assumptions,
+   or unexplained month-on-month changes.
+10. Executive Readability: The report is concise,
+    actionable, and suitable for governance review.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Identify unsupported conclusions, weak forecasts,
+missing decisions, and unreconciled financial values.
+
+Do not invent project evidence or authorize management decisions.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### E-commerce System Enhancement — Monthly Delivery Review
+
+**Scenario:** An IT team is enhancing an e-commerce order management system. Development is progressing, but integration defects and a delayed payment gateway dependency are creating pressure on testing and release readiness.
+
+The Project Manager must prepare a monthly report for the Project Sponsor, explaining current performance, emerging delivery risks, and required management actions.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | E-commerce Order Management Enhancement |
+| Reporting period | August 2027 |
+| Project phase | Integration / Testing |
+| Delivery approach | Hybrid |
+| Target release | 30 September 2027 |
+| Approved budget | €450,000 |
+| Current overall status | Amber |
+| Key concern | Integration defects and payment gateway readiness |
+| Audience | Project Sponsor / Steering Committee |
+| Management decision | Validate recovery options and protect the release timeline |
+
+### Example Input
+
+```text id="monthlyexample02"
+Project: E-commerce Order Management Enhancement
+
+Reporting period: August 2027
+Delivery approach: Hybrid
+Target release: 30 September 2027
+
+Reported overall status: Amber
+
+Delivery progress:
+- Order workflow development completed.
+- Payment gateway integration 80% complete.
+- System Integration Testing 70% complete.
+- Two critical defects remain open.
 
 Milestones:
-[DETAILS]
-
-Schedule:
-[DETAILS]
+- Development completion: 31 July — completed.
+- SIT completion: 31 August — forecast 7 September.
+- UAT completion: 17 September — forecast TBD.
+- Production release: 30 September — unchanged target.
 
 Budget:
-[DETAILS]
-
-Scope:
-[DETAILS]
-
-Quality / Testing:
-[DETAILS]
-
-Security / Compliance:
-[DETAILS]
-
-Operations / Business Readiness:
-[DETAILS]
-
-Vendors:
-[DETAILS]
-
-Risks:
-[DETAILS]
-
-Issues:
-[DETAILS]
-
-Decisions:
-[DETAILS]
-
-Key achievements:
-[DETAILS]
-
-Next-period priorities:
-[DETAILS]
-
-Forecast:
-[DETAILS]
-
-OUTPUT FORMAT
-
-Create the report with:
-
-1. Executive Summary
-2. Overall Project Health
-3. Progress Against Milestones
-4. Delivery / Workstream Progress
-5. Financial Summary
-6. Quality, Testing and Readiness
-7. Key Risks and Issues
-8. Vendor / External Dependency Status
-9. Decisions and Actions Required
-10. Forecast for Next Period
-```
-
----
-
-# 1. Executive Summary
-
-Write 3–5 concise sentences covering:
-
-```text id="monthly-exec"
-Overall position
-Major achievement
-Main risk or issue
-Financial / schedule position
-Decision or management action required
-```
-
-The executive summary should be understandable without reading the rest of the report.
-
----
-
-# Example Executive Summary
-
-```text id="monthly-exec-example"
-The CRM replacement remains Amber due to a two-week delay in
-data-migration preparation and unresolved vendor integration
-dependencies.
-
-Core configuration is substantially complete and system integration
-testing has started as planned.
-
-Budget remains within the approved forecast, although contingency
-exposure has increased because of migration uncertainty.
-
-Management attention is required on vendor recovery actions and
-business-resource confirmation for UAT.
-```
-
----
-
-# 2. Overall Project Health
-
-Provide a project-health summary.
-
-| Area | Status | Current Position | Trend |
-|---|---|---|---|
-| Overall | Green / Amber / Red | | |
-| Schedule | | | |
-| Budget | | | |
-| Scope | | | |
-| Quality | | | |
-| Risk | | | |
-| Resources | | | |
-| Vendor | | | |
-| Security / Compliance | | | |
-| Business Readiness | | | |
-
-Trend:
-
-```text id="monthly-trend"
-Improving
-Stable
-Deteriorating
-```
-
----
-
-# RAG Assessment
-
-RAG should be based on evidence.
-
-Do not automatically copy the previous month's status.
-
-Review:
-
-```text id="monthly-rag"
-Schedule performance
-Budget performance
-Scope stability
-Quality
-Risk exposure
-Issue severity
-Critical dependencies
-Vendor performance
-Release readiness
-Business readiness
-```
-
-If reported RAG and available evidence conflict, flag the inconsistency.
-
----
-
-# 3. Progress Against Milestones
-
-Provide:
-
-| Milestone | Baseline / Target | Current Forecast | Status | Commentary |
-|---|---|---|---|---|
-
-Use:
-
-```text id="monthly-milestone-status"
-Complete
-On Track
-At Risk
-Delayed
-Not Started
-```
-
-Where a milestone is delayed, explain:
-
-- cause,
-- impact,
-- recovery action,
-- revised forecast.
-
----
-
-# 4. Delivery / Workstream Progress
-
-Report by meaningful workstream.
-
-Possible workstreams:
-
-```text id="monthly-workstreams"
-Requirements
-Architecture
-Development / Configuration
-Integration
-Data Migration
-Testing
-Security
-Change Management
-Training
-Deployment
-Operations
-Vendor Delivery
-```
-
-Provide:
-
-| Workstream | Current Status | Progress | Key Achievement | Next Priority |
-|---|---|---|---|---|
-
-Do not report every task.
-
-Focus on material delivery information.
-
----
-
-# Agile / Scrum Reporting
-
-Where relevant, monthly reporting may include:
-
-- release progress,
-- major product increments,
-- Sprint trends,
-- backlog health,
-- cross-team dependencies,
-- major blockers.
-
-Do not use velocity as an executive performance target without context.
-
-Explain what the metric means for delivery.
-
----
-
-# Kanban Reporting
-
-Relevant indicators may include:
-
-```text id="monthly-kanban"
-Throughput trend
-Cycle-time trend
-Work item age
-WIP
-Blocked work
-SLE performance
-```
-
-Example:
-
-> Average cycle time increased from 8 to 12 days because integration review became a bottleneck. Three ageing items are now directly linked to the planned release scope.
-
-Translate metrics into management impact.
-
----
-
-# Predictive Reporting
-
-May include:
-
-- baseline milestone variance,
-- critical-path impact,
-- schedule forecast,
-- approved change impact.
-
----
-
-# Hybrid Reporting
-
-Combine formal project commitments with delivery-level evidence.
-
-Example:
-
-```text id="monthly-hybrid"
-Roadmap / delivery metrics
-↓
-Milestone forecast
-↓
-Risk / dependency assessment
-↓
-Governance impact
-```
-
----
-
-# 5. Financial Summary
-
-Provide:
-
-| Financial Measure | Baseline / Budget | Actual / Forecast | Variance | Status |
-|---|---:|---:|---:|---|
-
-Possible measures:
-
-```text id="monthly-financial"
-Approved budget
-Actual spend
-Committed cost
-Forecast at completion
-Contingency
-Approved changes
-Pending changes
-```
-
-If values are missing, state this rather than inventing them.
-
----
-
-# Financial Commentary
-
-Explain:
-
-```text id="monthly-financial-commentary"
-What changed this month?
-
-What is driving variance?
-
-Is contingency changing?
-
-Are vendor costs changing?
-
-Are scope decisions affecting forecast?
-
-Does management action need to be taken?
-```
-
----
-
-# 6. Quality, Testing and Readiness
-
-Use only the areas relevant to the project.
-
-Possible indicators:
-
-```text id="monthly-quality"
-Test execution
-Pass rate
-Critical defects
-Defect ageing
-UAT readiness
-Security approvals
-Data migration quality
-Operational readiness
-Training readiness
-Deployment readiness
-```
-
-Provide:
-
-| Area | Status | Evidence | Concern / Action |
-|---|---|---|---|
-
----
-
-# Example
-
-```text id="monthly-quality-example"
-System Integration Testing:
-78% executed
-92% pass rate
-2 critical defects open
-
-Status:
-Amber
-
-Action:
-Resolve and retest critical defects before UAT entry decision.
-```
-
----
-
-# 7. Key Risks and Issues
-
-Report only risks and issues requiring management visibility.
-
-| Type | Description | Impact | Rating / Priority | Action | Owner |
-|---|---|---|---|---|---|
-
-For each major item explain:
-
-```text id="monthly-risk-rule"
-Current exposure
-Change since previous month
-Mitigation / resolution
-Decision required
-```
-
----
-
-# Risk Trend
-
-Where useful:
-
-```text id="monthly-risk-trend"
-New
-Increasing
-Stable
-Reducing
-Closed
-Materialised into Issue
-```
-
----
-
-# 8. Vendor / External Dependency Status
-
-Where external suppliers are important, provide:
-
-| Vendor / Dependency | Commitment | Current Status | Risk | Required Action |
-|---|---|---|---|---|
-
-Consider:
-
-- milestone performance,
-- delivery quality,
-- capacity,
-- commercial changes,
-- dependencies,
-- escalations.
-
----
-
-# 9. Decisions and Actions Required
-
-Provide:
-
-| Decision / Action | Owner | Recommendation | Deadline | Impact if Delayed |
-|---|---|---|---|---|
-
-Separate:
-
-```text id="monthly-decision-types"
-Decision Required
-Action Required
-Escalation Required
-```
-
-Do not hide decisions inside general commentary.
-
----
-
-# Example
-
-```text id="monthly-decision-example"
-Decision:
-Approve additional data-migration capacity.
-
-Owner:
-Project Sponsor.
-
-Recommendation:
-Approve two temporary specialists for six weeks.
-
-Deadline:
-15 August.
-
-Impact if delayed:
-Current migration recovery plan will not protect the UAT start.
-```
-
----
-
-# 10. Forecast for Next Period
-
-Include:
-
-```text id="monthly-forecast"
-Expected milestones
-Key priorities
-Emerging risks
-Expected decisions
-Forecast status
-```
-
-A useful forecast should answer:
-
-> What is most likely to change before the next report?
-
----
-
-# Forecast Confidence
-
-Optionally classify forecast confidence:
-
-```text id="monthly-confidence"
-High
-Medium
-Low
-```
-
-Explain low confidence where significant dependencies remain unresolved.
-
----
-
-# Example Input
-
-```text id="monthly-example-input"
-Project:
-CRM Replacement
-
-Reporting Period:
-August 2027
-
-Delivery Approach:
-Hybrid
-
-Overall:
-Amber
-
-Progress:
-Core configuration complete.
-Integration testing 75% complete.
-Data migration rehearsal delayed by two weeks.
-
-Schedule:
-Go-live still forecast for 1 October but recovery margin is limited.
-
-Budget:
-€1.1M spent of €1.8M approved.
-Forecast currently €1.78M.
+- Approved budget: €450,000
+- Actual spend: €310,000
+- Committed additional cost: €80,000
+- Forecast at completion: €445,000
 
 Quality:
-2 critical defects open.
-SIT pass rate 91%.
+- SIT execution: 70%
+- Critical defects: 2 open
 
-Security:
-Final review scheduled for 5 September.
+External dependency:
+- Payment provider integration support delayed.
+- Revised supplier delivery date not confirmed.
 
-Business Readiness:
-UAT testers confirmed.
-Training material 60% complete.
+Main risk:
+Integration defects may delay UAT and release readiness.
 
-Vendor:
-Migration vendor has added one specialist.
+Decision required:
+Confirm whether additional technical support
+should be requested from the payment provider.
 
-Main Risk:
-Migration delay may compress UAT.
+Next-month priorities:
+- Complete SIT
+- Resolve critical defects
+- Conduct UAT
+- Confirm release readiness
 
-Decision:
-Sponsor may need to approve additional migration capacity.
+Previous monthly report:
+Not available.
 ```
 
----
+### Example Output — Monthly Project Progress Report
 
-# Example Executive Output
+#### 1. Executive Summary
 
-## Executive Summary
+The E-commerce Order Management Enhancement project is **Amber** for August 2027 due to integration defects and unresolved payment-provider dependencies. Core order workflow development is complete, but SIT completion is forecast seven calendar days later than the original milestone. The forecast project cost of €445,000 remains €5,000 below the approved €450,000 budget, although the underlying cost assumptions require confirmation. Management attention is required to obtain a reliable supplier recovery date and assess whether additional technical support is needed to protect the September release.
 
-The CRM replacement remains **Amber** because the delayed data-migration rehearsal has reduced schedule contingency ahead of UAT. Core configuration is complete and integration testing is approximately 75% complete, with two critical defects still under resolution. The project remains within the approved financial forecast. Additional migration capacity may be required if the current recovery actions do not restore the planned UAT start.
+#### 2. Overall Project Health
 
----
+| Area | RAG | Current Position | Trend |
+|---|---|---|---|
+| Overall | Amber | Integration and testing delays | Not assessed |
+| Schedule | Amber | SIT forecast seven days late | Not assessed |
+| Budget | Green (provisional) | Forecast €5,000 below budget | Not assessed |
+| Scope | Green (provisional) | No scope changes reported | Not assessed |
+| Quality | Amber | Two critical defects remain | Not assessed |
+| Risk | Amber | Payment dependency threatens UAT | Not assessed |
+| Vendor | Amber | Revised supplier commitment missing | Not assessed |
+| Business Readiness | Not assessed | UAT forecast unavailable | Unknown |
 
-# Prompt 2 — Month-on-Month Trend Analysis
+RAG classifications are illustrative and require validation against approved thresholds. Trends cannot be established without previous-period data.
 
-```text id="monthly-trend-prompt"
-ROLE
+#### 3. Milestone Performance
 
-You are a senior PMO Lead reviewing monthly project performance.
+| Milestone | Baseline | Forecast / Actual | Variance | Status |
+|---|---|---|---|---|
+| Development completion | 31 Jul | Completed | Not reported | Complete |
+| SIT completion | 31 Aug | 7 Sep | +7 calendar days | Delayed forecast |
+| UAT completion | 17 Sep | TBD | Not assessable | At risk |
+| Production release | 30 Sep | No revised forecast | Not assessable | At risk |
 
-TASK
+**Schedule concern:** The SIT delay reduces the available time for UAT, defect resolution, and release preparation.
 
-Compare the current and previous monthly project reports.
+#### 4. Delivery / Workstream Progress
 
-PREVIOUS REPORT
+| Workstream | Status | Key Achievement | Current Blocker | Next Priority |
+|---|---|---|---|---|
+| Order workflow | Complete | Development finished | None reported | Support testing |
+| Payment integration | At risk | 80% reported complete | Vendor dependency | Complete integration |
+| QA / SIT | At risk | 70% of tests executed | Two critical defects | Resolve and retest |
+| UAT | At risk | Planned milestone established | SIT dependency | Confirm readiness |
 
-[PASTE]
+#### 5. Financial Summary
 
-CURRENT REPORT
+| Measure | Budget / Baseline | Actual / Forecast | Variance |
+|---|---:|---:|---:|
+| Approved project budget | €450,000 | — | — |
+| Actual spend | — | €310,000 | — |
+| Additional committed cost | — | €80,000 | — |
+| Forecast at completion | €450,000 | €445,000 | €5,000 below budget |
 
-[PASTE]
+Actual spend and additional commitments total €390,000, leaving €55,000 between that amount and the stated forecast at completion.
 
-Identify:
+**Financial review required:** Confirm whether the forecast includes all remaining committed and expected costs, especially any additional payment-provider support.
 
-1. Areas improving
-2. Areas deteriorating
-3. New risks / issues
-4. Risks closed
-5. Milestones moved
-6. Budget changes
-7. New decisions
-8. Forecast changes
+#### 6. Quality and Readiness
 
-OUTPUT FORMAT
+| Area | Status | Evidence | Required Action |
+|---|---|---|---|
+| SIT execution | In progress | 70% completed | Finish remaining tests |
+| Critical defects | At risk | Two open | Resolve and retest |
+| UAT readiness | Not confirmed | SIT incomplete | Validate entry criteria |
+| Release readiness | At risk | Downstream milestones exposed | Confirm go/no-go evidence |
+| Security | Not provided | No assessment supplied | Confirm required clearance |
 
-Area
-Previous Position
-Current Position
-Trend
-Management Significance
-```
+#### 7. Key Risks and Issues
 
-This prevents monthly reporting from becoming a sequence of disconnected snapshots.
+| Type | Description | Impact | Action | Proposed Owner |
+|---|---|---|---|---|
+| Issue | Two critical integration defects remain open | SIT completion affected | Correct and retest | Development / QA Leads |
+| Issue | Payment-provider support is delayed | Integration coordination affected | Obtain recovery commitment | Vendor Lead |
+| Risk | UAT may be delayed | Release schedule exposure | Reassess test sequence | Project Manager |
+| Risk | September release may become unachievable | Business milestone at risk | Validate recovery forecast | Project Manager |
 
----
+Existing delays are issues; uncertain downstream consequences are risks.
 
-# Prompt 3 — Executive Quality Review
+#### 8. Vendor and External Dependencies
 
-```text id="monthly-review"
-ROLE
+| Dependency | Commitment | Current Status | Delivery Impact | Required Action |
+|---|---|---|---|---|
+| Payment gateway support | Support for integration completion | Delayed; revised date unknown | SIT and release exposure | Obtain dated recovery plan |
+| Payment integration completion | Complete integration | 80% reported | Remaining test dependency | Validate outstanding work |
 
-You are a PMO Director performing a quality review of a monthly
-IT project report.
+#### 9. Decisions and Actions Required
 
-TASK
+| Type | Decision / Action | Proposed Owner | Deadline | Impact if Delayed |
+|---|---|---|---|---|
+| Decision | Determine need for additional vendor support | Authorized Sponsor / PM | TBD | Recovery may be constrained |
+| Action | Obtain confirmed supplier recovery date | Vendor Lead | TBD | Forecast remains unreliable |
+| Action | Confirm critical defect resolution plan | Development Lead | TBD | SIT completion at risk |
+| Decision | Revalidate UAT and release forecasts | Project Governance | Before release readiness | Late commitment change |
 
-Review the report below.
+#### 10. Next-Period Forecast
 
-[PASTE REPORT]
+| Priority | Forecast | Dependency | Confidence |
+|---|---|---|---|
+| SIT completion | 7 September | Defect resolution, provider support | Low |
+| UAT completion | TBD | Successful SIT and business availability | Low |
+| Release readiness | TBD | Quality and UAT evidence | Low |
+| Production release | 30 September remains target | Recovery feasibility | Low |
 
-Check for:
+The immediate management priority is to confirm whether the current recovery options can protect UAT and the planned production release.
 
-- unsupported RAG status,
-- inconsistent financial figures,
-- unexplained milestone changes,
-- missing decisions,
-- weak forecasts,
-- risks without owners,
-- issues without resolution actions,
-- excessive operational detail,
-- contradictions,
-- unsupported assumptions.
+#### 11. Month-on-Month Changes
 
-OUTPUT FORMAT
+**Not assessed.** The previous monthly report was not provided, so improvements, deterioration, and month-on-month financial changes cannot be verified.
 
-Finding
-Evidence
-Why It Matters
-Recommended Correction
-Priority
-```
+### Management Decisions
 
----
+1. **Vendor recovery:** Obtain a committed payment-provider recovery plan with named owners and dates.
+2. **Testing:** Confirm critical defect resolution and reassess the SIT and UAT sequence.
+3. **Financial control:** Validate the forecast at completion and the cost of any additional technical support.
+4. **Release governance:** Decide whether the September release remains feasible using evidence from testing and supplier readiness.
 
-# Reporting Principles
+### Applied Quality Review
 
-The monthly report should be:
+**Quality verdict: REVISE**
 
-```text id="monthly-principles"
-Evidence-based
-Decision-oriented
-Concise
-Forward-looking
-Consistent
-Traceable
-Audience-appropriate
-```
+**Findings:** The report identifies schedule exposure, quality concerns, key dependencies, and financial position. However, the UAT forecast, revised supplier commitment, financial forecast assumptions, and RAG thresholds require validation.
 
-A strong monthly report explains not only:
+**Required corrections:**
+- Confirm SIT recovery feasibility and the updated UAT forecast.
+- Obtain dated vendor recovery commitments.
+- Reconcile remaining costs with forecast at completion.
+- Validate RAG classifications against approved thresholds.
+- Confirm the release decision owner and deadlines.
 
-> What happened?
+**Approval blockers:** Unconfirmed downstream milestone forecasts, incomplete vendor recovery commitments, and unvalidated financial assumptions.
 
-but also:
+**Governance:** This framework supports PMI-aligned project performance reporting, financial oversight, forecasting, risk and issue management, stakeholder communication, and project governance.
 
-> What does it mean, what happens next, and what management action is required?
-
----
-
-# Quality Checklist
-
-Before issuing the report, confirm:
-
-- [ ] Executive summary reflects actual project health
-- [ ] RAG status is evidence-based
-- [ ] Milestone movement is explained
-- [ ] Financial figures reconcile
-- [ ] Quality / readiness is visible
-- [ ] Material risks and issues are included
-- [ ] Vendor dependencies are visible
-- [ ] Decisions are explicit
-- [ ] Decision deadlines are included
-- [ ] Forecast is forward-looking
-- [ ] Trend from previous period is understood
-- [ ] No unsupported information was invented
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- performance monitoring,
-- forecasting,
-- stakeholder communication,
-- financial management,
-- risk and issue management,
-- governance,
-- decision support.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- measurement,
-- finance,
-- delivery,
-- risk,
-- governance,
-- stakeholders.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Before formal distribution, validate:
-
-- RAG status,
-- financial values,
-- milestone forecast,
-- risks and issues,
-- security or compliance statements,
-- decisions and recommendations.
-
-The accountable Project Manager remains responsible for the official report.
-
----
-
-# Confidentiality
-
-Monthly reports may contain commercially or operationally sensitive information.
-
-Protect:
-
-- budget details,
-- vendor performance,
-- security issues,
-- customer information,
-- contractual matters,
-- personal performance information,
-- strategic decisions.
-
-Use anonymised data in public AI tools where required.
-
----
-
-# Prompt Metadata
-
-```text id="monthly-metadata"
-Prompt ID: REPORT-002
-Category: Reporting & Communication
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: PMO / Sponsor
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT monthly progress-report framework |
+The monthly report is a management decision-support artifact. All material performance figures, forecasts, status assessments, and recommendations require verification by the accountable Project Manager and relevant stakeholders. Protect confidential financial, contractual, security, customer, and vendor information.

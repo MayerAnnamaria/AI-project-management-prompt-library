@@ -1,462 +1,329 @@
 # Project Brief
 
-## Purpose
+**Prompt ID:** INIT-002 | **Category:** Project Initiation | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert early stakeholder input, rough project notes, meeting outputs, or incomplete business information into a structured IT project brief.
+## 1. Ready-to-Use Prompt
 
-The project brief should provide enough clarity to support:
+**Purpose:** Transform early project information into a structured brief that supports stakeholder alignment, scope clarification, and initial delivery planning.
 
-- initial stakeholder alignment,
-- project evaluation,
-- early scope discussion,
-- delivery planning,
-- governance setup,
-- and identification of information gaps.
+**Use case:** Project initiation and discovery in IT, software development, and digital transformation initiatives.
 
-The brief is not a substitute for approved scope or a full project charter.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Discovery
-
-**Project type:**  
-Software development / System implementation / Digital transformation / Data project / Infrastructure project / Product initiative
-
-**Primary user:**  
-Project Manager / Project Coordinator / Delivery Manager / Business Analyst / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At the start of a new initiative or when an existing initiative requires clarification
-
----
-
-# Prompt
+Copy the prompt and replace the placeholders with your project information.
 
 ```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, digital transformation, stakeholder management,
-requirements clarification, and project governance.
+You are a Senior IT Project Manager specializing in software delivery,
+requirements analysis, stakeholder management, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Project phase: [INITIATION / DISCOVERY]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target date: [DATE, IF KNOWN]
+Budget: [BUDGET, IF KNOWN]
+Stakeholders: [KNOWN ROLES]
+Systems and vendors: [DETAILS]
+Available information: [PASTE PROJECT NOTES / MEETING SUMMARY / REQUIREMENTS]
 
 TASK
 
-Convert the project information below into a structured professional project brief.
+Create a professional project brief from the available information.
 
-PROJECT CONTEXT — RAW INPUT
+1. Summarize the business problem, proposed solution, expected value,
+   and intended outcomes.
+2. Identify project objectives and flag those without measurable criteria.
+3. Classify scope as In Scope, Out of Scope, or To Be Confirmed.
+4. Identify key deliverables, expected outcomes, owners, and dates.
+5. Categorize business, functional, technical, data, security,
+   operational, and compliance requirements.
+6. Assess known schedule, budget, resource, technical, vendor,
+   security, compliance, and operational constraints.
+7. Identify critical dependencies and their delivery impacts.
+8. Identify stakeholders, responsibilities, and decision authority.
+9. Document initial project risks and proposed responses.
+10. Record assumptions requiring validation.
+11. Identify considerations relevant to the stated delivery approach.
+12. Highlight unresolved questions, contradictions, unclear scope,
+    missing ownership, and governance decisions.
+13. Recommend the five highest-priority next steps.
 
-[PASTE PROJECT NOTES, MEETING NOTES, EMAIL SUMMARY, OR EARLY PROJECT INFORMATION HERE]
-
-The input may include:
-
-- business problem,
-- strategic objective,
-- expected business value,
-- users,
-- stakeholders,
-- scope ideas,
-- requirements,
-- technical systems,
-- timelines,
-- budget information,
-- dependencies,
-- vendors,
-- constraints,
-- assumptions,
-- risks,
-- unresolved questions.
-
-Do not invent missing project information.
-
-Where information is incomplete, unclear, contradictory, or unconfirmed,
-flag it explicitly.
+Preserve confirmed facts and distinguish them from assumptions.
+Do not invent missing information or infer unapproved scope.
+Separate business outcomes from project deliverables.
 
 OUTPUT FORMAT
 
-Create the project brief using the following sections:
+Produce a structured Project Brief containing:
 
-1. Project Overview
+1. PROJECT OVERVIEW
+   Business problem | Proposed Initiative | Expected Business Value
 
-Summarise:
+2. PROJECT OBJECTIVES
+   Objective | Expected Outcome | Measurement | Owner
 
-- the business problem,
-- the proposed initiative,
-- the intended outcome,
-- the expected business value.
+3. HIGH-LEVEL SCOPE
+   In Scope | Out of Scope | To Be Confirmed
 
-2. Project Objectives
+4. KEY DELIVERABLES
+   Deliverable | Description | Expected Outcome | Owner | Target Date
 
-List the known project objectives.
+5. KEY REQUIREMENTS
+   Category | Requirement | Status
+   Categories: Business, Functional, Technical, Data,
+   Security, Operational, Compliance
 
-For each objective identify:
+6. KEY CONSTRAINTS
+   Constraint | Category | Delivery Impact
 
-- objective,
-- expected outcome,
-- measurement method if available,
-- owner if known.
+7. KEY DEPENDENCIES
+   Dependency | Type | Impact | Owner | Required By | Status
 
-Flag objectives that are not measurable.
+8. KEY STAKEHOLDERS
+   Stakeholder | Role | Interest | Decision Authority |
+   Engagement Requirement
 
-3. High-Level Scope
+9. HIGH-LEVEL RISKS
+   Risk | Cause | Potential Impact | Initial Response | Owner
 
-Separate into:
+10. ASSUMPTIONS
+    Assumption | Reason | Impact if Incorrect |
+    Validation Required | Owner
 
-IN SCOPE
+11. DELIVERY APPROACH
+    Relevant methodology and delivery considerations
 
-OUT OF SCOPE
+12. OPEN QUESTIONS
+    Question | Decision Owner | Priority
 
-TO BE CONFIRMED
+13. RECOMMENDED NEXT STEPS
+    Action | Priority | Proposed Owner | Expected Outcome
 
-Do not infer scope boundaries that have not been agreed.
-
-4. Key Deliverables
-
-Provide:
-
-Deliverable | Description | Expected Outcome | Owner | Target Date
-
-5. Key Requirements
-
-Group known requirements into:
-
-- Business
-- Functional
-- Technical
-- Data
-- Security
-- Operational
-- Compliance
-
-Where a category is not supported by the available information,
-state:
-
-"Not yet defined."
-
-6. Key Constraints
-
-Assess known constraints across:
-
-- Schedule
-- Budget
-- Resources
-- Technology
-- Security
-- Compliance
-- Vendor availability
-- Business availability
-- Operational environment
-
-7. Key Dependencies
-
-Provide:
-
-Dependency
-Type
-Potential Impact
-Owner
-Required By
-Status
-
-8. Key Stakeholders
-
-Provide:
-
-Stakeholder
-Role
-Primary Interest
-Decision Authority
-Engagement Requirement
-
-9. High-Level Risks
-
-Provide:
-
-Risk
-Cause
-Potential Impact
-Initial Response
-Owner
-
-10. Assumptions
-
-Provide:
-
-Assumption
-Reason
-Impact if Incorrect
-Validation Required
-Owner
-
-11. Delivery Approach Considerations
-
-Based only on the available information, identify any considerations
-relevant to the stated delivery approach.
-
-Do not recommend changing methodology unless there is clear evidence.
-
-12. Open Questions
-
-List unresolved questions that should be answered before detailed
-planning or delivery begins.
-
-13. Recommended Next Steps
-
-Identify the five most important actions required to move the initiative forward.
+Use concise Markdown tables where appropriate.
+Mark missing information as "Not yet defined".
+Label proposed owners, dates, and actions as unconfirmed.
 ```
 
 ---
 
-# Delivery-Approach Considerations
+## 2. Quality Check
 
-Use this section only where relevant.
-
-## Agile / Scrum
-
-Consider:
-
-- product vision,
-- Product Owner,
-- backlog ownership,
-- incremental delivery,
-- release objectives,
-- user feedback,
-- Definition of Done.
-
-## Kanban
-
-Consider:
-
-- service delivery objective,
-- incoming demand,
-- workflow,
-- WIP policy,
-- classes of service,
-- Service Level Expectations,
-- flow constraints.
-
-## Predictive
-
-Consider:
-
-- scope baseline,
-- schedule baseline,
-- milestone commitments,
-- critical dependencies,
-- formal change control.
-
-## Hybrid
-
-Consider the interaction between fixed governance commitments and iterative or flow-based delivery.
-
----
-
-# Analysis Rules
-
-When creating the brief:
-
-1. Preserve confirmed facts.
-2. Do not invent missing information.
-3. Separate facts from assumptions.
-4. Flag contradictions.
-5. Highlight unclear scope.
-6. Identify unresolved ownership.
-7. Identify dependencies that could affect delivery.
-8. Flag requirements that are too vague for planning.
-9. Distinguish business outcomes from project outputs.
-10. Highlight missing governance decisions.
-
----
-
-# Example Input
+Apply the following quality control after generating the Project Brief.
 
 ```text
-Need customer portal this year.
+QUALITY CHECK
 
-Customers currently email support for address changes, invoice copies,
-payment-status questions, and account updates.
+Act as a Senior QA Manager and review the Project Brief.
 
-Customer Service says volume is too high.
+Verify:
+1. Completeness: All 13 required sections are addressed.
+2. Accuracy: Confirmed facts, assumptions, and gaps are distinguished.
+3. Scope: Unapproved requirements are not presented as commitments.
+4. Consistency: Objectives, scope, deliverables, and risks are aligned.
+5. Governance: Ownership, dependencies, open decisions, and approvals
+   are identified where supported.
+6. Actionability: Next steps are specific, prioritized, and feasible.
 
-IT says existing login may be reusable.
+OUTPUT
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Corrective actions: [RECOMMENDED IMPROVEMENTS]
 
-CRM API is old and may need changes.
-
-Security must approve authentication.
-
-External development partner can start in March.
-
-Budget approximately €500k but Finance has not confirmed final amount.
-
-Target launch September.
-
-Marketing wants mobile-friendly design.
-
-Operations wants reporting dashboard.
-
-No agreement yet about whether customers can change bank details online.
+Do not invent missing facts, metrics, owners, or deadlines.
+Flag decisions requiring stakeholder validation.
 ```
 
 ---
 
-# Example Output Excerpt
+## 3. Practical IT Use Case
 
-## Project Overview
+### Customer Self-Service Portal — Project Initiation
 
-The proposed Customer Self-Service Portal is intended to reduce manual customer-service demand by enabling customers to complete selected routine account activities digitally.
+**Scenario:** A company wants to reduce customer service workload through a digital self-service portal. Initial stakeholder discussions have identified business needs, technical dependencies, and an indicative budget, but several scope and governance decisions remain unresolved.
 
-The expected business value includes reduced service workload, faster response times, and improved digital access for customers.
+### Project Context
 
----
+| Attribute | Details |
+|---|---|
+| Project | Customer Self-Service Portal |
+| Phase | Initiation / Discovery |
+| Target launch | September (year unconfirmed) |
+| Indicative budget | €500,000 (not approved) |
+| External vendor | Development partner available from March |
+| Key dependencies | CRM API, authentication, security approval |
+| Management decision | Clarify scope, feasibility, ownership, and funding before detailed planning |
 
-## High-Level Scope
-
-### In Scope
-
-- Customer authentication
-- Address updates
-- Invoice retrieval
-- Payment-status visibility
-- Mobile-responsive customer portal
-
-### Out of Scope
-
-No confirmed out-of-scope items are available from the current information.
-
-### To Be Confirmed
-
-- Online bank-detail changes
-- Reporting dashboard scope
-- Required CRM API enhancements
-
----
-
-## Open Questions
-
-1. Is the €500k budget formally approved?
-2. Is the September launch date fixed or target-based?
-3. Can the existing authentication platform support the required user volume?
-4. Who has final authority over scope approval?
-5. Is the reporting dashboard part of the initial release or a later phase?
-
----
-
-# Quality Review
-
-Before using the brief, confirm:
-
-- [ ] Business problem is clearly stated
-- [ ] Expected value is visible
-- [ ] Objectives are understandable
-- [ ] Scope boundaries are visible
-- [ ] Major dependencies are identified
-- [ ] Key stakeholders are included
-- [ ] Assumptions are separated from facts
-- [ ] Open questions are explicit
-- [ ] No unsupported details were invented
-- [ ] Recommended actions are actionable
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- stakeholder identification,
-- business value,
-- project initiation,
-- scope clarification,
-- risk identification,
-- governance,
-- delivery planning.
-
-## PMBOK Relevance
-
-This prompt supports early project definition around:
-
-- value,
-- stakeholders,
-- scope,
-- planning,
-- risk,
-- governance,
-- accountability.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Validate the brief with relevant stakeholders, including:
-
-- Project Sponsor
-- Business Owner
-- Product Owner where relevant
-- Business Analyst
-- IT / Architecture
-- Information Security
-- Finance
-- Vendor representatives where applicable
-
-The brief should not be treated as approved scope until accountable stakeholders confirm it.
-
----
-
-# Confidentiality
-
-Do not include:
-
-- personal data,
-- customer-identifying information,
-- passwords,
-- credentials,
-- API keys,
-- confidential supplier pricing,
-- confidential contract terms,
-- proprietary technical architecture,
-- security-sensitive details.
-
-Anonymise project information where required.
-
----
-
-# Prompt Metadata
+### Example Input
 
 ```text
-Prompt ID: INIT-002
-Category: Project Initiation
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Sponsor / Business Owner / PMO
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Low
-AI Model Tested:
-Last Reviewed:
+Project: Customer Self-Service Portal
+
+Business problem:
+Customers currently contact support for address changes,
+invoice copies, payment-status inquiries, and account updates.
+Customer Service reports excessive request volumes.
+
+Business objective:
+Reduce manual customer service workload through digital self-service.
+
+Known information:
+- Existing authentication may be reusable.
+- CRM API may require modifications.
+- Security approval is required for authentication.
+- External development partner can start in March.
+- Indicative budget: €500,000 (Finance approval pending).
+- Target launch: September (year unconfirmed).
+- Marketing requests mobile-responsive design.
+- Operations requests a reporting dashboard.
+- Online bank-detail changes are not yet agreed.
 ```
+
+### Example Output — Project Brief
+
+**1. Project Overview**
+
+Develop a Customer Self-Service Portal to reduce manual support requests and improve digital access to routine customer services.
+
+Expected business value includes lower support workload, improved service accessibility, and faster customer interactions.
+
+**2. Project Objectives**
+
+| Objective | Expected Outcome | Measurement | Owner |
+|---|---|---|---|
+| Reduce manual service requests | Lower support workload | Request volume reduction; target TBD | Not defined |
+| Improve digital access | More self-service transactions | Portal adoption rate; target TBD | Not defined |
+
+**3. High-Level Scope**
+
+| In Scope | Out of Scope | To Be Confirmed |
+|---|---|---|
+| No items formally approved | No exclusions confirmed | Address updates, invoice retrieval, payment-status visibility, account updates, mobile-responsive design, bank-detail changes, reporting dashboard |
+
+**4. Key Deliverables**
+
+| Deliverable | Expected Outcome | Owner | Target Date |
+|---|---|---|---|
+| Customer portal (proposed) | Digital self-service capability | TBD | September, year TBD |
+| Authentication integration (proposed) | Secure customer access | TBD | TBD |
+
+**5. Key Requirements**
+
+| Category | Requirement | Status |
+|---|---|---|
+| Business | Reduce service workload | Identified; target not defined |
+| Functional | Address updates and invoice retrieval | Proposed |
+| Technical | CRM API integration | Feasibility unconfirmed |
+| Data | Not yet defined | Missing |
+| Security | Authentication approval | Required |
+| Operational | Reporting dashboard | Proposed |
+| Compliance | Not yet defined | Missing |
+
+**6. Key Constraints**
+
+| Constraint / Limitation | Category | Delivery Impact |
+|---|---|---|
+| Indicative budget of €500,000 | Budget | Funding not confirmed |
+| September target | Schedule | Feasibility requires assessment |
+| External partner start in March | Vendor | Influences delivery planning |
+
+**7. Key Dependencies**
+
+| Dependency | Type | Impact | Owner | Required By | Status |
+|---|---|---|---|---|---|
+| CRM API assessment | Technical | Integration effort uncertain | TBD | TBD | Open |
+| Security approval | Security | Authentication cannot be approved without review | TBD | TBD | Open |
+| Finance approval | Financial | Funding commitment unresolved | TBD | TBD | Open |
+
+**8. Key Stakeholders**
+
+| Stakeholder | Role / Interest | Decision Authority | Engagement |
+|---|---|---|---|
+| Customer Service | Operational needs | TBD | Requirements validation |
+| IT | Technical feasibility | TBD | Architecture assessment |
+| Finance | Funding | TBD | Budget confirmation |
+| Security | Authentication review | Security approval | Security assessment |
+| Marketing | Mobile experience | TBD | Design consultation |
+| Operations | Reporting needs | TBD | Scope clarification |
+
+**9. High-Level Risks**
+
+| Risk | Cause | Potential Impact | Initial Response | Owner |
+|---|---|---|---|---|
+| CRM integration delay | Legacy API limitations | Schedule and cost impact | Technical assessment | TBD |
+| Authentication issues | Reuse feasibility unknown | Security or delivery delay | Architecture and security review | TBD |
+| Scope expansion | Unresolved feature requests | Additional effort and cost | Agree scope baseline | TBD |
+
+**10. Assumptions**
+
+| Assumption | Reason | Impact if Incorrect | Validation | Owner |
+|---|---|---|---|---|
+| Existing login can be reused | Preliminary IT input | Additional development effort | Technical assessment | TBD |
+| Vendor can begin in March | Initial availability information | Schedule delay | Confirm commitment | TBD |
+
+**11. Delivery Approach**
+
+The delivery methodology has not been confirmed. Assess technical dependencies, scope uncertainty, and governance requirements before selecting an appropriate approach.
+
+**12. Open Questions**
+
+| Question | Decision Owner | Priority |
+|---|---|---|
+| Is the €500,000 budget approved? | Finance / accountable approver TBD | High |
+| Is September a fixed deadline? | TBD | High |
+| Can the existing authentication be reused? | TBD | High |
+| Are bank-detail changes included? | TBD | High |
+| Is the dashboard part of the initial release? | TBD | Medium |
+
+**13. Recommended Next Steps**
+
+| Action | Priority | Proposed Owner | Expected Outcome |
+|---|---|---|---|
+| Confirm funding | High | Finance | Approved funding position |
+| Assess CRM and authentication feasibility | High | IT Lead | Technical feasibility findings |
+| Agree initial scope | High | Business Owner | Defined scope boundaries |
+| Confirm delivery timeline | High | Project Manager | Feasible initial schedule |
+| Establish project governance | High | Project Sponsor | Confirmed decision authority |
+
+### Management Decisions
+
+1. **Funding:** Confirm the available budget before committing to delivery.
+2. **Scope:** Agree on the initial release features and deferred functionality.
+3. **Technical feasibility:** Validate CRM integration and authentication dependencies.
+4. **Governance:** Confirm accountable decision-makers and approve the project brief before detailed planning.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+The example brief identifies the key business needs and delivery uncertainties. However, scope approval, funding, measurable objectives, and decision ownership remain unresolved.
+
+**Required corrections:** Confirm scope boundaries, budget approval, delivery feasibility, and accountable stakeholders before treating the brief as an approved planning baseline.
 
 ---
 
-# Version History
+**PM Governance:** This prompt supports relevant PMI-aligned practices in project initiation, stakeholder engagement, scope definition, uncertainty management, and value delivery.
+
+The Project Brief is a preliminary decision-support artifact, not an approved project charter or scope baseline. Human validation is required before project commitments are established. Anonymize confidential commercial, personal, and security-sensitive information.
+
+### Prompt Metadata
+
+| Field | Value |
+|---|---|
+| Prompt ID | INIT-002 |
+| Category | Project Initiation |
+| Version | 1.0 |
+| Status | Draft |
+| Owner | Project Manager |
+| Reviewer | Sponsor / Business Owner / PMO |
+| Project Type | IT / Digital Transformation |
+| Delivery Approach | Framework-neutral |
+| Risk Level | Low |
+| AI Model Tested | Not recorded |
+| Last Reviewed | Not recorded |
+
+### Version History
 
 | Version | Date | Change |
 |---|---|---|

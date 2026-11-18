@@ -1,997 +1,413 @@
 # Iterative Refinement Workflow
 
-## Purpose
+**Prompt ID:** AIWF-003 | **Category:** Advanced AI Workflows | **Version:** 1.0 | **Status:** Draft
 
-Use iterative refinement when an AI-generated project-management output is directionally correct but not yet good enough for professional use.
+## 1. Ready-to-Use Prompt
 
-Instead of discarding the first draft and starting again, improve the output through controlled review cycles.
+**Purpose:** Improve AI-generated project-management documents through controlled critique, factual correction, and audience-focused refinement.
 
-A simple workflow is:
+**Use case:** Refine status reports, executive summaries, risk statements, Steering Committee papers, change requests, requirements, vendor escalations, and stakeholder communications.
 
-```text id="refine-flow-01"
-Draft
-↓
-Critique
-↓
-Rewrite
-↓
-Refine
-↓
-Final Quality Check
-```
+Copy the master prompt and replace the placeholders. Execute each stage sequentially, reviewing the output before continuing.
 
-The objective is not to generate more text.
+### Master Prompt — Iterative Refinement
 
-The objective is to progressively improve:
-
-- clarity,
-- evidence,
-- precision,
-- tone,
-- decision usefulness,
-- and conciseness.
-
----
-
-## Best Used For
-
-Iterative refinement works especially well for:
-
-- status reports,
-- executive summaries,
-- decision papers,
-- risk narratives,
-- change requests,
-- stakeholder communications,
-- vendor escalations,
-- project briefs,
-- lessons learned,
-- meeting outputs.
-
----
-
-# Core Principle
-
-Do not use:
-
-```text id="refine-vague"
-Make this better.
-```
-
-Use:
-
-```text id="refine-specific"
-Identify exactly what is weak.
-
-Explain why it is weak.
-
-Correct those weaknesses.
-
-Then review again against a defined quality standard.
-```
-
----
-
-# Three-Round Model
-
-```text id="refine-rounds"
-Round 1
-Critique
-
-Round 2
-Rewrite
-
-Round 3
-Refine and Quality Check
-```
-
----
-
-# Round 1 — Critique the Draft
-
-Start by asking the AI to identify specific weaknesses.
-
-```text id="refine-round1"
+```text
 ROLE
 
-You are a senior IT Project Manager and PMO quality reviewer.
+You are a Senior IT Project Manager and PMO Quality Reviewer
+experienced in project governance, executive reporting,
+risk management, and stakeholder communication.
 
-TASK
+CONTEXT
 
-Review the project status summary below and identify its five
-biggest weaknesses.
-
-Be specific.
-
-Check for:
-
-- vague statements,
-- unsupported RAG status,
-- missing metrics,
-- unclear risks,
-- unclear actions,
-- missing owners,
-- missing decision requirements,
-- weak executive relevance.
+Project: [PROJECT NAME]
+Document type: [STATUS REPORT / DECISION PAPER / RISK REGISTER / OTHER]
+Project phase: [PHASE]
+Target audience: [EXECUTIVE / PMO / DELIVERY TEAM / USER]
+Document purpose: [PURPOSE]
+Decision required: [IF APPLICABLE]
+Approved facts and metrics: [LIST]
+Relevant quality criteria: [IF AVAILABLE]
 
 DRAFT
 
-[PASTE DRAFT]
+[PASTE CURRENT DOCUMENT]
 
-OUTPUT FORMAT
+OBJECTIVE
 
-Weakness
-Why It Matters
-What Information Is Missing
-Recommended Improvement
+Improve the document's clarity, evidence, precision,
+actionability, executive relevance, and conciseness
+without changing verified project facts.
+
+Complete the following stages sequentially.
+Stop after each stage for Project Manager review.
+
+STAGE 1 — CRITIQUE
+
+1. Identify the five most material weaknesses.
+2. Review:
+   - Vague or ambiguous statements
+   - Unsupported claims or RAG assessments
+   - Missing metrics and evidence
+   - Unclear risks, dependencies, and impacts
+   - Weak actions, owners, or deadlines
+   - Missing decisions and escalation requirements
+   - Excessive detail or repetition
+3. Explain why each weakness matters.
+4. Identify additional information needed.
+5. Do not rewrite the document yet.
+
+OUTPUT
+
+Weakness | Evidence / Document Reference |
+Why It Matters | Missing Information |
+Recommended Correction | Priority
+
+STAGE 2 — EVIDENCE-BASED REWRITE
+
+After the critique has been reviewed, use:
+
+Approved corrections: [PASTE]
+Additional verified information: [PASTE]
+
+1. Correct the material weaknesses.
+2. Incorporate only confirmed new information.
+3. Separate facts, forecasts, assumptions, and recommendations.
+4. Make risks, actions, owners, and decisions explicit.
+5. Preserve original project commitments unless
+   verified corrections have been supplied.
+6. Identify remaining evidence gaps.
+
+OUTPUT
+
+Revised Document — Version 2
+Corrections Made
+Information Still Missing
+
+STAGE 3 — EXECUTIVE REFINEMENT
+
+Refine Version 2 for the intended audience.
+
+1. Remove repetition and unnecessary background.
+2. Reduce length by approximately 20% where feasible.
+3. Preserve all material:
+   - Facts and metrics
+   - Risks and dependencies
+   - Actions and accountability
+   - Decisions and deadlines
+   - Important assumptions and qualifications
+4. Use concise, factual, professional language.
+5. Make business impact and decisions immediately visible.
+6. Avoid defensive, vague, or overly technical wording.
+7. Do not introduce new project information.
+
+OUTPUT
+
+Final Refined Document — Version 3
+Material Information Preserved
+Remaining Weaknesses
+
+STAGE 4 — FINAL QUALITY VALIDATION
+
+Compare Versions 1, 2, and 3.
+
+Check:
+- Factual accuracy
+- Evidence and traceability
+- Internal consistency
+- Actionability
+- Decision readiness
+- Audience suitability
+- Unintended changes or omissions
+
+OUTPUT
+
+Quality Verdict: PASS / REVISE
+Version Comparison
+Remaining Corrections
+Approval Blockers
+
+RULES
+
+- Do not invent project facts, metrics, owners, or dates.
+- Do not turn assumptions into confirmed statements.
+- Do not replace missing evidence with confident wording.
+- Do not remove material information solely to shorten text.
+- Do not claim decisions or approvals were granted.
+- Stop refining when further edits add no material value.
+- Keep final approval with the authorized project owner.
+```
+
+### Optional Targeted Refinement
+
+Use this short prompt when a document needs only one focused improvement rather than the full workflow.
+
+```text
+Act as a Senior IT Project Manager.
+
+Review the document below for [CLARITY / EVIDENCE /
+ACTIONABILITY / TONE / CONCISENESS / DECISION READINESS].
+
+[PASTE DOCUMENT]
+
+Identify the three most important weaknesses.
+Rewrite only the affected content.
+
+Preserve all confirmed facts, metrics, decisions,
+and deadlines.
+
+Return:
+1. Main Weaknesses
+2. Revised Text
+3. Changes Made
+4. Remaining Evidence Gaps
 ```
 
 ---
 
-# Example Weak Draft
+## 2. Quality Check
 
-```text id="refine-weak-example"
+Use this independent check to validate the final refined document against the original.
+
+```text
+QUALITY CHECK
+
+Act as an independent Senior PMO Quality Assurance Manager.
+
+Review:
+- Original Draft — Version 1
+- Revised Draft — Version 2
+- Final Refined Draft — Version 3
+- Approved corrections and source evidence
+
+Verify:
+
+1. Accuracy:
+   Confirmed facts, figures, and dates remain correct.
+
+2. Evidence:
+   Material statements and management conclusions
+   have appropriate supporting information.
+
+3. Traceability:
+   Every substantive change can be explained
+   by a verified correction or quality improvement.
+
+4. Assumptions:
+   Unconfirmed information remains clearly identified.
+
+5. Actionability:
+   Actions have clear expectations, owners,
+   deadlines, or explicit information gaps.
+
+6. Decision Readiness:
+   Required decisions, business implications,
+   and consequences of inaction are visible.
+
+7. Clarity:
+   The document avoids vague, ambiguous,
+   defensive, or unnecessarily technical language.
+
+8. Conciseness:
+   Repetition is reduced without losing
+   important nuance or project commitments.
+
+9. Consistency:
+   No contradictory metrics, owners,
+   milestones, or risk assessments were introduced.
+
+10. Governance:
+    Final approval and unresolved issues
+    remain visible.
+
+OUTPUT
+
+Quality Verdict: PASS / REVISE
+
+Version Comparison:
+Item | Original | Final |
+Change | Evidence | Assessment
+
+Findings: [REMAINING ISSUES]
+Required Corrections: [ACTIONS]
+Approval Blockers: [CRITICAL GAPS]
+
+Optional Quality Score:
+Rate Accuracy, Clarity, Evidence,
+Actionability, and Executive Relevance
+from 1–10 with brief justification.
+
+Treat scores as subjective review indicators,
+not objective quality measurements.
+
+Do not invent missing evidence or approve
+the document on behalf of stakeholders.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### CRM Replacement — Refining a Weekly Executive Status Report
+
+**Scenario:** A Project Manager prepares a weekly CRM replacement status report. The initial draft is too vague for senior management: it claims progress is on track without evidence and does not clearly explain testing risks or required decisions.
+
+The Project Manager uses three refinement rounds to improve the report before submission.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Enterprise CRM Replacement |
+| Reporting type | Weekly Executive Status |
+| Delivery approach | Hybrid |
+| Overall status | Amber |
+| Development progress | 82% actual vs. 85% planned |
+| SIT pass rate | 91% |
+| Open critical defects | Two Severity 1 |
+| UAT forecast | Five working days late |
+| Main dependency | Identity-provider certification |
+| Budget actual vs. plan | €1.64M vs. €1.68M |
+| Next milestone | UAT readiness review, 24 November 2026 |
+
+### Example Input — Version 1
+
+```text
 Project update:
 
-Things are generally progressing well, although there have been
-some challenges.
+Things are generally progressing well,
+although there have been some challenges.
 
 Development is mostly on track.
 
-There are some testing issues, but the team is working on them.
+There are some testing issues,
+but the team is working on them.
 
 Budget appears fine.
 
-We will continue working on the remaining items next week.
+We will continue working on remaining items.
 
-Overall status is Amber.
+Overall status: Amber.
 ```
 
----
+### Round 1 — Critique
 
-# Likely Critique
+| Weakness | Why It Matters | Recommended Correction |
+|---|---|---|
+| "Generally progressing well" | No measurable basis | Include planned vs. actual progress |
+| "Some testing issues" | Hides quality exposure | State pass rate and critical defects |
+| "Budget appears fine" | Not financially meaningful | Include actual and planned expenditure |
+| Amber status unexplained | Weak governance reporting | Link status to schedule and quality risk |
+| No clear management action | Executives cannot respond | Define recovery activities and decision trigger |
 
-A quality review should identify issues such as:
+**Review finding:** The draft needs verified delivery facts before a professional rewrite can be completed.
 
-```text id="refine-likely-issues"
-"Mostly on track"
-→ No evidence.
+### Round 2 — Add Verified Information and Rewrite
 
-"Some testing issues"
-→ Issue not defined.
+**Additional project data provided by the Project Manager:**
 
-"Budget appears fine"
-→ No actual / forecast data.
-
-Amber
-→ No stated reason.
-
-"We will continue working"
-→ No specific next actions.
-```
-
----
-
-# Critique Before Rewrite
-
-This sequence is important.
-
-Avoid jumping directly to:
-
-```text id="refine-direct"
-Rewrite this professionally.
-```
-
-because the AI may improve wording without fixing the underlying project-management gaps.
-
-Use:
-
-```text id="refine-analysis-first"
-Diagnose
-↓
-Correct
-```
-
----
-
-# Round 2 — Rewrite With Better Evidence
-
-After reviewing the critique, supply missing information.
-
-Example:
-
-```text id="refine-round2"
-Good.
-
-Now rewrite the status report addressing all five weaknesses.
-
-Use the confirmed information below.
-
-PROJECT
-
-Enterprise CRM Replacement
-
-Overall Status:
-Amber
+```text
+Overall RAG: Amber
 
 Development:
 82% complete against 85% planned.
 
 Testing:
-SIT pass rate is 91%.
+SIT pass rate 91%.
 Two Severity 1 defects remain open.
 
 Schedule:
-UAT is forecast five working days late.
+UAT forecast five working days late.
 
 Cause:
-Identity-provider certification is delayed.
+Identity-provider certification delayed.
 
 Budget:
-Actual spend is €1.64M against €1.68M planned.
+€1.64M actual against €1.68M planned.
 
 Recovery:
 Mock authentication service implemented.
-Testing has been resequenced.
-Vendor escalation is active.
+Testing resequenced.
+Vendor escalation active.
 
 Next milestone:
-UAT readiness review on 24 November.
+UAT readiness review — 24 November 2026.
 
-Decision required:
-Sponsor support is required if vendor certification is not confirmed
-by 20 November.
-
-OUTPUT FORMAT
-
-Overall Status
-Progress
-Schedule
-Quality
-Cost
-Risks / Issues
-Recovery
-Next Steps
-Decision Required
-
-Do not introduce information not provided above.
+Management decision:
+Sponsor support required if vendor certification
+is not confirmed by 20 November 2026.
 ```
 
----
+**Rewritten Status Report — Version 2**
 
-# Round 2 Objective
+The Enterprise CRM Replacement project is **Amber**, primarily due to delayed identity-provider certification affecting testing readiness and the planned start of UAT.
 
-The output should move from:
+Development is 82% complete against 85% planned. SIT currently has a 91% pass rate, with two Severity 1 defects remaining open. UAT is forecast to begin five working days later than planned.
 
-```text id="refine-round2-before"
-General language
-```
+Actual expenditure is €1.64M against €1.68M planned.
 
-to:
+The project team has implemented mock authentication services, re-sequenced testing activities, and escalated the certification dependency to the vendor.
 
-```text id="refine-round2-after"
-Evidence-based management commentary
-```
+A UAT readiness review is scheduled for 24 November 2026. Sponsor support will be required if certification is not confirmed by 20 November.
 
----
+### Round 3 — Executive Refinement
 
-# Example
+**Final Refined Version — Version 3**
 
-### Weak
+<box border radius="lg" padding={3} gap={2}>
+  <row align="center" justify="between">
+    **Enterprise CRM Replacement — Weekly Status**
 
-> Testing has had some challenges.
+    <badge color="warning">Amber</badge>
+  </row>
+  **Executive Summary**
 
-### Stronger
+  UAT is forecast **five working days late** due to delayed identity-provider certification. Development is 82% complete against 85% planned, while SIT has reached a 91% pass rate with two Severity 1 defects still open.
 
-> SIT pass rate is 91%, with two Severity 1 defects remaining open. UAT readiness remains dependent on closure of both defects and completion of identity-provider certification.
+  <table>
+    <table-row><table-cell>Development</table-cell><table-cell>82% actual / 85% planned</table-cell></table-row>
+    <table-row><table-cell>Testing</table-cell><table-cell>91% SIT pass rate; 2 Severity 1 defects</table-cell></table-row>
+    <table-row><table-cell>Budget</table-cell><table-cell>€1.64M actual / €1.68M planned</table-cell></table-row>
+    <table-row><table-cell>UAT</table-cell><table-cell>5 working days late (forecast)</table-cell></table-row>
+  </table>
+  **Recovery:** Mock authentication implemented, testing re-sequenced, and vendor escalation active.
 
----
+  **Decision trigger:** Sponsor support required if certification remains unconfirmed by **20 November 2026**. The next UAT readiness review is scheduled for **24 November 2026**.
+</box>
 
-# Round 3 — Refine the Improved Version
+This version makes the schedule exposure, quality position, financial data, recovery measures, and escalation trigger immediately visible.
 
-Once the content is strong, refine the presentation.
+### Version Comparison
 
-```text id="refine-round3"
-Good.
-
-Now review the rewritten status report once more.
-
-TASK
-
-1. Remove repetition.
-2. Reduce the length by approximately 20%.
-3. Preserve every material project fact.
-4. Make the tone suitable for senior management.
-5. Make required decisions immediately visible.
-
-Then provide:
-
-Final Version
-
-Quality Rating:
-1–10
-
-Rating Justification:
-Maximum 3 sentences
-
-Remaining Weaknesses:
-If any.
-```
-
----
-
-# Why the Final Round Matters
-
-A document can be accurate but still ineffective because it is:
-
-- too long,
-- repetitive,
-- defensive,
-- overly technical,
-- poorly prioritised.
-
-The final round optimises communication quality.
-
----
-
-# Refinement Dimensions
-
-Use targeted instructions.
-
----
-
-# 1. Clarity
-
-```text id="refine-clarity"
-Identify any sentence that could be interpreted in more than one way.
-
-Rewrite it to be unambiguous.
-```
-
----
-
-# 2. Evidence
-
-```text id="refine-evidence"
-Identify every material claim that lacks evidence.
-
-For each, state what evidence or metric would strengthen it.
-```
-
----
-
-# 3. Conciseness
-
-```text id="refine-concise"
-Reduce this document by 25%.
-
-Remove:
-
-- repetition,
-- background the audience already knows,
-- unnecessary adjectives,
-- low-value detail.
-
-Do not remove:
-
-- decisions,
-- risks,
-- actions,
-- metrics,
-- deadlines.
-```
-
----
-
-# 4. Tone
-
-```text id="refine-tone"
-Review the tone.
-
-Identify language that is:
-
-- defensive,
-- emotional,
-- apologetic,
-- aggressive,
-- vague.
-
-Rewrite it to be factual, calm, and confident.
-```
-
----
-
-# Example
-
-### Defensive
-
-```text id="refine-defensive"
-Unfortunately, the vendor has once again failed to provide the
-necessary certification despite our repeated requests.
-```
-
-### Factual
-
-```text id="refine-factual"
-Vendor certification remains outstanding against the agreed
-milestone and is now affecting the planned UAT start.
-```
-
----
-
-# 5. Executive Relevance
-
-```text id="refine-executive"
-You are the Executive Sponsor.
-
-Remove information that does not support:
-
-- understanding project health,
-- understanding material risk,
-- making decisions,
-- confirming accountability.
-
-Retain all information required for governance.
-```
-
----
-
-# 6. Actionability
-
-```text id="refine-actionability"
-Review every action in the document.
-
-Check whether each has:
-
-- a clear action,
-- owner,
-- deadline,
-- intended outcome.
-
-Flag any weak actions.
-```
-
----
-
-# 7. Decision Clarity
-
-```text id="refine-decision"
-Review the document from the perspective of the decision-maker.
-
-Is it immediately clear:
-
-- what decision is required,
-- why it is required,
-- by when,
-- what happens if no decision is made?
-
-Rewrite if necessary.
-```
-
----
-
-# Example — Refining a Risk Statement
-
-### Round 0
-
-```text id="refine-risk-0"
-Vendor delay may affect project.
-```
-
-### Round 1
-
-Critique:
-
-```text id="refine-risk-1"
-Which vendor?
-Which deliverable?
-What milestone?
-What probability?
-What impact?
-```
-
-### Round 2
-
-```text id="refine-risk-2"
-If the identity provider does not complete certification by
-20 November, authentication testing may delay UAT by five working
-days.
-```
-
-### Round 3
-
-```text id="refine-risk-3"
-Identity-provider certification remains the main UAT schedule risk.
-Certification is required by 20 November to protect the current UAT
-forecast.
-```
-
-The final version is shorter while preserving decision relevance.
-
----
-
-# Example — Refining an Executive Update
-
-### Draft
-
-```text id="refine-exec-draft"
-The team has been working very hard and has made good progress,
-although unfortunately some challenges have arisen with the vendor
-which are currently being investigated and managed.
-```
-
-### Critique
-
-Problems:
-
-```text id="refine-exec-critique"
-"working very hard"
-→ not project-health evidence
-
-"good progress"
-→ vague
-
-"some challenges"
-→ vague
-
-"being investigated"
-→ unclear accountability
-```
-
-### Refined
-
-```text id="refine-exec-final"
-Delivery remains Amber because identity-provider certification is
-five working days late.
-
-The vendor escalation is active, and the project team has
-re-sequenced testing to protect the UAT milestone.
-```
-
----
-
-# Refinement for Steering Committee Papers
-
-Use:
-
-```text id="refine-steerco"
-Review this Steering Committee paper.
-
-ROUND 1
-Identify:
-
-- unclear decision,
-- weak options,
-- missing trade-offs,
-- unsupported recommendation,
-- excessive detail.
-
-ROUND 2
-Rewrite the paper addressing these gaps.
-
-ROUND 3
-Reduce the executive section to one page while preserving all
-decision-critical information.
-```
-
----
-
-# Refinement for Vendor Escalations
-
-```text id="refine-vendor"
-ROUND 1
-Identify emotional, blaming, or unsupported statements.
-
-ROUND 2
-Rewrite using only verified facts, project impact, required action,
-and deadline.
-
-ROUND 3
-Review from the supplier's perspective and remove any wording that
-creates avoidable ambiguity.
-```
-
----
-
-# Refinement for Requirements
-
-```text id="refine-requirements"
-ROUND 1
-Identify ambiguity and missing acceptance criteria.
-
-ROUND 2
-Rewrite requirements to be clearer and testable.
-
-ROUND 3
-Review as QA Lead and identify anything that still cannot be
-objectively verified.
-```
-
----
-
-# Refinement for Risk Registers
-
-```text id="refine-risk-register"
-ROUND 1
-Identify vague risks and weak mitigation.
-
-ROUND 2
-Rewrite using cause-event-impact structure.
-
-ROUND 3
-Check whether mitigation actions reduce likelihood or impact and
-whether owners are clear.
-```
-
----
-
-# Refinement for Meeting Minutes
-
-```text id="refine-minutes"
-ROUND 1
-Identify decisions hidden in discussion and actions without owners.
-
-ROUND 2
-Restructure into decisions, actions, risks, and discussion.
-
-ROUND 3
-Remove unnecessary transcript-style detail.
-```
-
----
-
-# Refinement for User Communications
-
-```text id="refine-user-comms"
-ROUND 1
-Identify jargon, unclear impact, and missing user action.
-
-ROUND 2
-Rewrite in plain language.
-
-ROUND 3
-Review from the end-user perspective and shorten while preserving
-all actions and deadlines.
-```
-
----
-
-# Refinement Prompt Library
-
-Useful targeted refinement instructions include:
-
-```text id="refine-library"
-Make the risk more specific.
-
-Replace assumptions with questions.
-
-Separate facts from interpretation.
-
-Make the action measurable.
-
-Make ownership explicit.
-
-Remove blame.
-
-Reduce technical detail.
-
-Strengthen the executive summary.
-
-Make the decision required explicit.
-
-Cut repetition.
-
-Add evidence.
-
-Remove unsupported certainty.
-
-Make deadlines visible.
-
-Clarify the consequence of inaction.
-```
-
----
-
-# Avoid Generic Refinement Requests
-
-Weak:
-
-```text id="refine-generic-weak"
-Improve this.
-```
-
-Better:
-
-```text id="refine-generic-better"
-The second paragraph is too defensive.
-
-Rewrite it using:
-
-- confirmed facts,
-- current impact,
-- action already taken,
-- next decision required.
-
-Do not apologise or blame the vendor.
-```
-
----
-
-# Quality Scoring
-
-A quality score can be useful if the criteria are defined.
-
-Example:
-
-```text id="refine-score-prompt"
-Rate this status report from 1–10 against:
-
-1. Accuracy
-2. Clarity
-3. Evidence
-4. Actionability
-5. Executive relevance
-
-Provide one score for each category.
-
-Then identify the single biggest improvement still required.
-```
-
----
-
-# Example Scorecard
-
-| Dimension | Score |
-|---|---:|
-| Accuracy | 9 |
-| Clarity | 8 |
-| Evidence | 8 |
-| Actionability | 9 |
-| Executive Relevance | 8 |
-
-Do not treat AI-generated scores as objective performance metrics.
-
-The value is in the critique behind the score.
-
----
-
-# Stop Criteria
-
-Do not refine endlessly.
-
-Stop when:
-
-```text id="refine-stop"
-Facts are accurate
-
-Message is clear
-
-Evidence is sufficient
-
-Required actions are explicit
-
-Audience needs are met
-
-Further editing adds little value
-```
-
----
-
-# Over-Refinement Risk
-
-Too many rounds can:
-
-- remove important nuance,
-- introduce new assumptions,
-- make language artificial,
-- over-compress important information.
-
-Use human judgement.
-
----
-
-# Human-in-the-Loop Model
-
-Use:
-
-```text id="refine-hitl"
-Draft
-↓
-AI Critique
-↓
-Human Adds Missing Facts
-↓
-AI Rewrite
-↓
-Human Review
-↓
-AI Final Polish
-↓
-Human Approval
-```
-
-The human supplies missing project truth.
-
-The AI improves structure and communication.
-
----
-
-# Fact Integrity Rule
-
-Never allow refinement to change facts merely to make the document sound stronger.
-
-Example:
-
-Confirmed:
-
-```text id="refine-fact-confirmed"
-Release date is at risk.
-```
-
-Do not refine into:
-
-```text id="refine-fact-bad"
-Release date will be achieved.
-```
-
-unless evidence supports it.
-
----
-
-# Version Comparison
-
-For important outputs ask:
-
-```text id="refine-version-compare"
-Compare Draft V1 and Draft V2.
-
-Identify:
-
-- information removed,
-- information added,
-- factual changes,
-- assumption changes,
-- tone changes.
-
-Flag anything material that changed unintentionally.
-```
-
----
-
-# Iterative Refinement Workflow
-
-Recommended sequence:
-
-```text id="refine-final-flow"
-1. Generate Draft
-2. Diagnose Weaknesses
-3. Add Missing Facts
-4. Rewrite
-5. Refine for Audience
-6. Reduce Unnecessary Detail
-7. Quality Check
-8. Human Approval
-```
-
----
-
-# Agile / Scrum Considerations
-
-Use iterative refinement for:
-
-- Sprint Review summaries,
-- release updates,
-- backlog descriptions,
-- stakeholder messages.
-
-The AI should not override team decisions or Product Owner priorities.
-
----
-
-# Kanban Considerations
-
-Refine:
-
-- service-review commentary,
-- bottleneck analysis,
-- flow summaries,
-- blocked-item escalations.
-
-Keep metrics linked to management action.
-
----
-
-# Predictive Considerations
-
-Refine:
-
-- milestone reports,
-- variance narratives,
-- formal change documents,
-- executive reports.
-
----
-
-# Hybrid Considerations
-
-Refine both:
-
-```text id="refine-hybrid"
-Delivery evidence
-+
-Formal governance communication
-```
-
----
-
-# Quality Checklist
-
-Before finalising an iteratively refined output, confirm:
-
-- [ ] Weaknesses were identified before rewriting
-- [ ] Missing facts were added by a reliable source
-- [ ] Facts remain unchanged
-- [ ] Assumptions remain visible
-- [ ] Evidence supports major claims
-- [ ] Tone fits the audience
-- [ ] Actions are specific
-- [ ] Decisions are clear
-- [ ] Repetition has been removed
-- [ ] Important nuance has not been lost
-- [ ] Final version has human approval
-
----
-
-# Key Principle
-
-Iterative refinement is not:
-
-```text id="refine-key-bad"
-Generate
-↓
-Generate again
-↓
-Generate again
-```
-
-It is:
-
-```text id="refine-key-good"
-Draft
-↓
-Diagnose
-↓
-Correct
-↓
-Refine
-↓
-Validate
-```
-
-Each round should have a specific purpose.
-
----
-
-# Prompt Metadata
-
-```text id="refine-metadata"
-Prompt ID: AIWF-003
-Category: Advanced AI Workflows
-Version: 1.0
-Status: Draft
-Owner: Project Manager / PMO
-Reviewer: Project Manager
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Low / Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Dimension | Version 1 | Version 3 |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial iterative-refinement workflow |
+| Project health | "Generally progressing well" | Amber with specific rationale |
+| Development | "Mostly on track" | 82% actual vs. 85% planned |
+| Testing | "Some issues" | 91% SIT pass; two Severity 1 defects |
+| Budget | "Appears fine" | €1.64M actual vs. €1.68M planned |
+| Schedule | Not provided | Five-working-day UAT forecast delay |
+| Recovery | Generic activity | Specific mitigation actions |
+| Decision | Not stated | Sponsor escalation trigger |
+| Executive usefulness | Limited | Actionable and evidence-based |
+
+### Management Decisions
+
+1. **Schedule recovery:** Validate whether certification and unresolved Severity 1 defects will affect the 24 November readiness assessment.
+2. **Vendor escalation:** Obtain a confirmed certification date and evidence supporting the recovery forecast.
+3. **Quality governance:** Confirm defect ownership and closure requirements before UAT readiness approval.
+4. **Executive decision:** Escalate for sponsor support if certification remains unconfirmed by 20 November.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The refined report substantially improves clarity, evidence, and decision relevance. Project figures remain consistent with the supplied data, and management attention is focused on the certification dependency and UAT readiness.
+
+**Required corrections:** Confirm that the status uses the latest reporting-period data, validate remaining defect impacts, and verify the named sponsor decision route.
+
+**Approval blockers:** Official publication remains subject to source-data validation and authorized project approval.
+
+**Governance:** Supports PMI-aligned project monitoring, quality assurance, risk management, stakeholder communication, and decision support.
+
+AI-assisted refinement improves document clarity and structure but does not replace verified project reporting or human approval. Do not enter confidential project, supplier, financial, or security information into AI systems unless organizational policy permits it.

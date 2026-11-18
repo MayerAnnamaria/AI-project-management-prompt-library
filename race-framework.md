@@ -1,535 +1,222 @@
-# RACE Prompt Framework for Project Management
+## 3. Practical IT Use Case
 
-The RACE framework provides a simple and repeatable structure for creating high-quality AI prompts for project-management work.
+### Competing Priorities — Urgent Scope Change vs. Delivery Deadline
 
-RACE stands for:
+**Scenario:** An IT Project Manager is coordinating a CRM implementation scheduled for release in four weeks.
 
-**R — Role**  
-**A — Ask**  
-**C — Context**  
-**E — Expected Output**
+The Sales Director requests an additional reporting dashboard, arguing that it is business-critical. However, the development team is fully allocated, two high-priority defects remain unresolved, and the implementation vendor has an outstanding integration dependency.
 
-The framework is intentionally simple.
+The Project Manager must determine whether to accept, defer, or trade off the request without jeopardizing the release.
 
-Its purpose is not to make prompts longer.
+**Management challenge:** How should the Project Manager balance business value, delivery capacity, quality, and stakeholder expectations?
 
-Its purpose is to make project-management requests more precise, reusable, and easier to review.
+### Project Context
 
----
+| Attribute | Current Position |
+|---|---|
+| Project | Enterprise CRM Implementation |
+| Delivery approach | Hybrid / Agile development |
+| Planned release | 4 weeks |
+| Development capacity | 40 person-days available before release |
+| Existing committed work | 35 person-days |
+| Available capacity buffer | 5 person-days |
+| New stakeholder request | Sales performance dashboard |
+| Estimated additional effort | 12 person-days |
+| Open defects | 2 High-priority defects |
+| External dependency | Vendor API integration awaiting certification |
+| Sponsor priority | Protect committed release date |
 
-# 1. R — Role
+The new request exceeds the remaining capacity by **7 person-days**, even before considering additional defect remediation or integration delays.
 
-Define the professional perspective required for the task.
+### Example RACE Prompt
 
-A generic role often produces generic output.
-
-## Weak
-
-```text id="race-role-weak"
-You are a project manager.
-```
-
-## Stronger
-
-```text id="race-role-strong"
-You are a senior IT Project Manager experienced in international
-software delivery, stakeholder management, risk management,
-quality assurance, vendor coordination, and project governance.
-```
-
-The role should match the actual task.
-
-Examples:
-
-- Senior IT Project Manager
-- Delivery Manager
-- PMO Lead
-- Business Analyst
-- Risk Manager
-- Product Owner
-- Scrum Master
-- Kanban Delivery Lead
-- QA Manager
-- Vendor Manager
-
-## Principle
-
-Use the **most relevant professional perspective**, not the most impressive title.
-
----
-
-# 2. A — Ask
-
-Define one clear task.
-
-## Weak
-
-```text id="race-ask-weak"
-Review my project and tell me what is wrong.
-```
-
-## Stronger
-
-```text id="race-ask-strong"
-Review the current project status and identify the five delivery
-risks that require immediate management attention.
-```
-
-A strong Ask should make clear:
-
-- what should be analysed,
-- what decision should be supported,
-- what time horizon matters,
-- and what result is required.
-
-Avoid combining unrelated tasks.
-
-## Weak
-
-```text id="race-multi-task"
-Review the risks, write a status report, create a stakeholder matrix,
-and prepare an escalation email.
-```
-
-## Better
-
-Use separate prompts for:
-
-1. Risk review
-2. Status reporting
-3. Stakeholder analysis
-4. Escalation communication
-
-This makes each output easier to review, reuse, and version.
-
----
-
-# 3. C — Context
-
-Context determines how relevant the output will be.
-
-Useful project context may include:
-
-```text id="race-context-list"
-Project objective
-Project phase
-Delivery methodology
-Project size
-Timeline
-Budget
-Team structure
-Stakeholders
-Dependencies
-Known risks
-Known issues
-Vendors
-Technical constraints
-Security constraints
-Regulatory requirements
-Relevant metrics
-```
-
-Not every prompt needs every field.
-
-Only include information that can materially affect the analysis.
-
----
-
-## Example Without Context
-
-```text id="race-no-context"
-Identify risks in a software project.
-```
-
-Likely output:
-
-- schedule delay,
-- budget overrun,
-- scope creep,
-- resource shortage.
-
-These may be valid but are too generic for meaningful project-management use.
-
----
-
-## Example With Context
-
-```text id="race-with-context"
-Project:
-Customer onboarding platform replacement
-
-Current phase:
-System Integration Testing
-
-Go-live:
-6 weeks
-
-Teams:
-3 development squads
-2 QA teams
-External identity-verification vendor
-
-Known issue:
-Vendor API certification is 12 working days behind plan.
-
-Dependency:
-UAT cannot begin until certification is complete.
-
-Current status:
-Amber
-```
-
-Now the analysis can focus on the actual delivery environment.
-
----
-
-# 4. E — Expected Output
-
-Define exactly how the result should be presented.
-
-Without an output instruction, the AI decides the structure.
-
-That may produce useful information but an unusable project artifact.
-
----
-
-## Example — Risk Analysis
-
-```text id="race-output-risk"
-OUTPUT FORMAT
-
-Provide a table with:
-
-Risk
-Root Cause
-Probability
-Impact
-Early Warning Indicator
-Mitigation
-Owner
-Escalation Trigger
-```
-
----
-
-## Example — Executive Reporting
-
-```text id="race-output-exec"
-OUTPUT FORMAT
-
-1. Executive Summary
-2. Overall RAG Status
-3. Key Achievements
-4. Top Risks and Issues
-5. Decisions Required
-6. Priorities for the Next Reporting Period
-```
-
-The required format should match the intended audience.
-
----
-
-# RACE in Practice
-
-A structured prompt may look like this:
-
-```text id="race-example"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software implementation projects.
+You are a Senior IT Project Manager experienced in
+Agile and Hybrid delivery, stakeholder management,
+scope control, capacity planning, and risk management.
 
 ASK
 
-Assess whether the project is ready to begin User Acceptance Testing.
+Evaluate an urgent business change request competing
+with existing delivery commitments.
+
+Recommend the most appropriate management option
+while balancing business value, schedule, quality,
+team capacity, and project governance.
 
 CONTEXT
 
-Project:
-ERP implementation
+Project: Enterprise CRM Implementation
 
-Current phase:
-System Integration Testing
+Release deadline: 4 weeks
 
-Planned UAT:
-Next Monday
+Delivery capacity:
+40 person-days remaining.
 
-Open defects:
-3 Critical
-11 High
-27 Medium
+Existing committed work:
+35 person-days.
 
-Test completion:
-91%
+Available buffer:
+5 person-days.
 
-Business test scripts approved:
-85%
+New stakeholder request:
+Sales performance dashboard.
 
-Training environment:
-Available
+Estimated effort:
+12 person-days.
 
-Test data:
-Incomplete for two business units
+Business justification:
+Sales Director considers the dashboard
+critical for the upcoming reporting cycle.
+
+Current delivery risks:
+- 2 unresolved High-priority defects
+- Vendor API certification outstanding
+- No additional development capacity confirmed
+
+Sponsor priority:
+Protect the agreed release date.
+
+Decision authority:
+Project Sponsor / Change Control Board,
+according to project governance.
 
 EXPECTED OUTPUT
 
-Provide:
+1. Executive Summary
+2. Capacity and Schedule Impact
+3. Three Management Options
+4. Comparison of Business Value, Risk, and Trade-offs
+5. Recommended Option with Rationale
+6. Stakeholder Communication Approach
+7. Decision Required and Approval Owner
 
-1. Overall UAT readiness:
-   Ready / Ready with Conditions / Not Ready
-2. Key blockers
-3. Risks
-4. Required actions
-5. Owner for each action
-6. Recommended decision
+RULES
+
+- Do not automatically accept the urgent request.
+- Do not assume that all committed work has equal priority.
+- Distinguish business urgency from technical necessity.
+- Consider the impact on quality and existing commitments.
+- Do not assume additional capacity is available.
+- Flag unknown dependencies and estimation uncertainty.
+- Separate the PM recommendation from formal approval.
+- Do not invent project facts or commitments.
 ```
 
-The output can now support an actual management decision.
+### Example AI Output
 
----
+#### 1. Executive Summary
 
-# RACE Across Delivery Frameworks
+The requested Sales dashboard requires 12 person-days, while only 5 person-days remain unallocated before release.
 
-The RACE structure remains the same regardless of the delivery approach.
+The request therefore creates a minimum capacity shortfall of 7 person-days if added without replacing existing work. This excludes any further effort arising from defect resolution or vendor integration issues.
 
-What changes is the context and the decision criteria.
+Accepting the request without re-prioritization would introduce avoidable schedule and quality exposure.
 
-## Predictive Example
+**Recommended approach:** Evaluate the dashboard for a later release unless the business owner can demonstrate that it is essential for the current launch. If it must be delivered now, identify and formally approve equivalent scope trade-offs.
 
-Relevant context may include:
+#### 2. Capacity Impact
 
-- baseline schedule,
-- milestone variance,
-- critical path,
-- cost variance,
-- change requests.
+| Capacity Measure | Person-Days |
+|---|---:|
+| Total remaining capacity | 40 |
+| Existing commitments | 35 |
+| Available buffer | 5 |
+| New dashboard estimate | 12 |
+| Total demand if accepted | 47 |
+| Capacity shortfall | 7 |
 
-## Scrum Example
+The calculation assumes the 35 person-days of existing work and the new 12-person-day estimate are comparable and that no work has been displaced.
 
-Relevant context may include:
+#### 3. Management Options
 
-- Sprint Goal,
-- backlog status,
-- blocked work,
-- velocity,
-- acceptance criteria,
-- Definition of Done.
+| Option | Business Benefit | Delivery Impact | Main Risk |
+|---|---|---|---|
+| **A. Accept now** | Dashboard available at launch | Exceeds capacity by at least 7 days | Schedule slippage, quality pressure |
+| **B. Defer to next release** | Value delivered later | Protects current baseline | Stakeholder dissatisfaction |
+| **C. Reprioritize existing scope** | Potential delivery at launch | Requires removing or deferring other work | Loss of previously committed functionality |
 
-## Kanban Example
+**Option A — Accept without changing commitments**
 
-Relevant context may include:
+Not recommended under the current capacity assumptions. The plan exceeds available capacity, and no additional resources or schedule extension have been approved.
 
-- WIP,
-- WIP limits,
-- cycle time,
-- lead time,
-- throughput,
-- blocked work,
-- work item age,
-- Service Level Expectation.
+**Option B — Defer the dashboard**
 
-## Hybrid Example
+Preserves the existing release scope and allows the team to focus on committed delivery, defect resolution, and integration readiness.
 
-Relevant context may include:
+The business impact of deferring the dashboard must still be assessed.
 
-- fixed governance milestones,
-- iterative development,
-- release cadence,
-- cross-team dependencies,
-- contractual commitments.
+**Option C — Reprioritize existing scope**
 
-The framework should be adapted to the delivery environment rather than forcing every project into the same model.
+Could accommodate the dashboard if at least 7 person-days of existing work can be removed or postponed. However, the Project Manager must confirm that the displaced work is genuinely deferrable and that the estimates remain valid.
 
----
+#### 4. Recommended Management Decision
 
-# RACE vs Ad-Hoc Prompting
+**Recommend Option B — Defer the dashboard, subject to business-impact validation.**
 
-| Ad-Hoc Prompting | RACE-Based Prompting |
-|---|---|
-| Generic role | Relevant professional role |
-| Vague request | Defined management task |
-| Limited context | Project-specific context |
-| AI chooses format | PM defines the output |
-| Hard to reuse | Repeatable structure |
-| Hard to review | Structured review possible |
+This option best aligns with the Sponsor's stated priority to protect the release date while maintaining attention on existing quality and integration risks.
 
----
+However, the Sales Director's business justification should be assessed before reaching a final decision.
 
-# Senior-Level Extension
+If the dashboard is essential for regulatory, contractual, or critical operational reasons, Option C should be considered through formal change control.
 
-For complex projects, RACE should be supplemented with explicit management criteria.
+### 5. Stakeholder Communication
 
-Add:
+**Proposed message to the Sales Director**
 
-```text id="race-senior-extension"
-Assumptions
-Constraints
-Dependencies
-Risk tolerance
-Decision criteria
-Escalation thresholds
-Decision deadline
-Required evidence
-```
+> Thank you for highlighting the dashboard requirement. I understand its importance for the upcoming reporting cycle.
+>
+> Our current delivery plan has five person-days of available capacity, while the dashboard is estimated at twelve. Adding it without reprioritizing existing work would create a delivery shortfall and increase risk to the planned release.
+>
+> I recommend reviewing the business impact and assessing whether the dashboard can be scheduled for the next release. If delivery at launch is essential, we can evaluate which existing scope items could be deferred and present the trade-offs for approval.
 
-This improves transparency and reduces unsupported recommendations.
+This approach acknowledges business value without promising unapproved scope, capacity, or deadlines.
 
----
+### 6. Required Management Actions
 
-# Example — Decision Criteria
+| Action | Proposed Owner | Required Outcome |
+|---|---|---|
+| Validate dashboard urgency and business impact | Sales Director / Product Owner | Confirm whether the request is launch-critical |
+| Review effort estimate and dependencies | Development Lead | Validate the 12-person-day estimate |
+| Identify potentially deferrable scope | Product Owner / Project Manager | Establish feasible trade-offs |
+| Assess schedule and quality exposure | Project Manager / QA Lead | Quantify delivery impact |
+| Present change options | Project Manager | Obtain an informed management decision |
+| Approve scope or baseline changes | Authorized Change Authority | Record formal decision |
 
-Instead of asking:
+### 7. Decision Required
 
-```text id="race-opinion"
-Should we go live?
-```
+The Project Sponsor or designated Change Control Board must decide whether to:
 
-Use:
+- **Defer** the dashboard to a later release.
+- **Approve scope substitution** after reviewing the displaced functionality.
+- **Approve a revised delivery baseline** if additional scope is required without equivalent trade-offs.
 
-```text id="race-decision"
-Assess go-live readiness against these criteria:
+No baseline change should be treated as approved until the authorized decision is recorded.
 
-- no open Severity 1 defects,
-- critical business processes tested,
-- data migration reconciliation above the agreed threshold,
-- rollback testing complete,
-- operational support ready,
-- security approval received,
-- business owner approval received.
+### Applied Quality Check
 
-Identify any failed criteria.
+**Quality verdict: PASS — with management validation required**
 
-Separate blockers from manageable risks.
+The RACE prompt produces a decision-oriented assessment rather than a generic prioritization list. It includes capacity calculations, alternative options, delivery trade-offs, stakeholder communication, and approval responsibilities.
 
-Provide a recommendation with rationale.
-```
+**Outstanding validation:**
 
-This changes the AI task from:
+- Confirm dashboard business criticality.
+- Validate effort estimates and available capacity.
+- Assess whether existing scope can safely be deferred.
+- Confirm the effect of unresolved defects and vendor dependencies.
+- Obtain formal approval for any scope or baseline change.
 
-> Give me an opinion.
+### Management Value
 
-to:
+This example demonstrates five essential project-management competencies:
 
-> Evaluate the project against defined management criteria.
+1. **Prioritization:** Distinguishing urgent stakeholder requests from essential delivery commitments.
+2. **Impact analysis:** Quantifying capacity shortfalls and delivery exposure.
+3. **Trade-off management:** Comparing business value, schedule, scope, and quality.
+4. **Stakeholder management:** Explaining constraints constructively without creating unrealistic commitments.
+5. **Governance:** Converting competing demands into an evidence-based decision for the appropriate authority.
 
----
-
-# Small vs Enterprise Use
-
-## Small IT Project
-
-Keep the RACE prompt lightweight.
-
-Example:
-
-```text id="race-small"
-ROLE:
-You are an IT Project Manager supporting a six-person development team.
-
-ASK:
-Identify the three most important delivery risks this week.
-
-CONTEXT:
-- 3 developers
-- 1 QA
-- 1 Product Owner
-- payment integration unfinished
-- one developer unavailable for three days
-
-OUTPUT:
-Risk | Impact | Action | Owner
-```
-
----
-
-## International Enterprise Project
-
-Provide more structured context.
-
-Example:
-
-```text id="race-enterprise"
-ROLE:
-You are a senior Delivery Manager responsible for an international
-digital transformation programme.
-
-ASK:
-Identify the delivery risks requiring executive attention.
-
-CONTEXT:
-- 4 countries
-- 6 workstreams
-- 45 project team members
-- 3 external vendors
-- €7M programme budget
-- go-live in 12 weeks
-- data migration and API integration on the critical path
-
-OUTPUT:
-
-Risk
-Root Cause
-Schedule Impact
-Commercial Impact
-Dependency Impact
-Mitigation
-Executive Decision Required
-Owner
-Decision Deadline
-```
-
----
-
-# Standards and Framework Alignment
-
-The RACE framework itself is framework-neutral.
-
-Individual prompts may reference relevant concepts from:
-
-- PMI / PMP
-- PMBOK
-- Agile
-- Scrum
-- Kanban
-- hybrid delivery
-- software quality
-- DevOps
-- risk management
-- governance practices
-
-Use these only where they are relevant to the specific project-management problem.
-
----
-
-# Quality Check
-
-Before using a RACE prompt, verify:
-
-### Role
-Is the professional perspective relevant?
-
-### Ask
-Is there one clear primary task?
-
-### Context
-Has enough project information been provided?
-
-### Expected Output
-Is the result structured for the intended audience?
-
-### Decision Logic
-Are assumptions, dependencies, risks, and decision criteria visible where relevant?
-
-If the answer to any of these is **No**, improve the prompt before use.
-
----
-
-# Key Principle
-
-RACE improves AI output because it improves the quality of the project-management request.
-
-The real value is not better wording.
-
-The real value is:
-
-**clearer thinking, structured analysis, consistent outputs, and better decision support.**
+**Key principle:** A Project Manager should not simply choose which stakeholder request sounds most urgent. Effective project management means **making trade-offs visible, protecting delivery commitments, and enabling informed decisions.**

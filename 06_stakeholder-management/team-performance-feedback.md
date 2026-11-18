@@ -1,1080 +1,430 @@
 # Team Performance Feedback
 
-## Purpose
+**Prompt ID:** STAKE-005 | **Category:** Stakeholder Management | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to prepare clear, fair, and constructive performance feedback for a project-team member.
+## 1. Ready-to-Use Prompt
 
-The objective is to:
+**Purpose:** Prepare fair, specific, and constructive performance feedback that recognizes strengths, addresses observable concerns, and supports measurable improvement.
 
-- recognise strengths,
-- address a specific performance concern,
-- explain its project impact,
-- establish clear expectations,
-- offer appropriate support,
-- and create an opportunity for improvement.
+**Use case:** Provide feedback to IT project team members when communication, quality, ownership, collaboration, or delivery behavior requires recognition or improvement.
 
-The purpose is not to create unnecessarily harsh criticism.
-
-The purpose is to help the team member understand **what is working, what needs to change, why it matters, and what good performance looks like going forward**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Any delivery phase
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Product initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / Team Lead / Programme Manager
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-When specific performance feedback is required
-
----
-
-# Prompt
+Copy the prompt and replace the placeholders with your project information.
 
 ```text
 ROLE
 
-You are a senior IT Project Manager experienced in leading
-international and cross-functional technology teams.
-
-TASK
-
-Prepare structured written performance feedback for the team member
-described below.
-
-TEAM MEMBER
-
-Role:
-[ROLE]
-
-Experience level:
-[LEVEL]
-
-Project responsibilities:
-[RESPONSIBILITIES]
-
-STRENGTHS
-
-[LIST SPECIFIC STRENGTHS]
-
-PERFORMANCE CONCERN
-
-[DESCRIBE THE SPECIFIC ISSUE]
-
-SPECIFIC EXAMPLES
-
-[DATES / EVENTS / OBSERVABLE BEHAVIOUR]
-
-PROJECT IMPACT
-
-[EXPLAIN IMPACT]
+You are a Senior IT Project Manager experienced in leading
+cross-functional and international technology teams,
+performance coaching, stakeholder communication,
+and delivery governance.
 
 CONTEXT
 
-[RELEVANT CONTEXT — TEAM STRUCTURE / REMOTE WORK / COMMUNICATION /
-WORKLOAD / CULTURAL OR LANGUAGE CONSIDERATIONS]
+Project: [PROJECT NAME]
+Team member's role: [ROLE]
+Experience level: [LEVEL]
+Employment relationship: [EMPLOYEE / VENDOR / OTHER]
+Project responsibilities: [LIST]
+Feedback type: [DEVELOPMENT / RECOGNITION / MIXED]
+Feedback context: [1:1 / WRITTEN REVIEW / PROJECT FOLLOW-UP]
 
-EXPECTED BEHAVIOUR GOING FORWARD
+STRENGTHS AND OBSERVATIONS
 
-[DEFINE EXPECTATION]
+Demonstrated strengths: [SPECIFIC EXAMPLES]
+Performance concern: [OBSERVABLE BEHAVIOR / NONE]
+Evidence: [DATES / EVENTS / WORK PRODUCTS]
+Project impact: [FACTUAL IMPACT]
 
-SUPPORT AVAILABLE
+RELEVANT CONTEXT
 
-[DETAILS]
+Role expectations: [AGREED RESPONSIBILITIES]
+Workload / capacity: [KNOWN FACTS]
+Process or tooling constraints: [KNOWN FACTS]
+Previous feedback: [IF AVAILABLE]
+Team member's perspective: [IF KNOWN]
 
-CONSEQUENCE IF PATTERN CONTINUES
+FUTURE EXPECTATIONS
 
-[DETAILS IF APPROPRIATE]
+Required behavior: [SPECIFIC EXPECTATION]
+Expected timing: [WHEN]
+Communication / delivery process: [HOW]
+Available support: [COACHING / TRAINING / RESOURCES]
+Follow-up date: [DATE]
+Formal management requirements: [IF APPLICABLE]
 
-OUTPUT REQUIREMENTS
+TASK
 
-Create structured feedback that:
+Prepare constructive, evidence-based performance feedback.
 
-1. acknowledges strengths specifically,
-2. describes the issue using observable facts,
-3. explains why the behaviour matters,
-4. considers relevant context without making assumptions,
-5. sets a clear future expectation,
-6. offers practical support,
-7. explains next steps if the issue continues.
+STEP 1 — ASSESS PERFORMANCE
 
-Tone:
-Firm
-Fair
-Supportive
-Respectful
-Specific
-Professional
-```
+1. Identify specific strengths and positive contributions.
+2. Describe the concern using observable behavior.
+3. Reference relevant dates, events, or deliverables.
+4. Explain the demonstrated impact on:
+   - Delivery and schedule
+   - Quality
+   - Collaboration
+   - Stakeholder confidence
+   - Decision-making
+5. Separate facts from interpretation.
+6. Consider whether the issue may involve:
+   - Individual behavior
+   - Unclear responsibilities
+   - Ineffective processes
+   - Workload or capacity
+   - Skills or training gaps
+   - Tooling or communication barriers
+7. Identify missing information before assigning responsibility.
 
----
+STEP 2 — PREPARE CONSTRUCTIVE FEEDBACK
 
-# Core Feedback Principle
+8. Start with genuine, specific recognition.
+9. Explain the concern using:
+   Situation → Behavior → Impact.
+10. State future expectations clearly:
+    - What must change
+    - When it must happen
+    - Which process or channel applies
+    - What successful performance looks like
+11. Offer proportionate coaching, resources, or support.
+12. Invite the team member to share their perspective.
+13. Describe next steps if improvement is insufficient,
+    without making unauthorized disciplinary commitments.
 
-Use:
+STEP 3 — DEFINE FOLLOW-UP
 
-```text
-Strength
-↓
-Observed Behaviour
-↓
+14. Recommend measurable, proportionate follow-up indicators.
+15. Establish a reasonable review point.
+16. Identify support and accountability arrangements.
+17. Recognize improvement when demonstrated.
+18. Escalate formal employment matters to the responsible
+    Line Manager or HR team where appropriate.
+
+STEP 4 — ADAPT TO CONTEXT
+
+19. For junior members, emphasize clarity and coaching.
+20. For senior members, address ownership, escalation,
+    communication, and leadership responsibilities.
+21. For vendor personnel, respect supplier governance
+    and the relevant contractual management structure.
+22. For remote or international teams, use clear language
+    and verified expectations without cultural assumptions.
+
+RULES
+
+- Do not invent performance incidents or consequences.
+- Do not make personality judgments.
+- Do not infer motivation, intention, or attitude.
+- Do not confuse missing process clarity with poor performance.
+- Do not equate lower visibility with lower productivity.
+- Avoid discriminatory or culturally stereotyped language.
+- Use a firm, fair, respectful, and supportive tone.
+- Protect confidential personnel information.
+- Do not make formal HR, compensation, or termination decisions.
+
+OUTPUT FORMAT
+
+1. PERFORMANCE FEEDBACK — READY TO USE
+
+Opening and Specific Strengths
+Observed Concern and Supporting Example
 Project Impact
-↓
-Expected Behaviour
-↓
-Support
-↓
-Follow-Up
-```
+Expected Behavior
+Support and Development
+Follow-Up Commitment
+Professional Close
 
-Avoid:
+2. PERFORMANCE ASSESSMENT
 
-```text
-Personal Judgment
-↓
-Vague Criticism
-↓
-No Example
-↓
-No Clear Expectation
-```
+Observation | Evidence | Project Impact |
+Confirmed / Unverified | Context
 
----
+3. ROOT CAUSE AND CONTEXT REVIEW
 
-# 1. Start With Genuine Strengths
+Potential Cause | Supporting Evidence |
+Missing Information | Recommended Action
 
-Acknowledge specific strengths relevant to the person's work.
+4. IMPROVEMENT AND SUPPORT PLAN
 
-### Weak
+Expectation | Success Measure |
+Support | Review Date | Responsible Role
 
-```text
-You are doing a good job overall.
-```
+5. FEEDBACK CONVERSATION GUIDE
 
-### Better
+Opening | Key Evidence |
+Questions for Team Member |
+Expected Agreement | Follow-Up
 
-```text
-Your defect analysis has been consistently detailed, and you have
-identified several integration issues before they reached UAT.
+6. MANAGEMENT SUMMARY
 
-Your technical preparation and attention to evidence are valuable
-to the project.
-```
+- Main strengths
+- Specific improvement area
+- Project impact
+- Support required
+- Next review point
+- Formal escalation requirements, if applicable
 
-Specific recognition makes the feedback more credible.
-
----
-
-# 2. Describe Behaviour, Not Personality
-
-Focus on observable behaviour.
-
-Avoid:
-
-```text
-You are not proactive.
-```
-
-Prefer:
-
-```text
-During the last two dependency reviews, the API delivery risk was
-already known within your workstream but was not raised during the
-project meeting.
-
-The risk was escalated only after it had begun affecting the test
-schedule.
+Use professional, direct, and natural language.
+Keep feedback proportionate to the issue.
 ```
 
 ---
 
-# Behaviour vs Interpretation
+## 2. Quality Check
 
-Separate:
-
-```text
-Observation:
-The risk was not raised in the meeting.
-```
-
-from:
+Run this independent review before sharing written performance feedback.
 
 ```text
-Interpretation:
-The person does not care about communication.
-```
+QUALITY CHECK
 
-Do not present interpretation as fact.
+Act as a Senior People Manager and PMO Quality Assurance Reviewer.
 
----
+Review the performance feedback against the supplied evidence.
 
-# 3. Use Specific Examples
+Verify:
 
-Strong feedback includes:
+1. Fairness:
+   Recognition and concerns are specific and proportionate.
 
-```text
-When
+2. Evidence:
+   Observations are supported by facts, examples,
+   or documented project outcomes.
 
-Where
+3. Objectivity:
+   The feedback avoids personality judgments,
+   unsupported assumptions, and cultural stereotypes.
 
-What happened
+4. Context:
+   Process, workload, role clarity, and capability
+   are considered before assigning responsibility.
 
-What should have happened
+5. Impact:
+   The relationship between observed behavior
+   and project consequences is supported.
 
-What impact occurred
-```
+6. Expectations:
+   Required improvements are specific, achievable,
+   and aligned with the person's responsibilities.
 
-Example:
+7. Support:
+   Coaching, resources, and process improvements
+   are included where appropriate.
 
-> At the integration review on 10 September, the vendor dependency had already been identified by the technical team but was not raised during the meeting. The dependency became a schedule issue three days later and required escalation.
+8. Follow-Up:
+   Success indicators, review timing, and accountability
+   are clear and proportionate.
 
-This is more actionable than:
+9. Governance:
+   Feedback respects employment boundaries,
+   confidentiality, and formal HR responsibilities.
 
-> You need to communicate earlier.
+10. Tone:
+    The message is respectful, constructive,
+    clear, and non-threatening.
 
----
+OUTPUT
 
-# Specificity Principle
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Unverified Assumptions: [EVIDENCE GAPS]
+Management / HR Review Required: [IF APPLICABLE]
 
-Use:
-
-```text
-Event
-+
-Behaviour
-+
-Impact
-```
-
-Example:
-
-```text
-During Tuesday's UAT readiness review,
-the two unresolved Severity 1 defects were not highlighted
-when readiness was discussed.
-
-As a result, stakeholders initially left the meeting believing
-that UAT could start as planned.
+Do not invent performance history, misconduct,
+personal motivations, or disciplinary outcomes.
 ```
 
 ---
 
-# 4. Explain Why It Matters
+## 3. Practical IT Use Case
 
-Connect behaviour to project outcomes.
+### Software Implementation — Business Analyst Requirement Communication
 
-Possible impacts:
+**Scenario:** During a software implementation project, a Business Analyst produces high-quality requirements documentation and maintains positive relationships with business stakeholders.
 
-```text
-Schedule
+However, agreed requirement changes are not always communicated promptly to the development team, resulting in avoidable rework.
 
-Quality
+The Project Manager must give constructive feedback while checking whether process clarity also contributed to the problem.
 
-Risk
+### Project Context
 
-Decision-making
+| Attribute | Details |
+|---|---|
+| Project | Customer Management System Enhancement |
+| Phase | Development |
+| Delivery approach | Hybrid |
+| Team member | Business Analyst |
+| Experience on project | Three months |
+| Main strengths | Requirements analysis, documentation, stakeholder relationships |
+| Performance concern | Delayed requirement-change communication |
+| Project impact | Development rework and unclear requirements |
+| Management objective | Improve change communication and delivery coordination |
 
-Stakeholder trust
-
-Team coordination
-
-Customer impact
-
-Vendor management
-
-Delivery predictability
-```
-
-Example:
-
-> Early visibility of delivery risks is essential because it gives the project team time to mitigate the issue before it affects committed milestones.
-
----
-
-# 5. Consider Context
-
-Relevant context may include:
+### Example Input
 
 ```text
-Remote working
+Project:
+Customer Management System Enhancement
 
-New team membership
-
-Different communication styles
-
-Language
-
-Experience level
-
-Workload
-
-Unclear role expectations
-
-Organisational culture
-```
-
-However, context should not become unsupported speculation.
-
----
-
-# Cultural Awareness
-
-Use cultural awareness carefully.
-
-Avoid:
-
-```text
-People from your culture tend not to challenge others in meetings.
-```
-
-Prefer:
-
-```text
-I recognise that communication styles can differ across teams and
-working environments.
-
-Regardless of communication style, the project requires material
-delivery risks to be raised early so the wider team can act on them.
-```
-
-Respect the individual without stereotyping.
-
----
-
-# 6. Define the Expected Behaviour
-
-Be precise.
-
-### Weak
-
-```text
-Please communicate better.
-```
-
-### Better
-
-```text
-Going forward, I expect any issue that could materially affect a
-milestone, dependency, cost, scope, or quality target to be raised
-during the relevant project meeting as soon as it is identified.
-
-If you are uncertain whether something is significant enough to
-escalate, raise it with me directly before the meeting.
-```
-
----
-
-# Expectation Framework
-
-Define:
-
-```text
-What
-
-When
-
-Where
-
-How
-
-Threshold
-```
-
-Example:
-
-```text
-What:
-Material schedule risks
-
-When:
-As soon as identified
-
-Where:
-Weekly delivery review / Jira / direct escalation
-
-How:
-Risk statement + impact + proposed action
-
-Threshold:
-Potential impact to milestone or committed dependency
-```
-
----
-
-# 7. Offer Support
-
-Feedback should include a realistic path to improvement.
-
-Possible support:
-
-```text
-1:1 preparation
-
-Meeting coaching
-
-Communication templates
-
-Clarification of escalation thresholds
-
-Mentoring
-
-Training
-
-Pairing with experienced team member
-
-Regular check-ins
-```
-
-Example:
-
-> For the next month, we can spend ten minutes before the weekly delivery meeting reviewing any risks you think may need escalation.
-
----
-
-# 8. Explain Consequences Carefully
-
-Where appropriate, clarify what happens if the issue continues.
-
-Avoid threatening language.
-
-### Weak
-
-```text
-If this happens again there will be consequences.
-```
-
-### Better
-
-```text
-I expect to see consistent improvement in early risk communication.
-
-If material risks continue to remain unreported, we will need to
-review whether the current responsibility model is appropriate and
-agree a more formal improvement plan.
-```
-
----
-
-# Consequence Principle
-
-Use:
-
-```text
-Expectation
-↓
-Opportunity to Improve
-↓
-Follow-Up
-↓
-Escalation if Necessary
-```
-
-Do not jump directly from feedback to punishment unless the situation requires formal HR action.
-
----
-
-# Example Input
-
-```text
 Role:
 Business Analyst
 
+Experience on project:
+Three months
+
 Strengths:
-Strong requirements analysis.
-Very good documentation.
-Good relationship with business users.
+- Strong requirements analysis
+- Clear, structured documentation
+- Positive relationships with business users
 
 Concern:
-Important requirement changes are sometimes discussed directly with
-business stakeholders but not communicated quickly enough to the
-development team.
+Important requirement changes are sometimes
+discussed with business stakeholders but
+communicated late to developers.
 
-Example:
-Two changes agreed last month were entered into the backlog several
-days later after development had already started.
+Specific evidence:
+Two agreed changes last month were entered
+into the backlog several days after the
+business discussions.
 
-Impact:
-Rework and confusion about approved requirements.
+Development had already started using
+the previous requirements.
 
-Expected Behaviour:
-Any agreed requirement change must be documented and communicated
-through the project process on the same working day.
+Project impact:
+- Rework
+- Confusion about current requirements
+- Reduced delivery predictability
 
-Support:
-PM will review change process together with BA.
+Expected behavior:
+Requirement changes must be documented
+and communicated through the agreed
+project process on the same working day.
 
-Context:
-BA joined project three months ago.
+If approval is still pending, that status
+must be clearly identified.
+
+Available support:
+Project Manager will review the change
+process and escalation points with the BA.
+
+Follow-up:
+Regular 1:1 discussions over the next month.
+
+Formal disciplinary action:
+Not requested.
 ```
 
----
+### Example Output — Team Performance Feedback
 
-# Example Output
+#### 1. Performance Feedback — Ready to Use
 
-## Performance Feedback
+**Subject: Development Feedback — Requirement Change Communication**
 
-You have made a strong contribution to the project through your requirements analysis and documentation. Your ability to work with business users and translate their needs into structured requirements has been particularly valuable.
+Your contribution to requirements analysis and documentation has been valuable to the project. You consistently produce structured requirements and maintain positive working relationships with business stakeholders.
 
-I would like to address one area that needs improvement: the speed at which agreed requirement changes are communicated to the delivery team.
+I would like to discuss one area where we need greater consistency: communicating requirement changes to the development team.
 
-On two recent occasions, requirement changes were discussed and agreed with business stakeholders but were not reflected in the delivery backlog until several days later. In both cases, development had already started against the previous requirement, which resulted in avoidable rework and uncertainty about the approved scope.
+Last month, two changes discussed and agreed with business stakeholders were not reflected in the delivery backlog until several days later. Development had already started against the previous requirements, which resulted in rework and uncertainty about the current scope.
 
-Going forward, I expect any agreed requirement change to be documented and communicated through the project's agreed change process on the same working day. If a change has not yet been formally approved, that status should also be made explicit.
+Going forward, I expect requirement changes to be documented and communicated through the agreed project process on the same working day. Where formal approval is still pending, that status should be clearly indicated so the development team does not interpret the change as authorized work.
 
-I recognise that you joined the project relatively recently and that the current change process involves several stakeholders. I would be happy to review the workflow with you and clarify the escalation and approval points so that the process is easier to apply consistently.
+I also want to understand whether any part of the current process makes timely communication difficult. Since you joined the project relatively recently, we can review the change workflow, responsibilities, and escalation points together.
 
-We will review progress during our regular 1:1s over the next month. If significant changes continue to reach the delivery team late, we will need to review the process and responsibilities more formally.
+Over the next month, we will review progress during our regular 1:1 meetings and check whether changes are being communicated consistently.
 
-Your analytical strengths are valuable to the project, and improving this communication step will make your contribution even more effective.
+Your analytical and documentation skills are important strengths. Improving this coordination step will help the team reduce rework and maintain greater confidence in the requirements baseline.
 
----
+#### 2. Performance Assessment
 
-# Prompt 2 — Feedback Quality Review
+| Observation | Evidence | Project Impact | Assessment |
+|---|---|---|---|
+| Strong documentation | Reported quality of requirements | Supports delivery clarity | Positive |
+| Effective business relationships | Reported stakeholder collaboration | Supports requirements gathering | Positive |
+| Delayed change communication | Two changes entered late | Rework and scope confusion | Improvement required |
+| Process familiarity | Three months on project | Possible learning need | Requires discussion |
+| Communication expectations | Same-day update requested | Supports timely coordination | To be confirmed as agreed process |
 
-```text
-ROLE
+**Management interpretation:** The concern is supported by specific observations, but the underlying cause should be discussed before concluding that individual performance is the sole issue.
 
-You are an experienced people manager reviewing performance feedback
-written by a Project Manager.
+#### 3. Root Cause and Context Review
 
-TASK
-
-Review the feedback below.
-
-[PASTE FEEDBACK]
-
-Check for:
-
-- vague criticism,
-- personality judgments,
-- missing examples,
-- unsupported assumptions,
-- cultural stereotypes,
-- unclear expectations,
-- lack of support,
-- disproportionate consequences,
-- language likely to cause defensiveness.
-
-OUTPUT FORMAT
-
-Finding
-Why It Matters
-Recommended Improvement
-```
-
----
-
-# Prompt 3 — Prepare for the Conversation
-
-Written feedback should usually support a conversation rather than replace one.
-
-```text
-ROLE
-
-You are coaching an IT Project Manager before a performance-feedback
-conversation.
-
-TASK
-
-Using the feedback below, prepare a discussion guide.
-
-[PASTE FEEDBACK]
-
-OUTPUT FORMAT
-
-1. Opening
-2. Strengths to acknowledge
-3. Issue to discuss
-4. Evidence / example
-5. Questions to ask the team member
-6. Expectation to set
-7. Support to offer
-8. Follow-up agreement
-```
-
----
-
-# Ask for the Team Member's Perspective
-
-A feedback conversation should allow two-way discussion.
-
-Questions may include:
-
-```text
-How do you see the situation?
-
-Was there anything preventing you from raising the issue earlier?
-
-Was the escalation expectation clear?
-
-What would help you communicate these risks earlier?
-
-Is there anything in the current process that makes this difficult?
-```
-
-This may reveal a process problem rather than an individual performance problem.
-
----
-
-# Prompt 4 — Separate Performance From Process
-
-```text
-ROLE
-
-You are a senior Delivery Manager reviewing a recurring team
-performance issue.
-
-TASK
-
-Analyse whether the problem below is primarily:
-
-- individual behaviour,
-- unclear responsibility,
-- poor process,
-- insufficient capability,
-- workload / capacity,
-- or a combination.
-
-SITUATION
-
-[PASTE]
-
-For each potential cause provide:
-
-Evidence
-Missing Information
-Recommended Action
-
-Do not assume the individual is the sole cause.
-```
-
----
-
-# Performance vs System Issue
-
-Example:
-
-```text
-Symptom:
-Tester repeatedly reports defects late.
-```
-
-Possible causes:
-
-```text
-Individual:
-Defects not raised promptly.
-
-Process:
-No agreed defect-escalation threshold.
-
-Tool:
-Notifications not configured.
-
-Capacity:
-Tester covering three environments simultaneously.
-```
-
-Senior PM thinking requires distinguishing between these possibilities.
-
----
-
-# Feedback Model
-
-A practical structure is:
-
-```text
-Situation
-↓
-Behaviour
-↓
-Impact
-↓
-Expectation
-↓
-Support
-```
-
----
-
-# Situation
-
-Describe the context.
-
-```text
-During the last two weekly delivery reviews...
-```
-
----
-
-# Behaviour
-
-Describe observable action.
-
-```text
-...the known integration dependency was not raised.
-```
-
----
-
-# Impact
-
-Describe why it matters.
-
-```text
-This reduced the time available to mitigate the schedule impact.
-```
-
----
-
-# Expectation
-
-State what should happen.
-
-```text
-Material dependencies should be raised as soon as they are identified.
-```
-
----
-
-# Support
-
-Explain how you can help.
-
-```text
-We can review your risk list together before the next three
-delivery meetings.
-```
-
----
-
-# Positive Feedback
-
-The same level of specificity should apply to positive feedback.
-
-### Weak
-
-```text
-Great job.
-```
-
-### Better
-
-```text
-Your analysis of the production incident clearly separated the
-technical cause from the process failure and helped the team agree
-corrective actions within the same day.
-
-That is exactly the level of structured problem-solving we need.
-```
-
----
-
-# Recognition Prompt
-
-```text
-ROLE
-
-You are an IT Project Manager providing positive performance
-feedback.
-
-TASK
-
-Write concise recognition based on the example below.
-
-[PASTE EXAMPLE]
-
-Include:
-
-Specific behaviour
-Positive impact
-Capability demonstrated
-Why it matters to the project
-```
-
----
-
-# Feedback for Vendor Team Members
-
-Where the team member belongs to a supplier organisation, consider:
-
-```text
-Delivery expectation
-
-Contractual responsibility
-
-Supplier governance
-
-Vendor PM involvement
-```
-
-Do not treat an external resource exactly like a direct employee where governance differs.
-
----
-
-# Feedback for Junior Team Members
-
-Provide additional clarity around:
-
-- expected behaviour,
-- examples,
-- support,
-- learning opportunities.
-
-Avoid assuming experience they do not yet have.
-
----
-
-# Feedback for Senior Team Members
-
-Expect greater ownership around:
-
-- escalation,
-- decision-making,
-- mentoring,
-- dependency management,
-- communication.
-
-Keep feedback evidence-based regardless of seniority.
-
----
-
-# Multicultural / International Teams
-
-Good practices include:
-
-```text
-Use plain language
-
-Avoid idioms
-
-Be specific
-
-Check understanding
-
-Avoid stereotypes
-
-Respect different communication styles
-
-Keep project expectations consistent
-```
-
-Cultural awareness should improve communication, not lower clarity around project expectations.
-
----
-
-# Remote-Team Considerations
-
-Remote teams may need clearer explicit expectations around:
-
-```text
-Status updates
-
-Availability
-
-Escalation
-
-Documentation
-
-Meeting participation
-
-Decision capture
-```
-
-Do not interpret lower visibility as lower performance without evidence.
-
----
-
-# Agile / Scrum Considerations
-
-Where teams use Scrum, feedback should respect role boundaries and team accountability.
-
-Possible issues include:
-
-- blockers not raised,
-- poor collaboration,
-- incomplete work,
-- weak stakeholder communication.
-
-Do not turn routine Sprint Retrospective observations automatically into formal performance issues.
-
----
-
-# Kanban Considerations
-
-Useful evidence may include:
-
-- ageing items,
-- repeatedly blocked work,
-- handoff delays,
-- missed service expectations.
-
-Use metrics to understand patterns, not as the sole basis for personal judgment.
-
----
-
-# Predictive Considerations
-
-Feedback may relate to:
-
-- schedule ownership,
-- reporting,
-- risk escalation,
-- deliverable quality,
-- milestone accountability.
-
----
-
-# Hybrid Considerations
-
-Evaluate both formal project responsibilities and day-to-day delivery behaviour.
-
----
-
-# Follow-Up
-
-Feedback should have a defined review point.
-
-Use:
-
-```text
-Expectation agreed
-↓
-Support provided
-↓
-Observe
-↓
-Review
-↓
-Recognise improvement or address continued gap
-```
-
----
-
-# Improvement Follow-Up Table
-
-| Expectation | Measure / Evidence | Review Date | Support | Status |
-|---|---|---|---|---|
-
-Do not create unnecessary bureaucracy for minor coaching feedback.
-
----
-
-# Quality Checklist
-
-Before giving feedback, confirm:
-
-- [ ] Strengths are specific
-- [ ] Concern is based on observable behaviour
-- [ ] Specific example is included
-- [ ] Project impact is explained
-- [ ] Personal judgments are avoided
-- [ ] Cultural stereotypes are avoided
-- [ ] Context has been considered
-- [ ] Expected behaviour is explicit
-- [ ] Support is offered
-- [ ] Consequences are proportionate
-- [ ] Follow-up is defined
-- [ ] Team member has an opportunity to respond
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- leadership,
-- team development,
-- communication,
-- conflict management,
-- emotional intelligence,
-- performance management.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- team,
-- stakeholders,
-- leadership,
-- delivery.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Sensitive feedback may need input from:
-
-- Line Manager
-- People Manager
-- HR
-- Delivery Manager
-- Vendor Manager where appropriate
-
-AI can help structure feedback.
-
-It should not make formal employment, disciplinary, compensation, or termination decisions.
-
----
-
-# Confidentiality
-
-Performance feedback may contain sensitive employee information.
-
-Do not enter personally identifiable or confidential HR information into public AI tools unless organisational policy allows it.
-
-Where possible, anonymise:
-
-- names,
-- personal details,
-- HR history,
-- performance records.
-
----
-
-# Prompt Metadata
-
-```text
-Prompt ID: STAKE-005
-Category: Stakeholder Management
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Team Lead
-Reviewer: Line Manager / HR where appropriate
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Potential Cause | Current Evidence | Required Clarification |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT team-performance feedback framework |
+| Delayed individual communication | Two late backlog updates | What prevented timely updates? |
+| Unclear change process | Not confirmed | Are approval and communication steps documented? |
+| Role ambiguity | Not confirmed | Who owns backlog updates and developer notification? |
+| Workload constraints | Not provided | Were competing priorities affecting response time? |
+| Tooling or notifications | Not provided | Are developers informed when requirements change? |
+| Experience on project | Three months | Is additional process onboarding needed? |
+
+**Assessment:** Individual and process-related causes remain open for validation.
+
+#### 4. Improvement and Support Plan
+
+| Expectation | Success Measure | Support | Review Point |
+|---|---|---|---|
+| Communicate changes promptly | Changes recorded and communicated within agreed timeframe | Process walkthrough | Weekly |
+| Distinguish approved and pending changes | Clear approval status in backlog | Change-status guidance | Weekly |
+| Escalate unclear requirements | Questions raised before development proceeds | PM / BA check-in | As needed |
+| Improve developer coordination | Fewer delays caused by unclear change communication | Joint BA–Development review | After one month |
+
+The measures should be confirmed with the team member and relevant line manager.
+
+#### 5. Feedback Conversation Guide
+
+**Opening:** Recognize the Business Analyst's contribution to documentation quality and stakeholder collaboration.
+
+**Concern:** Explain the two delayed requirement-change updates and their observed impact on development.
+
+**Questions to ask:**
+- How do you see these situations?
+- Were the responsibilities and approval steps clear?
+- Were there obstacles to updating the backlog promptly?
+- What support would make this easier to manage?
+
+**Expected agreement:** Clarify the change process, communication timing, and ownership of backlog updates.
+
+**Support:** Review the workflow and escalation rules together.
+
+**Follow-up:** Check progress during regular 1:1 discussions over the next month.
+
+#### 6. Management Summary
+
+| Area | Management Assessment |
+|---|---|
+| Strengths | Requirements quality, documentation, business communication |
+| Improvement area | Timely change communication |
+| Delivery impact | Rework and unclear requirements |
+| Potential contributing factors | Role, process, workload, or tooling |
+| Support | Change-process coaching |
+| Review | Weekly check-ins for one month |
+| Escalation | Not currently indicated |
+
+### Management Decisions
+
+1. **Clarify accountability:** Confirm who owns documentation, approval status, and communication of requirement changes.
+2. **Improve process:** Ensure the change-control workflow clearly identifies approval and developer notification steps.
+3. **Provide support:** Offer focused coaching rather than treating the issue as purely individual performance.
+4. **Monitor improvement:** Review timely change communication and recognize sustained progress.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The feedback is specific, respectful, and supported by two reported examples. It acknowledges strengths and proposes practical support. However, the exact change-process expectations and potential contributing factors need confirmation.
+
+**Required corrections:**
+- Validate the specific incidents and resulting rework.
+- Confirm whether same-day communication is an agreed requirement.
+- Discuss the team member's perspective.
+- Clarify backlog and change-approval ownership.
+- Agree realistic improvement measures and follow-up.
+
+**Unverified assumptions:** Whether the delay resulted from individual behavior, unclear responsibilities, workload, or tooling.
+
+**Management / HR review:** Routine coaching may be appropriate without formal HR involvement. Any formal performance action must follow organizational policy and the responsible line manager's authority.
+
+**Governance:** Supports PMI-aligned team leadership, communication, performance development, issue management, and project delivery.
+
+AI can assist with feedback structure and communication quality, but it cannot determine employee performance ratings, disciplinary outcomes, or employment decisions. Protect confidential personnel information and share feedback only with authorized participants.

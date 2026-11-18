@@ -1,760 +1,351 @@
 # Lessons Learned Report
 
-## Purpose
+**Prompt ID:** REPORT-007 | **Category:** Reporting & Communication | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert retrospective notes, project observations, and delivery outcomes into a structured lessons learned report.
+## 1. Ready-to-Use Prompt
 
-The report should capture:
+**Purpose:** Convert project experience into evidence-based lessons and actionable improvements that strengthen delivery performance and organizational knowledge.
 
-- what worked well,
-- what did not work well,
-- why outcomes occurred,
-- what should be repeated,
-- what should change,
-- and how future projects can benefit.
+**Use case:** Prepare a lessons learned report after a software release, major milestone, retrospective, or project closure to identify repeatable successes, systemic problems, and improvements for current and future projects.
 
-The objective is not to document blame.
+Copy the prompt and replace the placeholders with your project information.
 
-The objective is to convert project experience into **reusable organisational knowledge**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-End of Phase / Major Milestone / Release / Project Close / Hypercare Exit
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Product initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / PMO / Programme Manager
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At major milestones and project close
-
----
-
-# Prompt
-
-```text id="lessons-01"
+```text id="llreport01"
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, project governance, continuous improvement,
-delivery performance, stakeholder management, and organisational
-learning.
+You are a Senior IT Project Manager specializing in software
+delivery, project governance, root cause analysis, performance
+improvement, and organizational learning.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Project objectives: [OBJECTIVES]
+Review type: [MID-PROJECT / RELEASE / MILESTONE / CLOSURE]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Planned completion: [DATE]
+Actual / forecast completion: [DATE]
+Planned / actual budget: [IF AVAILABLE]
+Key stakeholders: [ROLES]
+External vendors: [IF RELEVANT]
+Project metrics: [IF AVAILABLE]
+Retrospective notes: [PASTE NOTES]
+Previous lessons learned: [OPTIONAL]
+Related project reports: [OPTIONAL]
 
 TASK
 
-Create a structured lessons learned report from the retrospective
-notes below.
+Create an evidence-based Lessons Learned Report.
 
-PROJECT CONTEXT
+STEP 1 — ANALYZE PROJECT PERFORMANCE
 
-Project:
-[PROJECT NAME]
+1. Summarize the overall delivery outcome, key successes,
+   challenges, and most valuable lessons.
+2. Identify what worked well and why it succeeded.
+3. Identify what could be improved and its project impact.
+4. Distinguish symptoms, immediate causes, and systemic causes.
+5. Group repeated findings into root cause themes.
+6. Compare planned and actual project metrics where data exists.
+7. Separate verified evidence from stakeholder opinion
+   and unvalidated assumptions.
 
-Project phase / milestone:
-[PHASE]
+STEP 2 — DEFINE IMPROVEMENTS
 
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
+8. Prioritize up to five recommendations based on business
+   value, recurrence, and practical applicability.
+9. Convert recommendations into specific improvement actions.
+10. Assign proposed owners, implementation timing,
+    and measurable evidence of adoption.
+11. Identify practices to continue, stop, or improve.
+12. For mid-project reviews, prioritize actions that can
+    benefit the current delivery.
+13. Define how lessons will be shared through the PMO,
+    project templates, checklists, or delivery playbooks.
 
-Project objectives:
-[OBJECTIVES]
+STEP 3 — IDENTIFY ORGANIZATIONAL PATTERNS
 
-Planned completion:
-[DATE]
+14. Where multiple project reports are provided, identify
+    recurring success patterns, repeated failures,
+    systemic causes, and improvement opportunities.
+15. Recommend changes to organizational standards,
+    governance practices, or delivery processes.
+16. Identify lessons requiring stakeholder validation
+    or additional performance evidence.
 
-Actual / forecast completion:
-[DATE]
-
-Budget:
-[PLANNED / ACTUAL IF AVAILABLE]
-
-Key stakeholders:
-[LIST]
-
-Major vendors:
-[LIST]
-
-RETROSPECTIVE NOTES
-
-[PASTE NOTES]
+Use neutral, constructive, non-blaming language.
+Focus on process improvement rather than individual fault.
+Do not invent metrics, causes, approvals, or implementation status.
+Adapt recommendations to the delivery approach.
+Avoid duplicating routine team retrospective outputs
+unless they provide wider project-level value.
 
 OUTPUT FORMAT
 
-Create:
-
-1. Executive Summary
-2. What Went Well
-3. What Could Be Improved
-4. Root Cause Themes
-5. Key Recommendations
-6. Project Metrics
-7. Actions for Future Projects
-8. Knowledge Transfer / Ownership
-```
-
----
-
-# 1. Executive Summary
+1. EXECUTIVE SUMMARY
 
 Write 3–5 sentences covering:
+- Overall delivery outcome
+- Most significant success and challenge
+- Key lesson
+- Primary improvement recommendation
 
-```text id="lessons-summary"
-Overall delivery outcome
-Most important success
-Most important challenge
-Most valuable lesson
-Primary recommendation for future projects
+2. WHAT WENT WELL
+
+Practice / Outcome | Evidence | Why It Worked |
+Recommendation to Replicate
+
+3. WHAT COULD BE IMPROVED
+
+Observation | Project Impact |
+Root Cause / Confidence | Future Recommendation
+
+4. ROOT CAUSE THEMES
+
+Theme | Related Findings | Common Cause |
+Recommended Future Control
+
+5. TOP RECOMMENDATIONS
+
+Priority | Recommendation | Expected Benefit |
+Applicable Project Types
+
+6. PROJECT PERFORMANCE METRICS
+
+Metric | Planned | Actual | Variance |
+Interpretation / Lesson
+
+7. IMPROVEMENT ACTION PLAN
+
+Action | Applies To | Proposed Owner |
+Timing | Evidence of Adoption | Status
+
+8. KNOWLEDGE TRANSFER
+
+Lesson | Reusable Asset / Process |
+Knowledge Repository | Proposed Owner
+
+9. CROSS-PROJECT PATTERNS (IF INPUTS AVAILABLE)
+
+Pattern | Projects Affected | Evidence |
+Organizational Impact | Proposed PMO Action
+
+MANAGEMENT SUMMARY
+
+- Top three lessons
+- Improvements that can be implemented immediately
+- Organizational changes recommended
+- Decisions and ownership requiring confirmation
+
+Use concise Markdown tables.
+Mark unsupported conclusions as "Requires validation".
+Mark missing metrics as "Not available".
 ```
-
-Keep this concise and evidence-based.
 
 ---
 
-# 2. What Went Well
+## 2. Quality Check
 
-Provide:
+Apply this independent review after generating the Lessons Learned Report.
 
-| Item | Evidence / Detail | Why It Worked | Recommendation to Replicate |
+```text id="llquality01"
+QUALITY CHECK
+
+Act as a Senior PMO Quality Assurance Manager.
+
+Review the Lessons Learned Report for:
+
+1. Evidence: Findings are supported by project data
+   or clearly attributed stakeholder feedback.
+2. Balance: Successes and improvement opportunities are covered.
+3. Root Cause: Systemic causes are distinguished from symptoms.
+4. Objectivity: Language is factual and free from personal blame.
+5. Actionability: Recommendations specify what should change,
+   where, and why.
+6. Reusability: Lessons can benefit other relevant projects.
+7. Accountability: Actions have proposed owners, timing,
+   and measurable adoption evidence.
+8. Completeness: Project metrics, knowledge transfer,
+   and relevant cross-project patterns are addressed.
+9. Consistency: Conclusions do not exceed the available evidence.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Validation blockers: [MISSING EVIDENCE / UNCONFIRMED CAUSES]
+
+Identify vague lessons, unsupported conclusions,
+duplicate themes, and recommendations without actions.
+
+Do not invent root causes, metrics, ownership, or approvals.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### Software Development — Release Retrospective and Process Improvement
+
+**Scenario:** A development team has completed a new reporting feature for an internal business application. The release was delayed because acceptance criteria were clarified late and regression testing required additional effort.
+
+The Project Manager must document lessons and recommend improvements to requirements management, QA planning, and release readiness.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Web Application Reporting Enhancement |
+| Review type | Post-Release |
+| Delivery approach | Scrum |
+| Planned release | 30 June 2027 |
+| Actual release | 7 July 2027 |
+| Team | Product Owner, Developers, QA Engineers, Project Manager |
+| Main challenge | Late requirements clarification and insufficient regression coverage |
+| Positive outcome | Effective cross-team defect resolution |
+| Management objective | Improve requirements readiness and release quality for future delivery |
+
+### Example Input
+
+```text id="llinput01"
+Project: Web Application Reporting Enhancement
+
+Business objective:
+Deliver improved reporting and Excel export functionality.
+
+Delivery approach: Scrum
+Review type: Post-Release
+
+Planned release: 30 June 2027
+Actual release: 7 July 2027
+
+Retrospective notes:
+
+- Excel export acceptance criteria were finalized
+  after development had already started.
+- Developers had to revise the implementation.
+- Regression tests did not initially cover
+  large Excel export datasets.
+- A release-blocking defect was identified
+  during final regression testing.
+- Developers and QA coordinated effectively
+  to reproduce, fix, and retest the defect.
+- Daily defect triage helped prioritize remaining work.
+- Production deployment completed successfully.
+- No critical defects were reported during the
+  first three days after release.
+- The Product Owner suggested earlier
+  acceptance criteria reviews.
+
+Budget data:
+Not available.
+
+Root cause investigation:
+Not formally completed.
+```
+
+### Example Output — Lessons Learned Report
+
+#### 1. Executive Summary
+
+The Web Application Reporting Enhancement project was released on 7 July 2027, seven calendar days later than planned. The principal challenges were late clarification of Excel export acceptance criteria and incomplete initial regression coverage for large datasets. Effective collaboration between Development and QA supported defect resolution and successful deployment. Future releases should strengthen requirement readiness, test design, and release quality controls before implementation begins.
+
+#### 2. What Went Well
+
+| Practice / Outcome | Evidence | Why It Worked | Recommendation to Replicate |
 |---|---|---|---|
+| Cross-team defect resolution | QA and Development jointly reproduced and resolved the blocking defect | Faster technical coordination | Use joint defect triage for release-critical issues |
+| Daily defect triage | Daily prioritization during release preparation | Clear visibility of outstanding work | Maintain targeted triage when release readiness is at risk |
+| Production deployment | Deployment completed successfully | Release execution was effective | Review and retain effective deployment practices |
 
-Examples may include:
+#### 3. What Could Be Improved
 
-```text id="lessons-well"
-Early stakeholder engagement
-Strong vendor governance
-Effective UAT preparation
-Clear escalation process
-High-quality documentation
-Early technical proof of concept
-Strong cross-functional collaboration
-Effective status reporting
-Successful release planning
-```
-
-Do not write:
-
-> Communication was good.
-
-Instead write:
-
-> Weekly cross-team dependency reviews reduced unresolved integration blockers and enabled earlier escalation to vendor owners.
-
----
-
-# 3. What Could Be Improved
-
-Provide:
-
-| Item | Impact | Root Cause | Recommendation for Future |
+| Observation | Project Impact | Root Cause / Confidence | Future Recommendation |
 |---|---|---|---|
+| Late acceptance criteria | Implementation rework | Readiness process may have been insufficient; requires validation | Review acceptance criteria before development begins |
+| Missing large-dataset tests | Release-blocking defect discovered late | Test coverage design gap indicated; requires investigation | Include boundary and high-volume scenarios in test design |
+| Defect discovered near release | Additional testing and release delay | Contributing factors not fully verified | Strengthen regression readiness and earlier validation |
 
-Examples may include:
+**Key distinction:** Late acceptance criteria and limited test coverage are documented observations. Their deeper systemic causes require stakeholder validation before being presented as confirmed conclusions.
 
-```text id="lessons-improve"
-Requirements ambiguity
-Late security involvement
-Insufficient UAT capacity
-Poor vendor mobilisation
-Unclear ownership
-Late architecture decisions
-Data-quality assumptions
-Environment instability
-Weak dependency management
-Insufficient operational readiness
-```
+#### 4. Root Cause Themes
 
-Focus on system and process improvements rather than individual blame.
-
----
-
-# Root Cause Rule
-
-Avoid stopping at the symptom.
-
-### Symptom
-
-```text id="lesson-symptom"
-UAT started late.
-```
-
-### Immediate Cause
-
-```text id="lesson-immediate"
-Business testers were not available.
-```
-
-### Deeper Cause
-
-```text id="lesson-root"
-Business resource commitments were not formally confirmed during
-planning and no backup capacity had been identified.
-```
-
-The deeper cause produces the more useful lesson.
-
----
-
-# 4. Root Cause Themes
-
-Group related lessons where patterns exist.
-
-Possible themes:
-
-```text id="lesson-themes"
-Planning
-Requirements
-Governance
-Dependencies
-Vendor Management
-Architecture
-Data
-Testing
-Security
-Business Readiness
-Communication
-Decision-Making
-Resources
-```
-
-Provide:
-
-| Theme | Related Lessons | Common Root Cause | Future Control |
+| Theme | Related Findings | Potential Common Cause | Future Control |
 |---|---|---|---|
+| Requirements readiness | Late acceptance criteria, implementation rework | Insufficient pre-development clarification | Acceptance criteria readiness check |
+| Quality assurance | Missing high-volume scenarios, late defect discovery | Incomplete risk-based test coverage | Test design review before regression execution |
+| Release governance | Final defect resolution close to release | Readiness checkpoints may need improvement | Evidence-based release readiness review |
 
----
+#### 5. Top Recommendations
 
-# Example
+| Priority | Recommendation | Expected Benefit | Applicable Projects |
+|---|---|---|---|
+| 1 | Require acceptance criteria review before starting affected development work | Reduce rework | Software development |
+| 2 | Add boundary-value and high-volume scenarios to regression planning | Identify defects earlier | Data-intensive applications |
+| 3 | Establish clear regression readiness criteria | Improve testing predictability | Software releases |
+| 4 | Maintain joint defect triage when critical release defects emerge | Accelerate coordination | Cross-functional teams |
+| 5 | Review unresolved requirement and quality risks before release commitments | Improve forecast reliability | IT delivery projects |
 
-```text id="lesson-theme-example"
-Theme:
-Dependencies
-
-Lessons:
-API certification delay
-Late security review
-Delayed UAT-resource confirmation
-
-Common Root Cause:
-Critical external dependencies were tracked, but escalation
-thresholds were not defined.
-
-Future Control:
-Define owner, due date, trigger, and escalation threshold for every
-critical dependency during planning.
-```
-
----
-
-# 5. Key Recommendations
-
-Prioritise the top five recommendations.
-
-Use:
-
-```text id="lesson-recommendation"
-1. Recommendation
-   Why it matters
-   Where it should be applied
-
-2. Recommendation
-   Why it matters
-   Where it should be applied
-```
-
-Recommendations should be reusable beyond the current project.
-
----
-
-# Recommendation Quality
-
-### Weak
-
-```text id="lesson-rec-weak"
-Communicate better.
-```
-
-### Better
-
-```text id="lesson-rec-good"
-For projects with external integration dependencies, establish a
-weekly dependency review from the design phase and define escalation
-thresholds before development begins.
-```
-
----
-
-# 6. Project Metrics
-
-Compare planned and actual performance where reliable data exists.
+#### 6. Project Performance Metrics
 
 | Metric | Planned | Actual | Variance | Lesson |
-|---|---:|---:|---:|---|
-
-Possible measures:
-
-```text id="lesson-metrics"
-Completion Date
-Budget
-Milestone Delivery
-Defect Rate
-Test Pass Rate
-Critical Defects
-Vendor Milestone Performance
-Release Readiness
-Change Requests
-Risk Materialisation
-```
-
-Do not invent missing values.
-
----
-
-# Example
-
-| Metric | Planned | Actual | Lesson |
-|---|---|---|---|
-| UAT Start | 1 Aug | 8 Aug | Business-resource confirmation should occur earlier |
-| Critical Defects at UAT | 0 | 1 | Entry criteria were not enforced early enough |
-| Budget | €1.8M | €1.76M | Financial control remained effective |
-
----
-
-# 7. Actions for Future Projects
-
-Turn lessons into specific actions.
-
-Provide:
-
-| Action | Applies To | Owner | Timing | Evidence of Adoption |
 |---|---|---|---|---|
+| Release date | 30 Jun 2027 | 7 Jul 2027 | +7 calendar days | Improve requirement and test readiness |
+| Initial regression coverage for large exports | Not available | Incomplete | Not assessable | Strengthen test design |
+| Critical defects reported during first three post-release days | Not available | 0 reported | Not assessable | Retain post-deployment monitoring |
+| Budget | Not available | Not available | Not assessable | No financial conclusion possible |
 
-Example:
+The release delay is confirmed in the example, but its exact contribution from each cause cannot be quantified from the available notes.
 
-```text id="lesson-action-example"
-Action:
-Add external dependency escalation thresholds to the standard
-project initiation checklist.
+#### 7. Improvement Action Plan
 
-Owner:
-PMO.
+| Action | Applies To | Proposed Owner | Timing | Evidence of Adoption |
+|---|---|---|---|---|
+| Add acceptance criteria readiness check | Backlog refinement | Product Owner | Before future development work | Updated backlog guidance |
+| Include high-volume export tests | QA planning | QA Lead | Before next relevant testing cycle | Reviewed test cases |
+| Introduce regression readiness review | Release preparation | QA Lead / Project Manager | Before each release | Readiness record |
+| Document effective defect triage practices | Delivery coordination | Project Manager | Before next release | Updated team playbook |
+| Validate underlying causes | Process improvement | Project Manager / Team | Next retrospective review | Documented analysis |
 
-Timing:
-Before next project launch.
+These actions are recommendations, not approved organizational changes.
 
-Evidence:
-Updated template approved and published.
-```
+#### 8. Knowledge Transfer
 
-A lesson without an action may never change future delivery.
+| Lesson | Reusable Asset | Repository | Proposed Owner |
+|---|---|---|---|
+| Clarify acceptance criteria earlier | Backlog readiness checklist | Project Confluence | Product Owner |
+| Test realistic data volumes | Regression test checklist | QA knowledge base | QA Lead |
+| Maintain effective release triage | Release readiness playbook | Delivery documentation | Project Manager |
+| Investigate recurring rework | Lessons learned register | PMO repository | Project Manager / PMO |
 
----
+#### 9. Cross-Project Patterns
 
-# Lesson → Improvement Flow
+**Not assessed.** No additional project reports were provided.
 
-Use:
+A PMO-level comparison could later assess whether late requirements, incomplete regression coverage, or release delays recur across multiple projects.
 
-```text id="lesson-flow"
-Observation
-↓
-Evidence
-↓
-Root Cause
-↓
-Lesson
-↓
-Recommendation
-↓
-Future Action
-↓
-Owner
-```
+### Management Decisions
 
----
+1. **Requirements management:** Approve an acceptance criteria readiness check for relevant backlog items.
+2. **Quality assurance:** Introduce explicit high-volume and boundary test coverage requirements.
+3. **Release governance:** Confirm minimum evidence for regression and release readiness.
+4. **Organizational learning:** Assign improvement owners and integrate validated lessons into reusable checklists and playbooks.
 
-# 8. Knowledge Transfer
+### Applied Quality Review
 
-Define how the lesson will be reused.
+**Quality verdict: REVISE**
 
-Possible destinations:
+**Findings:** The report distinguishes successful practices from improvement opportunities and connects lessons to practical actions. However, the deeper root causes have not been formally validated, and several performance metrics are unavailable.
 
-```text id="lesson-knowledge"
-PMO knowledge base
-Project template library
-Delivery playbook
-Architecture standards
-Testing checklist
-Vendor onboarding checklist
-Risk library
-Project initiation checklist
-```
+**Required corrections:**
+- Validate systemic causes with Development, QA, and the Product Owner.
+- Confirm the relationship between observed problems and release delay.
+- Agree on improvement ownership and implementation timing.
+- Define measurable adoption criteria for updated project practices.
 
-Do not simply archive the report.
+**Validation blockers:** Unverified systemic causes and unapproved improvement ownership.
 
----
+**Governance:** This framework supports PMI-aligned continuous improvement, project performance review, knowledge transfer, stakeholder engagement, and organizational learning.
 
-# Example Input
-
-```text id="lesson-example-input"
-Project:
-CRM Replacement
-
-Notes:
-- weekly status format worked well and sponsor feedback positive
-- data migration rehearsal started 2 weeks late
-- source data quality worse than expected
-- UAT tester availability was confirmed too late
-- identity vendor missed certification deadline
-- mock service helped protect SIT
-- security team engaged early and approval completed on time
-- final go-live was 1 week late
-- budget completed 3% under approved amount
-- business training completed successfully
-```
-
----
-
-# Example Output Excerpt
-
-## What Went Well
-
-| Item | Detail | Recommendation |
-|---|---|---|
-| Security engagement | Security team joined during design and approval completed on schedule | Engage Security during initiation on future projects |
-| Integration contingency | Mock identity service allowed testing to continue during vendor delay | Create mocks for high-risk external dependencies where feasible |
-| Reporting | Weekly reporting format was positively received by Sponsor | Retain standard status format |
-
----
-
-## What Could Be Improved
-
-| Item | Root Cause | Recommendation |
-|---|---|---|
-| Data migration | Source-data quality was assumed rather than profiled early | Conduct data profiling during discovery |
-| UAT resources | Named testers were not confirmed during planning | Require business-resource commitment before UAT planning is approved |
-| Vendor dependency | Certification escalation thresholds were unclear | Add formal dependency triggers and escalation rules |
-
----
-
-# Prompt 2 — Lessons Quality Review
-
-```text id="lessons-review"
-ROLE
-
-You are a PMO Director reviewing a project lessons learned report.
-
-TASK
-
-Review the report below.
-
-[PASTE REPORT]
-
-Check for:
-
-- vague lessons,
-- blame-oriented language,
-- missing evidence,
-- symptoms presented as root causes,
-- recommendations that are not actionable,
-- lessons that are too project-specific to reuse,
-- lessons without owners,
-- repeated themes that should be consolidated.
-
-OUTPUT FORMAT
-
-Finding
-Why It Matters
-Recommended Improvement
-Priority
-```
-
----
-
-# Prompt 3 — Cross-Project Pattern Analysis
-
-Where lessons from multiple projects are available:
-
-```text id="lessons-cross-project"
-ROLE
-
-You are a PMO knowledge-management lead.
-
-TASK
-
-Compare the lessons learned from the projects below.
-
-[PASTE MULTIPLE REPORTS]
-
-Identify:
-
-1. Repeated failure patterns
-2. Repeated success patterns
-3. Systemic organisational causes
-4. Standards or templates that should change
-5. Recommended PMO actions
-
-OUTPUT FORMAT
-
-Pattern
-Projects Affected
-Evidence
-Organisational Impact
-Recommended PMO Action
-```
-
-This converts individual lessons into organisational improvement.
-
----
-
-# Prompt 4 — Mid-Project Lessons Review
-
-Do not wait until project close.
-
-```text id="lessons-mid-project"
-ROLE
-
-You are a senior IT Project Manager facilitating a mid-project
-lessons review.
-
-TASK
-
-Review the delivery experience so far.
-
-[PASTE NOTES]
-
-Identify:
-
-- practices to continue,
-- practices to stop,
-- practices to improve,
-- lessons that can still influence the current project.
-
-Prioritise actions that can create benefit before project completion.
-```
-
----
-
-# Agile / Scrum Considerations
-
-Relevant lessons may emerge from:
-
-- retrospectives,
-- release reviews,
-- backlog management,
-- team collaboration,
-- product feedback,
-- cross-team dependencies.
-
-Avoid duplicating retrospective outputs without adding project-level insight.
-
----
-
-# Kanban Considerations
-
-Lessons may include:
-
-- bottlenecks,
-- WIP policies,
-- ageing work,
-- blocked dependencies,
-- workflow design,
-- SLE accuracy.
-
-Example:
-
-> The integration-review stage repeatedly accumulated excessive WIP. Future projects should define review-capacity limits and explicit escalation rules during workflow design.
-
----
-
-# Predictive Considerations
-
-Lessons may focus on:
-
-- baseline assumptions,
-- milestone planning,
-- procurement,
-- schedule recovery,
-- change control,
-- estimating.
-
----
-
-# Hybrid Considerations
-
-Review both:
-
-```text id="lesson-hybrid"
-Formal governance performance
-+
-Adaptive delivery performance
-```
-
-A project may have effective Agile team delivery but weak enterprise governance, or the reverse.
-
----
-
-# Avoid Blame
-
-Avoid:
-
-```text id="lesson-blame"
-The vendor was incompetent.
-
-The business team failed.
-
-The developers communicated badly.
-```
-
-Prefer:
-
-```text id="lesson-neutral"
-Vendor capacity assumptions were not validated before mobilisation.
-
-Business resource commitments were not confirmed early enough.
-
-Cross-team technical dependencies lacked a defined escalation path.
-```
-
-The goal is improvement, not assigning personal fault.
-
----
-
-# Evidence Hierarchy
-
-Where possible, support lessons using:
-
-```text id="lesson-evidence"
-Project metrics
-Risk / issue history
-Decision logs
-Vendor performance
-Test results
-Schedule data
-Budget data
-Stakeholder feedback
-Retrospective feedback
-```
-
-Distinguish evidence from opinion.
-
----
-
-# Quality Checklist
-
-Before finalising the report, confirm:
-
-- [ ] Both successes and improvement areas are included
-- [ ] Lessons are evidence-based where possible
-- [ ] Root causes are explored
-- [ ] Personal blame is avoided
-- [ ] Recommendations are specific
-- [ ] Recommendations are reusable
-- [ ] Actions have owners
-- [ ] Lessons are linked to future practice
-- [ ] Metrics are used where reliable
-- [ ] Knowledge-transfer destination is defined
-- [ ] Lessons can be applied before project close where possible
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- continuous improvement,
-- organisational learning,
-- knowledge transfer,
-- delivery performance,
-- stakeholder feedback,
-- governance,
-- project closure.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- measurement,
-- delivery,
-- governance,
-- team learning,
-- stakeholders,
-- value.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Validate lessons with:
-
-- Project Manager
-- delivery team
-- business stakeholders
-- PMO
-- vendors where appropriate
-- Sponsor for strategic lessons
-
-AI can identify patterns and structure observations.
-
-It should not determine organisational conclusions without stakeholder validation.
-
----
-
-# Confidentiality
-
-Lessons learned may contain sensitive information about:
-
-- vendors,
-- internal teams,
-- security,
-- budgets,
-- customer impact,
-- performance.
-
-Anonymise information where necessary before sharing outside the appropriate governance environment.
-
----
-
-# Prompt Metadata
-
-```text id="lessons-metadata"
-Prompt ID: REPORT-007
-Category: Reporting & Communication
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: PMO / Project Team
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Low
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT lessons-learned framework |
+Lessons learned should be validated by relevant project stakeholders before being adopted as organizational standards. Protect confidential vendor, employee, customer, financial, and security-sensitive information.

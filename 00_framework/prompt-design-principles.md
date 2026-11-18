@@ -1,648 +1,299 @@
 # Prompt Design Principles
 
-This repository follows a consistent set of prompt-design principles to ensure that AI-supported project-management work is structured, reusable, reviewable, and appropriate for professional delivery environments.
+A practical guide for creating **clear, reusable, and decision-oriented AI prompts** for IT project management.
 
-The objective is not to make prompts unnecessarily complex.
+**Core principle:** Start with the business problem, provide relevant context, define the expected output, and validate the result.
 
-The objective is to make them useful for real project decisions.
+## 1. Start With the Business Problem
 
----
+Every prompt should address a specific management need, risk, issue, or decision.
 
-# 1. Start With the Business Problem
-
-A prompt should exist because there is a project-management problem to solve.
-
-Avoid starting with:
-
-> What can AI generate?
-
-Start with:
-
-> What decision, risk, issue, or management need must be addressed?
-
-### Example
-
-Weak framing:
-
+**Avoid:**
 ```text
 Create a risk table.
 ```
 
-Better framing:
-
+**Use:**
 ```text
-The Project Manager needs to determine which current risks
-require immediate escalation and whether existing mitigation
-actions are sufficient.
+Identify project risks requiring immediate escalation
+and assess whether existing mitigation actions are sufficient.
 ```
 
-This keeps the prompt focused on project value.
+**Rule:** Define the decision before defining the AI task.
 
----
+## 2. Select the Right Professional Role
 
-# 2. Define a Relevant Professional Role
+Assign expertise that matches the task—not automatically the most senior title.
 
-Avoid generic roles.
+| Role | Best Used For |
+|---|---|
+| IT Project Manager | Planning, delivery, risks, stakeholders |
+| Delivery Manager | Delivery performance, resources, profitability |
+| PMO Lead | Governance, KPIs, portfolio reporting |
+| Business Analyst | Requirements, processes, gap analysis |
+| Risk Manager | Risk assessment, mitigation, escalation |
+| QA Manager | Testing, defects, UAT, release readiness |
+| Product Owner | Backlog, priorities, business value |
+| Scrum Master | Sprint delivery, blockers, team improvement |
+| Solution Architect | Architecture, integrations, technical risks |
+| Vendor Manager | Supplier performance, contractual dependencies |
 
-### Weak
-
+**Example:**
 ```text
-You are a project manager.
+You are a Senior IT Project Manager specializing in
+software delivery, risk management, stakeholder coordination,
+and project governance.
 ```
 
-### Better
+## 3. Define One Clear, Specific Task
 
+Each prompt should focus on one primary management objective.
+
+Specify:
+- **What:** The analysis or action required.
+- **Why:** The decision or outcome it supports.
+- **When:** Relevant timeframe or deadline.
+- **Scope:** Relevant boundaries and constraints.
+
+**Avoid:**
 ```text
-You are a senior IT Project Manager experienced in international
-software delivery, stakeholder management, risk management,
-quality assurance, and project governance.
+Analyze this project.
 ```
 
-For specialist tasks, use a specialist role.
-
-Examples:
-
-- Delivery Manager
-- PMO Lead
-- Business Analyst
-- Risk Manager
-- Product Owner
-- Scrum Master
-- Kanban Delivery Lead
-- QA Manager
-- Vendor Manager
-- Solution Architect
-
-### Principle
-
-Use the most relevant professional perspective.
-
-Do not automatically choose the most senior title.
-
----
-
-# 3. One Primary Task per Prompt
-
-Avoid combining unrelated tasks.
-
-### Weak
-
+**Use:**
 ```text
-Review the risks, create a status report, write an escalation email,
-and create a stakeholder matrix.
+Identify the five most significant delivery risks
+that could affect production release within eight weeks.
+Recommend mitigation actions and escalation priorities.
 ```
 
-### Better
+Separate unrelated tasks into reusable prompts.
 
-Use separate prompts for:
+## 4. Provide Relevant Project Context
 
-1. Risk analysis
-2. Status reporting
-3. Escalation communication
-4. Stakeholder analysis
+Include only information that materially affects the analysis.
 
-This improves:
-
-- output quality,
-- reusability,
-- reviewability,
-- testing,
-- and version control.
-
----
-
-# 4. Make the Ask Specific
-
-Avoid vague instructions.
-
-### Weak
-
+**Core inputs:**
 ```text
-Analyse this project.
+PROJECT CONTEXT
+
+Project: [NAME]
+Business objective: [OBJECTIVE]
+Phase: [INITIATION / PLANNING / DELIVERY / TESTING / RELEASE]
+Delivery approach: [AGILE / PREDICTIVE / HYBRID]
+Current status: [GREEN / AMBER / RED]
+Timeline: [KEY MILESTONES]
+Budget: [IF RELEVANT]
+Stakeholders: [KEY ROLES]
+Risks and issues: [KNOWN ITEMS]
+Dependencies: [CRITICAL DEPENDENCIES]
+Constraints: [RESOURCES / TECHNICAL / REGULATORY]
 ```
 
-### Better
+### Adapt to the Delivery Framework
 
-```text
-Identify the five delivery risks most likely to affect the planned
-production release within the next eight weeks.
-```
+| Framework | Relevant Context |
+|---|---|
+| Agile / Scrum | Sprint Goal, backlog, velocity, blockers, Definition of Done |
+| Kanban | WIP limits, cycle time, lead time, throughput, blocked work, SLE |
+| Predictive | Baseline schedule, critical path, milestone and cost variance |
+| Hybrid | Governance milestones, iterations, releases, cross-team dependencies |
 
-A strong task should clarify:
+**Rule:** Include framework-specific details only when relevant.
 
-- what should be analysed,
-- what time horizon matters,
-- what decision it supports,
-- and what result is required.
+## 5. Define the Output and Audience
 
----
+Specify the expected structure, level of detail, and target audience.
 
-# 5. Provide Relevant Context
+**Common output formats:**
 
-AI output becomes more useful when the delivery environment is clear.
+| Output | Recommended Content |
+|---|---|
+| Risk Register | Risk, probability, impact, mitigation, owner |
+| Action Plan | Action, priority, owner, deadline |
+| Executive Status Report | RAG status, progress, risks, decisions |
+| Decision Matrix | Options, benefits, risks, recommendation |
+| Issue Log | Issue, root cause, impact, resolution |
+| UAT Readiness Report | Test results, defects, blockers, go/no-go criteria |
+| Stakeholder Analysis | Influence, interest, engagement strategy |
 
-Relevant context may include:
-
-- project objective,
-- project phase,
-- delivery approach,
-- timeline,
-- budget,
-- team structure,
-- stakeholders,
-- vendors,
-- dependencies,
-- current status,
-- known risks,
-- known issues,
-- relevant metrics,
-- technical constraints,
-- regulatory constraints.
-
-Do not add information simply to make the prompt look detailed.
-
-Only include information that can materially influence the analysis.
-
----
-
-# 6. Adapt Context to the Delivery Framework
-
-The core prompt structure can remain the same while the context changes.
-
-## Agile / Scrum
-
-Relevant context may include:
-
-- Sprint Goal
-- backlog status
-- velocity
-- blocked items
-- acceptance criteria
-- Definition of Done
-- release target
-
-## Kanban
-
-Relevant context may include:
-
-- WIP
-- WIP limits
-- cycle time
-- lead time
-- throughput
-- work item age
-- blocked work
-- Service Level Expectation
-
-## Predictive
-
-Relevant context may include:
-
-- baseline schedule
-- critical path
-- milestone variance
-- cost variance
-- change requests
-
-## Hybrid
-
-Relevant context may combine:
-
-- fixed governance milestones
-- iterative delivery
-- release cadence
-- external commitments
-- cross-team dependencies
-
-### Principle
-
-Adapt the prompt to the actual project environment.
-
-Do not force the project into a framework that does not fit.
-
----
-
-# 7. Define the Output Format
-
-Do not leave the structure entirely to the AI.
-
-### Example
-
+**Example:**
 ```text
 OUTPUT FORMAT
 
 Provide a table with:
+Risk | Root Cause | Probability | Impact |
+Mitigation | Owner | Due Date | Escalation Trigger
 
-Risk
-Root Cause
-Probability
-Impact
-Mitigation
-Owner
-Due Date
-Escalation Trigger
+Conclude with:
+1. Top three management priorities
+2. Recommended actions
+3. Decisions requiring approval
 ```
 
-Possible outputs include:
+**Audience guidance:**
+- **Delivery Team:** Blockers, actions, owners, deadlines.
+- **Steering Committee:** Milestones, budget, risks, escalations.
+- **Executive Sponsor:** Business impact, strategic risks, decisions.
 
-- tables,
-- action lists,
-- executive summaries,
-- decision logs,
-- stakeholder maps,
-- structured reports,
-- escalation messages,
-- risk registers.
+## 6. Require Evidence-Based Analysis
 
-The format should match the intended audience.
+Prevent unsupported conclusions and false precision.
+
+**Reusable instruction:**
+```text
+Use confirmed project information as the basis for analysis.
+
+Clearly distinguish:
+- Confirmed facts
+- Assumptions
+- Information gaps
+- Recommendations
+
+Identify likely root causes, dependencies, and project impacts.
+Do not invent missing information or unsupported numerical estimates.
+```
+
+For significant issues, assess:
+
+**Symptom → Root Cause → Impact → Corrective Action → Owner**
+
+Use defined probability and impact scales rather than unsupported risk percentages.
+
+## 7. Make Recommendations Actionable
+
+Every recommendation should support a practical management decision.
+
+**Avoid:**
+```text
+Monitor the integration delay closely.
+```
+
+**Use:**
+```text
+Agree a recovery plan with the API provider within
+two working days and evaluate an approved testing workaround.
+```
+
+Where relevant, specify:
+
+**Action + Accountable Owner + Priority + Due Date + Escalation Trigger**
+
+### Define Decision and Escalation Criteria
+
+Use project-specific thresholds.
+
+**Examples:**
+- Milestone delay exceeds the approved tolerance.
+- Budget variance exceeds the agreed threshold.
+- Critical dependency has no recovery plan.
+- Severity 1 defect remains unresolved before release.
+- Vendor misses a contractual commitment.
+
+For major decisions, define acceptance criteria before requesting a recommendation.
+
+## 8. Apply a Quality Review
+
+Include this compact QA instruction in important prompts.
+
+```text
+QUALITY REVIEW
+
+Act as a Senior QA Manager and review the output.
+
+Verify:
+1. Accuracy: Conclusions are supported by available evidence.
+2. Completeness: Relevant risks, dependencies, and gaps are covered.
+3. Actionability: Recommendations are feasible, prioritized,
+   and assigned to accountable owners.
+4. Governance: Escalations and required approvals are identified.
+5. Confidentiality: Sensitive project information is protected.
+
+Flag contradictions, unsupported claims, and missing information.
+
+OUTPUT:
+- Quality verdict: PASS / REVISE
+- Findings requiring correction
+- Recommended improvements
+
+Do not invent missing information.
+```
+
+## 9. Protect Confidentiality and Human Accountability
+
+AI supports project decisions; it does not replace accountable decision-makers.
+
+**Before submitting project data:**
+- Remove or anonymize personal and client information.
+- Never include passwords, credentials, or API keys.
+- Protect commercial pricing, contracts, and proprietary information.
+- Follow organizational data protection and AI usage policies.
+
+Use placeholders such as `[CLIENT]`, `[VENDOR]`, and `[PROJECT]`.
+
+**Require human validation before:**
+- Budget or scope changes
+- Contractual commitments
+- Risk acceptance
+- Production release or go-live
+- Security-sensitive decisions
+- Executive reporting
+
+Apply PMI, PMBOK, Scrum, Kanban, DevOps, or other professional practices only where relevant. Do not imply formal certification or compliance without verification.
+
+## 10. Design for Reuse and Version Control
+
+Keep reusable prompt instructions separate from project-specific information.
+
+```text
+REUSABLE PROMPT
++ PROFESSIONAL ROLE
++ PROJECT CONTEXT
++ OUTPUT FORMAT
++ QUALITY REVIEW
+```
+
+Use placeholders to support reuse across projects.
+
+**Minimum prompt metadata:**
+
+| Field | Purpose |
+|---|---|
+| Prompt ID / Name | Identification |
+| Category / Use Case | Intended application |
+| Owner | Accountability |
+| Version | Change tracking |
+| Status | Draft / Tested / Reviewed / Approved / Retired |
+| Last Reviewed | Maintenance |
+| Expected Output | Deliverable definition |
+
+Test prompts against realistic project scenarios before publishing or approving them.
 
 ---
 
-# 8. Separate Facts From Assumptions
+## Prompt Quality Checklist
 
-AI should not silently fill gaps.
+Before publishing a reusable prompt, confirm:
 
-Use instructions such as:
-
-```text
-Do not invent missing project information.
-
-Clearly separate:
-
-- confirmed facts,
-- assumptions,
-- information gaps,
-- recommendations.
-```
-
-This is especially important when the output influences:
-
-- project status,
-- scope,
-- budget,
-- contracts,
-- delivery commitments,
-- executive reporting,
-- risk acceptance.
+- [ ] **Purpose:** Business problem and required decision are clear.
+- [ ] **Role:** Professional expertise matches the task.
+- [ ] **Task:** One primary objective with defined scope.
+- [ ] **Context:** Relevant project information is provided.
+- [ ] **Framework:** Delivery methodology is reflected where relevant.
+- [ ] **Output:** Structure and target audience are specified.
+- [ ] **Evidence:** Facts, assumptions, and gaps are distinguishable.
+- [ ] **Actions:** Recommendations include ownership and priorities.
+- [ ] **Governance:** Decision criteria, escalations, and approvals are defined where needed.
+- [ ] **Quality:** Accuracy, completeness, and feasibility are reviewed.
+- [ ] **Security:** Sensitive information is protected.
+- [ ] **Reuse:** Placeholders, versioning, and testing support maintenance.
 
 ---
 
-# 9. Ask for Root Cause, Not Only Symptoms
+## Key Principle
 
-A useful project-management analysis should go beyond the visible problem.
+A professional AI prompt should consistently produce outputs that are:
 
-Instead of:
+**Relevant → Evidence-Based → Structured → Actionable → Reviewable → Governable**
 
-```text
-The release is delayed.
-```
-
-Ask for:
-
-```text
-For each delivery issue, identify:
-
-- symptom,
-- likely root cause,
-- affected dependency,
-- project impact,
-- corrective action,
-- owner,
-- escalation trigger.
-```
-
-This shifts the output from reporting to management analysis.
-
----
-
-# 10. Make Recommendations Actionable
-
-Avoid recommendations such as:
-
-```text
-Monitor the situation closely.
-```
-
-Prefer:
-
-```text
-Agree a recovery plan with the external API provider within
-two working days and assess whether testing can continue using
-a controlled mock service.
-```
-
-A useful recommendation should contain, where relevant:
-
-- action,
-- owner,
-- priority,
-- due date,
-- escalation threshold.
-
----
-
-# 11. Define Decision Criteria
-
-For important project decisions, define the criteria before asking for a recommendation.
-
-### Example
-
-```text
-Assess release readiness against:
-
-- no unresolved Severity 1 defects,
-- critical business processes tested,
-- security approval received,
-- rollback plan tested,
-- support model operational,
-- business owner approval received.
-```
-
-This makes the analysis more transparent and repeatable.
-
----
-
-# 12. Define Escalation Triggers
-
-Where possible, specify when an issue becomes a governance concern.
-
-Examples:
-
-```text
-Escalate when:
-
-- milestone delay exceeds 10 working days,
-- budget variance exceeds the agreed tolerance,
-- a critical dependency has no recovery plan,
-- a critical defect remains unresolved close to release,
-- a vendor misses a contractual commitment.
-```
-
-Escalation thresholds convert analysis into governance.
-
----
-
-# 13. Match the Detail to the Audience
-
-Different stakeholders require different information.
-
-## Delivery Team
-
-Focus on:
-
-- blockers,
-- actions,
-- dependencies,
-- ownership,
-- deadlines.
-
-## Steering Committee
-
-Focus on:
-
-- status,
-- major risks,
-- budget,
-- schedule,
-- decisions,
-- escalations.
-
-## Executive Sponsor
-
-Focus on:
-
-- business impact,
-- strategic risk,
-- major decisions,
-- value,
-- governance.
-
-### Principle
-
-Do not send the same level of detail to every audience.
-
----
-
-# 14. Use AI for Decision Support, Not Automatic Decisions
-
-Avoid:
-
-```text
-Decide whether we should go live.
-```
-
-Prefer:
-
-```text
-Assess go-live readiness against the defined criteria.
-
-Identify blockers, manageable risks, assumptions, and unresolved
-decisions.
-
-Provide a recommendation with rationale.
-
-The final decision remains with the accountable project stakeholders.
-```
-
----
-
-# 15. Build Quality Review Into the Prompt
-
-Important prompts should include a review instruction.
-
-### Example
-
-```text
-Before finalising:
-
-- check for contradictions,
-- identify unsupported assumptions,
-- flag missing information,
-- verify that recommendations are actionable,
-- verify that ownership is clear,
-- identify conclusions requiring independent validation.
-```
-
-This adds a second level of quality control.
-
----
-
-# 16. Avoid False Precision
-
-AI can produce precise-looking numbers that are unsupported by the available evidence.
-
-Avoid:
-
-```text
-What is the exact probability this project will fail?
-```
-
-Prefer:
-
-```text
-Rate probability using the agreed project scale.
-
-Explain the reasoning.
-
-Identify what evidence would be required for a stronger assessment.
-```
-
----
-
-# 17. Protect Confidential Information
-
-Do not include sensitive project information in public AI tools unless organisational policy explicitly allows it.
-
-Remove or anonymise:
-
-- client names,
-- customer data,
-- employee personal data,
-- passwords,
-- credentials,
-- API keys,
-- confidential pricing,
-- protected contract information,
-- proprietary financial data,
-- security-sensitive architecture.
-
-Use neutral placeholders where appropriate.
-
-Examples:
-
-```text
-Client A
-Vendor B
-Project X
-External API provider
-Critical production platform
-```
-
----
-
-# 18. Keep Prompt Logic and Project Data Separate
-
-Where possible, maintain:
-
-```text
-Reusable Prompt
-+
-Project-Specific Context
-```
-
-rather than embedding real project information inside the reusable prompt.
-
-This improves:
-
-- confidentiality,
-- reuse,
-- version control,
-- maintenance,
-- testing.
-
----
-
-# 19. Design Prompts for Reuse
-
-Use placeholders such as:
-
-```text
-[PROJECT]
-[PHASE]
-[DELIVERY APPROACH]
-[KEY MILESTONE]
-[KNOWN ISSUE]
-[DEPENDENCY]
-[STAKEHOLDER]
-[METRIC]
-```
-
-A strong library prompt should work across multiple projects with minimal modification.
-
----
-
-# 20. Align With Relevant Professional Practices
-
-Individual prompts may reference relevant standards or delivery practices.
-
-Examples:
-
-- PMI / PMP
-- PMBOK
-- Agile
-- Scrum
-- Kanban
-- hybrid delivery
-- software testing
-- DevOps
-- risk management
-- governance
-
-Only include a standard or framework where it actually contributes to the task.
-
-Do not use labels simply to make the prompt appear more sophisticated.
-
----
-
-# 21. Treat Prompts as Managed Project Assets
-
-A mature prompt should have:
-
-- defined purpose,
-- owner,
-- version,
-- review status,
-- intended user,
-- expected output,
-- quality criteria,
-- relevant framework alignment,
-- review date.
-
-Suggested lifecycle:
-
-```text
-Draft
-↓
-Tested
-↓
-Reviewed
-↓
-Approved
-↓
-Updated
-↓
-Retired
-```
-
----
-
-# Prompt Quality Checklist
-
-Before adding a prompt to this repository, confirm:
-
-- [ ] The business problem is clear
-- [ ] The professional role is relevant
-- [ ] There is one clear primary task
-- [ ] The task is specific
-- [ ] Sufficient context is provided
-- [ ] The delivery framework is reflected where relevant
-- [ ] The expected output is defined
-- [ ] Facts and assumptions are separated
-- [ ] Recommendations are actionable
-- [ ] Ownership is visible
-- [ ] Decision criteria are defined where needed
-- [ ] Escalation criteria are defined where useful
-- [ ] Human review is required
-- [ ] Confidential information is protected
-- [ ] The prompt can be reused
-- [ ] Framework or standard references are relevant rather than decorative
-
----
-
-# Key Principle
-
-A high-quality project-management prompt is not defined by how long or sophisticated it sounds.
-
-It is defined by whether it produces an output that is:
-
-**relevant → structured → evidence-based → actionable → reviewable → governable.**
+**Measure prompt quality by the usefulness of the management decisions it supports—not by prompt length or complexity.**

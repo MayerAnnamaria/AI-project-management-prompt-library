@@ -1,890 +1,421 @@
 # Stakeholder Analysis Matrix
 
-## Purpose
+**Prompt ID:** STAKE-001 | **Category:** Stakeholder Management | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to identify, assess, and prioritise stakeholders for an IT, software, digital transformation, data, infrastructure, or technology-enabled project.
+## 1. Ready-to-Use Prompt
 
-The analysis should help the Project Manager understand:
+**Purpose:** Identify and prioritize project stakeholders based on their influence, interests, decision authority, concerns, and engagement needs.
 
-- who can influence the project,
-- who is affected by it,
-- what each stakeholder cares about,
-- how much power and interest they have,
-- whether their attitude is supportive or resistant,
-- and how engagement should be adapted.
+**Use case:** Develop or update a stakeholder analysis during project initiation, delivery, organizational change, or major milestones to improve alignment, manage dependencies, and support timely decisions.
 
-The objective is not simply to create a stakeholder list.
+Copy the prompt and replace the placeholders with your project information.
 
-The objective is to understand **where stakeholder attention and management effort should be focused**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Planning / Delivery / Major Change
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Product initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / PMO / Business Analyst / Change Lead
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At initiation and reviewed throughout the project
-
----
-
-# Prompt
-
-```text id="stakeholder-analysis-01"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in stakeholder
-management, international software delivery, organisational change,
-project governance, and cross-functional communication.
+You are a Senior IT Project Manager experienced in
+stakeholder engagement, international software delivery,
+organizational change, governance, and communication.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Current phase: [PHASE]
+Delivery approach: [PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
+Target completion: [DATE]
+
+Project organization: [DETAILS]
+Known stakeholders: [LIST]
+Decision-makers: [LIST]
+External suppliers: [LIST]
+Affected business areas: [LIST]
+Countries / languages: [IF RELEVANT]
+Known concerns and feedback: [DETAILS]
+Critical stakeholder dependencies: [LIST]
+Previous stakeholder assessments: [IF AVAILABLE]
 
 TASK
 
-Create a complete stakeholder analysis matrix for the project
-described below.
+Create an evidence-based Stakeholder Analysis Matrix
+and a practical engagement plan.
 
-PROJECT CONTEXT
+STEP 1 — IDENTIFY AND ASSESS STAKEHOLDERS
 
-Project:
-[PROJECT NAME]
+1. Identify internal and external stakeholders,
+   including sponsors, decision-makers, delivery teams,
+   suppliers, operational owners, and affected users.
+2. Assess each stakeholder's:
+   - Role and project relationship
+   - Primary interest and expected outcome
+   - Power: High / Medium / Low
+   - Interest: High / Medium / Low
+   - Attitude: Supportive / Neutral / Resistant / Unknown
+   - Decision authority and critical dependencies
+   - Key concerns and change impact
+3. Classify stakeholders using the Power–Interest Matrix:
+   - High Power / High Interest: Manage Closely
+   - High Power / Low Interest: Keep Satisfied
+   - Low Power / High Interest: Keep Informed
+   - Low Power / Low Interest: Monitor
+4. Base assessments on documented authority,
+   responsibilities, feedback, and observed behavior.
+5. Mark unsupported assessments as provisional
+   or "Requires validation".
+
+STEP 2 — PRIORITIZE ENGAGEMENT
+
+6. Identify the three stakeholders requiring
+   the most active management attention.
+7. Consider decision authority, dependency ownership,
+   operational impact, influence, and engagement risk.
+8. Explain the consequences of insufficient engagement.
+9. Recommend specific actions addressing stakeholder
+   concerns and project dependencies.
+10. Identify missing or insufficiently engaged stakeholders.
+
+STEP 3 — DEVELOP COMMUNICATION AND RISK CONTROLS
+
+11. Define an engagement approach for each stakeholder:
+    - Engagement objective
+    - Communication method
+    - Frequency
+    - Required decisions or inputs
+    - Responsible project role
+12. Identify stakeholder-related delivery risks,
+    delayed decisions, unresolved concerns, or
+    resource dependencies.
+13. Recommend escalation only where justified
+    by project impact or governance requirements.
+14. Define monitoring indicators such as approval delays,
+    reduced participation, or withdrawn commitments.
+15. Compare stakeholder attitudes and engagement
+    effectiveness over time where evidence exists.
+16. Recommend review points during major milestones,
+    organizational changes, or significant escalations.
+
+Adapt engagement to the delivery approach:
+- Agile / Scrum: Product Owner collaboration,
+  Sprint Reviews, user feedback, release decisions.
+- Kanban: Service expectations, prioritization,
+  blocked dependencies, delivery predictability.
+- Predictive: Milestone approvals, formal governance,
+  change control, and acceptance.
+- Hybrid: Continuous delivery engagement combined
+  with executive governance.
+
+For international projects, consider language,
+time zones, and confirmed communication preferences.
+
+RULES
+
+- Do not infer stakeholder attitudes without evidence.
+- Do not equate constructive challenge with resistance.
+- Do not assume organizational seniority equals influence.
+- Distinguish formal authority from informal influence.
+- Do not invent stakeholder commitments or approvals.
+- Avoid personal judgments or cultural stereotypes.
+- Protect confidential stakeholder information.
+
+OUTPUT FORMAT
+
+1. STAKEHOLDER ANALYSIS MATRIX
+
+Stakeholder | Role | Primary Interest |
+Power | Interest Level | Current Attitude |
+Key Concern | Decision Authority
+
+2. POWER–INTEREST PRIORITIZATION
+
+Stakeholder | Power | Interest |
+Quadrant | Engagement Priority | Rationale
+
+3. ENGAGEMENT AND COMMUNICATION PLAN
+
+Stakeholder | Engagement Objective |
+Recommended Action | Communication Method |
+Frequency | Proposed Relationship Owner
+
+4. TOP 3 PRIORITY STAKEHOLDERS
+
+Stakeholder | Why Critical |
+Risk if Engagement Fails |
+Next Action | Proposed Owner
+
+5. STAKEHOLDER DEPENDENCIES AND RISKS
+
+Stakeholder | Dependency / Concern |
+Project Impact | Required By |
+Mitigation / Escalation
+
+6. ENGAGEMENT TREND AND WARNING SIGNALS
+
+Stakeholder | Previous Position |
+Current Position | Trend |
+Evidence | Recommended Response
+
+7. STAKEHOLDER GAPS
+
+Missing / Under-engaged Role |
+Potential Impact | Recommended Action |
+Priority
+
+MANAGEMENT SUMMARY
+
+- Highest-priority stakeholder relationships
+- Critical decisions and dependencies
+- Main engagement risks
+- Immediate management actions
+- Recommended review cadence
+
+Use concise Markdown tables.
+Mark unsupported assumptions as "Requires validation".
+Prioritize practical engagement over generic communication.
+```
+
+---
+
+## 2. Quality Check
+
+Run this independent review before using the matrix for formal stakeholder planning.
+
+```text
+QUALITY CHECK
+
+Act as an independent Senior PMO and Stakeholder
+Engagement Assurance Manager.
+
+Review the Stakeholder Analysis Matrix and supporting evidence.
+
+Verify:
+
+1. Completeness: Sponsors, decision-makers, technical
+   teams, suppliers, operational owners, and affected users
+   are appropriately represented.
+
+2. Assessment Quality: Power, interest, influence,
+   and decision authority are assessed separately.
+
+3. Evidence: Stakeholder attitudes and concerns
+   are supported by available information rather
+   than assumptions or subjective judgments.
+
+4. Prioritization: The top three stakeholder
+   priorities reflect actual project influence,
+   dependencies, and delivery risk.
+
+5. Engagement: Strategies define specific actions,
+   communication methods, frequency, and ownership.
+
+6. Dependencies: Critical approvals, resources,
+   and stakeholder-controlled deliverables are visible.
+
+7. Risk: Warning signals, escalation needs,
+   and unresolved concerns are identified.
+
+8. Consistency: Communication effort is proportional
+   to stakeholder needs and project impact.
+
+9. Governance: The analysis respects confidentiality
+   and distinguishes proposed actions from commitments.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Validation Required: [UNSUPPORTED ASSESSMENTS]
+Management Attention: [CRITICAL ENGAGEMENT GAPS]
+
+Do not invent stakeholder attitudes, influence,
+authority, or commitments.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### CRM Replacement — Stakeholder Alignment and Operational Readiness
+
+**Scenario:** A company is replacing its legacy CRM platform. The Executive Sponsor supports the project, but the Customer Service Director is concerned about potential operational disruption. The Security team has not yet been fully engaged, and frontline employees have received limited communication.
+
+The Project Manager must identify stakeholder priorities and establish an engagement plan before UAT and deployment.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | CRM Replacement |
+| Phase | Development / UAT Preparation |
+| Delivery approach | Hybrid |
+| Business objective | Improve customer-service efficiency |
+| Main stakeholders | Sponsor, Customer Service, Product Owner, IT, Security, Vendor, End Users |
+| Key concern | Operational adoption and readiness |
+| Management objective | Secure decisions, reduce resistance risk, and improve engagement |
+
+### Example Input
+
+```text
+Project: CRM Replacement
 
 Business objective:
-[OBJECTIVE]
+Improve customer-service efficiency and replace
+the existing legacy CRM platform.
 
 Current phase:
-[PHASE]
+Development / UAT Preparation
 
 Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Target completion:
-[DATE]
-
-Project organisation:
-[DETAILS]
-
-Key stakeholders:
-[LIST]
-
-External vendors:
-[LIST]
-
-Affected business areas:
-[LIST]
-
-Countries / languages:
-[LIST]
-
-Known stakeholder concerns:
-[LIST]
-
-OUTPUT FORMAT
-
-For each stakeholder provide:
-
-1. Stakeholder Name / Group
-2. Role / Relationship to Project
-3. Primary Interest
-4. Power Level: High / Medium / Low
-5. Interest Level: High / Medium / Low
-6. Current Attitude: Supportive / Neutral / Resistant / Unknown
-7. Key Concerns
-8. Engagement Strategy
-9. Communication Method
-10. Communication Frequency
-11. Responsible Project Role
-
-Format as a table.
-
-After the table:
-
-- identify the top 3 stakeholders requiring the most active management,
-- explain why,
-- highlight any stakeholder whose attitude may materially affect project success.
-```
-
----
-
-# Stakeholder Analysis Dimensions
-
-For each stakeholder assess:
-
-```text id="stakeholder-dimensions"
-Power
-Interest
-Attitude
-Influence
-Impact
-Decision Authority
-Information Need
-Change Impact
-```
-
-Do not assume that seniority alone determines stakeholder importance.
-
----
-
-# 1. Primary Interest
-
-Ask:
-
-> What does this stakeholder most care about?
-
-Possible interests include:
-
-```text id="stakeholder-interests"
-Business outcome
-
-Budget
-
-Schedule
-
-Customer experience
-
-Operational stability
-
-Security
-
-Compliance
-
-Technical architecture
-
-Team workload
-
-Product value
-
-Vendor performance
-
-Data quality
-
-User adoption
-```
-
----
-
-# Example
-
-```text id="stakeholder-interest-example"
-Stakeholder:
-Head of Customer Service
-
-Primary Interest:
-The new CRM must improve agent efficiency without disrupting
-customer-service operations during rollout.
-```
-
----
-
-# 2. Power Level
-
-Use:
-
-```text id="stakeholder-power"
-High
-Can approve, stop, materially change, fund, or escalate the project.
-
-Medium
-Can influence important delivery decisions or stakeholder behaviour.
-
-Low
-Limited formal authority over project direction.
-```
-
-Power may come from:
-
-- decision authority,
-- funding,
-- specialist expertise,
-- regulatory authority,
-- operational control,
-- organisational influence.
-
----
-
-# 3. Interest Level
-
-Use:
-
-```text id="stakeholder-interest-level"
-High
-Project outcome directly affects the stakeholder.
-
-Medium
-Stakeholder is affected but not continuously engaged.
-
-Low
-Limited direct involvement or impact.
-```
-
-Power and interest should be assessed separately.
-
----
-
-# Power / Interest Matrix
-
-Use the classic four-quadrant view:
-
-| Power | Interest | Suggested Approach |
-|---|---|---|
-| High | High | Manage Closely |
-| High | Low | Keep Satisfied |
-| Low | High | Keep Informed |
-| Low | Low | Monitor |
-
-This is a starting point, not a complete engagement strategy.
-
----
-
-# 4. Current Attitude
-
-Use:
-
-```text id="stakeholder-attitude"
-Supportive
-
-Neutral
-
-Resistant
-
-Unknown
-```
-
-Do not infer attitude without evidence.
-
-If uncertain:
-
-> Unknown — validate through stakeholder engagement.
-
----
-
-# Attitude Evidence
-
-Possible evidence includes:
-
-```text id="stakeholder-attitude-evidence"
-Meeting behaviour
-
-Decision history
-
-Response times
-
-Feedback
-
-Escalations
-
-Participation
-
-Resource commitment
-
-Survey feedback
-
-Direct stakeholder conversation
-```
-
-Avoid labelling a stakeholder “resistant” because they challenge the project.
-
-Challenge may reflect legitimate project risk.
-
----
-
-# 5. Key Concerns
-
-Identify what may influence stakeholder behaviour.
-
-Examples:
-
-```text id="stakeholder-concerns"
-Budget impact
-
-Loss of control
-
-Operational disruption
-
-Job-role change
-
-Data privacy
-
-Workload
-
-Implementation risk
-
-Technical complexity
-
-Vendor dependency
-
-Customer impact
-```
-
-Understanding concerns improves engagement quality.
-
----
-
-# 6. Engagement Strategy
-
-For each stakeholder, define a practical strategy.
-
-### Weak
-
-```text id="stakeholder-strategy-weak"
-Communicate regularly.
-```
-
-### Better
-
-```text id="stakeholder-strategy-good"
-Engage the Customer Service Director in monthly readiness reviews
-and provide early visibility of training, cutover, and operational
-risks.
-
-Escalate decisions affecting frontline operations before they enter
-final release planning.
-```
-
----
-
-# Engagement Strategy Should Answer
-
-```text id="stakeholder-strategy-questions"
-What do they need?
-
-When do they need it?
-
-What concerns should we address?
-
-What decisions do they control?
-
-How should we involve them?
-```
-
----
-
-# 7. Communication Method
-
-Possible channels include:
-
-```text id="stakeholder-methods"
-Steering Committee
-
-1:1 meeting
-
-Project status report
-
-Workshop
-
-Email
-
-Teams / Slack
-
-Dashboard
-
-Demo
-
-Sprint Review
-
-Risk review
-
-Vendor review
-
-Training session
-```
-
-The communication method should match stakeholder needs.
-
----
-
-# 8. Communication Frequency
-
-Possible frequencies:
-
-```text id="stakeholder-frequency"
-Daily
-
-Weekly
-
-Biweekly
-
-Monthly
-
-Milestone-based
-
-Event-driven
-
-As required
-```
-
-Do not over-communicate stakeholders who need only periodic governance information.
-
----
-
-# Example Stakeholder Matrix
-
-| Stakeholder | Interest | Power | Interest Level | Attitude | Engagement |
-|---|---|---|---|---|---|
-| Executive Sponsor | Business value / budget | High | High | Supportive | Manage closely |
-| Product Owner | Scope / priorities | High | High | Supportive | Continuous engagement |
-| Security Lead | Security approval | High | Medium | Neutral | Early and milestone-based engagement |
-| End Users | Usability / process change | Low | High | Unknown | Keep informed and involve in testing |
-| Vendor | Delivery / commercial outcome | Medium | High | Supportive | Weekly delivery governance |
-
----
-
-# Example Input
-
-```text id="stakeholder-example-input"
-Project:
-CRM Replacement
+Hybrid
 
 Stakeholders:
-Executive Sponsor
-Customer Service Director
-Product Owner
-IT Architecture
-Security
-Data Team
-CRM Implementation Vendor
-Customer Service Agents
-Operations
-Finance
+- Executive Sponsor
+- Customer Service Director
+- Product Owner
+- Solution Architect
+- Security Lead
+- Data Migration Lead
+- CRM Implementation Vendor
+- Customer Service Agents
+- Operations Lead
+- Finance
 
-Known Context:
-Sponsor strongly supports the programme.
-Customer Service Director is concerned about operational disruption.
-Security has not yet been fully engaged.
-Vendor relationship is positive.
-Customer Service agents have had limited communication about the change.
+Known information:
+- Executive Sponsor strongly supports the project.
+- Customer Service Director has raised concerns
+  about operational disruption during rollout.
+- Product Owner manages functional priorities.
+- Security has not yet been fully engaged.
+- Vendor relationship is positive.
+- Customer Service Agents received limited
+  communication about upcoming changes.
+- Operations will support the solution after go-live.
+
+Known dependencies:
+- Business must confirm UAT participants.
+- Security approval required before deployment.
+- Operations must accept support handover.
+
+Stakeholder power and interest assessments:
+Not yet validated.
 ```
 
----
+### Example Output — Stakeholder Analysis
 
-# Example Output Excerpt
+#### 1. Stakeholder Analysis Matrix
 
-| Stakeholder | Power | Interest | Attitude | Key Concern | Engagement Strategy |
+| Stakeholder | Primary Interest | Power | Interest | Attitude | Key Concern |
 |---|---|---|---|---|---|
-| Executive Sponsor | High | High | Supportive | Business value / timeline | Monthly steering, decision escalation |
-| Customer Service Director | High | High | Neutral | Operational disruption | Readiness reviews and early cutover planning |
-| Security Lead | High | Medium | Unknown | Security compliance | Early design review and milestone approvals |
-| Service Agents | Low | High | Unknown | Process / workload change | Demos, UAT involvement, training |
-
----
-
-# Top 3 Stakeholder Review
-
-After creating the matrix, identify the three stakeholders requiring the most active management.
-
-Consider:
-
-```text id="stakeholder-priority-factors"
-High power
-
-High interest
-
-Decision authority
-
-Resistance
-
-Critical dependency ownership
-
-Ability to delay project
-
-Operational impact
-
-Influence over others
-```
-
-Do not simply select the three most senior people.
-
----
-
-# Stakeholder Priority Prompt
-
-```text id="stakeholder-priority"
-ROLE
-
-You are a senior IT Project Manager reviewing stakeholder risk.
-
-TASK
-
-From the stakeholder matrix below, identify the three stakeholders
-requiring the highest level of active management.
-
-[PASTE MATRIX]
-
-For each explain:
-
-1. Why they are important
-2. What could happen if engagement fails
-3. What engagement action should happen next
-4. Who should own the relationship
-```
-
----
-
-# Stakeholder Attitude Trend
-
-Stakeholder positions can change.
-
-Track:
-
-| Stakeholder | Previous Attitude | Current Attitude | Trend | Reason |
-|---|---|---|---|---|
-
-Possible trends:
-
-```text id="stakeholder-trend"
-Improving
-
-Stable
-
-Deteriorating
-
-Unknown
-```
-
-Example:
-
-> Security moved from Neutral to Supportive after early technical workshops and agreement on the evidence required for production approval.
-
----
-
-# Stakeholder Risk Signals
-
-Possible warning indicators:
-
-```text id="stakeholder-signals"
-Repeated missed decisions
-
-Reduced meeting participation
-
-Delayed approvals
-
-Repeated escalation
-
-Resource commitments withdrawn
-
-Negative feedback
-
-Contradictory stakeholder instructions
-
-New resistance to scope or timeline
-```
-
-These may indicate emerging stakeholder risk.
-
----
-
-# Stakeholder Dependency Review
-
-Some stakeholders own critical project dependencies.
-
-Provide:
-
-| Stakeholder | Dependency | Required By | Impact if Late |
-|---|---|---|---|
-
-Examples:
-
-```text id="stakeholder-dependencies"
-Business Owner
-→ UAT resources
-
-Security
-→ Production approval
-
-Architecture
-→ Technical decision
-
-Finance
-→ Budget approval
-
-Vendor
-→ API delivery
-```
-
----
-
-# Stakeholder Influence Map
-
-Where useful, assess informal influence.
-
-Ask:
-
-```text id="stakeholder-influence"
-Who influences the Sponsor?
-
-Who influences end-user opinion?
-
-Who controls access to decision-makers?
-
-Who can accelerate or block approvals?
-
-Who has informal authority?
-```
-
-Do not assume the organisation chart tells the full story.
-
----
-
-# Agile / Scrum Considerations
-
-Relevant stakeholders may include:
-
-- Product Owner,
-- users,
-- business sponsors,
-- technical stakeholders,
-- external teams.
-
-Sprint Reviews and product demonstrations can support stakeholder engagement.
-
-Do not treat Scrum events as the complete stakeholder-management strategy.
-
----
-
-# Kanban Considerations
-
-Stakeholder engagement may focus on:
-
-- service expectations,
-- priority policies,
-- blocked dependencies,
-- delivery predictability,
-- SLE performance.
-
-Stakeholders who frequently change priorities may materially affect flow.
-
----
-
-# Predictive Considerations
-
-Stakeholder management may align strongly with:
-
-- milestone approvals,
-- formal governance,
-- scope decisions,
-- change control,
-- acceptance.
-
----
-
-# Hybrid Considerations
-
-Combine continuous product engagement with formal governance.
-
-Example:
-
-```text id="stakeholder-hybrid"
-Delivery-level engagement
-+
-Executive governance
-```
-
----
-
-# International / Multicultural Considerations
-
-Where relevant assess:
-
-```text id="stakeholder-international"
-Language
-
-Time zone
-
-Decision-making culture
-
-Communication style
-
-Local organisational norms
-
-Availability
-```
-
-Avoid stereotyping based on nationality or culture.
-
-Use observed stakeholder behaviour and confirmed communication needs.
-
----
-
-# Stakeholder Review Cadence
-
-Review the matrix:
-
-```text id="stakeholder-review-cadence"
-At project initiation
-
-Before major milestones
-
-After organisational change
-
-After major escalation
-
-When stakeholder attitude changes
-
-During regular governance reviews
-```
-
-Stakeholder analysis should be dynamic.
-
----
-
-# Prompt 2 — Stakeholder Gap Review
-
-```text id="stakeholder-gap-review"
-ROLE
-
-You are a PMO Lead reviewing a stakeholder analysis.
-
-TASK
-
-Review the stakeholder matrix below.
-
-[PASTE MATRIX]
-
-Check for:
-
-- missing decision-makers,
-- missing end users,
-- missing operational owners,
-- missing technical stakeholders,
-- missing security / compliance stakeholders,
-- unvalidated attitudes,
-- stakeholders with unclear engagement owners,
-- high-power stakeholders with insufficient engagement.
-
-OUTPUT FORMAT
-
-Gap
-Why It Matters
-Potential Impact
-Recommended Action
-Priority
-```
-
----
-
-# Quality Checklist
-
-Before approving the matrix, confirm:
-
-- [ ] Key stakeholders are identified
-- [ ] Business stakeholders are included
-- [ ] Technical stakeholders are included
-- [ ] Operations are included where relevant
-- [ ] Vendors are included
-- [ ] End users are considered
-- [ ] Power is assessed
-- [ ] Interest is assessed
-- [ ] Attitude is assessed or marked unknown
-- [ ] Key concerns are understood
-- [ ] Engagement strategy is specific
-- [ ] Communication method is defined
-- [ ] Frequency is defined
-- [ ] Top-priority stakeholders are identified
-- [ ] Stakeholder attitudes will be reviewed over time
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- stakeholder identification,
-- stakeholder analysis,
-- engagement,
-- communication,
-- governance,
-- leadership,
-- change management.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- stakeholders,
-- team,
-- governance,
-- communication,
-- delivery.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Stakeholder assessments should be reviewed by the Project Manager and relevant project leaders.
-
-AI can:
-
-- structure stakeholder information,
-- identify potential gaps,
-- suggest engagement approaches.
-
-AI should not:
-
-- infer stakeholder attitudes without evidence,
-- make sensitive personal judgments,
-- replace direct stakeholder engagement.
-
----
-
-# Confidentiality
-
-Stakeholder analysis may contain sensitive information.
-
-Protect:
-
-- stakeholder attitudes,
-- internal influence,
-- organisational conflicts,
-- personal concerns,
-- escalation history,
-- political or commercial sensitivities.
-
-Do not distribute the stakeholder matrix more widely than necessary.
-
----
-
-# Prompt Metadata
-
-```text id="stakeholder-analysis-metadata"
-Prompt ID: STAKE-001
-Category: Stakeholder Management
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: PMO / Sponsor
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Executive Sponsor | Business value, delivery success | High* | High* | Supportive | Benefits and timeline |
+| Customer Service Director | Operational continuity | High* | High | Unknown | Disruption during rollout |
+| Product Owner | Functionality and priorities | High* | High | Unknown | Scope and business value |
+| Solution Architect | Technical integrity | Medium* | High* | Unknown | Integration complexity |
+| Security Lead | Security readiness | High* | Medium* | Unknown | Compliance and approval |
+| Data Migration Lead | Migration quality | Medium* | High* | Unknown | Data integrity |
+| CRM Vendor | Delivery performance | Medium* | High* | Supportive* | Delivery commitments |
+| Service Agents | Usability and workload | Low* | High | Unknown | Process changes |
+| Operations Lead | Support readiness | Medium* | High | Unknown | Handover and support |
+| Finance | Budget oversight | Medium* | Medium* | Unknown | Financial control |
+
+*Power, interest, and vendor attitude are provisional. The positive vendor relationship is reported, but it does not alone establish a supportive attitude toward every project decision.*
+
+The Customer Service Director's concerns do not establish resistance.
+
+#### 2. Power–Interest Prioritization
+
+| Stakeholder | Proposed Quadrant | Engagement Approach |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT stakeholder-analysis framework |
+| Executive Sponsor | High / High | Manage Closely |
+| Customer Service Director | High / High | Manage Closely |
+| Product Owner | High / High | Manage Closely |
+| Security Lead | High / Medium | Keep Satisfied and involve early |
+| Service Agents | Low / High | Keep Informed and involve in testing |
+| Operations Lead | Medium / High | Active operational engagement |
+| CRM Vendor | Medium / High | Weekly delivery coordination |
+
+**Validation required:** Confirm formal authority and the proposed classifications before finalizing engagement priorities.
+
+#### 3. Engagement and Communication Plan
+
+| Stakeholder | Engagement Objective | Recommended Action | Method / Frequency |
+|---|---|---|---|
+| Executive Sponsor | Maintain governance alignment | Review delivery exposure and decisions | Monthly Steering Committee |
+| Customer Service Director | Protect operational continuity | Review UAT, training, and cutover plans | Biweekly readiness meeting |
+| Product Owner | Align functionality and priorities | Resolve requirements and acceptance questions | Weekly working session |
+| Security Lead | Secure timely approvals | Review security evidence and outstanding controls | Early workshop and milestones |
+| Service Agents | Improve adoption | Provide demos and gather feedback | UAT sessions and demonstrations |
+| Operations Lead | Confirm service readiness | Review support model and handover evidence | Biweekly transition review |
+| CRM Vendor | Maintain delivery accountability | Review commitments, dependencies, and risks | Weekly supplier meeting |
+| Finance | Maintain cost visibility | Review material budget changes | Monthly or event-driven |
+
+All meeting frequencies are proposed and subject to stakeholder agreement.
+
+#### 4. Top 3 Priority Stakeholders
+
+| Stakeholder | Why Critical | Risk if Engagement Fails | Next Action |
+|---|---|---|---|
+| Customer Service Director | Controls or influences operational readiness | Cutover disruption or weak business preparation | Arrange readiness workshop |
+| Security Lead | Required for deployment approval | Late security issues could delay release | Confirm approval criteria and schedule |
+| Product Owner | Owns functional priorities | Unresolved requirements may affect UAT | Validate acceptance priorities |
+
+The Executive Sponsor remains a key governance stakeholder. The three above are prioritized because of the immediate, reported readiness dependencies.
+
+#### 5. Stakeholder Dependencies and Risks
+
+| Stakeholder | Dependency | Potential Impact | Proposed Response |
+|---|---|---|---|
+| Customer Service Director / Business | Confirm UAT participants | UAT resource shortages | Establish resource commitments |
+| Security Lead | Security approval | Deployment delay | Agree review dates and evidence |
+| Operations Lead | Support acceptance | Incomplete handover | Prepare operational readiness checklist |
+| Product Owner | Functional decisions | Requirements or testing delays | Track decision deadlines |
+| CRM Vendor | Supplier deliverables | Schedule and quality risk | Monitor supplier commitments |
+
+#### 6. Engagement Trend and Warning Signals
+
+| Stakeholder | Current Evidence | Trend | Monitoring Focus |
+|---|---|---|---|
+| Executive Sponsor | Strong project support reported | Unknown | Timely governance decisions |
+| Customer Service Director | Operational concern raised | Unknown | Engagement and readiness decisions |
+| Security Lead | Limited engagement | Unknown | Review participation and approvals |
+| Service Agents | Limited communication | Unknown | Feedback, participation, training readiness |
+| Vendor | Positive relationship reported | Unknown | Delivery commitments and responsiveness |
+
+Previous stakeholder assessments are unavailable; therefore, improvement or deterioration cannot be established.
+
+#### 7. Stakeholder Gaps
+
+| Gap | Potential Impact | Recommended Action | Priority |
+|---|---|---|---|
+| Security not fully engaged | Late approval risk | Schedule security review | High |
+| Limited end-user communication | Poor adoption readiness | Introduce demos and feedback sessions | High |
+| UAT resource commitments unconfirmed | Testing disruption | Confirm named participants | High |
+| Operations handover not yet evidenced | Support readiness gap | Establish acceptance checklist | High |
+| Stakeholder authority unclear | Delayed decisions | Validate decision and escalation roles | Medium |
+
+### Management Decisions
+
+1. **Operational readiness:** Engage the Customer Service Director in UAT, training, and cutover decisions.
+2. **Security governance:** Confirm approval criteria, responsible reviewers, and required evidence before deployment.
+3. **User adoption:** Include customer-service agents in demonstrations, testing, and structured feedback.
+4. **Stakeholder accountability:** Confirm decision rights, dependency ownership, and appropriate engagement frequency.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The analysis identifies the main stakeholder groups, their potential influence, readiness dependencies, and targeted engagement actions. However, power levels, stakeholder attitudes, decision authority, and communication arrangements remain partially unvalidated.
+
+**Required corrections:**
+- Confirm stakeholder authority and influence.
+- Validate current attitudes through direct engagement.
+- Agree communication frequency and relationship ownership.
+- Confirm UAT resource commitments.
+- Establish Security and Operations approval responsibilities.
+
+**Validation Required:** Provisional power–interest assessments, vendor attitude, and stakeholder decision rights.
+
+**Management Attention:** Security engagement, operational readiness, and end-user communication.
+
+**Governance:** Supports PMI-aligned stakeholder identification, engagement planning, communication management, organizational change, risk management, and project governance.
+
+Stakeholder analysis must be updated as project conditions change. AI may help structure engagement strategies but should not make unsupported judgments about individuals. Protect confidential stakeholder assessments, internal relationships, sensitive feedback, and organizational information.

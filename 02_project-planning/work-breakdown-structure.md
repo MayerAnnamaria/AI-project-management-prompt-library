@@ -1,503 +1,399 @@
 # Work Breakdown Structure
 
-## Purpose
+**Prompt ID:** PLAN-001 | **Category:** Project Planning | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to break a project into a structured hierarchy of manageable deliverables, work packages, and activities.
+## 1. Ready-to-Use Prompt
 
-A well-designed Work Breakdown Structure helps support:
+**Purpose:** Decompose approved project scope into manageable deliverables and work packages to support planning, estimating, ownership, and delivery control.
 
-- scope clarity,
-- scheduling,
-- ownership,
-- dependency analysis,
-- estimating,
-- resource planning,
-- risk identification,
-- and progress tracking.
+**Use case:** Develop or revise a deliverable-based WBS when preparing an IT project schedule, estimating resources and costs, allocating responsibilities, or assessing the impact of scope changes.
 
-The objective is to create a structure that is detailed enough for planning without turning the WBS into an unmanageable task list.
+Copy the prompt and replace the placeholders with your project information.
 
----
-
-## Best Used For
-
-**Project phase:**  
-Planning
-
-**Project type:**  
-Software implementation / Digital transformation / Data project / Infrastructure project / ERP / System migration / Product initiative
-
-**Primary user:**  
-Project Manager / Project Coordinator / Delivery Manager / PMO
-
-**Delivery approach:**  
-Predictive / Hybrid / Agile where WBS-style planning is useful
-
-**Recommended frequency:**  
-During initial planning and after major scope changes
-
----
-
-# Prompt
-
-```text id="wbs-01"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, digital transformation, project planning,
-dependency management, and project governance.
+You are a Senior IT Project Manager specializing in software delivery,
+scope decomposition, work package planning, dependency management,
+resource planning, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Project type: [SOFTWARE / DATA / INFRASTRUCTURE / ERP / OTHER]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Approved scope: [LIST / REFERENCE]
+Key deliverables: [LIST]
+Known workstreams: [LIST]
+Systems and integrations: [LIST]
+Dependencies: [LIST]
+Vendors: [IF RELEVANT]
+Milestones: [LIST]
+Constraints: [LIST]
+Available project roles: [LIST]
 
 TASK
 
-Create a structured 3-level Work Breakdown Structure for the project described below.
+Create a deliverable-oriented, three-level Work Breakdown Structure
+and review its planning completeness.
 
-PROJECT CONTEXT
+STEP 1 — WBS DEVELOPMENT
 
-Project:
-[PROJECT NAME]
+1. Decompose confirmed project scope into a three-level hierarchy.
+2. Group work logically by major deliverables or delivery areas.
+3. Use Level 1 for major deliverables or delivery areas,
+   Level 2 for work packages, and Level 3 for sub-deliverables
+   or planning-level work components.
+4. Apply consistent hierarchical numbering (1.0, 1.1, 1.1.1).
+5. Identify the primary owner, major dependency, and measurable
+   completion criterion for each Level 2 work package.
+6. Ensure deliverables are traceable to approved scope.
+7. Include governance, requirements, design, development,
+   integration, testing, security, deployment, transition,
+   and close-out where relevant.
+8. Include vendor deliverables and cross-team interfaces
+   where supported by project information.
+
+STEP 2 — COMPLETENESS AND SCHEDULE REVIEW
+
+9. Identify missing or duplicated work packages.
+10. Flag unclear boundaries, ownership, and dependencies.
+11. Identify potentially required but unconfirmed work separately.
+12. Check dependencies between workstreams and delivery milestones.
+13. Identify work packages requiring detailed scheduling,
+    cost estimation, or additional resource planning.
+14. Highlight scope gaps, delivery risks, and governance decisions.
+15. Recommend corrections before approving the WBS.
+
+Do not invent scope, deliverables, owners, or commitments.
+Distinguish approved work from proposed additions.
+Avoid excessive task-level decomposition.
+Do not confuse business outcomes with project deliverables.
+
+Adapt the hierarchy to the delivery approach.
+For Agile or Scrum, align relevant WBS elements with product
+capabilities and releases without replacing the Product Backlog.
+For Kanban, avoid imposing unnecessary task-level hierarchy.
+
+OUTPUT FORMAT
+
+1. THREE-LEVEL WORK BREAKDOWN STRUCTURE
+
+Use an indented hierarchy:
+
+1.0 [MAJOR DELIVERABLE / DELIVERY AREA]
+    1.1 [WORK PACKAGE]
+        1.1.1 [SUB-DELIVERABLE / WORK COMPONENT]
+
+2. WORK PACKAGE REGISTER
+
+WBS ID | Work Package | Primary Owner |
+Major Dependency | Completion Criterion | Scope Status
+
+3. WBS GAP REVIEW
+
+Missing / Unclear Work | Potential Impact |
+Recommended WBS Location | Proposed Action | Priority
+
+4. CROSS-WORKSTREAM DEPENDENCIES
+
+WBS ID | Dependency | Provider / Owner |
+Receiving Work Package | Delivery Impact
+
+5. WBS-TO-SCHEDULE MAPPING
+
+WBS ID | Work Package | Detailed Scheduling Required? |
+Key Dependency | Related Milestone
+
+6. MANAGEMENT SUMMARY
+
+- Major deliverables and scope coverage
+- Missing or duplicated work
+- Critical dependencies and ownership gaps
+- Work packages requiring detailed planning
+- Recommended corrections and approval decisions
+
+Use concise Markdown tables.
+Mark missing information as "Not yet defined".
+Flag unapproved work packages separately from the WBS baseline.
+```
+
+---
+
+## 2. Quality Check
+
+Apply this control after generating the Work Breakdown Structure.
+
+```text
+QUALITY CHECK
+
+Act as a Senior QA Manager and review the Work Breakdown Structure.
+
+Verify:
+
+1. Completeness: All confirmed project deliverables are represented,
+   with potentially missing work identified separately.
+2. Scope Traceability: Work packages align with approved scope.
+3. Structure: The hierarchy has three levels, consistent numbering,
+   logical decomposition, and no unnecessary task detail.
+4. Duplication: Work packages do not overlap or repeat deliverables.
+5. Accountability: Level 2 work packages have confirmed or
+   explicitly proposed owners and completion criteria.
+6. Dependencies: Cross-team interfaces, milestones, testing,
+   deployment, and operational transition are addressed.
+7. Planning: Relevant work packages can support scheduling,
+   cost estimation, and resource allocation.
+8. Governance: Unapproved additions and ownership gaps are
+   clearly identified for stakeholder decisions.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [UNRESOLVED CRITICAL ITEMS]
+
+Do not invent project scope, work packages, owners, or approvals.
+Flag changes requiring stakeholder validation.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### Business Application — Employee Onboarding Automation
+
+**Scenario:** An IT team is implementing an automated employee onboarding workflow within an existing business application. The current process relies on emails and spreadsheets, resulting in unclear responsibilities and delayed account provisioning.
+
+The Project Manager needs a WBS to organize requirements, development, integrations, testing, and deployment before detailed scheduling.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Employee Onboarding Automation |
+| Phase | Planning |
+| Delivery approach | Hybrid |
+| Business objective | Reduce manual onboarding coordination |
+| Key deliverables | Digital onboarding workflow, user provisioning integration, notifications, reporting, training, deployment |
+| Systems | HR system, identity management platform, existing business application |
+| Team | Project Manager, Business Analyst, Developers, QA Lead, IT Operations |
+| Major dependency | Identity platform integration |
+| Management decision | Validate deliverable coverage, ownership, and dependencies before approving detailed planning |
+
+### Example Input
+
+```text
+Project: Employee Onboarding Automation
 
 Business objective:
-[BUSINESS OBJECTIVE]
+Reduce manual onboarding coordination and improve
+the consistency of employee account provisioning.
 
-Project type:
-[SOFTWARE / DATA / INFRASTRUCTURE / ERP / DIGITAL TRANSFORMATION / OTHER]
+Delivery approach: Hybrid
 
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Key deliverables:
-[LIST]
+Confirmed scope:
+- Implement an onboarding request workflow.
+- Integrate approved provisioning requests with the identity platform.
+- Send status notifications to relevant stakeholders.
+- Provide onboarding status reporting.
+- Deliver user documentation and training.
+- Deploy the solution into production.
 
 Known workstreams:
-[LIST]
-
-Known systems:
-[LIST]
-
-Known integrations:
-[LIST]
-
-Known dependencies:
-[LIST]
-
-Known vendors:
-[LIST]
-
-Known milestones:
-[LIST]
-
-Known constraints:
-[LIST]
-
-OUTPUT FORMAT
-
-Create a 3-level WBS hierarchy.
-
-Level 1:
-Major project phases or workstreams
-
-Level 2:
-Major deliverables or work packages
-
-Level 3:
-Key planning-level activities or sub-deliverables
-
-Use WBS coding:
-
-1.0
-1.1
-1.1.1
-
-Use an indented list format.
-
-For each Level 2 work package, include:
-
-- primary owner,
-- major dependency,
-- main completion criterion.
-
-Do not create an excessively detailed task list.
-```
-
----
-
-# WBS Design Principles
-
-The WBS should primarily be **deliverable-oriented**.
-
-Prefer:
-
-```text id="wbs-good"
-3.2 CRM Integration
-    3.2.1 Interface specification
-    3.2.2 API development
-    3.2.3 Integration testing
-    3.2.4 Production readiness
-```
-
-Avoid vague structures such as:
-
-```text id="wbs-bad"
-3.2 CRM Work
-    3.2.1 Meetings
-    3.2.2 Emails
-    3.2.3 Discussions
-```
-
-The WBS should describe project work that contributes to an identifiable result.
-
----
-
-# Example Level 1 Structure
-
-For a typical IT implementation, Level 1 might include:
-
-```text id="wbs-level1"
-1.0 Project Management and Governance
-2.0 Discovery and Requirements
-3.0 Solution Design
-4.0 Build and Configuration
-5.0 Integration
-6.0 Data Migration
-7.0 Testing and Quality Assurance
-8.0 Security and Compliance
-9.0 Business Readiness
-10.0 Deployment and Go-Live
-11.0 Hypercare and Transition
-12.0 Project Close-Out
-```
-
-This is an example only.
-
-The structure should be adapted to the actual project.
-
----
-
-# Delivery-Approach Considerations
-
-## Predictive
-
-A WBS may be directly linked to:
-
-- schedule activities,
-- cost estimates,
-- work packages,
-- resource assignments,
-- milestones,
-- baselines.
-
-## Agile / Scrum
-
-Use the WBS at a higher level where useful.
-
-For example:
-
-```text id="wbs-agile"
-Level 1:
-Product / Delivery Area
-
-Level 2:
-Epic / Major Capability
-
-Level 3:
-Feature / Release Component
-```
-
-Do not replace the product backlog with an unnecessarily detailed WBS.
-
-Use backlog decomposition where that is the better planning mechanism.
-
-## Kanban
-
-Use the WBS only for higher-level project or initiative decomposition where useful.
-
-Day-to-day delivery should normally remain flow-based rather than being forced into a detailed hierarchical plan.
-
-## Hybrid
-
-A common approach is:
-
-```text id="wbs-hybrid"
-WBS
-↓
-Major deliverables
-↓
-Release / workstream planning
-↓
-Backlog or flow-based execution
-```
-
-This allows governance-level planning and adaptive delivery to coexist.
-
----
-
-# WBS Gap-Check Prompt
-
-After generating the first WBS, run a second review.
-
-```text id="wbs-gap"
-ROLE
-
-You are a senior IT Project Manager performing a planning quality review.
-
-TASK
-
-Review the Work Breakdown Structure below and identify work that may be missing.
-
-WBS
-
-[PASTE WBS HERE]
-
-Check specifically for missing work related to:
-
-- project governance,
-- requirements,
-- architecture,
-- environments,
-- integrations,
-- data,
-- security,
-- testing,
-- UAT,
-- deployment,
-- rollback,
-- business readiness,
-- training,
-- documentation,
-- operational support,
-- vendor coordination,
-- compliance,
-- transition,
-- project close-out.
-
-OUTPUT FORMAT
-
-Provide:
-
-Missing Work Package
-Why It May Be Required
-Potential Impact if Omitted
-Recommended WBS Location
-Priority
-```
-
----
-
-# Analysis Rules
-
-When creating or reviewing the WBS:
-
-1. Do not invent project scope.
-2. Use the confirmed project scope as the primary boundary.
-3. Flag potential work packages separately if they are not confirmed.
-4. Do not confuse deliverables with organisational departments.
-5. Avoid duplicate work across branches.
-6. Identify interfaces between workstreams.
-7. Include project-management and governance work where relevant.
-8. Include testing and operational transition.
-9. Include external vendor work where relevant.
-10. Ensure every major deliverable can be mapped back to the project scope.
-
----
-
-# Example Input
-
-```text id="wbs-example-input"
-Project:
-CRM Replacement
-
-Business Objective:
-Replace the legacy CRM and migrate customer-service operations
-to a modern cloud-based platform.
-
-Delivery Approach:
-Hybrid
-
-Key Deliverables:
-Configured CRM
-Customer data migration
-Email integration
-Telephony integration
-User training
-Production deployment
-
-Known Workstreams:
 Business Analysis
-CRM Configuration
-Integrations
-Data Migration
-Testing
+Development
+Integration
+Quality Assurance
+Deployment
 Change Management
 
-Known Vendors:
-CRM implementation partner
-Data migration vendor
+Systems:
+HR system
+Identity management platform
+Existing business application
 
-Known Milestones:
-Design approval
-Configuration complete
-SIT complete
-UAT complete
-Go-live
+Dependencies:
+- HR approval of onboarding workflow
+- Identity platform API access
+- Business-user availability for UAT
+- Production environment readiness
+
+Known milestones:
+Requirements approval
+Integration readiness
+SIT completion
+UAT acceptance
+Production release
+
+Project roles:
+Project Manager
+Business Analyst
+Development Lead
+QA Lead
+IT Operations
+HR Business Owner
+
+Known constraints:
+- Limited developer availability
+- Identity integration must pass security review
 ```
 
----
+### Example Output — Work Breakdown Structure
 
-# Example Output Excerpt
+#### 1. Three-Level WBS
 
-```text id="wbs-example-output"
+The following is a proposed planning structure based on the supplied scope. Supporting activities are included where necessary to deliver the confirmed capabilities; ownership and approval remain subject to validation.
+
+```text
 1.0 Project Management and Governance
-    1.1 Project Governance
-        1.1.1 Governance structure confirmed
-        1.1.2 Steering committee cadence established
-        1.1.3 Decision and escalation process established
+    1.1 Project Planning and Control
+        1.1.1 Approved delivery plan
+        1.1.2 Risk and dependency register
+        1.1.3 Project reporting and decision records
 
-2.0 Discovery and Requirements
+2.0 Requirements and Solution Design
     2.1 Business Requirements
-        2.1.1 Customer-service processes documented
-        2.1.2 Functional requirements agreed
-        2.1.3 Non-functional requirements agreed
+        2.1.1 Onboarding process requirements
+        2.1.2 Functional acceptance criteria
+        2.1.3 Approved workflow requirements
 
-3.0 Solution Design
-    3.1 CRM Solution Design
-        3.1.1 Configuration design
-        3.1.2 Security design
-        3.1.3 Integration design
+    2.2 Technical Solution Design
+        2.2.1 Application design
+        2.2.2 Identity integration specification
+        2.2.3 Security design review
 
-4.0 CRM Configuration
-    4.1 Core Platform Configuration
-        4.1.1 User roles configured
-        4.1.2 Case-management workflow configured
-        4.1.3 Reporting configuration completed
+3.0 Application Development
+    3.1 Onboarding Workflow
+        3.1.1 Onboarding request functionality
+        3.1.2 Approval workflow configuration
+        3.1.3 Request status tracking
+
+    3.2 Notifications and Reporting
+        3.2.1 Notification functionality
+        3.2.2 Status reporting functionality
+        3.2.3 Functional validation evidence
+
+4.0 Identity Platform Integration
+    4.1 Provisioning Integration
+        4.1.1 Interface configuration
+        4.1.2 Provisioning request processing
+        4.1.3 Integration verification
+
+5.0 Testing and Quality Assurance
+    5.1 System Integration Testing
+        5.1.1 Integration test cases
+        5.1.2 Executed integration tests
+        5.1.3 Defect resolution evidence
+
+    5.2 User Acceptance Testing
+        5.2.1 UAT scenarios
+        5.2.2 Business validation results
+        5.2.3 UAT acceptance record
+
+6.0 Business Readiness
+    6.1 Documentation and Training
+        6.1.1 User documentation
+        6.1.2 Training materials
+        6.1.3 Completed training sessions
+
+7.0 Deployment and Transition
+    7.1 Production Deployment
+        7.1.1 Deployment readiness assessment
+        7.1.2 Production release
+        7.1.3 Post-deployment verification
+
+    7.2 Operational Handover
+        7.2.1 Support documentation
+        7.2.2 Operational knowledge transfer
+        7.2.3 Handover acceptance
+
+8.0 Project Close-Out
+    8.1 Project Closure
+        8.1.1 Deliverable acceptance summary
+        8.1.2 Outstanding action handover
+        8.1.3 Project closure report
 ```
 
----
+#### 2. Work Package Register
 
-# WBS Quality Review
+| WBS ID | Work Package | Proposed Owner | Major Dependency | Completion Criterion | Scope Status |
+|---|---|---|---|---|---|
+| 1.1 | Project Planning and Control | Project Manager | Project governance | Planning and control records accepted | Supporting work proposed |
+| 2.1 | Business Requirements | Business Analyst | HR input | Requirements approved | Supporting work proposed |
+| 2.2 | Technical Solution Design | Development Lead | Requirements | Design reviewed and accepted | Supporting work proposed |
+| 3.1 | Onboarding Workflow | Development Lead | Approved workflow | Agreed workflow criteria met | Confirmed capability; package proposed |
+| 3.2 | Notifications and Reporting | Development Lead | Approved requirements | Features meet acceptance criteria | Confirmed capability; package proposed |
+| 4.1 | Provisioning Integration | Development Lead | Identity API | Integration tests passed | Confirmed capability; package proposed |
+| 5.1 | System Integration Testing | QA Lead | Integrated solution | Required tests completed and evaluated | Supporting work proposed |
+| 5.2 | User Acceptance Testing | HR Business Owner | Test readiness | UAT acceptance recorded | Supporting work proposed |
+| 6.1 | Documentation and Training | Business Analyst | Approved functionality | Materials and training accepted | Confirmed deliverable; package proposed |
+| 7.1 | Production Deployment | IT Operations | Release approval | Deployment verified | Confirmed deliverable; package proposed |
+| 7.2 | Operational Handover | IT Operations | Production readiness | Support ownership accepted | Supporting work proposed |
+| 8.1 | Project Closure | Project Manager | Delivery acceptance | Closure records approved | Supporting work proposed |
 
-Check the generated WBS against the following:
+#### 3. WBS Gap Review
 
-- [ ] All major scope areas are represented
-- [ ] Work is grouped logically
-- [ ] Deliverables are visible
-- [ ] No major duplicate branches exist
-- [ ] Level 2 work packages have clear ownership
-- [ ] Major dependencies are visible
-- [ ] Testing is included
-- [ ] Security is included where relevant
-- [ ] Data migration is included where relevant
-- [ ] Deployment is included
-- [ ] Operational transition is included
-- [ ] Close-out is included
-- [ ] Unconfirmed work is clearly marked
-
----
-
-# WBS to Schedule Review
-
-After creating the WBS, identify which Level 2 and Level 3 elements should feed into detailed scheduling.
-
-Provide:
-
-| WBS ID | Work Package | Schedule Required? | Key Dependency | Milestone |
+| Missing / Unclear Work | Potential Impact | Recommended Location | Proposed Action | Priority |
 |---|---|---|---|---|
+| HR system data interface | Incomplete onboarding data flow | 2.2 or new integration package | Confirm whether HR data integration is required | High |
+| Security approval evidence | Integration or release delay | 2.2 / 7.1 | Define security acceptance requirements | High |
+| Failure handling for provisioning | Incomplete operational capability | 4.1 | Clarify retry, exception, and alert requirements | High |
+| Rollback preparation | Production recovery risk | 7.1 | Confirm rollback requirements | High |
+| Post-launch support arrangements | Unclear incident ownership | 7.2 | Confirm support scope and handover criteria | Medium |
 
-Do not automatically turn every WBS item into a schedule activity.
+*These gaps are review findings, not approved scope additions.*
 
----
+#### 4. Cross-Workstream Dependencies
 
-# Standards / Framework Alignment
+| WBS ID | Dependency | Provider / Proposed Owner | Receiving Work Package | Delivery Impact |
+|---|---|---|---|---|
+| 2.1 | Approved onboarding requirements | HR Business Owner | 2.2 Solution Design | Design cannot be finalized |
+| 4.1 | Identity API access | Identity Platform Team | 4.1 Provisioning Integration | Integration development may be delayed |
+| 5.1 | Integrated functionality | Development Lead | 5.1 SIT | Testing cannot complete |
+| 5.2 | SIT results and business availability | QA Lead / HR | 5.2 UAT | Business acceptance may be delayed |
+| 7.1 | UAT acceptance and release readiness | HR / IT Operations | 7.1 Deployment | Production release at risk |
 
-## PMI / PMP Relevance
+#### 5. WBS-to-Schedule Mapping
 
-Relevant themes may include:
+| WBS ID | Work Package | Detailed Scheduling Required? | Key Dependency | Related Milestone |
+|---|---|---|---|---|
+| 2.1 | Business Requirements | Yes | HR stakeholder availability | Requirements approval |
+| 2.2 | Technical Solution Design | Yes | Approved requirements | Design readiness |
+| 3.1 | Onboarding Workflow | Yes | Solution design | Development completion |
+| 3.2 | Notifications and Reporting | Yes | Agreed feature requirements | Development completion |
+| 4.1 | Provisioning Integration | Yes | Identity API access | Integration readiness |
+| 5.1 | System Integration Testing | Yes | Integrated build | SIT completion |
+| 5.2 | User Acceptance Testing | Yes | SIT completion | UAT acceptance |
+| 6.1 | Documentation and Training | Yes | Stable functionality | Business readiness |
+| 7.1 | Production Deployment | Yes | Release readiness | Production release |
+| 7.2 | Operational Handover | Yes | Support readiness | Handover acceptance |
 
-- scope decomposition,
-- planning,
-- schedule development,
-- cost estimation,
-- resource planning,
-- dependency management,
-- governance.
+The mapping identifies work packages that require schedule planning. Detailed activities, durations, and dates must be developed separately.
 
-## PMBOK Relevance
+### Management Decisions
 
-This prompt supports:
+1. **Scope completeness:** Confirm whether HR system integration, exception handling, and rollback requirements must be added to the approved scope.
+2. **Ownership:** Assign and validate accountable work package owners and cross-team dependencies.
+3. **Schedule readiness:** Prioritize detailed planning for integration, SIT, UAT, and production deployment.
+4. **Governance:** Obtain stakeholder approval of the WBS and resolve proposed supporting work before establishing the scope baseline.
 
-- scope,
-- planning,
-- delivery,
-- measurement,
-- governance.
+### Applied Quality Review
 
-## Delivery Framework
+**Quality verdict: REVISE**
 
-Primarily useful for:
+**Findings:** The WBS follows the required three-level hierarchy, uses consistent numbering, and covers the principal project deliverables. However, several supporting work packages, ownership assignments, and potential scope gaps require confirmation.
 
-- Predictive
-- Hybrid
+**Required corrections:**
+- Validate WBS completeness against approved requirements.
+- Confirm whether identified gaps require additional scope.
+- Assign work package owners.
+- Validate cross-team dependencies and completion criteria.
+- Approve the WBS before using it as a planning baseline.
 
-Can also support:
+**Approval blockers:** Unconfirmed scope additions, incomplete ownership, and unresolved integration requirements.
 
-- Agile
-- Scrum
-- Kanban
+**Governance:** This framework supports PMI-aligned scope decomposition, planning, schedule development, resource management, cost estimation, and delivery control.
 
-at higher levels where hierarchical decomposition adds value.
-
----
-
-# Human Review Required
-
-Validate the WBS with relevant stakeholders, including:
-
-- Project Manager
-- Business Analyst
-- Solution Architect
-- Technical Lead
-- QA Lead
-- Product Owner where relevant
-- Vendor leads
-- PMO where applicable
-
-The WBS should be treated as a planning artifact, not as automatically approved project scope.
-
----
-
-# Confidentiality
-
-Do not include:
-
-- sensitive architecture details,
-- credentials,
-- API keys,
-- confidential supplier pricing,
-- protected contract information,
-- security-sensitive implementation details,
-- personal data.
-
----
-
-# Prompt Metadata
-
-```text id="wbs-metadata"
-Prompt ID: PLAN-001
-Category: Project Planning
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Technical Lead / Business Analyst / PMO
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Low
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT Work Breakdown Structure framework |
+The WBS is a planning artifact and must be validated by the Project Manager, Business Analyst, Technical Lead, QA Lead, and relevant business stakeholders. Protect confidential project, vendor, personal, and security-sensitive information.

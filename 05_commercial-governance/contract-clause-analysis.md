@@ -1,898 +1,360 @@
 # Contract Clause Analysis
 
-## Purpose
+**Prompt ID:** COMM-001 | **Category:** Commercial & Project Governance | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert a complex contract clause into a structured, project-management-focused analysis.
+## 1. Ready-to-Use Prompt
 
-The objective is to help the Project Manager understand:
+**Purpose:** Translate contractual requirements into practical project-management obligations, risks, dependencies, and controls without replacing professional legal interpretation.
 
-- what the clause means,
-- what each party is required to do,
-- what delivery or commercial risks it creates,
-- what deadlines or conditions matter,
-- and where disputes or misunderstandings may arise.
+**Use case:** Review IT implementation, SaaS, cloud, or vendor contract clauses when delivery responsibilities, acceptance criteria, deadlines, payments, or change-control obligations affect project execution.
 
-This prompt is intended for **project and commercial awareness**, not legal interpretation or legal advice.
+Copy the prompt and replace the placeholders with your contract information.
 
----
-
-## Best Used For
-
-**Project phase:**  
-Procurement / Contracting / Delivery / Change / Escalation / Close-Out
-
-**Project type:**  
-Software implementation / SaaS / Cloud / ERP / Infrastructure / Outsourcing / Managed Service / Digital Transformation
-
-**Primary user:**  
-Project Manager / Delivery Manager / Vendor Manager / PMO / Commercial Manager
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-When reviewing clauses that materially affect delivery, cost, scope, risk, or governance
-
----
-
-# Prompt
-
-```text id="contract-clause-01"
+```text
 ROLE
 
-You are a senior IT Commercial and Project Management specialist
-experienced in software delivery, SaaS agreements, vendor contracts,
-technology procurement, service management, and project governance.
+You are a Senior IT Project Manager and Commercial Management
+Specialist experienced in software implementation, SaaS,
+vendor contracts, procurement, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Project phase: [PHASE]
+Contract type: [SOFTWARE / SAAS / CLOUD / OUTSOURCING / OTHER]
+Customer: [ROLE]
+Supplier: [ROLE]
+Delivery approach: [PREDICTIVE / AGILE / KANBAN / HYBRID]
+Commercial context: [DETAILS]
+Related clauses: [IF AVAILABLE]
+Contract version: [VERSION / DATE]
+
+CONTRACT CLAUSE
+
+[PASTE EXACT CLAUSE]
+
+OPTIONAL COMPARISON
+
+Previous clause version: [PASTE / NOT AVAILABLE]
 
 TASK
 
-Analyse the contract clause below for a Project Manager.
+Analyze the clause from a project-management and commercial
+governance perspective.
 
-CONTRACT CONTEXT
+STEP 1 — INTERPRET REQUIREMENTS
 
-Contract type:
-[SOFTWARE IMPLEMENTATION / SAAS / CLOUD / OUTSOURCING / OTHER]
+1. Explain the clause in 2–4 plain-English sentences.
+2. Identify explicit Customer and Supplier obligations.
+3. Extract deadlines, triggers, conditions, notice periods,
+   and acceptance requirements.
+4. Identify the consequence of non-compliance only when
+   expressly supported by the supplied contract text.
+5. Flag ambiguous language, missing definitions,
+   and related clauses requiring review.
 
-Customer / Client:
-[ROLE]
+STEP 2 — ASSESS PROJECT IMPLICATIONS
 
-Supplier / Vendor:
-[ROLE]
+6. Identify potential impacts on:
+   - Schedule and milestones
+   - Scope and deliverables
+   - Acceptance and quality
+   - Payments and commercial exposure
+   - Dependencies and responsibilities
+   - Change control and governance
+   - Security, compliance, or operations where relevant
 
-Project:
-[PROJECT NAME]
+7. Distinguish confirmed contractual requirements from
+   potential risks and assumptions.
+8. Assess commercial and delivery risks separately
+   for the Customer and Supplier.
+9. Identify critical inter-party dependencies and
+   potential areas of disagreement.
+10. Challenge the analysis from the counterparty's
+    perspective to expose unsupported interpretations.
 
-Current phase:
-[PHASE]
+STEP 3 — DEFINE PROJECT CONTROLS
 
-Relevant commercial context:
-[DETAILS]
+11. Translate material obligations into operational controls:
+    - Obligations register
+    - Deliverable acceptance tracker
+    - Contractual notice tracker
+    - Dependency and decision logs
+    - Change-control register
+    - Vendor performance monitoring
 
-CLAUSE
+12. Recommend responsible roles, evidence, review points,
+    and escalation triggers.
+13. Generate clarification questions for Legal, Procurement,
+    Commercial Management, or the relevant stakeholders.
+14. If two clause versions are supplied, identify changes
+    to obligations, deadlines, risk allocation, and delivery.
+15. Highlight matters requiring legal interpretation
+    or formal contractual approval.
 
-[PASTE CLAUSE]
+RULES
+
+- Analyze only the text and context actually provided.
+- Do not invent contractual rights, remedies, obligations,
+  waivers, breaches, termination rights, or liabilities.
+- Distinguish clause-derived facts from possible implications.
+- Do not assume a contractual term has a particular legal
+  effect without considering applicable law and other terms.
+- Refer legal conclusions to qualified Legal counsel.
+- Recommend only controls that serve a practical purpose.
 
 OUTPUT FORMAT
 
-Provide:
+1. PLAIN-ENGLISH SUMMARY
 
-1. Plain-English Summary
-2. Customer / Client Obligations
-3. Supplier / Vendor Obligations
-4. Key Deadlines / Conditions / Triggers
-5. Project Delivery Implications
-6. Commercial Risks for the Customer
-7. Commercial Risks for the Supplier
-8. Common Areas of Dispute or Ambiguity
-9. Questions the Project Manager Should Clarify
-10. Recommended Project Controls
+Clause Purpose | Key Requirement | Business Implication
 
-Use professional but accessible language.
+2. CONTRACTUAL OBLIGATIONS
 
-Do not invent contractual rights or obligations that are not
-supported by the clause.
+Party | Obligation | Trigger | Deadline |
+Required Evidence | Clause Reference
+
+3. DEADLINES AND CONDITIONS
+
+Trigger | Required Action | Responsible Party |
+Deadline | Express Contractual Consequence
+
+4. PROJECT DELIVERY IMPLICATIONS
+
+Area | Contract Requirement | Potential Impact |
+Project Control | Proposed Owner
+
+5. COMMERCIAL AND DELIVERY RISKS
+
+Affected Party | Risk Scenario | Potential Impact |
+Preventive Control | Evidence Required
+
+6. AMBIGUITIES AND CLARIFICATIONS
+
+Clause Wording | Possible Interpretations |
+Project Concern | Clarification Required
+
+7. CONTRACT OBLIGATIONS REGISTER
+
+ID | Clause | Obligation | Party | Trigger |
+Deadline | Proposed Owner | Evidence | Status
+
+8. CONTRACT VERSION COMPARISON (IF APPLICABLE)
+
+Change | Version A | Version B |
+Operational / Commercial Implication |
+Legal Review Required?
+
+9. MANAGEMENT SUMMARY
+
+- Critical contractual obligations
+- Main delivery and commercial exposures
+- Recommended project controls
+- Unresolved interpretation questions
+- Required stakeholder or legal review
+
+Use concise Markdown tables.
+Mark unsupported conclusions as "Requires legal review".
+Do not present operational recommendations as legal obligations.
 ```
 
 ---
 
-# 1. Plain-English Summary
-
-Explain the clause in 2–4 sentences.
-
-The summary should answer:
-
-```text id="clause-summary-questions"
-What does this clause allow or require?
-
-Who must do what?
-
-Under what conditions?
-
-What happens if the condition is not met?
-```
-
-Avoid simply rewriting the clause using different legal terminology.
-
----
-
-# Example
-
-### Clause Concept
-
-Supplier must notify the customer within ten business days if a customer-caused dependency is likely to affect the agreed implementation schedule.
-
-### Plain-English Summary
-
-```text id="clause-summary-example"
-The supplier must formally notify the customer within ten business
-days when a customer-controlled dependency is likely to delay delivery.
-
-If the supplier does not follow the required notification process,
-its ability to rely on the delay for schedule relief may be affected,
-depending on the wider contract terms.
-```
-
-Note:
-
-Do not claim loss of entitlement unless the actual contract supports that conclusion.
-
----
-
-# 2. Customer / Client Obligations
-
-Identify obligations explicitly created by the clause.
-
-Possible examples:
-
-```text id="client-obligations"
-Provide information
-
-Provide system access
-
-Approve deliverables
-
-Make decisions
-
-Provide resources
-
-Review submissions
-
-Pay invoices
-
-Respond within defined periods
-
-Provide environments
-
-Maintain dependencies
-```
-
-Use:
-
-| Obligation | Trigger | Deadline | Delivery Relevance |
-|---|---|---|---|
-
----
-
-# 3. Supplier / Vendor Obligations
-
-Possible obligations include:
-
-```text id="supplier-obligations"
-Deliver agreed services
-
-Meet milestones
-
-Provide notification
-
-Maintain service levels
-
-Resolve defects
-
-Provide documentation
-
-Protect information
-
-Support audits
-
-Escalate incidents
-
-Provide transition assistance
-```
-
-Use:
-
-| Obligation | Trigger | Deadline | Evidence Required |
-|---|---|---|---|
-
----
-
-# 4. Key Deadlines, Conditions and Triggers
-
-Extract any timing or procedural requirements.
-
-Look for:
-
-```text id="contract-triggers"
-Notice periods
-
-Approval periods
-
-Response deadlines
-
-Cure periods
-
-Renewal dates
-
-Termination windows
-
-Payment deadlines
-
-Escalation triggers
-
-Acceptance periods
-
-SLA measurement periods
-```
-
-Provide:
-
-| Trigger | Required Action | Deadline | Responsible Party | Consequence if Missed |
-|---|---|---|---|---|
-
-Only state the consequence where the contract supports it.
-
----
-
-# 5. Project Delivery Implications
-
-Translate the clause into operational project-management meaning.
-
-Ask:
-
-```text id="delivery-implications"
-Does this affect schedule?
-
-Does this affect acceptance?
-
-Does this affect scope?
-
-Does this affect change control?
-
-Does this affect vendor performance?
-
-Does this affect release?
-
-Does this affect payment?
-
-Does this create a dependency?
-```
-
-Example:
-
-> The ten-business-day notice requirement means dependency delays should be monitored through the RAID process so that potential contractual notifications are not identified too late.
-
----
-
-# Contract-to-Project Translation
-
-Use:
-
-```text id="contract-project-flow"
-Contract Requirement
-↓
-Project Trigger
-↓
-Project Control
-↓
-Evidence
-↓
-Escalation if Required
-```
-
-Example:
-
-```text id="contract-project-example"
-Contract:
-Customer approval required within 5 business days.
-
-Project Control:
-Approval tracker.
-
-Evidence:
-Documented submission and approval timestamps.
-
-Escalation:
-Escalate unresolved approval on Day 4.
+## 2. Quality Check
+
+Apply this independent review before using the analysis for project decisions or contractual communication.
+
+```text
+QUALITY CHECK
+
+Act as a Senior PMO Quality Assurance Manager with experience
+in IT procurement and commercial governance.
+
+Review the clause analysis against the original wording.
+
+Verify:
+
+1. Fidelity: Summaries accurately reflect the actual clause.
+2. Obligations: Customer and Supplier duties are separated
+   and supported by specific wording.
+3. Timing: Deadlines, triggers, and conditions are accurate.
+4. Consequences: No unsupported contractual remedies,
+   liability, or legal conclusions have been invented.
+5. Interpretation: Ambiguities, related clauses, and
+   alternative counterparty interpretations are identified.
+6. Delivery: Project implications and dependencies are logical.
+7. Commercial Risks: Risks are proportionate and distinguish
+   actual contractual exposure from hypothetical scenarios.
+8. Controls: Recommendations are actionable, proportionate,
+   and linked to obligations.
+9. Governance: Legal, Procurement, or Commercial review
+   requirements are appropriately identified.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Legal / Commercial Review Required: [OPEN QUESTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Do not assume missing contractual provisions or
+make definitive legal determinations.
 ```
 
 ---
 
-# 6. Customer Commercial Risks
+## 3. Practical IT Use Case
 
-Possible areas to consider:
+### Software Implementation — Deliverable Acceptance Clause
 
-```text id="customer-risks"
-Unclear acceptance criteria
+**Scenario:** A company is implementing a new CRM system with an external software vendor. The contract requires the customer to review submitted deliverables within five business days. If no response is provided, the deliverable is deemed accepted.
 
-Unexpected licence costs
+The Project Manager must establish an acceptance process to prevent missed review deadlines and unclear responsibilities.
 
-Vendor lock-in
+### Project Context
 
-Weak SLA remedies
+| Attribute | Details |
+|---|---|
+| Project | CRM System Implementation |
+| Phase | Configuration / Deliverable Acceptance |
+| Contract type | Software Implementation Agreement |
+| Customer | Internal Business / IT Team |
+| Supplier | CRM Implementation Vendor |
+| Key requirement | Five-business-day acceptance period |
+| Main exposure | Deliverables deemed accepted without an explicit customer response |
+| Management objective | Define acceptance ownership, tracking, and escalation |
 
-Delayed approvals
+### Example Input
 
-Data portability
+```text
+Project: CRM System Implementation
+Contract type: Software Implementation Agreement
 
-Exit costs
-
-Change-control exposure
-
-Minimum consumption commitments
-
-Automatic renewal
-```
-
-Do not assume these exist unless supported by the clause or wider contract context.
-
----
-
-# 7. Supplier Commercial Risks
-
-Possible areas:
-
-```text id="supplier-risks"
-Unclear customer dependencies
-
-Unlimited change expectation
-
-Ambiguous acceptance
-
-Uncontrolled scope
-
-Delayed payment
-
-Resource commitments
-
-Service-credit exposure
-
-Unclear responsibilities
-```
-
-Again, distinguish actual clause-derived risk from general possibilities.
-
----
-
-# 8. Ambiguity / Dispute Analysis
-
-Look for wording that may create different interpretations.
-
-Examples:
-
-```text id="contract-ambiguity"
-Reasonable effort
-
-Material delay
-
-Promptly
-
-Substantial compliance
-
-Appropriate support
-
-Acceptable performance
-
-Customer-caused delay
-```
-
-For each:
-
-| Ambiguous Term | Possible Interpretations | Project Risk | Clarification Needed |
-|---|---|---|---|
-
----
-
-# 9. Questions for the Project Manager
-
-Generate clarification questions such as:
-
-```text id="contract-pm-questions"
-Who owns the notification process?
-
-What evidence proves the trigger date?
-
-Who is authorised to issue formal notices?
-
-Which repository stores contractual correspondence?
-
-Does the clause interact with another clause?
-
-How is acceptance confirmed?
-
-Who approves contractual changes?
-
-What happens if the required response is late?
-```
-
-These questions should help the PM operationalise the clause.
-
----
-
-# 10. Recommended Project Controls
-
-Possible controls include:
-
-```text id="contract-controls"
-Contract obligations register
-
-Notice tracker
-
-Approval tracker
-
-Decision log
-
-Change log
-
-SLA dashboard
-
-Deliverable acceptance register
-
-Vendor action tracker
-
-Renewal calendar
-
-Dependency register
-```
-
-Do not introduce controls that add bureaucracy without management value.
-
----
-
-# Example Input
-
-```text id="contract-example-input"
-Contract Type:
-Software Implementation Agreement
+Customer: Internal Business / IT Team
+Supplier: CRM Implementation Vendor
 
 Clause:
-The Customer shall review each Deliverable within five Business Days
-of receipt and either approve it or provide written details of any
-material non-conformance with the agreed Acceptance Criteria.
 
-If no response is received within that period, the Deliverable shall
-be deemed accepted.
+"The Customer shall review each Deliverable within five
+Business Days of receipt and either approve it or provide
+written details of any material non-conformance with the
+agreed Acceptance Criteria.
+
+If no response is received within that period,
+the Deliverable shall be deemed accepted."
+
+Project context:
+- Vendor submits configured CRM functionality for review.
+- Business Owner and QA Lead participate in acceptance.
+- Several deliverables are planned during configuration.
+- No centralized acceptance tracker currently exists.
+
+Related contractual definitions:
+Not provided.
+
+Task:
+Identify obligations, risks, deadlines, and project controls.
 ```
 
----
+### Example Output — Contract Clause Analysis
 
-# Example Analysis
+#### 1. Plain-English Summary
 
-## Plain-English Summary
+The customer must review each received deliverable within five business days and either approve it or provide written details of material non-conformance with the agreed acceptance criteria.
 
-The customer has five business days to review each submitted deliverable against the agreed acceptance criteria. If the customer does not approve or reject it within that period, the clause states that the deliverable is treated as accepted.
+If the customer does not respond within that period, the clause states that the deliverable is deemed accepted. The effect of such acceptance under the wider agreement requires legal review.
 
-## Customer Obligation
+#### 2. Contractual Obligations
 
-The customer must complete the review within five business days and document any material non-conformance.
+| Party | Obligation | Trigger | Deadline |
+|---|---|---|---|
+| Customer | Review each deliverable | Receipt of deliverable | Within 5 business days |
+| Customer | Approve or provide written non-conformance details | Deliverable review | Within review period |
+| Supplier | No separate express submission duty stated in this excerpt | Not specified | Not specified |
 
-## Supplier Obligation
+The clause refers to supplier deliverables, but the supplier's full delivery obligations must be established from other contract provisions.
 
-The supplier must submit a deliverable that can be assessed against the agreed acceptance criteria.
+#### 3. Deadlines and Conditions
 
-## Project Delivery Implication
+| Trigger | Required Action | Responsible Party | Consequence |
+|---|---|---|---|
+| Deliverable received | Start review process | Customer | Review period begins |
+| Review period active | Approve or provide written objections | Customer | Response required within 5 business days |
+| No response within review period | No further action stated | Customer | Deliverable deemed accepted under clause |
 
-The Project Manager should track submission and response dates because missed review deadlines may result in deemed acceptance.
+**Clarification required:** The contract's definition of *Business Day*, applicable holidays, receipt method, and any other notice requirements.
 
-## Project Control
+#### 4. Project Delivery Implications
 
-Maintain a deliverable acceptance register containing:
-
-```text id="acceptance-register"
-Deliverable
-Submission Date
-Acceptance Deadline
-Reviewer
-Status
-Comments
-Final Decision
-```
-
----
-
-# Prompt 2 — Clause Risk Review
-
-```text id="contract-risk-review"
-ROLE
-
-You are a senior IT Commercial Manager reviewing a contract clause
-for delivery risk.
-
-TASK
-
-Review the clause and identify project-management risks.
-
-[PASTE CLAUSE]
-
-OUTPUT FORMAT
-
-Clause Requirement
-Potential Failure Scenario
-Project Impact
-Commercial Impact
-Preventive Control
-Owner
-Evidence Required
-```
-
----
-
-# Prompt 3 — Clause Dependency Review
-
-```text id="contract-dependency"
-ROLE
-
-You are an IT Project Manager mapping contractual obligations into
-project dependencies.
-
-TASK
-
-Analyse the clause below and identify dependencies between the
-customer and supplier.
-
-[PASTE CLAUSE]
-
-OUTPUT FORMAT
-
-Dependency
-Providing Party
-Receiving Party
-Required By
-Impact if Late
-Project Control
-Escalation Trigger
-```
-
----
-
-# Prompt 4 — Clause Comparison
-
-Where two contract versions exist:
-
-```text id="contract-comparison"
-ROLE
-
-You are a senior IT Commercial Manager.
-
-TASK
-
-Compare the two versions of the clause below.
-
-VERSION A
-
-[PASTE]
-
-VERSION B
-
-[PASTE]
-
-Identify:
-
-1. Wording changes
-2. Obligation changes
-3. Deadline changes
-4. Risk allocation changes
-5. Commercial impact
-6. Project-management impact
-
-Do not assume legal significance beyond the text provided.
-```
-
----
-
-# Common IT Clauses Worth Reviewing
-
-Examples include:
-
-```text id="contract-clauses"
-Scope and Deliverables
-Acceptance
-Change Control
-Milestones
-Payment
-Service Levels
-Availability
-Incident Management
-Data Protection
-Security
-Intellectual Property
-Confidentiality
-Subcontracting
-Liability
-Termination
-Exit Assistance
-Renewal
-Audit Rights
-Customer Dependencies
-Force Majeure
-```
-
-The relevant clauses depend on the specific contract.
-
----
-
-# SaaS Considerations
-
-For SaaS agreements, pay particular attention to:
-
-- availability,
-- service credits,
-- data ownership,
-- data portability,
-- retention,
-- security,
-- renewal,
-- termination,
-- usage limits,
-- support.
-
----
-
-# Cloud Considerations
-
-Consider:
-
-- consumption commitments,
-- data region,
-- service availability,
-- shared-responsibility model,
-- price changes,
-- portability,
-- exit costs.
-
----
-
-# Implementation Contract Considerations
-
-Consider:
-
-- scope,
-- milestones,
-- dependencies,
-- acceptance,
-- change control,
-- resource commitments,
-- delay,
-- payment.
-
----
-
-# Agile / Scrum Considerations
-
-Contract terms should support the intended delivery model.
-
-Potential tension can arise where:
-
-```text id="contract-agile-tension"
-Contract:
-Fixed detailed scope.
-
-Delivery Model:
-Adaptive backlog prioritisation.
-```
-
-Flag this tension where relevant.
-
-Do not assume Agile delivery removes contractual obligations.
-
----
-
-# Kanban / Managed Service Considerations
-
-For ongoing service delivery, clauses may relate to:
-
-- SLAs,
-- service requests,
-- prioritisation,
-- response times,
-- resolution times,
-- service capacity,
-- support windows.
-
-Project and service-management responsibilities should be clearly distinguished.
-
----
-
-# Predictive Considerations
-
-Contractual milestones, deliverable acceptance, and formal change control may directly influence the project baseline.
-
----
-
-# Hybrid Considerations
-
-Clearly distinguish:
-
-```text id="contract-hybrid"
-Fixed commercial boundaries
-+
-Adaptive delivery mechanisms
-```
-
-The Project Manager should understand which elements can change operationally and which require contractual approval.
-
----
-
-# Contract Obligations Register
-
-For complex projects, maintain:
-
-| ID | Clause | Obligation | Party | Trigger | Deadline | Owner | Evidence | Status |
-|---|---|---|---|---|---|---|---|---|
-
-This makes contract obligations visible within delivery governance.
-
----
-
-# Important AI Rule
-
-Never ask AI to assume that a clause creates:
-
-- a legal entitlement,
-- a waiver,
-- a contractual breach,
-- a right to terminate,
-- liability,
-- damages,
-
-unless the contract text and professional legal review support that conclusion.
-
-Use AI to support understanding and issue spotting.
-
-Do not use it as the final legal authority.
-
----
-
-# Recipient / Counterparty Challenge
-
-After analysis, run:
-
-```text id="contract-counterparty"
-ROLE
-
-You represent the counterparty to the contract clause below.
-
-TASK
-
-Challenge the interpretation provided.
-
-CLAUSE
-
-[PASTE]
-
-INTERPRETATION
-
-[PASTE]
-
-Identify:
-
-- unsupported assumptions,
-- alternative interpretations,
-- missing conditions,
-- missing dependencies,
-- wording that requires legal clarification.
-
-Do not invent terms outside the clause.
-```
-
-This helps expose one-sided interpretations before formal communication.
-
----
-
-# Quality Checklist
-
-Before relying on the analysis, confirm:
-
-- [ ] Original clause text is complete
-- [ ] Plain-English summary matches the text
-- [ ] Obligations are separated by party
-- [ ] Deadlines are identified
-- [ ] Conditions and triggers are visible
-- [ ] Project implications are understood
-- [ ] Actual requirements are separated from assumptions
-- [ ] Ambiguities are highlighted
-- [ ] Required project controls are identified
-- [ ] Legal interpretation has not been invented
-- [ ] Related clauses have been checked where necessary
-- [ ] Legal / Procurement review is requested where appropriate
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- procurement,
-- commercial management,
-- stakeholder responsibilities,
-- risk,
-- governance,
-- change management,
-- vendor management.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Material contractual analysis should be reviewed with appropriate stakeholders such as:
-
-- Legal
-- Procurement
-- Commercial Management
-- Project Manager
-- Vendor Manager
-- Information Security
-- Data Protection
-
-AI can help explain wording and identify project-management implications.
-
-It is not a substitute for qualified legal advice.
-
----
-
-# Confidentiality
-
-Contracts often contain highly sensitive commercial information.
-
-Do not enter confidential contract text into public AI tools unless organisational policy permits it.
-
-Protect:
-
-- pricing,
-- liability terms,
-- negotiated concessions,
-- security terms,
-- vendor information,
-- personal data,
-- proprietary commercial terms.
-
-Use redacted or anonymised text where appropriate.
-
----
-
-# Prompt Metadata
-
-```text id="contract-metadata"
-Prompt ID: COMM-001
-Category: Commercial & Project Governance
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Commercial Manager
-Reviewer: Legal / Procurement
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Area | Potential Impact | Recommended Control |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT contract-clause analysis framework |
+| Schedule | Short acceptance windows require coordinated review | Acceptance calendar |
+| Quality | Review may be incomplete before deadline | Acceptance checklist |
+| Governance | Approval responsibility may be unclear | Named acceptance owner |
+| Commercial | Deemed acceptance may affect later contractual processes | Legal review of related provisions |
+| Documentation | Unrecorded responses may create disputes | Central evidence repository |
+
+#### 5. Commercial and Delivery Risks
+
+| Affected Party | Risk Scenario | Potential Impact | Preventive Control |
+|---|---|---|---|
+| Customer | Acceptance deadline missed | Deemed acceptance | Automated deadline alerts |
+| Customer | Material defects not documented in writing | Unclear acceptance position | Standard non-conformance template |
+| Supplier | Approval or rejection communication is unclear | Potential dispute | Defined submission and response channels |
+| Both | Acceptance criteria interpreted differently | Rework or disagreement | Confirmed acceptance criteria baseline |
+
+These are potential operational and commercial risks, not conclusions that either party has breached the contract.
+
+#### 6. Ambiguities and Clarifications
+
+| Wording | Concern | Clarification Required |
+|---|---|---|
+| "Business Days" | Calendar calculation | Which holidays and jurisdictions apply? |
+| "Receipt" | Unclear review start | What constitutes valid delivery? |
+| "Material non-conformance" | Different interpretations | How is materiality assessed? |
+| "Agreed Acceptance Criteria" | Missing reference | Which approved version applies? |
+| "Deemed accepted" | Wider legal implications | How does acceptance interact with defects, warranties, and payments? |
+
+#### 7. Contract Obligations Register
+
+| ID | Obligation | Party | Trigger | Proposed Owner | Evidence |
+|---|---|---|---|---|---|
+| C-01 | Review deliverables within 5 business days | Customer | Receipt | Business Owner | Review record |
+| C-02 | Provide written approval or non-conformance details | Customer | Review outcome | Authorized Approver | Written response |
+| C-03 | Track acceptance deadlines | Internal project control | Receipt | Project Manager | Acceptance tracker |
+| C-04 | Escalate approaching deadlines | Internal project control | Review outstanding | Project Manager | Escalation record |
+
+C-03 and C-04 are **recommended project controls**, not additional contractual duties created by the clause.
+
+#### 8. Contract Version Comparison
+
+Not applicable. Only one clause version was provided.
+
+### Management Decisions
+
+1. **Acceptance ownership:** Confirm who reviews deliverables and who is authorized to approve them.
+2. **Deadline control:** Introduce a centralized acceptance tracker with early alerts before each five-business-day deadline.
+3. **Quality:** Agree on review evidence and written non-conformance documentation.
+4. **Commercial governance:** Ask Legal or Procurement to confirm the operation of deemed acceptance under the full agreement.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The analysis identifies the customer review obligation and deemed-acceptance condition. It distinguishes express contractual requirements from proposed project controls. However, critical definitions and related provisions are unavailable.
+
+**Required corrections:**
+- Verify the definition of *Business Day* and *receipt*.
+- Review the complete acceptance and notice provisions.
+- Confirm approval authority and acceptance criteria.
+- Validate any commercial implications with Legal or Procurement.
+- Implement the acceptance tracker after process approval.
+
+**Legal / Commercial Review Required:** Deemed-acceptance implications, defect-remedy provisions, and relationships with payment or warranty clauses.
+
+**Approval blockers:** Incomplete contractual context and unconfirmed acceptance authority.
+
+**Governance:** This framework supports PMI-aligned procurement management, vendor governance, stakeholder responsibilities, risk management, and contract administration.
+
+AI-assisted clause analysis is for project-management awareness and operational planning. It is not legal advice. Material contractual conclusions, formal notices, and commercial decisions require review by qualified professionals. Protect confidential contract terms, pricing, security provisions, and personal data.

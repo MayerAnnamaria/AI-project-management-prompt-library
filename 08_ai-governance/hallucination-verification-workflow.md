@@ -1,355 +1,225 @@
 # Hallucination Verification Workflow
 
-## Purpose
+**Prompt ID:** AIGOV-002 | **Category:** AI Governance | **Version:** 1.1 | **Status:** Draft
 
-Use this workflow when AI produces information that sounds precise, authoritative, or highly confident.
+## 1. Ready-to-Use Prompt
 
-Typical high-risk examples include:
+**Purpose:** Identify and verify unsupported AI-generated claims before they influence project decisions or formal documentation.
 
-- contract clauses,
-- legal wording,
-- technical specifications,
-- financial calculations,
-- standards,
-- policies,
-- dates,
-- regulatory requirements.
+**When to use:** For AI outputs containing contractual references, financial calculations, technical specifications, standards, regulatory requirements, deadlines, or other high-impact information.
 
-The key principle is simple:
+**Core principle: Confident output ≠ Verified fact.**
 
-```text id="hallucination-core"
-Confident Output
-≠
-Verified Fact
-```
+### Copy-and-Paste Prompt
 
----
-
-# Two-Step Verification Pattern
-
-## Step 1 — Ask the Question
-
-Example:
-
-```text id="hallucination-step1"
-What contract clause governs the notification period for a claim?
-
-Provide the clause number and exact wording.
-```
-
-AI may return a very confident answer.
-
-Do not stop there.
-
----
-
-## Step 2 — Challenge the Answer
-
-```text id="hallucination-step2"
-How confident are you that the clause number and wording are
-completely accurate?
-
-What is the risk of error?
-
-What source should I verify before using this in a formal document?
-```
-
-The purpose is to expose uncertainty before the information is used.
-
----
-
-# Verification Workflow
-
-Use:
-
-```text id="hallucination-flow"
-AI Answer
-↓
-Confidence Challenge
-↓
-Source Verification
-↓
-Human Review
-↓
-Approved Use
-```
-
----
-
-# What Requires Independent Verification
-
-Always verify high-impact information such as:
-
-```text id="hallucination-verify"
-Contract clauses
-
-Legal requirements
-
-Financial figures
-
-Technical specifications
-
-Security recommendations
-
-Standards
-
-Regulatory requirements
-
-Deadlines
-
-Calculations
-```
-
----
-
-# Example — Contract Reference
-
-AI says:
-
-```text id="hallucination-contract"
-Clause 12.4 requires notification within 10 days.
-```
-
-Before using it:
-
-```text id="hallucination-contract-check"
-Open the actual contract.
-
-Verify the clause number.
-
-Verify the wording.
-
-Check related clauses.
-
-Confirm with Commercial / Legal if material.
-```
-
----
-
-# Example — Technical Claim
-
-AI says:
-
-```text id="hallucination-tech"
-This API supports 10,000 requests per second.
-```
-
-Verify using:
-
-- vendor documentation,
-- test evidence,
-- architecture records,
-- actual performance data.
-
----
-
-# Example — Financial Calculation
-
-AI says:
-
-```text id="hallucination-finance"
-The project variance is 7.4%.
-```
-
-Verify:
-
-```text id="hallucination-finance-check"
-Actual Cost
-
-Approved Budget
-
-Calculation
-
-Reporting Period
-```
-
----
-
-# Fact / Assumption / Recommendation
-
-Use this classification:
-
-```text id="hallucination-classification"
-FACT
-Verified against an authoritative source.
-
-ASSUMPTION
-Used because information is missing.
-
-AI ANALYSIS
-Interpretation based on provided information.
-
-RECOMMENDATION
-Suggested future action.
-```
-
-Do not allow assumptions or AI analysis to become project facts automatically.
-
----
-
-# Prompt — Verification Review
-
-```text id="hallucination-review"
+```text
 ROLE
 
-You are a PMO quality reviewer.
+You are a Senior IT Project Manager and PMO Quality
+Reviewer specializing in factual verification,
+project assurance, and decision governance.
+
+PROJECT INPUTS
+
+Project: [PROJECT / ANONYMIZED CONTEXT]
+Document type: [REPORT / ANALYSIS / CONTRACT / OTHER]
+Intended use: [INTERNAL / CLIENT / FORMAL DECISION]
+Source documents: [APPROVED REFERENCES / NOT PROVIDED]
+
+AI OUTPUT TO VERIFY
+
+[PASTE CONTENT PERMITTED FOR AI PROCESSING]
 
 TASK
 
-Review the AI-generated content below.
+Identify claims requiring independent verification
+before the output is used.
 
-[PASTE OUTPUT]
+STEP 1 — IDENTIFY CLAIMS
 
-Identify statements that require independent verification.
+Review:
+- Contract clauses and legal obligations
+- Financial figures and calculations
+- Technical specifications and security claims
+- Standards and regulatory requirements
+- Dates, milestones, and deadlines
+- Project assumptions and recommendations
 
-For each provide:
+STEP 2 — CLASSIFY AND VERIFY
 
-Statement
-Risk if Incorrect
-Source to Verify
-Priority
+Classify each statement as:
 
-Do not assume the original AI answer is correct.
+VERIFIED FACT:
+Supported by an authoritative source.
+
+SUPPORTED ANALYSIS:
+Reasoned interpretation of available evidence.
+
+ASSUMPTION:
+Unconfirmed information requiring validation.
+
+RECOMMENDATION:
+Proposed management action.
+
+UNSUPPORTED CLAIM:
+Statement lacking sufficient evidence.
+
+For each material claim:
+1. Identify its source or missing evidence.
+2. Explain the consequence if incorrect.
+3. Recommend an authoritative verification source.
+4. Assign verification priority: HIGH / MEDIUM / LOW.
+5. Mark unverified statements "Not verified".
+
+STEP 3 — MANAGEMENT REVIEW
+
+Identify claims requiring specialist validation:
+- Legal / Commercial
+- Finance
+- Architecture / Engineering
+- Information Security
+- Project Manager / PMO
+
+Do not recommend formal use of high-impact claims
+until the required verification is completed.
+
+OUTPUT FORMAT
+
+1. VERIFICATION REGISTER
+
+Claim | Classification | Source / Evidence |
+Risk if Incorrect | Verification Action |
+Priority | Status
+
+2. CRITICAL FINDINGS
+
+- Unsupported high-impact claims
+- Missing authoritative sources
+- Contradictions or calculation errors
+
+3. MANAGEMENT RECOMMENDATION
+
+Output Readiness:
+READY FOR HUMAN REVIEW / REVISE / BLOCKED
+
+Required Corrections:
+[LIST]
+
+Required Specialist Review:
+[ROLES]
+
+RULES
+
+- Do not invent sources, quotations, or clause numbers.
+- Do not treat AI confidence as evidence.
+- Do not claim independent verification without source access.
+- Recalculate financial figures using approved inputs.
+- Verify exact wording against original documents.
+- Preserve uncertainty where evidence is unavailable.
+- Do not treat AI recommendations as approved decisions.
 ```
+
+### How to Use
+
+1. **Generate:** Obtain the initial AI answer or document.
+2. **Challenge:** Run the verification prompt to identify claims requiring evidence.
+3. **Verify:** Check flagged statements against original contracts, official technical documentation, approved financial data, or project baselines.
+4. **Correct:** Replace unsupported claims with verified information or explicitly label them unconfirmed.
+5. **Approve:** Obtain specialist review before using high-impact findings in formal decisions.
+
+### Source Verification Guide
+
+| Claim Type | Preferred Evidence |
+|---|---|
+| Contract clauses | Executed contract and amendments |
+| Legal / regulatory obligations | Applicable official legal or regulatory sources |
+| Financial calculations | Approved financial records and recalculation |
+| Technical specifications | Official vendor documentation and test evidence |
+| Security claims | Security assessments and validated controls |
+| Dates / milestones | Approved project schedule |
+| Standards | Applicable official standard and version |
 
 ---
 
-# Source Hierarchy
+## 2. Quality Check
 
-Prefer authoritative sources.
+Run this independent review after completing verification.
 
-Example:
+```text
+ROLE
 
-```text id="hallucination-source-hierarchy"
-Original Contract
-over
-AI Summary
+You are an independent Senior PMO Quality Assurance
+Manager reviewing an AI-assisted verification process.
 
-Official Product Documentation
-over
-AI Technical Claim
+TASK
 
-Approved Budget
-over
-AI Calculation
+Review the original AI output, verification register,
+and supporting evidence.
 
-Project Schedule
-over
-AI Timeline Assumption
+CHECK
+
+1. CLAIM COVERAGE
+   All material factual claims were identified.
+
+2. SOURCE RELIABILITY
+   Evidence is authoritative, relevant, and current
+   for the claim being assessed.
+
+3. TRACEABILITY
+   Verified claims can be traced to their sources.
+
+4. FACTUAL ACCURACY
+   Dates, numbers, calculations, and quotations
+   match the supporting evidence.
+
+5. ASSUMPTIONS
+   Unsupported information remains clearly labelled.
+
+6. RISK PRIORITIZATION
+   High-impact errors receive appropriate attention.
+
+7. HUMAN OVERSIGHT
+   Required specialist reviews and approvals
+   are identified.
+
+OUTPUT FORMAT
+
+Quality Verdict: PASS / REVISE
+
+Finding | Evidence Gap | Risk |
+Required Correction | Priority
+
+Verification Blockers:
+[LIST]
+
+Required Human Review:
+[ROLES]
+
+Final Recommendation:
+READY FOR HUMAN APPROVAL / NOT READY
+
+Do not invent evidence or treat repeated
+AI assertions as independent confirmation.
 ```
+
+### Final Verification Checklist
+
+- [ ] Material claims identified
+- [ ] Authoritative sources checked
+- [ ] Exact contractual or regulatory wording verified
+- [ ] Financial calculations independently checked
+- [ ] Dates and technical specifications validated
+- [ ] Assumptions and unsupported claims clearly labelled
+- [ ] Required specialist review completed
+- [ ] Human approval obtained where applicable
+
+**Governance principle:** AI can identify potential inaccuracies and recommend sources, but actual verification requires reliable evidence. The Project Manager coordinates validation; authorized stakeholders remain responsible for formal decisions.
 
 ---
 
-# High-Risk Warning Signs
-
-Be especially cautious when AI provides:
-
-```text id="hallucination-warning-signs"
-Exact clause numbers
-
-Exact quotations
-
-Precise percentages
-
-Specific deadlines
-
-Legal conclusions
-
-Security assurances
-
-Guaranteed outcomes
-
-Specific regulatory requirements
-```
-
-Precision can create a false sense of confidence.
-
----
-
-# Do Not Ask AI to Verify Itself
-
-Weak approach:
-
-```text id="hallucination-self-check"
-Are you sure?
-```
-
-Better:
-
-```text id="hallucination-independent"
-What authoritative source should I check?
-
-What part of your answer is most likely to be wrong?
-
-Which assumptions did you make?
-```
-
-The final verification should come from a real source, not just another AI response.
-
----
-
-# Quality Checklist
-
-Before using a high-impact AI answer:
-
-- [ ] Source identified
-- [ ] Original source checked
-- [ ] Exact wording verified where relevant
-- [ ] Numbers recalculated
-- [ ] Dates checked
-- [ ] Assumptions identified
-- [ ] Related requirements reviewed
-- [ ] Specialist review completed where required
-- [ ] AI confidence not treated as proof
-
----
-
-# Key Principle
-
-Responsible use is:
-
-```text id="hallucination-key"
-Ask
-↓
-Challenge
-↓
-Verify
-↓
-Use
-```
-
-Not:
-
-```text id="hallucination-bad"
-Ask
-↓
-Trust
-↓
-Send
-```
-
-AI is a powerful drafting and analysis tool.
-
-It is **not automatically an authoritative source**.
-
----
-
-# Prompt Metadata
-
-```text id="hallucination-metadata"
-Prompt ID: AIGOV-002
-Category: AI Governance
-Version: 1.0
-Status: Draft
-Owner: Project Manager / PMO
-Reviewer: Relevant Specialist
-Risk Level: High
-```
-
----
-
-# Version History
+### Version History
 
 | Version | Change |
 |---|---|
 | 1.0 | Initial hallucination verification workflow |
+| 1.1 | Consolidated verification controls and introduced a reusable prompt and independent quality check |

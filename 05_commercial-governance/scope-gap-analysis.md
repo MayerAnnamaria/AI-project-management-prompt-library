@@ -1,969 +1,382 @@
 # Scope Gap Analysis
 
-## Purpose
+**Prompt ID:** COMM-004 | **Category:** Commercial & Project Governance | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to review an IT scope, requirements document, Statement of Work, technical specification, or procurement package before approval or supplier commitment.
+## 1. Ready-to-Use Prompt
 
-The analysis should identify:
+**Purpose:** Identify missing, ambiguous, or commercially exposed requirements before they create delivery delays, change requests, acceptance disputes, or unplanned costs.
 
-- ambiguous requirements,
-- missing requirements,
-- unclear responsibilities,
-- incomplete interfaces,
-- missing acceptance criteria,
-- assumptions that may later create disagreement,
-- and areas likely to result in scope change or commercial dispute.
+**Use case:** Review Statements of Work (SOWs), requirements specifications, RFPs, and supplier scope documents before approval, contract signature, vendor mobilization, or major change decisions.
 
-The objective is to identify scope problems **before they become delivery problems**.
+Copy the prompt and replace the placeholders.
 
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Planning / Procurement / Contracting / Change Control
-
-**Project type:**  
-Software implementation / ERP / SaaS / Cloud / Infrastructure / Data / Outsourcing / Digital Transformation
-
-**Primary user:**  
-Project Manager / Business Analyst / Product Owner / Commercial Manager / Procurement / Solution Architect
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-Before contract award, scope approval, major change approval, or vendor mobilisation
-
----
-
-# Prompt
-
-```text id="scope-gap-01"
+```text
 ROLE
 
-You are a senior IT Project Manager and Business / Commercial
-Analyst experienced in software implementation, requirements
-management, vendor delivery, contract governance, and scope control.
+You are a Senior IT Project Manager and Business / Commercial
+Analyst specializing in requirements management, software
+implementation, vendor governance, scope control, and procurement.
 
-TASK
+CONTEXT
 
-Review the project scope / requirements below and identify gaps
-that could create delivery ambiguity, change requests, commercial
-disputes, or acceptance problems.
-
-PROJECT CONTEXT
-
-Project:
-[PROJECT NAME]
-
-Document type:
-[SOW / REQUIREMENTS / RFP / CONTRACT SCOPE / TECHNICAL SPECIFICATION]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Supplier model:
-[INTERNAL / EXTERNAL / MULTI-VENDOR]
-
-Business objective:
-[OBJECTIVE]
+Project: [PROJECT NAME]
+Document type: [SOW / RFP / REQUIREMENTS / CONTRACT SCOPE]
+Project phase: [PHASE]
+Business objective: [OBJECTIVE]
+Delivery approach: [PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
+Supplier model: [INTERNAL / EXTERNAL / MULTI-VENDOR]
+Contract model: [FIXED PRICE / TIME & MATERIALS / OTHER]
+Known constraints: [LIST]
+Approved scope boundaries: [IF AVAILABLE]
 
 DOCUMENT TO REVIEW
 
-[PASTE SCOPE / REQUIREMENTS]
+[PASTE PROJECT SCOPE OR REQUIREMENTS]
 
-CHECK FOR
+TASK
 
-1. Ambiguous statements
-2. Missing requirements
-3. Scope-change / variation risk
-4. Unclear interface responsibilities
-5. Missing measurable acceptance criteria
-6. Undefined assumptions
-7. Undefined exclusions
-8. Missing dependencies
-9. Missing security / compliance requirements
-10. Missing operational / support requirements
+Identify scope gaps that may create delivery, technical,
+commercial, or acceptance risks.
+
+STEP 1 — REQUIREMENTS QUALITY
+
+1. Identify vague, incomplete, contradictory, or
+   untestable requirements.
+2. Evaluate clarity, necessity, feasibility,
+   measurability, and traceability.
+3. Highlight open-ended commitments such as
+   "all necessary integrations" or "support as required".
+4. Identify missing functional and non-functional
+   requirements relevant to the project.
+5. Distinguish confirmed omissions from areas requiring
+   further stakeholder clarification.
+
+STEP 2 — RESPONSIBILITIES AND DEPENDENCIES
+
+6. Identify unclear Customer, Supplier, and third-party
+   responsibilities.
+7. Review interface ownership, API access, environments,
+   test data, security, and external dependencies.
+8. Identify hidden assumptions and missing exclusions.
+9. Assess potential impact if critical dependencies
+   or assumptions prove incorrect.
+
+STEP 3 — ACCEPTANCE AND OPERATIONS
+
+10. Review whether deliverables have measurable
+    acceptance criteria, evidence, and approvers.
+11. Identify missing testing, data migration,
+    performance, security, privacy, and compliance
+    requirements where relevant.
+12. Review deployment, documentation, support,
+    monitoring, recovery, and operational handover.
+
+STEP 4 — COMMERCIAL AND DELIVERY RISK
+
+13. Assess each gap from both Customer and Supplier
+    perspectives.
+14. Identify potential change requests, cost exposure,
+    schedule impact, and acceptance disputes.
+15. Assign a proposed priority:
+    - Critical: Potential major delivery, security,
+      commercial, or acceptance failure.
+    - High: Material ambiguity requiring resolution
+      before commitment.
+    - Medium: Important clarification with manageable impact.
+    - Low: Minor improvement.
+16. Recommend specific wording, clarification questions,
+    ownership, and required evidence.
+17. Identify gaps that should block scope approval
+    until appropriately resolved.
+
+For Agile delivery, distinguish flexible backlog details
+from contractual and commercial boundaries.
+
+Do not invent system requirements, acceptance thresholds,
+contractual commitments, or stakeholder approvals.
+
+Treat suggested wording as a proposal requiring validation.
 
 OUTPUT FORMAT
 
-Gap / Issue
-Document Location
-Why It Is Ambiguous / Missing
-Risk to Customer
-Risk to Supplier
-Potential Delivery Impact
-Recommended Fix
-Priority
+1. EXECUTIVE SCOPE ASSESSMENT
+
+Overall Completeness | Critical Gaps |
+Commercial Exposure | Approval Readiness
+
+2. SCOPE GAP REGISTER
+
+Gap ID | Requirement / Document Reference |
+Gap / Ambiguity | Customer Risk | Supplier Risk |
+Delivery Impact | Priority | Recommended Fix
+
+3. REQUIREMENTS QUALITY REVIEW
+
+Requirement | Quality Issue | Why It Matters |
+Suggested Clarification | Validation Required
+
+4. INTERFACE AND RESPONSIBILITY MATRIX
+
+Interface / Dependency | Customer Responsibility |
+Supplier Responsibility | Third Party |
+Acceptance Owner | Missing Decision
+
+5. ACCEPTANCE CRITERIA REVIEW
+
+Deliverable | Current Criterion | Gap |
+Proposed Measurable Criterion |
+Required Evidence | Approver
+
+6. ASSUMPTIONS AND EXCLUSIONS
+
+Item | Type | Current Position |
+Validation Owner | Risk if Incorrect
+
+7. TECHNICAL AND OPERATIONAL GAPS
+
+Area | Missing / Ambiguous Requirement |
+Potential Impact | Required Clarification
+
+8. RECOMMENDED SCOPE CORRECTIONS
+
+Priority | Proposed Correction |
+Proposed Owner | Required Evidence |
+Approval Dependency
+
+9. MANAGEMENT SUMMARY
+
+- Highest-priority scope gaps
+- Main Customer and Supplier exposure
+- Decisions needed before commitment
+- Recommended scope approval status
+
+Approval status:
+READY / READY WITH CONDITIONS / NOT READY
+
+Use concise Markdown tables.
+Reference source wording where available.
+Mark unknown information as "Requires clarification".
 ```
 
 ---
 
-# Core Review Principle
+## 2. Quality Check
 
-Use:
+Use this independent audit before approving the revised scope.
 
-```text id="scope-gap-flow"
-Requirement
-↓
-Interpretation
-↓
-Ownership
-↓
-Acceptance
-↓
-Commercial Boundary
-```
+```text
+QUALITY CHECK
 
-If any of these are unclear, scope risk increases.
+Act as an independent Senior QA and Commercial Assurance Manager.
 
----
+Review the Scope Gap Analysis against the original document.
 
-# 1. Ambiguity Review
+Verify:
 
-Look for wording that can be interpreted differently.
+1. Accuracy: Every finding is traceable to source wording
+   or clearly identified as a potential omission.
+2. Requirements: Ambiguous, contradictory, and untestable
+   statements are identified.
+3. Completeness: Relevant functional, technical,
+   security, data, and operational areas are covered.
+4. Responsibilities: Customer, Supplier, and third-party
+   ownership gaps are visible.
+5. Acceptance: Proposed criteria are measurable,
+   feasible, and require stakeholder agreement.
+6. Commercial Risk: Exposure is assessed fairly
+   for both Customer and Supplier.
+7. Prioritization: Severity reflects actual project
+   context, not generic assumptions.
+8. Actionability: Each material gap has a practical
+   clarification or correction.
+9. Governance: Critical approval blockers and
+   required decision authorities are identified.
 
-Examples:
+OUTPUT
 
-```text id="scope-ambiguous-terms"
-User-friendly
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
 
-Modern
-
-Best practice
-
-High performance
-
-Fast response
-
-Appropriate security
-
-Industry standard
-
-Flexible reporting
-
-Seamless integration
-
-As required
-```
-
-These phrases may describe intent but often do not define a measurable requirement.
-
----
-
-# Example
-
-### Weak Requirement
-
-```text id="scope-weak-requirement"
-The system shall provide fast search.
-```
-
-### Better
-
-```text id="scope-better-requirement"
-For standard customer searches against the production dataset,
-95% of requests shall return results within 2 seconds under the
-agreed normal-load profile.
-```
-
-The exact target should come from stakeholder agreement, not AI invention.
-
----
-
-# Ambiguity Questions
-
-For every ambiguous statement ask:
-
-```text id="scope-ambiguity-questions"
-What does this mean?
-
-How will compliance be measured?
-
-Who decides whether it is acceptable?
-
-Under what conditions?
-
-What happens if the parties interpret it differently?
+Do not invent missing requirements, contract terms,
+acceptance thresholds, or approved scope decisions.
 ```
 
 ---
 
-# 2. Missing Requirement Review
+## 3. Practical IT Use Case
 
-Check whether important requirement categories are absent.
+### CRM Implementation — Pre-Contract Scope Review
 
-Possible IT categories:
+**Scenario:** A company is preparing to engage a software supplier to implement a CRM system. The draft Statement of Work describes required integrations, data migration, reporting, and training, but several commitments are too general to establish reliable delivery and commercial boundaries.
 
-```text id="scope-missing-categories"
-Business requirements
-Functional requirements
-Non-functional requirements
-Data
-Integrations
-Security
-Privacy
-Performance
-Availability
-Accessibility
-Environments
-Testing
-Migration
-Training
-Documentation
-Deployment
-Support
-Operations
-Monitoring
-Disaster recovery
-Compliance
+The Project Manager must identify gaps before contract signature.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | CRM Implementation |
+| Phase | Procurement / Contracting |
+| Document | Draft Statement of Work |
+| Delivery approach | Hybrid |
+| Supplier model | External vendor |
+| Commercial model | Fixed price |
+| Main concern | Ambiguous scope and acceptance conditions |
+| Management objective | Reduce change disputes and delivery uncertainty |
+
+### Example Input
+
+```text
+Project: CRM Implementation
+
+Document: Draft Statement of Work
+Contract model: Fixed Price
+Supplier: External CRM Implementation Vendor
+
+Scope extract:
+
+"The Supplier shall implement a CRM solution
+integrated with the ERP and other relevant systems.
+
+The solution shall provide fast customer searches
+and flexible reporting capabilities.
+
+The Supplier shall migrate all necessary
+customer data from the legacy system.
+
+The solution must comply with applicable
+security requirements.
+
+The Supplier shall provide user training
+and technical documentation.
+
+The implementation must be completed
+by 30 September 2027."
+
+Known information:
+- ERP integration required.
+- Other interfaces not yet listed.
+- Legacy data quality not assessed.
+- Business acceptance criteria not finalized.
+- Support arrangements not defined.
 ```
 
-Do not assume every category is required for every project.
+### Example Output — Scope Gap Analysis
 
----
+#### 1. Executive Scope Assessment
 
-# 3. Scope Change / Variation Risk
+| Area | Assessment |
+|---|---|
+| Overall completeness | Insufficient for fixed-price commitment |
+| Critical gaps | Integration scope, migration boundaries, acceptance criteria |
+| Commercial exposure | High |
+| Approval readiness | Not Ready |
+| Main recommendation | Clarify deliverables, responsibilities, and measurable acceptance conditions before signature |
 
-Identify wording that could produce future scope disputes.
+#### 2. Scope Gap Register
 
-Typical warning signs:
+| ID | Gap / Ambiguity | Customer Risk | Supplier Risk | Priority | Recommended Fix |
+|---|---|---|---|---|---|
+| G-01 | "Other relevant systems" undefined | Required integrations may be excluded | Open-ended integration expectations | High | List systems and interfaces |
+| G-02 | "Fast customer searches" unmeasured | Performance may not meet business needs | Disputes over acceptable response time | High | Agree performance criteria |
+| G-03 | "Flexible reporting" undefined | Required reports may be missing | Uncontrolled report requests | High | Define reporting scope |
+| G-04 | "All necessary customer data" undefined | Incomplete migration | Unexpected cleansing and migration effort | Critical | Define datasets and responsibilities |
+| G-05 | Security requirements unspecified | Security expectations may be unmet | Undefined compliance effort | High | Reference approved security baseline |
+| G-06 | Training and documentation undefined | Inadequate business readiness | Unclear delivery quantities | Medium | Specify required outputs |
+| G-07 | No operational support scope | Unclear post-launch ownership | Unplanned support expectations | High | Define handover and support model |
+| G-08 | Acceptance criteria missing | Disputes over completion | Payment / approval uncertainty | Critical | Establish acceptance matrix |
 
-```text id="scope-change-risk"
-"All necessary integrations"
+Priorities are illustrative and must be confirmed against the project's actual risk criteria.
 
-"Any required reports"
+#### 3. Requirements Quality Review
 
-"Complete migration"
+| Requirement | Quality Issue | Suggested Clarification |
+|---|---|---|
+| Fast customer searches | Not measurable | Define agreed response time, test load, and data volume |
+| Flexible reporting | Unbounded functionality | List required reports and configuration options |
+| All necessary customer data | Undefined scope | Identify entities, history, records, and exclusions |
+| Applicable security requirements | Missing reference baseline | Specify approved security controls and review process |
+| Technical documentation | Undefined deliverables | List documents, required content, and approval criteria |
 
-"Full training"
+Any proposed technical threshold must be agreed by the appropriate stakeholders rather than generated as an assumed requirement.
 
-"All applicable security requirements"
+#### 4. Interface and Responsibility Matrix
 
-"Support as required"
-
-"Any other functionality necessary"
-```
-
-These statements may leave commercial boundaries unclear.
-
----
-
-# Example
-
-### High-Risk Scope
-
-```text id="scope-change-risk-example"
-Supplier shall integrate the CRM with all relevant enterprise systems.
-```
-
-Questions:
-
-```text id="scope-change-risk-questions"
-Which systems?
-
-How many interfaces?
-
-What protocols?
-
-Who owns each system?
-
-Who provides API access?
-
-Who pays for third-party changes?
-```
-
----
-
-# 4. Interface Responsibility Review
-
-Interfaces are a common source of IT delivery risk.
-
-For every interface identify:
-
-| Interface | Customer Responsibility | Supplier Responsibility | Third Party | Acceptance Owner |
+| Interface / Dependency | Customer | Supplier | Third Party | Missing Decision |
 |---|---|---|---|---|
+| ERP integration | Responsibilities TBD | Responsibilities TBD | ERP provider, if applicable | API ownership and test access |
+| Additional enterprise systems | Define candidate systems | Assess integration feasibility | TBD | Confirm scope and interface count |
+| Legacy data migration | Responsibilities TBD | Responsibilities TBD | Legacy provider, if applicable | Extraction, cleansing, and reconciliation ownership |
+| Security integration | Define security requirements | Confirm implementation responsibilities | Identity provider, if applicable | Authentication and approval responsibilities |
 
-Consider:
+These are clarification areas, not confirmed contractual allocations.
 
-```text id="scope-interface"
-API specification
-Authentication
-Network connectivity
-Test data
-Firewall rules
-Environment access
-Source-system changes
-Error handling
-Monitoring
-Support
-```
+#### 5. Acceptance Criteria Review
 
----
-
-# Responsibility Rule
-
-Avoid:
-
-```text id="scope-responsibility-weak"
-Customer and supplier will coordinate integration.
-```
-
-Prefer clearly separated ownership.
-
-Example:
-
-```text id="scope-responsibility-good"
-Supplier:
-Develop CRM API client and error handling.
-
-Customer:
-Provide approved API specification and test endpoint.
-
-Third Party:
-Maintain availability of the billing API.
-
-Customer Architecture:
-Approve interface design.
-```
-
----
-
-# 5. Acceptance Criteria Review
-
-Every important deliverable should have measurable acceptance criteria.
-
-Ask:
-
-```text id="scope-acceptance-questions"
-What does complete mean?
-
-Who accepts it?
-
-What evidence is required?
-
-What tolerance applies?
-
-What happens when criteria are not met?
-```
-
----
-
-# Example
-
-### Weak
-
-```text id="scope-acceptance-weak"
-Migration must be successful.
-```
-
-### Better
-
-```text id="scope-acceptance-better"
-Migration acceptance will be based on the agreed reconciliation
-criteria, including completeness, accuracy, and exception handling.
-```
-
-Actual tolerances should be defined and approved by the project.
-
----
-
-# Acceptance Matrix
-
-| Deliverable | Acceptance Criterion | Evidence | Approver |
+| Deliverable | Current Criterion | Gap | Required Clarification |
 |---|---|---|---|
+| ERP integration | Not defined | No agreed success test | Specify integration scenarios and evidence |
+| Customer search | "Fast" | No performance threshold | Define measurable acceptance target |
+| Data migration | "All necessary data" | No completeness or accuracy criteria | Agree reconciliation measures |
+| Reporting | "Flexible reporting" | No report catalogue | Define report inventory and acceptance |
+| Security | "Applicable requirements" | No approval standard | Confirm applicable security checks |
+| User training | Training provided | No measurable delivery scope | Define audience, sessions, and materials |
 
-Examples:
+Acceptance owners and criteria remain to be agreed.
 
-```text id="scope-acceptance-examples"
-Integration
-→ Approved end-to-end test evidence
+#### 6. Assumptions and Exclusions
 
-Data migration
-→ Reconciliation results
-
-Security
-→ Required approval / test evidence
-
-Training
-→ Agreed materials delivered
-
-Documentation
-→ Required documents approved
-```
-
----
-
-# 6. Assumption Review
-
-Identify hidden assumptions.
-
-Examples:
-
-```text id="scope-assumptions"
-Customer data is clean.
-
-APIs already exist.
-
-Business users will be available.
-
-Licences are already purchased.
-
-Security approval will be straightforward.
-
-Vendor resources are immediately available.
-```
-
-Convert important assumptions into explicit statements.
-
-Use:
-
-| Assumption | Owner | Validation Required | Impact if Wrong |
+| Item | Type | Current Position | Risk if Incorrect |
 |---|---|---|---|
+| Legacy source data is usable | Assumption | Not validated | Unexpected cleansing and rework |
+| ERP API is available | Assumption | Not confirmed | Integration delay |
+| Additional integrations | Scope boundary | Undefined | Commercial scope expansion |
+| Historical data cleansing | Exclusion candidate | Not specified | Responsibility dispute |
+| Post-go-live support | Scope boundary | Not defined | Unplanned service commitments |
 
----
+#### 7. Technical and Operational Gaps
 
-# 7. Exclusions Review
-
-Scope should clearly state what is not included.
-
-Possible exclusions:
-
-```text id="scope-exclusions"
-Historical data cleansing
-
-Legacy-system remediation
-
-Third-party licence fees
-
-Changes to external systems
-
-24/7 support
-
-Post-go-live enhancement
-
-Custom reporting beyond agreed reports
-
-Additional environments
-```
-
-Exclusions should be explicit rather than assumed.
-
----
-
-# 8. Dependency Review
-
-Identify dependencies such as:
-
-```text id="scope-dependencies"
-Customer decisions
-
-Vendor deliverables
-
-Third-party APIs
-
-Security approval
-
-Data availability
-
-Infrastructure
-
-Environment readiness
-
-Business resources
-
-Procurement
-```
-
-Provide:
-
-| Dependency | Owner | Required By | Impact if Late |
+| Area | Gap | Potential Impact | Required Clarification |
 |---|---|---|---|
+| Performance | No load conditions | Acceptance uncertainty | Agree performance test profile |
+| Data | No migration inventory | Incomplete scope estimates | Define data sources and quality ownership |
+| Security | No security baseline | Approval and compliance risk | Confirm security requirements |
+| Environments | No environment responsibilities | Testing delays | Define provisioning and access |
+| Operations | No support model | Handover failure | Agree service ownership |
+| Documentation | No deliverables inventory | Incomplete knowledge transfer | Define mandatory documents |
 
----
+#### 8. Recommended Scope Corrections
 
-# 9. Security / Compliance Gap Review
+| Priority | Action | Proposed Owner | Evidence Required |
+|---|---|---|---|
+| Critical | Confirm complete migration scope and data ownership | Business / Data Lead | Approved data inventory |
+| Critical | Define measurable acceptance criteria | Business Analyst / QA Lead | Acceptance matrix |
+| High | Finalize integration catalogue | Solution Architect | Approved interface list |
+| High | Approve non-functional requirements | Architecture / Security | Requirements baseline |
+| High | Define operational handover | Service Owner | Support and transition plan |
+| Medium | Specify training and documentation | Business Owner | Deliverables checklist |
 
-Check whether the scope defines relevant requirements for:
+### Management Decisions
 
-```text id="scope-security"
-Authentication
+1. **Scope approval:** Do not finalize the fixed-price scope until critical ambiguities are resolved or formally addressed.
+2. **Commercial boundaries:** Confirm integration quantities, migration responsibilities, support obligations, and explicit exclusions.
+3. **Acceptance:** Establish measurable criteria and authorized acceptance owners for key deliverables.
+4. **Change control:** Ensure that requirements introduced after the agreed baseline follow the appropriate contractual change process.
 
-Authorisation
+### Applied Quality Review
 
-Encryption
+**Quality verdict: REVISE**
 
-Logging
+**Findings:** The analysis identifies material ambiguity in integration scope, migration obligations, performance requirements, acceptance criteria, and operations. The recommendations are actionable, but technical and commercial boundaries remain undefined.
 
-Audit trail
+**Required corrections:** Confirm interface inventory, data migration scope, measurable acceptance criteria, customer–supplier responsibilities, exclusions, and support obligations.
 
-Vulnerability management
+**Approval blockers:** Undefined critical deliverables, missing acceptance criteria, and unresolved fixed-price commercial boundaries.
 
-Data residency
+**Recommended scope status: NOT READY**
 
-Retention
+**Governance:** Supports PMI-aligned scope management, requirements analysis, procurement governance, quality planning, risk management, and change control.
 
-Privacy
-
-Security testing
-
-Access control
-```
-
-Do not invent standards or certifications.
-
-Flag missing requirements for stakeholder confirmation.
-
----
-
-# 10. Operational Readiness Gap Review
-
-Scope often focuses on build but ignores operation.
-
-Check:
-
-```text id="scope-ops"
-Monitoring
-
-Incident management
-
-Support ownership
-
-Runbooks
-
-Backup
-
-Recovery
-
-Service hours
-
-SLA
-
-Knowledge transfer
-
-Hypercare
-
-Handover
-```
-
----
-
-# Example Input
-
-```text id="scope-gap-example-input"
-Project:
-Customer Portal
-
-Scope Extract:
-
-"The Supplier shall implement a modern customer portal integrated
-with the CRM and other relevant enterprise systems.
-
-The portal shall provide fast access to customer information.
-
-The Supplier shall migrate all necessary customer data.
-
-The solution shall comply with all applicable security standards.
-
-The Supplier shall provide training and documentation.
-
-The project shall be complete by 30 September."
-```
-
----
-
-# Example Gap Analysis
-
-| Gap / Issue | Risk | Recommended Fix |
-|---|---|---|
-| "Other relevant enterprise systems" undefined | Number of integrations is commercially unclear | List all required integrations |
-| "Fast access" not measurable | Performance acceptance dispute | Define measurable response-time criteria |
-| "All necessary customer data" undefined | Migration scope may expand | Define entities, history, volume, and quality responsibilities |
-| "Applicable security standards" undefined | Security obligations unclear | Identify approved security requirements |
-| Training scope undefined | Number of sessions / users unclear | Define audience, format, duration, and materials |
-| Documentation undefined | Acceptance disagreement | List required documents |
-
----
-
-# Prompt 2 — Pre-Contract Scope Audit
-
-```text id="scope-precontract"
-ROLE
-
-You are an independent IT Commercial Manager reviewing a scope
-before contract signature.
-
-TASK
-
-Review the scope below specifically for commercial exposure.
-
-[PASTE SCOPE]
-
-Identify:
-
-- open-ended obligations,
-- undefined quantities,
-- hidden assumptions,
-- unclear ownership,
-- customer dependencies,
-- third-party dependencies,
-- missing exclusions,
-- missing acceptance criteria,
-- language likely to create future change disputes.
-
-OUTPUT FORMAT
-
-Clause / Requirement
-Commercial Risk
-Customer Exposure
-Supplier Exposure
-Recommended Clarification
-Priority
-```
-
----
-
-# Prompt 3 — Technical Scope Audit
-
-```text id="scope-technical"
-ROLE
-
-You are a senior Solution Architect reviewing an IT project scope.
-
-TASK
-
-Review the scope below for technical completeness.
-
-[PASTE SCOPE]
-
-Check:
-
-- architecture,
-- integrations,
-- environments,
-- data,
-- security,
-- performance,
-- resilience,
-- monitoring,
-- deployment,
-- operational support.
-
-OUTPUT FORMAT
-
-Technical Gap
-Why It Matters
-Required Clarification
-Owner
-```
-
----
-
-# Prompt 4 — Requirements Quality Audit
-
-```text id="scope-requirements-quality"
-ROLE
-
-You are a senior Business Analyst.
-
-TASK
-
-Review the requirements below for quality.
-
-[PASTE REQUIREMENTS]
-
-Check whether each requirement is:
-
-Clear
-Testable
-Unambiguous
-Necessary
-Traceable
-Feasible
-Measurable where relevant
-
-OUTPUT FORMAT
-
-Requirement
-Quality Issue
-Why It Matters
-Suggested Clarification
-```
-
----
-
-# Scope Gap Severity
-
-Possible classification:
-
-```text id="scope-gap-severity"
-Critical
-Likely to cause major delivery, commercial, security, or acceptance failure.
-
-High
-Material ambiguity requiring resolution before commitment.
-
-Medium
-Important clarification but manageable.
-
-Low
-Minor improvement.
-```
-
-Use project context when assigning severity.
-
----
-
-# Customer vs Supplier Perspective
-
-A mature review should assess both sides.
-
-Example:
-
-```text id="scope-two-sided"
-Ambiguous acceptance criteria
-
-Customer Risk:
-May receive a deliverable that does not meet expected outcomes.
-
-Supplier Risk:
-May face repeated rejection based on undocumented expectations.
-```
-
-Good scope definition protects both parties.
-
----
-
-# Change-Risk Indicator
-
-For each gap optionally assess:
-
-```text id="scope-change-indicator"
-Low
-Medium
-High
-```
-
-Ask:
-
-> How likely is this ambiguity to create a future change request or commercial disagreement?
-
----
-
-# Agile / Scrum Considerations
-
-Agile projects may intentionally leave detailed feature requirements flexible.
-
-However, commercial boundaries should still be clear.
-
-Distinguish:
-
-```text id="scope-agile"
-Detailed backlog content
-```
-
-from:
-
-```text id="scope-agile-commercial"
-Contractual scope boundary
-```
-
-Examples of fixed boundaries may include:
-
-- product area,
-- team capacity,
-- budget,
-- duration,
-- major interfaces,
-- non-functional requirements,
-- compliance obligations.
-
----
-
-# Kanban / Managed Service Considerations
-
-Review whether the scope defines:
-
-- service boundaries,
-- request types,
-- service hours,
-- priorities,
-- SLAs / SLEs,
-- support responsibilities,
-- capacity assumptions.
-
-Avoid ambiguous wording such as:
-
-> Supplier will handle all support requests as required.
-
----
-
-# Predictive Considerations
-
-Detailed scope clarity is particularly important where:
-
-- scope is baselined,
-- price is fixed,
-- milestone acceptance drives payment,
-- formal change control applies.
-
----
-
-# Hybrid Considerations
-
-Keep enough definition for commercial and governance control while allowing delivery flexibility inside agreed boundaries.
-
----
-
-# Scope-to-Change Prevention
-
-Use:
-
-```text id="scope-prevention"
-Clear Scope
-+
-Clear Interfaces
-+
-Clear Assumptions
-+
-Clear Acceptance
-+
-Clear Exclusions
-=
-Lower Change / Dispute Risk
-```
-
----
-
-# Scope Gap Register
-
-For significant reviews maintain:
-
-| Gap ID | Requirement | Gap | Risk | Owner | Resolution | Status |
-|---|---|---|---|---|---|---|
-
-Suggested statuses:
-
-```text id="scope-gap-status"
-Open
-Under Review
-Clarified
-Accepted Risk
-Resolved
-```
-
----
-
-# Quality Checklist
-
-Before approving the scope, confirm:
-
-- [ ] Business objective is clear
-- [ ] In-scope items are defined
-- [ ] Out-of-scope items are defined
-- [ ] Deliverables are defined
-- [ ] Interfaces are identified
-- [ ] Responsibilities are assigned
-- [ ] Dependencies are identified
-- [ ] Assumptions are explicit
-- [ ] Acceptance criteria are measurable
-- [ ] Security requirements are addressed
-- [ ] Data requirements are addressed
-- [ ] Testing responsibilities are clear
-- [ ] Operational requirements are addressed
-- [ ] Vendor responsibilities are clear
-- [ ] Customer responsibilities are clear
-- [ ] Commercial boundaries are understood
-- [ ] High-risk ambiguities are resolved before commitment
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- scope management,
-- requirements,
-- procurement,
-- risk,
-- integrated change control,
-- stakeholder alignment,
-- quality.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Scope reviews should involve relevant stakeholders such as:
-
-- Project Manager
-- Business Analyst
-- Product Owner
-- Solution Architect
-- Security
-- QA
-- Procurement / Commercial
-- Legal where applicable
-- Vendor representatives
-
-AI can identify potential ambiguity.
-
-It cannot determine the final commercial interpretation of a contract.
-
----
-
-# Confidentiality
-
-Scope and contract documents may contain confidential information.
-
-Protect:
-
-- architecture,
-- pricing,
-- security requirements,
-- commercial terms,
-- customer information,
-- proprietary solution details.
-
-Use anonymised information in public AI tools where required.
-
----
-
-# Prompt Metadata
-
-```text id="scope-gap-metadata"
-Prompt ID: COMM-004
-Category: Commercial & Project Governance
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Business Analyst
-Reviewer: Commercial / Architecture / Legal where applicable
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT scope-gap analysis framework |
+AI-assisted analysis identifies potential scope gaps but does not establish contractual meaning or approve requirements. Final scope, commercial boundaries, and acceptance criteria require validation by authorized business, technical, commercial, and legal stakeholders. Protect confidential architecture, pricing, security requirements, and customer information.

@@ -1,595 +1,308 @@
 # RACI Matrix and Governance Review
 
-## Purpose
+**Prompt ID:** PLAN-003 | **Category:** Project Planning | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to create and review a Responsibility Assignment Matrix for an IT project.
+## 1. Ready-to-Use Prompt
 
-A RACI matrix clarifies who is:
+**Purpose:** Define responsibilities and decision authority to improve accountability, cross-team coordination, and project governance.
 
-**R — Responsible**  
-Performs or coordinates the work.
+**Use case:** Clarify ownership and approval responsibilities during project planning, software delivery, release preparation, or changes to team structure and governance.
 
-**A — Accountable**  
-Owns the final outcome or decision.
+Copy the prompt and replace the placeholders with your project information.
 
-**C — Consulted**  
-Provides input before the activity or decision is completed.
-
-**I — Informed**  
-Receives relevant information after or during the activity.
-
-The objective is not simply to fill every cell.
-
-The objective is to make **ownership and decision rights explicit**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Planning / Delivery
-
-**Project type:**  
-Software implementation / Digital transformation / Data / Infrastructure / ERP / Product delivery / Multi-vendor initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / PMO / Business Analyst
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At project setup and after major team, scope, or governance changes
-
----
-
-# Prompt 1 — Create the RACI Matrix
-
-```text id="raci-01"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, cross-functional coordination, stakeholder
-management, governance, and accountability design.
+You are a Senior IT Project Manager specializing in software delivery,
+responsibility assignment, stakeholder management, cross-functional
+coordination, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Project roles: [LIST]
+Business and technical teams: [LIST]
+External vendors: [IF RELEVANT]
+Governance bodies: [LIST]
+Key activities: [LIST]
+Key decisions: [LIST]
+Cross-team dependencies: [LIST]
+Known ownership concerns: [LIST]
+Existing approval authority: [IF KNOWN]
+Existing RACI: [PASTE IF AVAILABLE]
 
 TASK
 
-Create a RACI matrix for the project described below.
+Create a RACI matrix and perform a governance review.
 
-PROJECT CONTEXT
+STEP 1 — RESPONSIBILITY ASSIGNMENT
 
-Project:
-[PROJECT NAME]
+1. Identify activities, deliverables, and decisions requiring
+   clear responsibility and accountability.
+2. Assign R (Responsible), A (Accountable), C (Consulted),
+   and I (Informed) based on available governance information.
+3. Ensure each critical activity has a Responsible role and
+   normally one Accountable owner.
+4. Distinguish delivery execution from approval authority.
+5. Separate business, technical, security, operations,
+   and vendor responsibilities.
+6. Identify cross-team dependencies and escalation ownership.
+7. Align responsibilities with the stated delivery approach
+   without overriding established framework accountabilities.
 
-Business objective:
-[OBJECTIVE]
+STEP 2 — GOVERNANCE REVIEW
 
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
+8. Identify activities with missing or multiple Accountable owners.
+9. Flag activities without a Responsible role.
+10. Identify overloaded roles and excessive consultation.
+11. Detect unclear business, IT, vendor, or cross-team ownership.
+12. Flag decision-right conflicts and missing escalation authority.
+13. Identify key stakeholders excluded from necessary consultation.
+14. Recommend corrections to responsibilities and governance gaps.
+15. Identify assignments requiring stakeholder confirmation.
 
-Project roles:
-[LIST ROLES]
-
-External vendors:
-[LIST]
-
-Governance bodies:
-[LIST]
-
-Major workstreams:
-[LIST]
-
-Key activities:
-[LIST]
-
-Key decisions:
-[LIST]
-
-Known ownership concerns:
-[LIST]
+Do not invent organisational authority or approved responsibilities.
+Label suggested RACI assignments as proposed until validated.
+Prioritize clear accountability over unnecessary role assignments.
 
 OUTPUT FORMAT
 
-Create a RACI matrix:
+TABLE 1 — RACI MATRIX
 
-Activity / Decision | Role 1 | Role 2 | Role 3 | Role 4 | ...
+Activity / Decision | [ROLE 1] | [ROLE 2] | [ROLE 3] | ...
 
 Use:
-
 R = Responsible
 A = Accountable
 C = Consulted
 I = Informed
+A/R = Both Accountable and Responsible
+– = No assigned involvement
 
-Then provide:
+TABLE 2 — GOVERNANCE GAP REVIEW
 
-1. Accountability gaps
-2. Duplicate accountability
-3. Activities without a Responsible owner
-4. Overloaded roles
-5. Decision-right conflicts
-6. Cross-team ownership gaps
-7. Recommended governance improvements
+Issue | Affected Activity | Governance Risk |
+Recommended Correction | Decision Required | Priority
+
+TABLE 3 — DECISION RIGHTS
+
+Decision | Recommends | Approves | Executes |
+Consulted | Escalation Authority
+
+TABLE 4 — CROSS-TEAM DEPENDENCIES
+
+Dependency | Provider Team | Receiving Team |
+Accountable Owner | Required By | Escalation Owner
+
+MANAGEMENT SUMMARY
+
+1. Critical accountability and ownership gaps
+2. Conflicting or missing decision authority
+3. Overloaded roles and unnecessary consultation
+4. Cross-team and vendor dependencies
+5. Recommended governance corrections and approvals
+
+Use concise Markdown tables.
+Mark unknown authority as "Not yet defined".
+Clearly distinguish proposed assignments from confirmed roles.
 ```
 
 ---
 
-# Core RACI Rules
+## 2. Quality Check
 
-Use the following rules when generating the matrix.
+Apply this control after generating the RACI matrix and governance review.
 
-## Rule 1 — One Accountable Owner
+```text
+QUALITY CHECK
 
-Each activity or decision should normally have **one clear Accountable owner**.
+Act as a Senior QA Manager and review the RACI matrix.
 
-Avoid:
+Verify:
 
-```text id="raci-bad-a"
-Production Release Approval
+1. Completeness: Critical activities, decisions, and teams
+   are represented.
+2. Accountability: Each critical activity normally has one
+   Accountable owner and at least one Responsible role.
+3. Consistency: Assignments align with confirmed authority,
+   delivery responsibilities, and governance structures.
+4. Role Clarity: Business, technical, security, operational,
+   and vendor ownership are clearly distinguished.
+5. Efficiency: Excessive consultation, overloaded roles,
+   and unnecessary approval layers are flagged.
+6. Governance: Decision rights, dependencies, and escalation
+   responsibilities are defined or marked for confirmation.
+7. Actionability: Governance gaps have specific,
+   prioritized corrective actions.
 
-Project Manager = A
-Product Owner = A
-IT Director = A
-```
+OUTPUT
 
-This creates unclear final authority.
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [UNRESOLVED CRITICAL ITEMS]
 
-Prefer:
-
-```text id="raci-good-a"
-Production Release Approval
-
-IT Director = A
-Project Manager = R
-Product Owner = C
-Security Lead = C
-Operations Lead = C
-```
-
-The exact ownership must match the organisation's governance model.
-
----
-
-# Rule 2 — Every Activity Needs Ownership
-
-Avoid rows with:
-
-```text id="raci-no-owner"
-C | C | I | I | C
-```
-
-No one owns the actual work.
-
-Important activities should normally have at least:
-
-- one Responsible role,
-- one Accountable role.
-
----
-
-# Rule 3 — Avoid Excessive Consultation
-
-A matrix such as:
-
-```text id="raci-too-many-c"
-R | A | C | C | C | C | C | C
-```
-
-may indicate unnecessarily complex decision-making.
-
-Ask:
-
-> Do all these stakeholders genuinely need to be consulted before the decision?
-
-Too many mandatory consultations can create delivery delays.
-
----
-
-# Rule 4 — Accountability Is Not the Same as Seniority
-
-Do not automatically assign the most senior person as Accountable.
-
-Accountability should follow:
-
-- decision authority,
-- ownership of the outcome,
-- organisational mandate,
-- governance rules.
-
----
-
-# Rule 5 — Separate Work From Decisions
-
-Where useful, distinguish between:
-
-```text id="raci-work-decision"
-Prepare release package
-Approve production release
-Execute deployment
-Confirm post-release validation
-```
-
-These activities may have different Accountable owners.
-
----
-
-# Typical IT Project Activities
-
-Use only those relevant to the project.
-
-```text id="raci-it-activities"
-Project charter approval
-Business requirements approval
-Product / solution scope approval
-Architecture approval
-Backlog ownership
-Technical design
-Security review
-Data migration
-Environment readiness
-Development / configuration
-Integration development
-System Integration Testing
-UAT preparation
-UAT execution
-Defect triage
-Release readiness
-Go-live approval
-Production deployment
-Operational handover
-Risk acceptance
-Change approval
-Vendor management
-Budget approval
-Executive reporting
-Project close-out
+Do not invent decision authority, role assignments, or approvals.
+Flag responsibilities requiring stakeholder validation.
 ```
 
 ---
 
-# Delivery-Approach Considerations
+## 3. Practical IT Use Case
 
-## Agile / Scrum
+### Software Development — Testing and Release Governance
 
-Possible roles include:
+**Scenario:** A software development team is preparing a new release. Developers, QA engineers, the Product Owner, and Operations have overlapping responsibilities for defect resolution, acceptance testing, and deployment.
 
-- Product Owner
-- Scrum Master
-- Project Manager
-- Developers
-- QA
-- Solution Architect
-- Business Owner
-- Security
-- Operations
+The Project Manager must clarify responsibilities and decision authority to prevent delayed approvals, duplicated work, and unresolved release blockers.
 
-Be careful not to use RACI to override established Agile accountabilities.
+### Project Context
 
-For example, Product Owner responsibilities should not be redistributed simply because a RACI matrix is being created.
+| Attribute | Details |
+|---|---|
+| Project | Web Application Reporting Enhancement |
+| Phase | Testing / Release Preparation |
+| Delivery approach | Scrum |
+| Team | Project Manager, Product Owner, Development Lead, QA Lead, Security Lead, Operations Lead |
+| Key activities | Development, testing, defect management, UAT, release readiness, deployment |
+| Current challenge | Unclear ownership of defect priorities, approvals, and deployment |
+| Management decision | Confirm responsibilities and approval authority before release |
 
----
+### Example Input
 
-## Kanban
+```text
+Project: Web Application Reporting Enhancement
 
-RACI may clarify ownership for:
+Business objective:
+Deliver enhanced reporting functionality to business users.
 
-- service ownership,
-- replenishment decisions,
-- workflow policies,
-- blocked-item escalation,
-- risk decisions,
-- release decisions,
-- operational support.
-
-Flow ownership should remain clear without introducing unnecessary approval layers.
-
----
-
-## Predictive
-
-RACI may be closely aligned with:
-
-- work packages,
-- milestone approvals,
-- change control,
-- scope approval,
-- formal governance.
-
----
-
-## Hybrid
-
-RACI is particularly useful where traditional governance interacts with Agile or flow-based delivery.
-
-Example:
-
-```text id="raci-hybrid"
-Product backlog ownership → Product Owner
-
-Technical implementation → Delivery Team
-
-Project-level dependency coordination → Project Manager
-
-Architecture approval → Architecture Authority
-
-Budget approval → Sponsor
-
-Production release approval → Defined governance authority
-```
-
----
-
-# Prompt 2 — RACI Governance Audit
-
-After creating the matrix, run a separate governance review.
-
-```text id="raci-audit"
-ROLE
-
-You are a senior PMO and project-governance specialist reviewing
-an IT project's responsibility assignment model.
-
-TASK
-
-Audit the RACI matrix below for governance weaknesses.
-
-RACI MATRIX
-
-[PASTE MATRIX HERE]
-
-Identify:
-
-1. Rows with no Accountable owner
-2. Rows with multiple Accountable owners
-3. Rows with no Responsible owner
-4. Roles carrying excessive accountability
-5. Activities with excessive consultation
-6. Activities where important stakeholders appear excluded
-7. Decision rights that conflict with stated governance
-8. Vendor / internal-team ownership ambiguity
-9. Business / IT ownership ambiguity
-10. Activities where escalation authority is unclear
-
-OUTPUT FORMAT
-
-Governance Issue
-Affected Activity
-Why It Matters
-Risk
-Recommended Correction
-Decision Required
-```
-
----
-
-# Example Input
-
-```text id="raci-example-input"
-Project:
-CRM Replacement
-
-Delivery Approach:
-Hybrid
+Project phase: Testing / Release Preparation
+Delivery approach: Scrum
 
 Roles:
-Sponsor
-Project Manager
-Product Owner
-Business Analyst
-Solution Architect
-Development Lead
-QA Lead
-Security Lead
-Operations Lead
-Implementation Vendor
+- Project Manager (PM)
+- Product Owner (PO)
+- Development Lead (DEV)
+- QA Lead (QA)
+- Security Lead (SEC)
+- Operations Lead (OPS)
 
-Key Activities:
-Project charter approval
-Requirements approval
-Solution design
-CRM configuration
-Integration development
-Data migration
-SIT
-UAT
-Security approval
-Release readiness
-Go-live approval
-Production deployment
-Operational handover
+Key activities:
+- Requirements clarification
+- Technical implementation
+- Defect triage
+- Regression testing
+- UAT coordination
+- UAT acceptance
+- Security review
+- Release readiness assessment
+- Production release approval
+- Production deployment
+- Post-release validation
+
+Known ownership concerns:
+- Developers and QA disagree on defect prioritization.
+- UAT acceptance authority is unclear.
+- Production deployment responsibilities are not documented.
+- Release approval authority is not defined.
+- Security review ownership needs confirmation.
+
+Existing decision authority:
+Not yet documented.
 ```
 
----
+### Example Output — RACI Matrix
 
-# Example Matrix Excerpt
+The following assignments illustrate a proposed responsibility model. They must be reviewed against the organization's governance structure.
 
-| Activity | Sponsor | PM | PO | Architect | Dev Lead | QA | Security | Operations |
-|---|---|---|---|---|---|---|---|---|
-| Project Charter Approval | A | R | C | I | I | I | I | I |
-| Requirements Approval | I | C | A | C | C | C | I | C |
-| Solution Design | I | C | C | A | R | C | C | C |
-| SIT | I | C | C | C | R | A | I | I |
-| Security Approval | I | I | I | C | C | I | A/R | C |
-| Go-Live Approval | A | R | C | C | C | C | C | C |
-| Production Deployment | I | C | I | C | R | C | C | A |
+**Role abbreviations:** PM = Project Manager; PO = Product Owner; DEV = Development Lead; QA = QA Lead; SEC = Security Lead; OPS = Operations Lead.
 
-This example is illustrative only.
+| Activity / Decision | PM | PO | DEV | QA | SEC | OPS |
+|---|---|---|---|---|---|---|
+| Requirements clarification | I | A | C | C | – | – |
+| Technical implementation | I | C | A/R | C | C | – |
+| Defect triage | C | A | R | R | C | – |
+| Regression testing | I | C | C | A/R | – | – |
+| UAT coordination | A | C | I | R | – | – |
+| UAT acceptance | C | A | I | R | – | – |
+| Security review | I | I | C | C | A/R | C |
+| Release readiness assessment | A | C | R | R | C | C |
+| Production release approval | R | C | C | C | C | C |
+| Production deployment | I | I | R | C | C | A |
+| Post-release validation | I | C | R | R | C | A |
 
-Actual accountabilities must follow the organisation's governance model.
+**Governance exception:** Production release approval has no confirmed Accountable owner. An authorized release decision-maker must be identified before the matrix can be approved.
 
----
+The proposed role assignments are illustrative and do not establish formal organizational authority. For Scrum teams, Product Owner and Developer accountabilities must remain consistent with the Scrum framework.
 
-# Decision-Rights Review
+### Example Output — Governance Gap Review
 
-RACI alone may not be sufficient for important decisions.
-
-For key governance decisions, also create:
-
-| Decision | Recommends | Approves | Executes | Must Be Consulted | Escalation Authority |
+| Issue | Affected Activity | Governance Risk | Recommended Correction | Decision Required | Priority |
 |---|---|---|---|---|---|
+| Missing approval authority | Production release approval | Unauthorized or delayed release | Identify Accountable approver | Confirm release authority | High |
+| Unclear business acceptance | UAT acceptance | Acceptance disputes | Validate PO or business approval authority | Confirm acceptance owner | High |
+| Defect prioritization conflict | Defect triage | Delayed resolution | Define severity and priority decision rights | Agree triage policy | High |
+| Unclear deployment responsibility | Production deployment | Deployment delays | Confirm deployment owner and execution responsibilities | Approve operational roles | High |
+| Security ownership unconfirmed | Security review | Release compliance risk | Confirm security approval responsibilities | Validate security authority | High |
 
-Useful decisions may include:
+### Example Output — Decision Rights
 
-- scope change,
-- budget increase,
-- release approval,
-- risk acceptance,
-- vendor escalation,
-- milestone re-baseline,
-- production rollback.
+| Decision | Recommends | Approves | Executes | Consulted | Escalation Authority |
+|---|---|---|---|---|---|
+| Defect prioritization | QA / DEV | PO (proposed) | DEV / QA | PM | TBD |
+| UAT acceptance | QA / Business Users | PO (proposed) | Business / QA | PM | TBD |
+| Security clearance | Security Lead | Authorized Security Authority (TBD) | Security / DEV | PM | TBD |
+| Release approval | PM | TBD | Delivery / Operations | PO, QA, Security | TBD |
+| Production rollback | Operations / DEV | TBD | Operations / DEV | PM, Security | TBD |
 
-This makes decision authority more explicit than RACI alone.
+*All decision rights require confirmation. The table does not imply that any approval has been granted.*
 
----
-
-# Cross-Team Dependency Review
-
-For international or multi-team projects, identify ownership of cross-team dependencies.
-
-Use:
+### Example Output — Cross-Team Dependencies
 
 | Dependency | Provider Team | Receiving Team | Accountable Owner | Required By | Escalation Owner |
 |---|---|---|---|---|---|
+| Defect fixes | Development | QA | DEV (proposed) | Before regression completion | PM (proposed) |
+| Test completion evidence | QA | Release decision-maker | QA (proposed) | Before release approval | PM (proposed) |
+| Security clearance | Security | Release decision-maker | SEC (proposed) | Before release approval | TBD |
+| Deployment readiness | Operations | Delivery Team | OPS (proposed) | Before deployment | PM (proposed) |
+| UAT acceptance | Business / PO | Release decision-maker | PO (proposed) | Before release approval | TBD |
 
-This is particularly useful when teams work across:
+### Management Decisions
 
-- countries,
-- time zones,
-- business units,
-- vendors,
-- platforms.
+**1. Confirm release authority**
 
----
+Identify who has final accountability for production release approval and establish the required evidence and escalation path.
 
-# Governance Red Flags
+**2. Clarify defect management**
 
-Flag the matrix when:
+Agree on severity classification, prioritization authority, defect ownership, and escalation responsibilities.
 
-```text id="raci-redflags"
-No A
-Multiple As
-No R
-One role owns almost every decision
-Too many mandatory Cs
-Vendor accountability is unclear
-Business vs IT ownership is unclear
-Approval authority does not match organisational authority
-Critical decisions have no escalation path
-```
+**3. Validate UAT and security approval**
 
----
+Confirm who can formally accept business functionality and authorize security readiness.
 
-# Quality Checklist
+**4. Establish deployment accountability**
 
-Before approving the RACI, confirm:
+Define deployment execution, operational ownership, post-release validation, and rollback decision rights.
 
-- [ ] Every critical activity has an Accountable owner
-- [ ] Every critical activity has a Responsible owner
-- [ ] Multiple Accountables have been reviewed
-- [ ] Decision authority is clear
-- [ ] Business and IT ownership are differentiated
-- [ ] Vendor responsibilities are explicit
-- [ ] Security responsibilities are visible
-- [ ] Operational ownership is visible
-- [ ] Consultation is not unnecessarily complex
-- [ ] Escalation ownership is defined for critical decisions
+### Applied Quality Review
 
----
+**Quality verdict: REVISE**
 
-# Standards / Framework Alignment
+**Findings:** The proposed RACI covers the main testing and release activities, but several decision rights remain unconfirmed. Production release approval has no Accountable owner, and the authority for UAT, security acceptance, and rollback requires validation.
 
-## PMI / PMP Relevance
+**Required corrections:**
+- Assign and confirm the authorized release approver.
+- Validate Product Owner and business acceptance responsibilities.
+- Confirm defect prioritization and escalation authority.
+- Establish deployment and rollback decision rights.
+- Obtain stakeholder agreement on the final RACI.
 
-Relevant themes may include:
+**Approval blockers:** Missing production release accountability and unconfirmed critical approval authority.
 
-- responsibility assignment,
-- team management,
-- stakeholder engagement,
-- governance,
-- communication,
-- decision-making,
-- resource management.
+**Governance:** This prompt supports relevant PMI-aligned practices in responsibility assignment, stakeholder management, resource coordination, decision authority, and project governance.
 
-## PMBOK Relevance
-
-This prompt supports:
-
-- governance,
-- stakeholders,
-- resources,
-- delivery,
-- accountability.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
-RACI should support the chosen delivery model rather than replace its established accountabilities.
-
----
-
-# Human Review Required
-
-Validate the RACI with the actual role owners.
-
-At minimum, review critical accountabilities with:
-
-- Project Sponsor
-- Project Manager
-- Business Owner
-- Product Owner where relevant
-- Technical / Architecture Lead
-- Security
-- Operations
-- Vendor leadership where relevant
-
-AI can identify structural governance problems.
-
-It cannot determine organisational authority unless that authority is provided in the project context.
-
----
-
-# Confidentiality
-
-Avoid including:
-
-- unnecessary personal information,
-- confidential organisational hierarchies,
-- security-sensitive approval structures,
-- restricted supplier information.
-
-Use role names rather than personal names where practical.
-
----
-
-# Prompt Metadata
-
-```text id="raci-metadata"
-Prompt ID: PLAN-003
-Category: Project Planning
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Sponsor / PMO / Business Owner
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT RACI and governance review framework |
+The RACI matrix is a responsibility-planning artifact, not evidence of formal authorization. Accountable stakeholders must validate assignments before implementation. Use organizational roles rather than personal names where practical, and protect confidential governance and security information.

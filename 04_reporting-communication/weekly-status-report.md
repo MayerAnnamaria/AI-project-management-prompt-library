@@ -1,742 +1,328 @@
 # Weekly Project Status Report
 
-## Purpose
+**Prompt ID:** REPORT-001 | **Category:** Reporting & Communication | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert rough weekly project notes into a concise, structured, management-ready status report.
+## 1. Ready-to-Use Prompt
 
-The report should help stakeholders understand:
+**Purpose:** Convert weekly project updates into concise, evidence-based reports that communicate delivery health, progress, risks, and required management actions.
 
-- current overall status,
-- what progressed this week,
-- which risks and issues require attention,
-- what is planned next,
-- and which decisions or actions are required.
+**Use case:** Prepare weekly status reports for IT project sponsors, delivery managers, and stakeholders when project progress, blockers, dependencies, and upcoming decisions require visibility.
 
-The objective is not to reproduce every project activity.
+Copy the prompt and replace the placeholders with your project information.
 
-The objective is to communicate the information required for **management awareness, action, and decision-making**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery / Testing / Deployment / Hypercare
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Product initiative
-
-**Primary user:**  
-Project Manager / Project Coordinator / Delivery Manager / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-Weekly
-
----
-
-# Prompt
-
-```text id="weekly-status-01"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, stakeholder communication, risk management,
-project governance, and executive reporting.
+You are a Senior IT Project Manager specializing in software
+delivery, stakeholder communication, risk management,
+performance monitoring, and project governance.
 
-TASK
+CONTEXT
 
-Create a professional weekly project status report from the rough
-project notes below.
-
-PROJECT CONTEXT
-
-Project:
-[PROJECT NAME]
-
-Reporting period:
-[DATE RANGE]
-
-Current phase:
-[PHASE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Target milestone / release:
-[MILESTONE / DATE]
-
-Overall status:
-[IF ALREADY ASSESSED]
+Project: [PROJECT NAME]
+Reporting period: [DATE RANGE]
+Current phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target milestone / release: [DATE]
+Reported overall RAG: [GREEN / AMBER / RED / UNKNOWN]
+Previous-week status: [IF AVAILABLE]
+Approved baselines / tolerances: [IF AVAILABLE]
 
 ROUGH WEEKLY NOTES
 
-[PASTE RAW NOTES HERE]
-
-The notes may contain:
-
-- progress,
-- milestones,
-- delivery metrics,
-- blockers,
-- risks,
-- issues,
-- defects,
-- dependencies,
-- vendor updates,
-- budget information,
-- decisions,
-- stakeholder actions,
-- next steps.
-
-Do not invent missing information.
-
-OUTPUT FORMAT
-
-Create the report with:
-
-1. Project Status Summary
-2. This Week's Progress
-3. Key Risks and Issues
-4. Next Week's Priorities
-5. Decisions / Actions Required
-```
-
----
-
-# 1. Project Status Summary
-
-Provide:
-
-```text id="weekly-rag"
-Overall RAG Status:
-GREEN / AMBER / RED
-
-One-Sentence Rationale:
-[WHY]
-```
-
-Then provide a concise management summary of no more than 3–4 sentences.
-
-The summary should explain:
-
-- current delivery position,
-- most important progress,
-- main concern,
-- whether management action is required.
-
----
-
-# RAG Principles
-
-## Green
-
-Use when:
-
-```text id="weekly-green"
-Key commitments remain achievable.
-
-No material unresolved risk currently threatens the target.
-
-Issues are being managed within agreed project tolerance.
-```
-
-## Amber
-
-Use when:
-
-```text id="weekly-amber"
-A material risk or issue exists.
-
-The target remains achievable but requires active management,
-recovery action, or a timely decision.
-```
-
-## Red
-
-Use when:
-
-```text id="weekly-red"
-A major commitment is no longer achievable under the current plan,
-or material impact exceeds agreed project tolerance.
-```
-
-Do not assign RAG status based only on subjective tone.
-
-Use available evidence.
-
----
-
-# Evidence-Based RAG Check
-
-Before assigning or validating the status, review:
-
-```text id="weekly-rag-evidence"
-Schedule
-Scope
-Budget
-Quality
-Risks
-Issues
-Dependencies
-Vendor performance
-Security / compliance
-Release readiness
-Business readiness
-```
-
-Where the available evidence conflicts with the stated status, flag it.
-
-Example:
-
-```text id="weekly-rag-conflict"
-Reported Status:
-Green
-
-Evidence:
-Critical integration dependency is already two weeks late.
-
-Recommendation:
-Review overall status — Amber may be more appropriate.
-```
-
----
-
-# 2. This Week's Progress
-
-Use concise bullets focused on completed or materially advanced work.
-
-Preferred style:
-
-```text id="weekly-progress-good"
-- CRM configuration reached 85% completion.
-- Identity integration passed functional testing.
-- UAT test scripts were approved by the Business Owner.
-- Security pre-review completed with two actions remaining.
-```
-
-Avoid activity-only reporting such as:
-
-```text id="weekly-progress-weak"
-- Attended meetings.
-- Discussed testing.
-- Followed up with vendor.
-```
-
-Report outcomes rather than effort where possible.
-
----
-
-# 3. Key Risks and Issues
-
-Provide:
-
-| Type | Risk / Issue | Impact | Current Action | Owner | Due |
-|---|---|---|---|---|---|
-
-Use:
-
-```text id="weekly-risk-type"
-Risk
-Issue
-Dependency
-Blocker
-```
-
-Do not mix future uncertainty and already-materialised problems without identifying the type.
-
----
-
-# Risk / Issue Reporting Rule
-
-Each material item should answer:
-
-```text id="weekly-risk-questions"
-What is happening?
-
-Why does it matter?
-
-What is being done?
-
-Who owns the action?
-
-When is the next meaningful deadline?
-```
-
----
-
-# 4. Next Week's Priorities
-
-Identify the most important planned outcomes for the next reporting period.
-
-Examples:
-
-```text id="weekly-next"
-Complete identity-provider certification.
-
-Close remaining Severity 1 integration defect.
-
-Confirm named UAT testers.
-
-Submit security evidence package.
-
-Approve release-readiness checklist.
-```
-
-Prefer outcomes over generic activity.
-
----
-
-# 5. Decisions / Actions Required
-
-This section is especially important for governance.
-
-Provide:
-
-| Decision / Action | Required From | Why Required | Deadline | Impact if Delayed |
-|---|---|---|---|---|
-
-Examples:
-
-```text id="weekly-decision-examples"
-Approve additional vendor capacity.
-
-Confirm release-scope reduction.
-
-Approve budget contingency usage.
-
-Confirm UAT business resources.
-
-Accept residual security risk.
-
-Approve revised milestone.
-```
-
-Do not hide management decisions inside narrative text.
-
----
-
-# Decision Quality Rule
-
-A decision request should contain:
-
-```text id="weekly-decision-structure"
-Decision required
-+
-Decision owner
-+
-Recommendation where appropriate
-+
-Decision deadline
-+
-Impact if delayed
-```
-
-### Weak
-
-```text id="weekly-decision-weak"
-Sponsor input required.
-```
-
-### Better
-
-```text id="weekly-decision-good"
-Decision Required:
-Approve two additional vendor developers.
-
-Decision Owner:
-Project Sponsor.
-
-Deadline:
-Friday.
-
-Impact if Delayed:
-Current recovery plan will not protect the planned UAT start.
-```
-
----
-
-# Example Input
-
-```text id="weekly-example-input"
-Project:
-Customer Portal
-
-Reporting Period:
-7–11 June
-
-Delivery Approach:
-Hybrid Agile
-
-Overall:
-Amber
-
-Notes:
-- portal frontend 90% done
-- identity provider certification 10 days late
-- mock authentication service now working
-- 2 critical integration defects, one fixed today
-- business confirmed 6 of 8 UAT testers
-- security evidence 70% complete
-- vendor recovery plan received, proposes certification next Friday
-- budget still on plan
-- next week: complete certification, close critical defects,
-  confirm UAT testers, complete security package
-- sponsor needs to decide whether to add two temporary vendor developers
-```
-
----
-
-# Example Output
-
-## Project Status Summary
-
-**Overall Status: Amber**
-
-The project remains on track for the planned release, but the delayed identity-provider certification continues to create integration and UAT schedule risk. A working mock authentication service is allowing eligible testing to continue, and one of two critical defects has been resolved. The vendor has submitted a recovery plan, but additional capacity may be required to protect the UAT start.
-
----
-
-## This Week's Progress
-
-- Portal frontend reached approximately 90% completion.
-- Mock authentication service was successfully enabled.
-- One of two critical integration defects was resolved.
-- Six of eight required UAT testers were confirmed.
-- Security evidence package reached approximately 70% completion.
-- Vendor recovery plan was received.
-
----
-
-## Key Risks and Issues
-
-| Type | Risk / Issue | Impact | Action | Owner |
-|---|---|---|---|---|
-| Issue | Identity certification 10 days late | UAT schedule risk | Execute vendor recovery plan | Vendor Lead |
-| Issue | One critical defect remains open | Testing readiness | Prioritise fix and retest | QA Lead |
-| Risk | Two UAT testers not yet confirmed | UAT capacity | Confirm backup resources | Business Owner |
-
----
-
-## Next Week's Priorities
-
-- Complete identity-provider certification.
-- Resolve and retest remaining critical defect.
-- Confirm all UAT resources.
-- Complete security evidence package.
-
----
-
-## Decision Required
-
-**Decision:** Approve two temporary vendor developers  
-**Owner:** Project Sponsor  
-**Deadline:** Friday  
-**Impact if delayed:** Recovery capacity may be insufficient to protect the planned UAT start.
-
----
-
-# Delivery Metrics
-
-Include metrics only when they help explain status.
-
-Possible metrics include:
-
-```text id="weekly-metrics"
-Milestone completion
-Requirements progress
-Build / configuration progress
-Defect trend
-Test execution
-Test pass rate
-Release readiness
-Budget variance
-Vendor milestone performance
-```
-
-Do not add metrics purely to make the report look analytical.
-
----
-
-# Agile / Scrum Considerations
-
-Relevant weekly information may include:
-
-- Sprint Goal progress,
-- release progress,
-- backlog risks,
-- blocked work,
-- defects,
-- cross-team dependencies.
-
-Avoid simply copying Sprint statistics into an executive report without explaining their project impact.
-
----
-
-# Kanban Considerations
-
-Where Kanban is used, relevant indicators may include:
-
-```text id="weekly-kanban"
-WIP
-Blocked work
-Work item age
-Cycle time
-Throughput
-SLE performance
-```
-
-Example:
-
-> Work item age increased in integration review this week because three items are waiting for external vendor approval, creating a growing release dependency.
-
-Translate flow metrics into management meaning.
-
----
-
-# Predictive Considerations
-
-Relevant information may include:
-
-- milestone status,
-- schedule variance,
-- critical-path exposure,
-- budget variance,
-- approved changes.
-
----
-
-# Hybrid Considerations
-
-Combine delivery-level evidence with governance-level reporting.
-
-Example:
-
-```text id="weekly-hybrid"
-Delivery metrics
-↓
-Project impact
-↓
-Risk / issue
-↓
-Management action
-↓
-Decision
-```
-
----
-
-# Status Trend
-
-Where useful, include:
-
-```text id="weekly-trend"
-Current Week:
-Amber
-
-Previous Week:
-Green
-
-Trend:
-Deteriorating
-```
-
-Possible trends:
-
-```text id="weekly-trends"
-Improving
-Stable
-Deteriorating
-```
-
-Explain the reason for any material change.
-
----
-
-# Prompt 2 — Status Report Quality Review
-
-After generating the report:
-
-```text id="weekly-review"
-ROLE
-
-You are a PMO Lead performing a quality review of an IT project
-weekly status report.
+[PASTE NOTES]
+
+Notes may include:
+- Completed deliverables and progress
+- Milestones and delivery metrics
+- Risks, issues, defects, and blockers
+- Vendors and external dependencies
+- Quality, security, and testing
+- Budget and resource changes
+- Management decisions
+- Next-week priorities
 
 TASK
 
-Review the report below.
+Create a professional Weekly Project Status Report.
 
-[PASTE REPORT]
+STEP 1 — ASSESS PROJECT HEALTH
 
-Check for:
+1. Evaluate project health using available evidence:
+   schedule, scope, cost, quality, risks, dependencies,
+   security, and release readiness.
+2. Validate the reported RAG status:
+   - Green: Commitments remain achievable within tolerance.
+   - Amber: Material exposure requires active management
+     but commitments may remain achievable.
+   - Red: Major commitments are not achievable under the
+     current plan or agreed tolerance is exceeded.
+3. Identify contradictions between RAG status and evidence.
+4. Explain material changes from the previous reporting period.
 
-- unsupported RAG status,
-- vague statements,
-- missing owners,
-- missing deadlines,
-- hidden decisions,
-- risks reported as issues or vice versa,
-- excessive operational detail,
-- contradictions,
-- missing management impact,
-- unsupported assumptions.
+STEP 2 — REPORT DELIVERY PERFORMANCE
+
+5. Summarize completed or materially advanced work.
+6. Focus on outcomes rather than meetings or routine activities.
+7. Identify material risks, existing issues, blockers,
+   and external dependencies.
+8. Explain business or delivery impact, current actions,
+   ownership, and relevant deadlines.
+9. Highlight only metrics that support management decisions.
+
+STEP 3 — DEFINE NEXT ACTIONS
+
+10. Identify the most important outcomes for next week.
+11. Separate decisions from operational follow-up actions.
+12. Specify decisions required, responsible authority,
+    deadline, recommendation, and impact if delayed.
+13. Flag missing owners, dates, or evidence for confirmation.
+
+Adapt reporting to the delivery approach:
+- Agile / Scrum: Sprint Goals, release progress, blockers,
+  quality, and cross-team dependencies.
+- Kanban: WIP, work-item age, cycle time, throughput,
+  blocked items, and SLE performance.
+- Predictive: Milestone variance, critical path,
+  budget, and approved changes.
+- Hybrid: Combine delivery evidence with formal commitments.
+
+Do not invent facts, owners, deadlines, or approvals.
+Do not assume the project is on track without evidence.
+Clearly distinguish risks from materialized issues.
 
 OUTPUT FORMAT
 
-Finding
-Why It Matters
-Recommended Correction
-Priority
+1. PROJECT STATUS SUMMARY
+
+Overall RAG | Previous RAG | Trend |
+One-Sentence Rationale
+
+Executive summary:
+3–4 sentences covering delivery position, key progress,
+main concern, and management attention required.
+
+2. THIS WEEK'S PROGRESS
+
+Deliverable / Workstream | Achievement |
+Evidence / Metric | Management Significance
+
+3. KEY RISKS, ISSUES, AND DEPENDENCIES
+
+Type | Description | Impact |
+Current Action | Owner | Due Date
+
+4. NEXT WEEK'S PRIORITIES
+
+Priority | Expected Outcome |
+Owner | Target Date | Dependency
+
+5. DECISIONS AND ACTIONS REQUIRED
+
+Type | Decision / Action | Required From |
+Recommendation | Deadline | Impact if Delayed
+
+MANAGEMENT SUMMARY
+
+- Current project health
+- Main achievement
+- Most critical exposure
+- Immediate decisions and next steps
+
+Use concise Markdown tables.
+Mark missing information as "Not provided".
+Label proposed actions and unconfirmed ownership.
 ```
 
 ---
 
-# Executive Communication Rules
+## 2. Quality Check
 
-Use:
+Apply this independent review before distributing the weekly report.
 
-```text id="weekly-rules"
-Professional
-Factual
-Concise
-Evidence-based
-Action-oriented
-Non-emotional
-```
+```text
+QUALITY CHECK
 
-Avoid:
+Act as a Senior PMO Quality Assurance Manager.
 
-```text id="weekly-avoid"
-"We are doing our best."
+Review the Weekly Project Status Report against
+the original project notes.
 
-"The vendor is terrible."
+Verify:
 
-"Everything should probably be fine."
+1. Accuracy: Facts, metrics, dates, and status align
+   with the provided evidence.
+2. RAG: Overall status is justified and consistent
+   with approved project tolerances.
+3. Progress: Achievements describe measurable outcomes,
+   not routine activity.
+4. Risks and Issues: Uncertain risks are distinguished
+   from existing problems and dependencies.
+5. Accountability: Material actions have supported
+   owners, deadlines, and expected outcomes.
+6. Decisions: Governance requests are explicit,
+   justified, and time-sensitive where appropriate.
+7. Forecast: Next-week priorities are achievable
+   or clearly marked as dependent on unresolved items.
+8. Consistency: No unsupported optimism,
+   contradictory statements, or invented commitments.
+9. Readability: The report is concise,
+   professional, and management-focused.
 
-"We had many meetings."
+OUTPUT
 
-"There are some concerns."
-```
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
 
-Replace opinion with evidence and impact.
-
----
-
-# Quality Checklist
-
-Before sending the report, confirm:
-
-- [ ] Overall RAG status has a clear rationale
-- [ ] Status is supported by project evidence
-- [ ] Progress describes outcomes
-- [ ] Material risks are visible
-- [ ] Material issues are visible
-- [ ] Owners are identified
-- [ ] Due dates are included where relevant
-- [ ] Next-week priorities are clear
-- [ ] Decisions are explicit
-- [ ] Decision deadlines are visible
-- [ ] No unsupported information was invented
-- [ ] Language is concise and professional
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- project monitoring,
-- communication,
-- stakeholder engagement,
-- risk and issue management,
-- governance,
-- decision-making,
-- delivery performance.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- measurement,
-- delivery,
-- stakeholders,
-- governance,
-- risk,
-- planning.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Before distribution, the Project Manager should validate:
-
-- RAG status,
-- delivery data,
-- risk and issue status,
-- financial information,
-- decisions required,
-- sensitive stakeholder messaging.
-
-AI can turn rough notes into structured communication.
-
-It should not determine official project status without sufficient evidence or accountable review.
-
----
-
-# Confidentiality
-
-Weekly reports may contain sensitive project information.
-
-Protect:
-
-- customer data,
-- security incidents,
-- confidential financial data,
-- supplier-performance information,
-- commercial negotiations,
-- personal performance information.
-
-Use anonymised information in public AI tools where required.
-
----
-
-# Prompt Metadata
-
-```text id="weekly-metadata"
-Prompt ID: REPORT-001
-Category: Reporting & Communication
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: PMO / Delivery Lead
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
+Do not invent status evidence, ownership,
+delivery commitments, or approvals.
 ```
 
 ---
 
-# Version History
+## 3. Practical IT Use Case
 
-| Version | Date | Change |
+### Software Development — Weekly Integration and UAT Readiness
+
+**Scenario:** A development team is implementing a customer self-service portal. The project is approaching UAT, but a delayed identity-provider certification and unresolved integration defects are affecting testing readiness.
+
+The Project Manager must prepare a concise weekly report for delivery stakeholders and project leadership.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Customer Self-Service Portal |
+| Phase | Integration Testing |
+| Delivery approach | Hybrid |
+| Reporting period | 7–11 June 2027 |
+| Target milestone | UAT Preparation |
+| Overall status | Amber |
+| Main concern | Identity integration and critical defects |
+| Management objective | Protect UAT readiness and clarify recovery decisions |
+
+### Example Input
+
+```text
+Project: Customer Self-Service Portal
+
+Reporting period: 7–11 June 2027
+Delivery approach: Hybrid
+Current phase: Integration Testing
+Reported RAG: Amber
+
+Weekly notes:
+- Frontend development reached 90%.
+- Identity-provider certification is
+  10 working days behind plan.
+- Mock authentication service is operational.
+- Two critical integration defects were open.
+- One critical defect has been fixed and retested.
+- Six of eight UAT testers have been confirmed.
+- Security evidence package is 70% complete.
+- Vendor recovery plan received.
+- Revised certification target: 18 June.
+- Budget currently reported as on plan.
+
+Next-week priorities:
+- Complete identity certification.
+- Resolve remaining critical defect.
+- Confirm UAT resources.
+- Complete security evidence.
+
+Decision required:
+Sponsor to consider two temporary vendor developers.
+
+Decision deadline:
+18 June 2027.
+
+Previous-week RAG:
+Not provided.
+```
+
+### Example Output — Weekly Project Status Report
+
+#### 1. Project Status Summary
+
+| Indicator | Assessment |
+|---|---|
+| Overall RAG | Amber |
+| Previous RAG | Not provided |
+| Trend | Cannot be assessed |
+| Primary concern | Identity certification delay and UAT readiness |
+
+**Executive Summary**
+
+The Customer Self-Service Portal remains Amber due to a ten-working-day delay in identity-provider certification and one unresolved critical integration defect. Frontend development has reached 90%, and the operational mock authentication service allows eligible testing to continue. Six of eight UAT testers are confirmed, while security evidence remains incomplete. Management attention is required to validate vendor recovery and determine whether temporary development capacity is justified.
+
+#### 2. This Week's Progress
+
+| Workstream | Achievement | Management Significance |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT weekly status reporting framework |
+| Frontend | 90% complete | Remaining development work requires confirmation |
+| Integration | Mock authentication operational | Eligible testing can continue |
+| Quality | One critical defect fixed and retested | One critical defect remains |
+| Business Readiness | 6 of 8 testers confirmed | UAT capacity not fully secured |
+| Security | Evidence package 70% complete | Final readiness remains outstanding |
+| Vendor | Recovery plan received | Revised certification target is 18 June |
+
+#### 3. Key Risks, Issues, and Dependencies
+
+| Type | Description | Project Impact | Required Action | Proposed Owner |
+|---|---|---|---|---|
+| Issue | Identity certification 10 days late | Integration and UAT readiness | Validate recovery plan | Vendor Lead |
+| Issue | One critical defect remains open | Testing readiness | Fix and retest | Development / QA Leads |
+| Risk | Remaining UAT resources may not be confirmed | UAT start could be affected | Confirm two additional testers | Business Owner |
+| Dependency | Security evidence incomplete | Approval readiness uncertain | Complete required documentation | Security Lead |
+
+Action owners require confirmation.
+
+#### 4. Next Week's Priorities
+
+| Priority | Expected Outcome | Proposed Owner | Target Date |
+|---|---|---|---|
+| High | Complete identity certification | Vendor Lead | 18 June |
+| High | Resolve and retest critical defect | Development / QA Leads | TBD |
+| High | Confirm all UAT testers | Business Owner | TBD |
+| High | Complete security evidence package | Security Lead | TBD |
+
+The revised identity certification date is a target, not evidence that the milestone will be achieved.
+
+#### 5. Decisions and Actions Required
+
+| Type | Decision / Action | Required From | Deadline | Impact if Delayed |
+|---|---|---|---|---|
+| Decision | Assess additional vendor developer capacity | Project Sponsor | 18 June | Recovery options may narrow |
+| Action | Confirm vendor certification forecast | Vendor Lead | 18 June | UAT planning uncertainty |
+| Action | Confirm remaining UAT testers | Business Owner | TBD | Business testing readiness |
+| Action | Validate critical defect closure forecast | Development Lead | TBD | Test schedule exposure |
+
+**Management recommendation:** Confirm the vendor recovery forecast and remaining technical effort before approving additional capacity.
+
+### Management Decisions
+
+1. **Vendor recovery:** Validate the 18 June certification target against an actionable supplier plan.
+2. **Quality:** Resolve the remaining critical integration defect before confirming UAT readiness.
+3. **Business readiness:** Secure the two outstanding UAT testers.
+4. **Resource decision:** Determine whether additional vendor developers would materially improve recovery feasibility.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The report clearly communicates Amber status, material progress, open issues, and management requirements. However, several proposed owners and deadlines are unconfirmed, and the recovery forecast lacks supporting evidence.
+
+**Required corrections:**
+- Validate vendor certification commitments.
+- Confirm ownership and resolution dates for the critical defect.
+- Obtain the remaining UAT resource commitments.
+- Verify the reported budget position.
+- Confirm sponsor decision authority and capacity assumptions.
+
+**Approval blockers:** Unverified vendor recovery, incomplete action ownership, and missing milestone evidence.
+
+**Governance:** This template supports PMI-aligned project monitoring, stakeholder communication, risk and issue management, and decision support.
+
+The accountable Project Manager must validate project status, critical commitments, and management recommendations before formal distribution. Protect confidential customer, security, financial, vendor, and commercially sensitive information.

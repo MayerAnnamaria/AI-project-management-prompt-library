@@ -1,781 +1,350 @@
 # Communication Management Plan
 
-## Purpose
+**Prompt ID:** PLAN-006 | **Category:** Project Planning | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to create a structured communication management plan for an IT, software, digital transformation, data, or infrastructure project.
+## 1. Ready-to-Use Prompt
 
-The plan should define:
+**Purpose:** Establish clear, timely, and accountable project communication to improve stakeholder alignment, delivery coordination, and decision-making.
 
-- who needs what information,
-- when they need it,
-- how it should be communicated,
-- who is responsible,
-- how escalations work,
-- and how project information is controlled.
+**Use case:** Define reporting responsibilities, meeting cadence, and escalation procedures when coordinating software development teams, managing delivery blockers, or preparing releases.
 
-The objective is not to increase communication volume.
+Copy the prompt and replace the placeholders with your project information.
 
-The objective is to ensure that the **right information reaches the right stakeholder at the right time in the right format**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery
-
-**Project type:**  
-Software implementation / Digital transformation / Data / Infrastructure / ERP / Multi-vendor programme
-
-**Primary user:**  
-Project Manager / Project Coordinator / Delivery Manager / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-Create during planning and review after major stakeholder, team, or governance changes
-
----
-
-# Prompt
-
-```text id="comm-01"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, stakeholder management, executive communication,
-cross-functional coordination, and distributed-team governance.
+You are a Senior IT Project Manager specializing in software delivery,
+stakeholder communication, cross-functional coordination,
+risk management, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Project duration: [DURATION]
+Primary language: [LANGUAGE]
+Countries / time zones: [IF RELEVANT]
+Stakeholders and teams: [ROLES]
+External vendors: [IF RELEVANT]
+Governance bodies: [LIST]
+Communication challenges: [LIST]
+Communication tools: [JIRA / CONFLUENCE / TEAMS / EMAIL / OTHER]
+Document repository: [LOCATION]
 
 TASK
 
-Create a professional communication management plan for the project
-described below.
+Create a Communication Management Plan for the project.
 
-PROJECT CONTEXT
+1. Define 3–5 communication objectives aligned with delivery needs.
+2. Identify stakeholder information requirements, channels,
+   formats, frequency, and accountable owners.
+3. Differentiate executive, business, technical, delivery-team,
+   and vendor communication requirements.
+4. Define governance reporting for status, budget, risks,
+   issues, scope changes, dependencies, and decisions.
+5. Establish operational coordination and information-sharing rules.
+6. Define language, time-zone, and response protocols where relevant.
+7. Establish escalation levels, triggers, recipients,
+   response deadlines, and decision authority.
+8. Define meeting cadence, purpose, participants,
+   expected outputs, and ownership.
+9. Establish document ownership, version control,
+   approval, distribution, and confidentiality requirements.
+10. Identify authoritative information sources to prevent
+    inconsistent or duplicated project records.
+11. Assess communication risks and recommend mitigation actions.
+12. Define measurable indicators of communication effectiveness.
 
-Project:
-[PROJECT NAME]
-
-Business objective:
-[OBJECTIVE]
-
-Current phase:
-[PHASE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Project duration:
-[DURATION]
-
-Primary project language:
-[LANGUAGE]
-
-Other stakeholder languages:
-[LIST]
-
-Countries / time zones:
-[LIST]
-
-Key stakeholders:
-[LIST]
-
-Project team:
-[LIST]
-
-External vendors:
-[LIST]
-
-Governance bodies:
-[LIST]
-
-Known communication challenges:
-[LIST]
-
-Existing communication tools:
-[TEAMS / SLACK / EMAIL / JIRA / CONFLUENCE / OTHER]
-
-Document repository:
-[LOCATION]
+Adapt communication practices to the delivery approach.
+Avoid unnecessary meetings and duplicated reporting.
+Ensure material decisions and commitments are documented.
 
 OUTPUT FORMAT
 
-Create a communication management plan with:
+1. COMMUNICATION OBJECTIVES
+   Objective | Expected Outcome | Success Measure
 
-1. Communication Objectives
-2. Stakeholder Communication Matrix
-3. Governance Communication
-4. Team Communication
-5. Language and Time-Zone Protocol
-6. Escalation Pathway
-7. Meeting Cadence
-8. Document Control and Distribution
-9. Communication Risks
-10. Communication Effectiveness Measures
+2. STAKEHOLDER COMMUNICATION MATRIX
+   Stakeholder | Information Need | Channel |
+   Frequency | Owner | Format
+
+3. GOVERNANCE COMMUNICATION
+   Topic | Audience | Cadence | Owner | Evidence
+
+4. TEAM COMMUNICATION
+   Activity | Participants | Purpose | Output | Owner
+
+5. LANGUAGE & TIME-ZONE PROTOCOL
+   Language | Time-Zone Reference | Collaboration Window |
+   Response Expectations
+
+6. ESCALATION PATHWAY
+   Trigger | Level | Owner | Recipient |
+   Response Timeframe | Decision Required
+
+7. MEETING CADENCE
+   Meeting | Purpose | Frequency | Participants |
+   Owner | Required Output
+
+8. DOCUMENT CONTROL & DISTRIBUTION
+   Information | Authoritative Source | Owner |
+   Access | Approval / Version Control
+
+9. COMMUNICATION RISKS
+   Risk | Delivery Impact | Mitigation | Owner
+
+10. COMMUNICATION EFFECTIVENESS
+    KPI | Measurement Method | Target | Review Frequency
+
+MANAGEMENT SUMMARY
+
+- Critical communication gaps and dependencies
+- Escalation and decision-making priorities
+- Recommended communication improvements
+- Required management approvals
+
+Use concise Markdown tables.
+Do not invent responsibilities, response times, or KPIs.
+Mark proposed arrangements as requiring confirmation.
 ```
 
 ---
 
-# 1. Communication Objectives
+## 2. Quality Check
 
-Define 3–5 objectives.
+Apply this control after generating the Communication Management Plan.
 
-Examples:
+```text
+QUALITY CHECK
 
-```text id="comm-objectives"
-Ensure stakeholders receive decision-relevant information on time.
+Act as a Senior QA Manager and review the communication plan.
 
-Maintain clear visibility of project status, risks, issues,
-dependencies, and decisions.
+Verify:
 
-Support effective collaboration across business and technical teams.
+1. Completeness: All 10 required components are addressed.
+2. Relevance: Information matches stakeholder and decision needs.
+3. Accountability: Communication owners and escalation paths are clear.
+4. Feasibility: Meeting schedules, channels, and response
+   expectations are practical.
+5. Governance: Material decisions, approvals, and documents
+   are properly recorded and controlled.
+6. Risk: Communication delays, dependencies, and confidentiality
+   concerns are identified.
+7. Measurement: Communication KPIs are measurable and relevant.
 
-Provide consistent executive reporting.
+OUTPUT
 
-Ensure critical escalations reach the appropriate decision-maker
-within the required timeframe.
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Do not invent missing information or approval authority.
+Flag arrangements requiring stakeholder validation.
 ```
 
 ---
 
-# 2. Stakeholder Communication Matrix
+## 3. Practical IT Use Case
 
-Provide:
+### Software Development Project — Release Communication
 
-| Stakeholder | Information Need | Method | Frequency | Owner | Format |
-|---|---|---|---|---|---|
+**Scenario:** A software development team is preparing a new application release. Developers, QA engineers, and business stakeholders use Jira and Microsoft Teams, but critical defects are escalated late, acceptance criteria are occasionally unclear, and stakeholders receive inconsistent release-status updates.
 
-Possible communication methods:
+The Project Manager must establish communication responsibilities, reporting procedures, and escalation rules to improve release coordination.
 
-```text id="comm-methods"
-Status report
-Dashboard
-Steering committee
-Project meeting
-Daily coordination
-Email
-Jira
-Confluence
-Teams / Slack
-Risk review
-Vendor review
-Release review
-Executive briefing
-```
+### Project Context
 
-Avoid communicating the same level of detail to every stakeholder.
-
----
-
-# Audience-Based Communication
-
-## Project Team
-
-Focus on:
-
-- current priorities,
-- blockers,
-- dependencies,
-- actions,
-- decisions,
-- delivery risks.
-
-## Business Stakeholders
-
-Focus on:
-
-- progress,
-- business impact,
-- scope,
-- readiness,
-- decisions required.
-
-## Executive Sponsor
-
-Focus on:
-
-- overall status,
-- business outcomes,
-- material risks,
-- budget,
-- major decisions,
-- escalations.
-
-## Technical Stakeholders
-
-Focus on:
-
-- architecture,
-- dependencies,
-- environments,
-- integration,
-- security,
-- quality,
-- technical risks.
-
-## Vendors
-
-Focus on:
-
-- commitments,
-- milestones,
-- dependencies,
-- acceptance criteria,
-- issues,
-- commercial obligations where relevant.
-
----
-
-# 3. Governance Communication
-
-Define how governance information is communicated.
-
-Use:
-
-| Governance Topic | Audience | Cadence | Owner | Evidence |
-|---|---|---|---|---|
-
-Possible governance topics:
-
-- project status,
-- scope changes,
-- budget,
-- risk,
-- major issues,
-- vendor performance,
-- release decisions,
-- benefits,
-- escalation decisions.
-
----
-
-# 4. Team Communication
-
-Define operational communication separately from governance communication.
-
-Examples:
-
-```text id="comm-team"
-Delivery coordination
-Technical coordination
-Backlog discussion
-Dependency review
-Risk review
-Testing coordination
-Release coordination
-Incident communication
-```
-
-Keep meetings purposeful.
-
-For each meeting or communication:
-
-```text id="comm-purpose"
-Purpose
-Required Participants
-Inputs
-Expected Output
-Decision Rights
-Frequency
-```
-
----
-
-# 5. Language and Time-Zone Protocol
-
-For international teams, define:
-
-```text id="comm-language"
-Primary project language
-Required translation
-Official documentation language
-Meeting language
-Minutes language
-Time-zone reference
-Core collaboration hours
-Response expectations
-```
-
-Example:
-
-```text id="comm-timezone-example"
-Primary project time zone:
-CET
-
-Core overlap:
-14:00–17:00 CET
-
-Teams:
-Budapest
-London
-New York
-
-Rule:
-Schedule recurring cross-regional meetings inside the agreed
-overlap window whenever possible.
-```
-
-Avoid repeatedly placing the inconvenience of time-zone differences on the same regional team.
-
----
-
-# Written Communication Protocol
-
-For material decisions or commitments:
-
-```text id="comm-written"
-Document:
-
-Decision
-Owner
-Date
-Rationale
-Actions
-Deadline
-Affected Scope / Cost / Schedule
-```
-
-Verbal agreement should not be the sole record for significant project decisions.
-
----
-
-# 6. Escalation Pathway
-
-Define escalation levels clearly.
-
-Example:
-
-```text id="comm-escalation"
-Level 1
-Delivery team resolution
-
-Level 2
-Project Manager / Delivery Lead
-
-Level 3
-Business Owner / Functional Lead
-
-Level 4
-Project Sponsor / Steering Committee
-```
-
-For each escalation type define:
-
-| Trigger | Escalation Owner | Recipient | Timeframe | Required Information |
-|---|---|---|---|---|
-
-Possible triggers include:
-
-- critical blocker,
-- milestone risk,
-- unresolved dependency,
-- security risk,
-- budget tolerance breach,
-- scope conflict,
-- vendor failure,
-- production risk.
-
----
-
-# Escalation Message Structure
-
-Use:
-
-```text id="comm-escalation-structure"
-ISSUE
-
-IMPACT
-
-CURRENT STATUS
-
-OPTIONS
-
-RECOMMENDATION
-
-DECISION REQUIRED
-
-DECISION DEADLINE
-```
-
-This avoids escalations that merely describe a problem without explaining what management action is required.
-
----
-
-# 7. Meeting Cadence
-
-Provide:
-
-| Meeting | Purpose | Frequency | Participants | Owner | Required Output |
-|---|---|---|---|---|---|
-
-Possible meetings include:
-
-```text id="comm-meetings"
-Project Team Meeting
-Delivery Coordination
-Scrum Events where applicable
-Kanban Replenishment / Delivery Review where applicable
-Risk Review
-Dependency Review
-Vendor Review
-Testing / Defect Review
-Release Readiness Review
-Steering Committee
-Executive Review
-```
-
-Do not create meetings solely because they are common PM practice.
-
-Every recurring meeting should have a clear purpose.
-
----
-
-# Agile / Scrum Considerations
-
-Where Scrum is used, avoid duplicating formal Scrum events unnecessarily.
-
-Consider:
-
-- Daily Scrum
-- Sprint Planning
-- Sprint Review
-- Sprint Retrospective
-- backlog refinement
-
-The project communication plan should complement these events rather than replace them.
-
----
-
-# Kanban Considerations
-
-Where Kanban is used, communication may include relevant cadences such as:
-
-- replenishment,
-- delivery review,
-- risk review,
-- operations review.
-
-Flow information may include:
-
-- WIP,
-- blocked work,
-- work item age,
-- cycle time,
-- throughput,
-- Service Level Expectations.
-
-Use only the cadences relevant to the actual system.
-
----
-
-# Predictive Considerations
-
-Communication may align strongly with:
-
-- milestone reporting,
-- baseline reviews,
-- change control,
-- schedule reviews,
-- formal governance.
-
----
-
-# Hybrid Considerations
-
-Avoid creating two parallel communication systems.
-
-Where Agile delivery operates inside traditional governance, define how team-level information feeds executive reporting.
-
-Example:
-
-```text id="comm-hybrid-flow"
-Delivery data
-↓
-Project-level interpretation
-↓
-Risk / dependency assessment
-↓
-Governance report
-↓
-Decision / escalation
-```
-
----
-
-# 8. Document Control and Distribution
-
-Define rules for:
-
-```text id="comm-doc-control"
-Document owner
-Storage location
-Version control
-Approval status
-Distribution
-Confidentiality
-Retention
-Access permissions
-```
-
-Possible project records include:
-
-- project charter,
-- scope,
-- requirements,
-- project plan,
-- RAID register,
-- decision log,
-- meeting minutes,
-- status reports,
-- test evidence,
-- release approvals.
-
-Avoid multiple uncontrolled copies of critical project documentation.
-
----
-
-# Single Source of Truth
-
-Where possible, identify the authoritative source for each type of information.
-
-Example:
-
-| Information | Authoritative Source |
+| Attribute | Details |
 |---|---|
-| Delivery tasks | Jira |
-| Project documentation | Confluence |
-| Approved budget | Finance system |
-| Risks | RAID register |
-| Decisions | Decision log |
-| Source code | Git repository |
-| Test evidence | Test-management system |
+| Project | Web Application Enhancement |
+| Phase | Development / Testing |
+| Delivery approach | Scrum |
+| Release target | End of Sprint 6 |
+| Team | 4 Developers, 2 QA Engineers, 1 Product Owner, 1 Project Manager |
+| Tools | Jira, Confluence, Microsoft Teams |
+| Current challenge | Late defect escalation, unclear decisions, inconsistent status reporting |
+| Management decision | Establish communication and escalation procedures before release |
 
-The specific tools will depend on the organisation.
+### Example Input
 
----
+```text
+Project: Web Application Enhancement
 
-# 9. Communication Risks
+Business objective:
+Deliver new reporting functionality to business users.
 
-Provide:
+Project phase: Development / Testing
+Delivery approach: Scrum
+Release target: End of Sprint 6
 
-| Communication Risk | Impact | Mitigation | Owner |
-|---|---|---|---|
-
-Possible risks include:
-
-```text id="comm-risks"
-Stakeholders receive inconsistent status information
-Critical decisions are not documented
-Language misunderstandings
-Time-zone delays
-Information overload
-Executive reports contain too much detail
-Technical issues are communicated without business impact
-Vendor escalations happen too late
-Actions do not have owners
-Multiple document versions circulate
-```
-
----
-
-# 10. Communication Effectiveness Measures
-
-Possible indicators include:
-
-- overdue decisions,
-- overdue actions,
-- repeated clarification requests,
-- escalation response time,
-- meeting action closure rate,
-- stakeholder feedback,
-- number of unresolved communication dependencies.
-
-Do not measure communication solely by the number of meetings or reports produced.
-
----
-
-# Example Input
-
-```text id="comm-example-input"
-Project:
-Customer Portal Implementation
-
-Delivery Approach:
-Hybrid Agile
-
-Teams:
-Budapest development team
-London Product Owner
-US-based identity provider
-External QA partner
-
-Primary Language:
-English
-
-Time Zones:
-CET
-GMT
-EST
+Team:
+- 1 Project Manager
+- 1 Product Owner
+- 4 Developers
+- 2 QA Engineers
 
 Tools:
-Jira
-Confluence
-Microsoft Teams
-Email
+Jira, Confluence, Microsoft Teams
 
-Governance:
-Weekly project meeting
-Monthly steering committee
-
-Known Challenge:
-Identity-provider decisions frequently arrive late because
-technical issues are escalated without clear decision deadlines.
+Known communication challenges:
+- Critical defects are sometimes escalated late.
+- Developers receive unclear acceptance criteria.
+- Business stakeholders request status updates individually.
+- Some decisions are made verbally without documentation.
+- Release readiness information is distributed across tools.
+- Responsibilities for escalation are not clearly defined.
 ```
 
----
+### Example Output — Communication Management Plan
 
-# Example Output Excerpt
+#### 1. Communication Objectives
 
-## Communication Objective
-
-Ensure that cross-team dependencies and decisions affecting the identity integration are escalated with sufficient context and explicit decision deadlines.
-
-## Communication Matrix
-
-| Stakeholder | Information | Method | Frequency | Owner |
-|---|---|---|---|---|
-| Development Team | Priorities, blockers, dependencies | Jira + team coordination | Daily | Delivery Lead |
-| Product Owner | Scope, priorities, decisions | Teams + Jira | Weekly / ongoing | PM |
-| Identity Provider | Integration issues and decisions | Technical call + written action log | Weekly / as required | Integration Lead |
-| Steering Committee | Status, risks, decisions | Steering pack | Monthly | Project Manager |
-
-## Escalation Improvement
-
-All identity-provider escalations should include:
-
-- business or delivery impact,
-- available options,
-- recommended action,
-- accountable decision-maker,
-- required decision date.
-
----
-
-# Quality Review
-
-Before approving the communication plan, confirm:
-
-- [ ] Stakeholders are identified
-- [ ] Information needs differ by audience
-- [ ] Communication owners are clear
-- [ ] Frequencies are appropriate
-- [ ] Escalation triggers are defined
-- [ ] Decision deadlines are visible
-- [ ] Language requirements are addressed
-- [ ] Time-zone impact is addressed
-- [ ] Documentation sources are clear
-- [ ] Meetings have defined purposes
-- [ ] Communication risks have owners
-- [ ] Sensitive information is controlled
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- communication management,
-- stakeholder engagement,
-- team collaboration,
-- governance,
-- issue escalation,
-- leadership.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- stakeholders,
-- governance,
-- team / resources,
-- delivery,
-- communication,
-- decision-making.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Validate the communication plan with:
-
-- Project Manager
-- Project Sponsor
-- Business Owner
-- Product Owner where relevant
-- Delivery Lead
-- Vendor leads
-- PMO
-- key international stakeholders
-
-AI can help structure the communication model.
-
-The project team must confirm whether the proposed channels, frequencies, escalation paths, and decision rights fit the organisation.
-
----
-
-# Confidentiality
-
-Project communications may contain sensitive information.
-
-Protect:
-
-- personal information,
-- customer information,
-- security incidents,
-- vendor negotiations,
-- confidential financial data,
-- contract information,
-- sensitive technical architecture.
-
-Use access-controlled channels where appropriate.
-
----
-
-# Prompt Metadata
-
-```text id="comm-metadata"
-Prompt ID: PLAN-006
-Category: Project Planning
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Sponsor / PMO / Delivery Lead
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Low
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Objective | Expected Outcome | Success Measure |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT communication management framework |
+| Improve defect escalation | Earlier management visibility of release blockers | Escalation response time |
+| Clarify requirements | Fewer unresolved acceptance questions | Open clarification count |
+| Standardize status reporting | Consistent stakeholder information | Reporting completeness |
+| Improve decision traceability | Documented project decisions | Overdue decision count |
+
+*Performance targets require agreement.*
+
+#### 2. Stakeholder Communication Matrix
+
+| Stakeholder | Information Need | Channel | Frequency | Proposed Owner | Format |
+|---|---|---|---|---|---|
+| Developers | Priorities, requirements, blockers | Jira / Teams | Daily | Development Lead | Task board |
+| QA Engineers | Build readiness, defects, fixes | Jira | Daily | QA Lead | Defect report |
+| Product Owner | Scope, acceptance, priorities | Jira / Teams | Ongoing | Project Manager | Backlog and decision log |
+| Business Stakeholders | Progress, delivery impact, readiness | Teams / Email | Weekly (proposed) | Project Manager | Status report |
+| Project Sponsor | Major risks and decisions | Email / Review | Milestone-based | Project Manager | Executive summary |
+
+#### 3. Governance Communication
+
+| Topic | Audience | Cadence | Proposed Owner | Evidence |
+|---|---|---|---|---|
+| Release readiness | Sponsor / Product Owner | Before release | Project Manager | Readiness assessment |
+| Critical defects | Delivery leadership | Event-driven | QA Lead | Jira defect record |
+| Scope changes | Product Owner / PM | As required | Project Manager | Change decision record |
+| Project status | Business stakeholders | Weekly (proposed) | Project Manager | Status report |
+
+#### 4. Team Communication
+
+| Activity | Participants | Purpose | Expected Output | Proposed Owner |
+|---|---|---|---|---|
+| Daily coordination | Scrum Developers | Inspect progress and adapt plan | Updated Sprint Backlog | Developers |
+| Backlog clarification | Product Owner, Developers, QA | Resolve requirement ambiguity | Clarified backlog items | Product Owner |
+| Defect triage | Developers, QA, Product Owner | Prioritize and assign defects | Prioritized defect list | QA Lead |
+| Release coordination | PM, Product Owner, Developers, QA | Assess release readiness | Readiness findings | Project Manager |
+
+Use existing Scrum events wherever possible. Do not create parallel meetings unnecessarily.
+
+#### 5. Language & Time-Zone Protocol
+
+| Item | Proposed Protocol |
+|---|---|
+| Working language | To be confirmed |
+| Meeting language | Agreed project language |
+| Time-zone reference | Team-local time zone, if co-located |
+| Documentation | Consistent agreed language |
+| Response expectations | Based on issue priority and agreed working hours |
+
+No distributed-team arrangements are specified in the project input. International communication procedures should be added only if required.
+
+#### 6. Escalation Pathway
+
+| Trigger | Level | Proposed Owner | Recipient | Response Timeframe | Decision Required |
+|---|---|---|---|---|---|
+| Routine technical blocker | Team | Developer | Development Lead | TBD | Technical resolution |
+| Unclear acceptance criteria | Product | Developer / QA | Product Owner | TBD | Requirement clarification |
+| Critical defect affecting release | Project | QA Lead | Project Manager / Product Owner | TBD | Remediation priority |
+| Release milestone at risk | Management | Project Manager | Sponsor / authorized approver | TBD | Recovery or release decision |
+| Security-critical defect | Specialist | QA / Security Lead | Security authority | Per security policy | Risk treatment |
+
+**Reusable escalation message:**
+
+```text
+ISSUE: [DESCRIPTION]
+IMPACT: [BUSINESS / DELIVERY IMPACT]
+STATUS: [CURRENT STATUS]
+OPTIONS: [AVAILABLE ACTIONS]
+RECOMMENDATION: [PROPOSED RESPONSE]
+DECISION OWNER: [ROLE]
+DECISION DEADLINE: [DATE / TIME]
+```
+
+Response deadlines and decision rights require approval.
+
+#### 7. Meeting Cadence
+
+| Meeting | Purpose | Frequency | Participants | Proposed Owner | Required Output |
+|---|---|---|---|---|---|
+| Daily Scrum | Inspect progress toward Sprint Goal | Daily | Developers | Developers | Adapted plan |
+| Sprint Planning | Define Sprint Goal and planned work | Each sprint | Scrum Team | Scrum Team | Sprint Backlog |
+| Sprint Review | Inspect Increment and progress | Each sprint | Scrum Team / Stakeholders | Scrum Team | Feedback and backlog adaptations |
+| Sprint Retrospective | Improve team effectiveness | Each sprint | Scrum Team | Scrum Team | Improvement actions |
+| Defect triage | Address release-impacting defects | As required | Developers, QA, PO | QA Lead | Prioritized defects |
+| Release review | Confirm readiness and blockers | Before release | PM, PO, QA, Development | Project Manager | Release recommendation |
+
+Meeting ownership and cadence must align with Scrum accountabilities and existing team practices.
+
+#### 8. Document Control & Distribution
+
+| Information | Proposed Source | Owner | Access / Control |
+|---|---|---|---|
+| Sprint tasks and backlog | Jira | Product Owner / Developers | Authorized project team |
+| Defect records | Jira | QA Lead | Project team |
+| Project documentation | Confluence | Project Manager | Version-controlled |
+| Requirements and acceptance criteria | Jira / Confluence | Product Owner | Controlled updates |
+| Release readiness | Confluence / approved repository | Project Manager | Authorized stakeholders |
+| Management decisions | Decision log | Project Manager | Traceable approvals |
+
+Confirm authoritative systems and access permissions with the organization.
+
+#### 9. Communication Risks
+
+| Risk | Delivery Impact | Mitigation | Proposed Owner |
+|---|---|---|---|
+| Late defect escalation | Delayed release decisions | Establish escalation triggers | QA Lead |
+| Unclear acceptance criteria | Rework and testing delays | Introduce backlog clarification | Product Owner |
+| Inconsistent status reporting | Conflicting stakeholder expectations | Establish standard status report | Project Manager |
+| Undocumented decisions | Repeated discussions and scope disputes | Maintain decision log | Project Manager |
+| Fragmented release information | Incomplete readiness assessment | Establish single readiness record | Project Manager |
+
+#### 10. Communication Effectiveness
+
+| KPI | Measurement Method | Target | Review Frequency |
+|---|---|---|---|
+| Critical defect escalation time | Time from classification to escalation | TBD | Weekly (proposed) |
+| Overdue decisions | Decisions past agreed deadline | TBD | Weekly (proposed) |
+| Requirement clarification age | Time open questions remain unresolved | TBD | Sprint review |
+| Action closure rate | Actions closed by due date / actions due | TBD | Weekly (proposed) |
+| Release reporting completeness | Required readiness items reported | TBD | Before release |
+
+### Management Decisions
+
+1. **Defect escalation:** Agree on defect severity criteria, escalation triggers, and response responsibilities.
+2. **Requirement clarity:** Establish a consistent process for clarifying and approving acceptance criteria before implementation and testing.
+3. **Release communication:** Standardize release readiness reporting and identify the accountable release decision-maker.
+4. **Document control:** Confirm Jira and Confluence as authoritative project information sources, subject to organizational approval.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The plan addresses the main communication challenges and provides a structured approach for development, QA, stakeholder reporting, and release coordination. However, escalation response times, authority, and KPI targets remain unconfirmed.
+
+**Required corrections:**
+- Approve critical defect escalation thresholds and response times.
+- Confirm accountable communication and decision owners.
+- Agree on stakeholder reporting frequency.
+- Validate release readiness documentation and approval procedures.
+- Define measurable communication performance targets.
+
+**Approval blockers:** Undefined critical escalation timeframes and unconfirmed release decision authority.
+
+**Governance:** This prompt supports relevant PMI-aligned practices in communication management, stakeholder engagement, issue escalation, quality assurance, and project governance.
+
+The Communication Management Plan requires stakeholder validation before implementation. Protect confidential project, personal, commercial, and security-sensitive information through authorized systems.

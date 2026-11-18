@@ -1,69 +1,22 @@
 # AI Project Management Prompt Library
 
-A practical library of **reusable AI prompts, decision frameworks, and quality assurance workflows** for IT project management.
+A practical library of **AI-assisted prompts and workflows for IT project management**, designed to support structured analysis, decision-making, governance, communication, and delivery.
 
-Designed to help Project Managers and delivery teams analyze complex delivery challenges, evaluate trade-offs, manage risks, communicate with stakeholders, and develop evidence-based management recommendations.
+> **AI supports project decisions. The Project Manager remains accountable for the final output.**
 
-The library combines structured AI prompting with professional project governance to support:
+## What’s Included
 
-- **Decision-making:** Evaluate competing priorities, delivery risks, and management options.
-- **Delivery control:** Structure project planning, reporting, change management, and issue resolution.
-- **Stakeholder management:** Develop clear, assertive, business-oriented communication.
-- **Quality assurance:** Challenge assumptions, verify information, and improve deliverables.
-- **Responsible AI use:** Protect confidential information and maintain human accountability.
-
-**Core principle:** AI supports analysis and recommendations. Formal decisions remain with authorized project stakeholders.
-
----
-
-## Quick Start — Solve a Real Project Management Challenge
-
-**Scenario:** A stakeholder requests additional functionality four weeks before release. The team has limited capacity, existing delivery commitments, and unresolved technical dependencies.
-
-**Management challenge:** Should the Project Manager accept, defer, or reprioritize the request?
-
-Use the [RACE Prompt Framework](race-framework.md) to evaluate the decision.
-
-1. **Select the framework:** Open `race-framework.md`.
-2. **Copy the prompt:** Use the Ready-to-Use Prompt section.
-3. **Add project context:** Enter verified requirements, constraints, deadlines, and decision criteria.
-4. **Evaluate options:** Generate an impact assessment, management recommendation, and stakeholder communication.
-5. **Validate the result:** Run the independent Quality Check before using the recommendation.
-
-**Expected output:** A structured comparison of delivery options, business and schedule trade-offs, a recommended management action, and professional stakeholder communication.
-
-The objective is not simply to generate an answer, but to support an **informed, accountable management decision**.
-
----
-
-## Explore the Library
-
-| Area | Management Value |
+| Area | Practical Use |
 |---|---|
-| [Framework & Prompt Design](00_framework/) | Create consistent, reusable, evidence-based AI prompts |
-| [Project Initiation](01_project-initiation/) | Define project objectives, scope, assumptions, and delivery boundaries |
-| [Project Planning](02_project-planning/) | Structure estimates, responsibilities, dependencies, and execution plans |
-| [Risk & Issue Management](03_risk-issue-management/) | Identify threats, assess exposure, and develop response strategies |
-| [Reporting & Communication](04_reporting-communication/) | Communicate delivery performance, risks, and management decisions |
-| [Commercial & Governance](05_commercial-governance/) | Analyze contractual matters, scope changes, and supplier obligations |
-| [Stakeholder Management](06_stakeholder-management/) | Align expectations, communicate change, and manage competing priorities |
-| [Advanced AI Workflows](07_advanced-ai-workflows/) | Connect prompts, challenge assumptions, and refine project deliverables |
-| [AI Governance](08_ai-governance/) | Support confidentiality, factual verification, and responsible AI use |
-
-### Recommended Starting Points
-
-| Management Need | Recommended Template |
-|---|---|
-| Structure an AI request | [RACE Prompt Framework](race-framework.md) |
-| Create a reusable PM prompt | [Prompt Template](prompt-template.md) |
-| Identify project risks | [Risk Register](03_risk-issue-management/risk-register.md) |
-| Evaluate delivery performance | [Weekly Status Report](04_reporting-communication/weekly-status-report.md) |
-| Prepare a management decision | [Steering Committee Decision Paper](04_reporting-communication/steering-committee-decision-paper.md) |
-| Improve a draft document | [Iterative Refinement Workflow](07_advanced-ai-workflows/iterative-refinement-workflow.md) |
-| Challenge document quality | [Document Audit Workflow](07_advanced-ai-workflows/document-audit-workflow.md) |
-| Verify AI-generated information | [Hallucination Verification Workflow](08_ai-governance/hallucination-verification-workflow.md) |
-
----
+| **[Framework](00_framework/)** | Prompt design, reusable templates, quality principles |
+| **[Project Initiation](01_project-initiation/)** | Charter, project brief, scope, objectives, assumptions |
+| **[Project Planning](02_project-planning/)** | WBS, RACI, scheduling, estimates, procurement, communication |
+| **[Risk & Issue Management](03_risk-issue-management/)** | Risk identification, analysis, response planning, issue tracking |
+| **[Reporting & Communication](04_reporting-communication/)** | Status reports, steering papers, dashboards, meeting minutes |
+| **[Commercial & Governance](05_commercial-governance/)** | Contract review, changes, scope gaps, supplier evaluation, close-out |
+| **[Stakeholder Management](06_stakeholder-management/)** | Stakeholder analysis, engagement, change communication, feedback |
+| **[Advanced AI Workflows](07_advanced-ai-workflows/)** | Chain prompting, role-based review, iterative refinement, document audit |
+| **[AI Governance](08_ai-governance/)** | Confidentiality, hallucination control, verification, responsible AI use |
 
 ## Repository Structure
 
@@ -137,99 +90,95 @@ AI-project-management-prompt-library/
     └── project-ai-use-policy.md
 ```
 
----
+## How to Use
 
-## How the Frameworks Work
-
-The templates are designed to support the full progression from project information to management decisions.
+1. Identify the project-management task.
+2. Open the relevant prompt or workflow.
+3. Replace placeholders with verified project context.
+4. Run the prompt in an approved AI tool.
+5. Review facts, assumptions, risks, and recommendations.
+6. Apply the appropriate project approval process.
 
 ```text
-Verified Project Context
-         ↓
-Structured AI Prompt
-         ↓
-Analysis and Management Options
-         ↓
-Quality Check and Evidence Validation
-         ↓
-Project Manager Review
-         ↓
-Authorized Decision / Approval
+Project Data
+     ↓
+AI Analysis / Draft
+     ↓
+Human Review
+     ↓
+Decision / Approval
 ```
-
-### Standard Template Structure
-
-Each operational prompt generally follows three sections:
-
-| Section | Content |
-|---|---|
-| **1. Ready-to-Use Prompt** | Professional role, project inputs, management task, and expected output |
-| **2. Quality Check** | Independent review of accuracy, evidence, governance, and practical usefulness |
-| **3. Practical IT Use Case** | Realistic project scenario, sample input, management analysis, and recommended actions |
-
-Governance reference documents may use a shorter format where a full worked example adds little value.
-
-This structure makes prompts easier to copy, adapt, review, and reuse across different projects.
-
----
 
 ## Advanced AI Workflows
 
-Beyond individual prompts, the library includes connected workflows for more complex project-management tasks.
+The library goes beyond standalone prompts by combining AI tasks into reusable PM workflows.
 
-| Workflow | Approach | Purpose |
-|---|---|---|
-| [Chain Prompting](07_advanced-ai-workflows/chain-prompting-workflow.md) | Context → Analysis → Response Plan → Report | Maintain consistency between related deliverables |
-| [Role-Based Review](07_advanced-ai-workflows/role-stacking-review-workflow.md) | Author → Stakeholder Challenge → Revision | Anticipate questions and strengthen recommendations |
-| [Iterative Refinement](07_advanced-ai-workflows/iterative-refinement-workflow.md) | Draft → Critique → Correct → Validate | Improve clarity, evidence, and executive communication |
-| [Document Audit](07_advanced-ai-workflows/document-audit-workflow.md) | Document → Gap Analysis → Correction → Re-Audit | Identify weaknesses before formal review |
+**[Chain Prompting](07_advanced-ai-workflows/chain-prompting-workflow.md)**
 
-These workflows emphasize **progressive analysis and quality control**, rather than treating the first AI-generated answer as final.
+```text
+Project Brief → Risk Register → Response Plan → Status Report
+```
 
----
+**[Role-Based Review](07_advanced-ai-workflows/role-stacking-review-workflow.md)**
 
-## Delivery Approaches
+```text
+Draft → Reviewer Perspective → Challenge → Improved Draft
+```
 
-The library is framework-neutral and can be adapted to different delivery environments.
+**[Iterative Refinement](07_advanced-ai-workflows/iterative-refinement-workflow.md)**
 
-| Approach | Typical Considerations |
-|---|---|
-| Predictive | Baselines, milestones, change control, critical path |
-| Scrum | Sprint Goals, backlog priorities, acceptance criteria, dependencies |
-| Kanban | WIP, cycle time, throughput, blocked work |
-| Hybrid | Iterative delivery, fixed governance milestones, cross-team dependencies |
+```text
+Draft → Critique → Rewrite → Final Review
+```
 
-Relevant PMI, Agile, Scrum, Kanban, and project governance concepts can be incorporated according to the needs of each project.
+**[Document Audit](07_advanced-ai-workflows/document-audit-workflow.md)**
 
----
+```text
+Document → Gap Analysis → Correction → Re-Audit
+```
 
-## AI Governance & Responsible Use
+## Delivery Approach
 
-AI-assisted project work must remain consistent with organizational confidentiality requirements and established decision authority.
+Framework-neutral and adaptable to:
 
-**Before using AI:**
+- Predictive
+- Agile
+- Scrum
+- Kanban
+- Hybrid delivery
 
-- Use approved AI environments and authorized information.
-- Minimize confidential, personal, commercial, and security-sensitive data.
-- Never include passwords, API keys, tokens, or production credentials.
+## AI Governance
 
-**Before using AI-generated outputs:**
+Before using AI:
 
-- Verify material facts, dates, figures, and calculations.
-- Distinguish verified information from assumptions and recommendations.
-- Validate contractual and technical claims against authoritative evidence.
-- Obtain specialist review and formal approval when required.
+- protect confidential and personal information,
+- use approved tools,
+- provide only necessary project context.
 
-For detailed controls, see the [AI Governance](08_ai-governance/) section.
+Before using AI output:
 
-**AI-generated content is a decision-support input, not an independently verified project record or formal authorization.**
+- verify facts, dates, and calculations,
+- distinguish assumptions from confirmed information,
+- verify contractual and technical claims,
+- obtain specialist review where required.
 
----
+**AI-generated content should never be treated as automatic project truth.**
 
-## License & Disclaimer
+## Purpose
 
-The materials are reusable professional-development templates and illustrative project-management examples. They should be adapted to the relevant project, organization, delivery approach, and governance requirements.
+This repository demonstrates practical AI use for:
 
-They do not replace professional judgment, organizational policies, contractual obligations, or specialist legal, financial, technical, and security review.
+- project planning,
+- risk management,
+- decision support,
+- governance,
+- stakeholder communication,
+- quality assurance.
 
-**The goal is to make project-management work more structured, evidence-based, and decision-oriented—without outsourcing professional accountability.**
+The goal is to make project-management work **more structured, evidence-based, and reviewable** — not to automate professional accountability.
+
+## Disclaimer
+
+These materials are reusable professional-development templates. Adapt them to the specific project and follow applicable organisational, security, contractual, legal, and regulatory requirements.
+
+> **Use AI to improve project thinking — not to outsource accountability.**

@@ -1,1084 +1,535 @@
 # Chain Prompting Workflow
 
-## Purpose
+**Prompt ID:** AIWF-001 | **Category:** Advanced AI Workflows | **Version:** 1.0 | **Status:** Draft
 
-Use this workflow when several project-management outputs depend on the same project context.
+## 1. Ready-to-Use Prompt
 
-Instead of starting a new AI conversation for every task, run related prompts sequentially in the same conversation so that each output builds on the previous one.
+**Purpose:** Generate consistent, connected project-management deliverables by reusing verified project context across a controlled sequence of AI prompts.
 
-Example:
+**Use case:** Create a project brief, risk register, risk response plan, and weekly status report without repeatedly entering the same information or allowing unverified AI-generated assumptions to become project facts.
 
-```text
-Project Context
-↓
-Project Brief
-↓
-Risk Register
-↓
-Risk Response Plan
-↓
-Status Report
-```
+Copy the master prompt, replace the placeholders, and execute the four stages sequentially.
 
-The objective is to reduce repeated context entry while improving consistency between project artefacts.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Planning / Delivery / Reporting
-
-**Project type:**  
-Software implementation / Digital transformation / ERP / Data / Cloud / Infrastructure / Product initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / PMO / Project Coordinator
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended use:**  
-When multiple outputs depend on the same underlying project information
-
----
-
-# Core Principle
-
-Chain prompting means:
-
-```text
-Prompt 1 produces Output A
-↓
-Prompt 2 uses Output A + existing project context
-↓
-Prompt 3 uses Outputs A and B
-↓
-Prompt 4 uses the combined context
-```
-
-The prompts are connected.
-
-They are not isolated requests.
-
----
-
-# Important Rule
-
-Run connected steps in the **same AI conversation** when the workflow depends on context from previous outputs.
-
-Do not unnecessarily restart the conversation between steps.
-
-However, do not assume earlier AI-generated information is automatically correct.
-
-Review important outputs before using them as inputs to later steps.
-
----
-
-# Example Workflow
-
-This example creates four connected project-management outputs:
-
-```text
-1. Project Brief
-2. Risk Register
-3. Risk Response Plan
-4. Weekly Status Report
-```
-
----
-
-# Step 1 — Establish the Project Context
+### Master Prompt — Shared Project Context
 
 ```text
 ROLE
 
-You are a senior IT Project Manager.
+You are a Senior IT Project Manager and PMO Quality Reviewer
+experienced in international software delivery, project governance,
+risk management, planning, and executive reporting.
 
-I will give you four connected project-management tasks.
+PROJECT CONTEXT
 
-Use the same project context throughout the conversation.
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Delivery approach: [PREDICTIVE / AGILE / HYBRID]
+Current phase: [PHASE]
+Approved scope: [DETAILS]
+Out-of-scope items: [DETAILS]
+Budget: [AMOUNT / NOT PROVIDED]
+Key milestones: [DATES]
+Stakeholders: [ROLES]
+Suppliers: [DETAILS]
+Integrations / dependencies: [LIST]
+Major constraints: [LIST]
+Known risks and issues: [LIST]
+Reporting date / period: [DATE]
 
-After completing each task, wait for the next instruction.
+WORKFLOW
 
-TASK 1
+We will complete four connected project-management tasks:
 
-Create a concise project brief from the information below.
+1. Project Brief
+2. Risk Register
+3. Risk Response Plan
+4. Weekly Project Status Report
 
-PROJECT
+Use the same verified project context throughout.
 
-Project:
-Enterprise CRM Replacement
+Complete only the requested stage, then stop for review.
+Use approved corrections in subsequent stages.
 
-Objective:
-Replace the legacy CRM with a cloud-based platform supporting
-Customer Service and Sales.
+INFORMATION CONTROL
 
-Target go-live:
-30 September
+Classify information as:
 
-Budget:
-€2.5M
+- CONFIRMED FACT: Explicitly supported by the project input.
+- AI ANALYSIS: Your interpretation of the available evidence.
+- ASSUMPTION: A condition requiring confirmation.
+- RECOMMENDATION: A proposed management action.
+- INFORMATION GAP: Missing evidence required for a decision.
 
-Delivery model:
-Hybrid
+Never present AI analysis, assumptions, or recommendations
+as confirmed project facts.
 
-Key vendor:
-External CRM implementation partner
+Do not invent:
+- Budgets or actual expenditure
+- Dates or milestone commitments
+- Decisions or approvals
+- Named owners
+- Supplier commitments
+- Risk scores based on nonexistent evidence
+- Delivery progress or KPI results
 
-Key integrations:
-SAP
-Customer Portal
-Identity Provider
-Data Warehouse
+Use project IDs consistently across outputs.
 
-Major business requirement:
-Maintain customer-service operations during migration.
+Examples:
+Risk R-001
+Issue I-001
+Change CR-001
+Decision D-001
 
-OUTPUT
+For each stage:
+1. Use the verified context and relevant approved outputs.
+2. Produce the requested deliverable.
+3. Flag missing information and unsupported conclusions.
+4. Identify items requiring Project Manager validation.
+5. Stop before generating the next deliverable.
 
-Provide:
-
-- Project Overview
-- Objectives
-- Scope
-- Key Deliverables
-- Major Dependencies
-- Key Constraints
-- Initial Risks
+Do not automatically treat earlier AI-generated outputs
+as approved project information.
 ```
 
----
-
-# Review Step 1
-
-Before continuing, verify:
-
-- project facts,
-- dates,
-- scope,
-- dependencies,
-- assumptions.
-
-Correct errors before the next prompt.
-
-Example:
+### Stage 1 — Project Brief
 
 ```text
-Correction:
+TASK 1 — PROJECT BRIEF
 
-SAP integration is in scope, but changes to SAP itself are not.
-
-The target go-live date is 30 September, not 30 August.
-
-Please update the project brief and use this corrected information
-for all following steps.
-```
-
-This prevents errors from propagating through the chain.
-
----
-
-# Step 2 — Create the Risk Register
-
-After reviewing the brief:
-
-```text
-Good.
-
-Using the confirmed project context and project brief above,
-create an initial risk register.
-
-Identify 8 material project risks.
+Using the project context above, create a concise Project Brief.
 
 Include:
 
-Risk ID
-Category
-Risk Description
-Likelihood 1–5
-Impact 1–5
-Score
-Early Warning Indicator
-Mitigation
-Owner
+1. Project Overview
+2. Business Objectives
+3. In-Scope / Out-of-Scope
+4. Key Deliverables
+5. Major Milestones
+6. Dependencies and Constraints
+7. Initial Risks
+8. Assumptions and Information Gaps
 
-Use cause-event-impact wording for the risk description.
+Distinguish approved scope from proposed scope.
 
-Do not invent project facts.
+Do not invent milestones, costs, or requirements.
 
-Where information is missing, state the assumption explicitly.
+OUTPUT
+
+Project Brief
+Confirmed Facts
+Assumptions
+Validation Required
+
+Stop for Project Manager review.
 ```
 
----
-
-# Example Risk Chain
+### Stage 2 — Risk Register
 
 ```text
-Project dependency
-↓
-Risk identified
-↓
-Risk scored
-↓
-Mitigation assigned
-```
+TASK 2 — RISK REGISTER
 
-Example:
+Use the verified project context and approved Project Brief.
 
-```text
-Cause:
-Identity-provider certification depends on an external vendor.
-
-Event:
-Certification is not completed before SIT.
-
-Impact:
-Authentication testing and UAT may be delayed.
-```
-
----
-
-# Step 3 — Convert Risks Into Response Plans
-
-After reviewing the risk register:
-
-```text
-Good.
-
-Using the risk register above, select the three risks requiring
-the most management attention.
-
-Do not rank only by numerical score.
-
-Also consider:
-
-- proximity,
-- dependency impact,
-- ability to affect major milestones,
-- recovery difficulty.
+Identify up to eight material project risks.
 
 For each risk provide:
 
 Risk ID
+Category
+Cause–Event–Impact Description
+Likelihood (1–5)
+Impact (1–5)
+Risk Score
+Early Warning Indicator
+Proposed Mitigation
+Proposed Owner
+Evidence / Assumption
+
+Calculate Risk Score = Likelihood × Impact only when
+the scoring method and supporting assessment are available.
+
+Otherwise, mark the score as "To be assessed".
+
+Do not confuse existing issues with future risks.
+
+Check consistency with the approved Project Brief.
+
+Stop for Project Manager review.
+```
+
+### Stage 3 — Risk Response Plan
+
+```text
+TASK 3 — RISK RESPONSE PLAN
+
+Use the validated Risk Register and project context.
+
+Select up to three risks requiring the most active
+management attention.
+
+Do not prioritize solely by numerical score.
+
+Consider:
+- Risk severity
+- Proximity
+- Critical dependencies
+- Milestone exposure
+- Recovery difficulty
+- Business impact
+
+For each risk provide:
+
+Risk ID
+Reason for Priority
 Response Strategy
 Preventive Actions
-Trigger Point
-Contingency Action
+Trigger / Early Warning
+Contingency Actions
 Residual Risk
-Owner
-Review Date
+Proposed Owner
+Review Date / To Be Confirmed
+
+Preserve the original risk IDs and descriptions.
+
+Distinguish proposed actions from approved commitments.
+
+Stop for Project Manager review.
 ```
 
----
-
-# Why This Step Matters
-
-The workflow now moves from:
+### Stage 4 — Weekly Project Status Report
 
 ```text
-Risk identification
-```
-
-to:
-
-```text
-Risk management action
-```
-
-A risk register alone does not show how the project will respond.
-
----
-
-# Step 4 — Generate the Status Report
-
-After reviewing the risk response plan:
-
-```text
-Good.
-
-Now create a weekly project status report using the confirmed
-project context, risk register, and risk response actions above.
-
-OUTPUT FORMAT
-
-1. Overall Status — RAG
-2. Executive Summary
-3. Progress This Week
-4. Key Risks / Issues
-5. Risk Response Actions in Progress
-6. Next-Week Priorities
-7. Decisions / Actions Required
-
-Do not introduce project facts that have not appeared in the
-conversation.
-
-Where evidence is insufficient to determine a RAG status,
-say so rather than inventing one.
-```
-
----
-
-# Full Chain
-
-The completed workflow is:
-
-```text
-Project Description
-↓
-Project Brief
-↓
-Risk Register
-↓
-Risk Response Plan
-↓
-Weekly Status Report
-```
-
-Each output becomes part of the context for the next one.
-
----
-
-# Why Chain Prompting Is Powerful
-
-Without chaining:
-
-```text
-Prompt 1:
-Explain project again
-
-Prompt 2:
-Explain project again
-
-Prompt 3:
-Explain project again
-
-Prompt 4:
-Explain project again
-```
-
-This creates:
-
-- duplicated effort,
-- inconsistent context,
-- different assumptions,
-- contradictory outputs.
-
-With chaining:
-
-```text
-Shared project context
-+
-Progressive outputs
-=
-Greater consistency
-```
-
----
-
-# Chain Prompting Is Not Blind Automation
-
-A critical rule:
-
-```text
-AI Output
-↓
-Human Review
-↓
-Correction
-↓
-Next Prompt
-```
-
-Not:
-
-```text
-AI Output
-↓
-Automatically becomes truth
-↓
-Next Prompt
-```
-
-Errors in an early output can propagate through every later artefact.
-
----
-
-# Error Propagation Example
-
-Suppose Step 1 incorrectly states:
-
-```text
-UAT starts 1 August.
-```
-
-Actual date:
-
-```text
-UAT starts 15 August.
-```
-
-If the mistake is not corrected:
-
-- risk proximity may be wrong,
-- schedule commentary may be wrong,
-- weekly reporting may be wrong,
-- escalation urgency may be wrong.
-
-Therefore:
-
-> Validate important context between chain stages.
-
----
-
-# Checkpoint Prompt
-
-Use this between major steps:
-
-```text
-Before continuing, review the information currently being used.
-
-Separate it into:
-
-1. Confirmed project facts
-2. AI-generated conclusions
-3. Assumptions
-4. Missing information
-
-Do not proceed until contradictions are highlighted.
-```
-
-This introduces a useful governance checkpoint.
-
----
-
-# Chain Workflow Pattern
-
-A reusable pattern is:
-
-```text
-Context
-↓
-Analyse
-↓
-Prioritise
-↓
-Plan
-↓
-Communicate
-```
-
-Example:
-
-```text
-Project Context
-↓
-Risk Analysis
-↓
-Risk Prioritisation
-↓
-Response Plan
-↓
-Executive Report
-```
-
----
-
-# Workflow 2 — Scope to Change Decision
-
-```text
-Requirements
-↓
-Scope Gap Analysis
-↓
-Change Impact Assessment
-↓
-Options Analysis
-↓
-Steering Committee Paper
-```
-
-Example prompts:
-
-```text
-STEP 1
-Review the requirements for ambiguity.
-
-STEP 2
-Using the gaps identified above, determine which items may represent
-scope changes.
-
-STEP 3
-Assess cost, schedule, risk, and technical impact.
-
-STEP 4
-Create three management options.
-
-STEP 5
-Create a Steering Committee decision paper.
-```
-
----
-
-# Workflow 3 — Issue Management
-
-```text
-Issue
-↓
-Root Cause
-↓
-Recovery Plan
-↓
-Stakeholder Communication
-↓
-Status Update
-```
-
-This is useful for:
-
-- outages,
-- vendor delays,
-- test failure,
-- integration issues,
-- migration problems.
-
----
-
-# Workflow 4 — Vendor Evaluation
-
-```text
-RFQ Requirements
-↓
-Supplier Response Review
-↓
-Clarification Questions
-↓
-Risk Assessment
-↓
-Recommendation
-```
-
----
-
-# Workflow 5 — Project Initiation Pack
-
-One initial project description can support:
-
-```text
-Project Brief
-↓
-Project Charter
-↓
-Stakeholder Matrix
-↓
-RACI
-↓
-Initial Risk Register
-↓
-Communication Plan
-```
-
-This can significantly accelerate early project administration.
-
-All outputs still require human validation.
-
----
-
-# Workflow 6 — Release Readiness
-
-```text
-Release Scope
-↓
-Readiness Assessment
-↓
-Open Risks / Defects
-↓
-Go / No-Go Criteria
-↓
-Executive Recommendation
-↓
-Stakeholder Communication
-```
-
----
-
-# Prompt Chaining With Structured IDs
-
-For complex workflows, use identifiers.
-
-Example:
-
-```text
-Risk R-001
-Risk R-002
-
-Decision D-001
-
-Change CR-014
-
-Issue I-006
-```
-
-Then later prompts can say:
-
-```text
-Using risks R-001 and R-002, create response plans.
-```
-
-This reduces ambiguity.
-
----
-
-# Context Preservation
-
-At the beginning of a long chain, define:
-
-```text
-Project name
-Objective
-Scope
-Budget
-Timeline
-Key stakeholders
-Delivery model
-Major dependencies
-Key constraints
-```
-
-These form the shared context.
-
----
-
-# Context Refresh
-
-Long conversations can accumulate outdated information.
+TASK 4 — WEEKLY PROJECT STATUS REPORT
 
 Use:
+- Verified project context
+- Approved Project Brief
+- Validated Risk Register
+- Reviewed Risk Response Plan
+- New factual updates for the reporting period
 
-```text
-Before the next task, summarise the current confirmed project
-context in no more than 15 bullet points.
+WEEKLY UPDATES
 
-Exclude outdated assumptions.
+[PASTE CURRENT PROGRESS, ISSUES, DECISIONS, AND METRICS]
 
-Highlight unresolved contradictions.
+Create:
+
+1. Overall RAG Status and Rationale
+2. Executive Summary
+3. This Week's Progress
+4. Key Risks and Issues
+5. Risk Response Actions
+6. Next Week's Priorities
+7. Decisions / Actions Required
+
+Use:
+GREEN / AMBER / RED / INSUFFICIENT EVIDENCE
+
+Do not infer current progress from project plans.
+
+Do not claim actions were completed merely because
+they appeared in the Risk Response Plan.
+
+Reference risk IDs consistently.
+
+Identify any risk that changed status or became an issue.
+
+After generating the report, reconcile it against
+all previously validated project outputs.
+
+OUTPUT
+
+Weekly Status Report
+Cross-Document Consistency Check
+Unresolved Information Gaps
+Required Management Actions
 ```
 
-Then review before continuing.
+### Reusable Checkpoint — Context Integrity
+
+Run this between major stages or whenever project information changes.
+
+```text
+CONTEXT CHECKPOINT
+
+Act as an independent PMO Quality Reviewer.
+
+Review the verified project context and all approved
+outputs generated in this workflow.
+
+Identify:
+
+1. Confirmed facts
+2. AI-generated conclusions
+3. Unverified assumptions
+4. Missing information
+5. Contradictions or outdated information
+6. Inconsistent IDs, dates, owners, and milestones
+
+OUTPUT
+
+Item | Source | Current Position |
+Issue / Contradiction | Required Correction
+
+Then produce a concise Confirmed Project Context
+containing only validated information.
+
+Do not silently overwrite previous project facts.
+
+Flag unresolved contradictions before the next stage.
+```
 
 ---
 
-# Chain Branching
+## 2. Quality Check
 
-Not every workflow must be purely linear.
-
-Example:
-
-```text
-Project Brief
-       ↓
- ┌─────┴─────┐
- ↓           ↓
-Risk       Stakeholder
-Register   Matrix
- ↓           ↓
-Response   Engagement
-Plan       Plan
- └─────┬─────┘
-       ↓
-Status Report
-```
-
-This is useful when multiple outputs share the same source context.
-
----
-
-# Advanced Branching Prompt
-
-```text
-Using the confirmed project brief above:
-
-TASK A
-Create the initial risk register.
-
-TASK B
-Create the stakeholder matrix.
-
-Treat these as separate analyses using the same project context.
-
-Do not assume conclusions from Task A automatically apply to Task B.
-```
-
----
-
-# Avoid Over-Chaining
-
-A very long chain can become unreliable if:
-
-- context changes,
-- assumptions accumulate,
-- outdated information remains,
-- outputs become increasingly dependent on earlier AI interpretation.
-
-Use checkpoints.
-
-For major workflows:
-
-```text
-3–5 steps
-↓
-Validate context
-↓
-Continue
-```
-
----
-
-# Fact vs AI-Derived Information
-
-Maintain this distinction:
-
-```text
-PROJECT FACT
-Provided by source or stakeholder.
-
-AI ANALYSIS
-Derived interpretation.
-
-ASSUMPTION
-Used because information is missing.
-
-RECOMMENDATION
-Suggested future action.
-```
-
-Do not allow these categories to become mixed during the chain.
-
----
-
-# Prompt — Context Integrity Review
+Use this independent review after completing the workflow, especially before publishing formal project documentation.
 
 ```text
 ROLE
 
-You are a PMO quality reviewer.
+You are an independent Senior PMO Quality Assurance Manager.
 
 TASK
 
-Review the conversation context used in this chained workflow.
+Review the completed chained project-management workflow.
 
-Identify:
+INPUT
 
-- contradictions,
-- unsupported facts,
-- assumptions that became treated as facts,
-- outdated information,
-- inconsistent dates,
-- inconsistent owners,
-- inconsistent risk ratings.
+[PASTE THE PROJECT BRIEF, RISK REGISTER,
+RISK RESPONSE PLAN, AND STATUS REPORT]
 
-OUTPUT FORMAT
+CHECK
 
-Item
-Problem
-Source / Origin
-Correction Required
-Impact on Later Outputs
+1. Context Integrity:
+   All deliverables use consistent project facts.
+
+2. Traceability:
+   Risks, actions, dependencies, and decisions
+   retain consistent IDs and references.
+
+3. Accuracy:
+   No unsupported facts or invented metrics appear.
+
+4. Assumptions:
+   AI-generated assumptions have not become
+   accepted facts without validation.
+
+5. Risk Consistency:
+   Significant risks remain visible until
+   formally closed, accepted, or superseded.
+
+6. Action Consistency:
+   Mitigation actions have consistent descriptions,
+   ownership, and implementation status.
+
+7. Reporting Accuracy:
+   RAG status, progress, and decisions are
+   supported by current reporting-period evidence.
+
+8. Governance:
+   Proposed actions and recommendations are
+   distinguished from authorized decisions.
+
+9. Completeness:
+   Critical dependencies, information gaps,
+   and unresolved issues are visible.
+
+10. Confidentiality:
+    Sensitive project information is handled
+    according to organizational requirements.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+
+RECONCILIATION TABLE
+
+Item / ID | Earlier Output | Later Output |
+Conflict / Gap | Required Correction
+
+ADDITIONAL RESULTS
+
+Findings: [ISSUES]
+Required corrections: [ACTIONS]
+Approval blockers: [CRITICAL ITEMS]
+Validated context: [CONFIRMED FACTS ONLY]
+
+Do not create missing evidence or retrospectively
+approve decisions.
 ```
 
 ---
 
-# Chain Prompting for Decision Support
+## 3. Practical IT Use Case
 
-A strong decision-support chain can be:
+### Enterprise CRM Replacement — From Project Context to Weekly Governance
+
+**Scenario:** A company is replacing its legacy CRM system with a cloud-based platform for Sales and Customer Service.
+
+The Project Manager needs several related project documents, all based on the same business scope, integration dependencies, timeline, and risk assumptions.
+
+Instead of preparing four independent prompts, the team uses a controlled chain in which each reviewed output becomes input to the next stage.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Enterprise CRM Replacement |
+| Business objective | Replace legacy CRM and support Sales / Customer Service |
+| Delivery approach | Hybrid |
+| Budget | €2.5 million |
+| Target go-live | 30 September 2027 |
+| Supplier | External CRM Implementation Partner |
+| Integrations | SAP, Customer Portal, Identity Provider, Data Warehouse |
+| Key constraint | Maintain customer-service operations during migration |
+| Current delivery progress | Not provided |
+
+### Example Input
 
 ```text
-Problem
-↓
-Evidence
-↓
-Root Cause
-↓
-Options
-↓
-Trade-Off Analysis
-↓
-Recommendation
-↓
-Decision Paper
+Project: Enterprise CRM Replacement
+
+Objective:
+Replace the legacy CRM with a cloud-based solution
+supporting Customer Service and Sales.
+
+Budget: €2.5 million
+Target go-live: 30 September 2027
+Delivery model: Hybrid
+
+Supplier:
+External CRM implementation partner.
+
+Key integrations:
+- SAP
+- Customer Portal
+- Identity Provider
+- Data Warehouse
+
+Business constraint:
+Customer-service operations must continue
+during the migration.
+
+Known project risks:
+Not yet assessed.
+
+Current project performance:
+Not provided.
+
+Task:
+Execute the four-stage chain prompting workflow.
 ```
 
-This is more valuable than asking:
+### Example Output — Stage 1: Project Brief
 
-> What should I do?
+| Area | Project Brief |
+|---|---|
+| Objective | Implement cloud-based CRM for Sales and Customer Service |
+| Budget | €2.5 million |
+| Target go-live | 30 September 2027 |
+| Major deliverable | Replacement CRM solution |
+| Integration scope | SAP, Customer Portal, Identity Provider, Data Warehouse |
+| Delivery approach | Hybrid |
+| Supplier | External implementation partner |
+| Key constraint | Maintain customer-service continuity |
 
-because the reasoning structure becomes visible and reviewable.
+**Proposed initial risk areas:** Integration dependencies, migration quality, operational continuity, and supplier delivery.
 
----
+These are assessment candidates, not yet validated project risks.
 
-# Example
+**Human checkpoint:** Confirm that SAP integration is in scope but changes to SAP itself are excluded, if that distinction reflects the approved scope. Review all milestone and budget assumptions before proceeding.
 
-```text
-STEP 1
-Analyse why UAT is delayed.
+### Example Output — Stage 2: Risk Register
 
-STEP 2
-Identify the root causes.
+<text color="secondary" size="xs">Illustrative assessment; likelihood, impact, and ownership require project validation.</text>
 
-STEP 3
-Generate three realistic recovery options.
-
-STEP 4
-Compare schedule, cost, quality, and risk trade-offs.
-
-STEP 5
-Recommend one option.
-
-STEP 6
-Convert the analysis into a Steering Committee paper.
-```
-
----
-
-# Chain Prompting for Data-Informed PM
-
-A data workflow could be:
-
-```text
-Raw KPI Data
-↓
-Metric Validation
-↓
-Trend Analysis
-↓
-Root Cause Hypotheses
-↓
-Management Commentary
-↓
-Recommended Actions
-```
-
-This works particularly well with:
-
-- Jira data,
-- testing metrics,
-- issue logs,
-- budget data,
-- schedule performance,
-- vendor KPIs.
-
----
-
-# Example
-
-```text
-STEP 1
-Check this KPI dataset for missing values and inconsistencies.
-
-STEP 2
-Analyse delivery trends.
-
-STEP 3
-Identify the three most important management signals.
-
-STEP 4
-Write executive dashboard commentary.
-
-STEP 5
-Recommend follow-up questions for the delivery leads.
-```
-
----
-
-# Chain Quality Review
-
-At the end of a chain:
-
-```text
-Review all outputs produced in this conversation.
-
-Check for:
-
-- contradictions,
-- duplicated actions,
-- inconsistent owners,
-- inconsistent dates,
-- unsupported assumptions,
-- risks that disappeared without explanation,
-- decisions that were never formally made.
-
-Return a reconciliation table.
-```
-
----
-
-# Reconciliation Table
-
-| Item | Earlier Output | Later Output | Conflict | Correction |
+| ID | Potential Risk | Likelihood | Impact | Proposed Response |
 |---|---|---|---|---|
+| R-001 | Identity-provider certification may not be ready for integration testing | TBD | TBD | Confirm certification dependencies and review schedule |
+| R-002 | Legacy-data quality problems may delay migration | TBD | TBD | Profile source data and define cleansing ownership |
+| R-003 | Cutover disruption may affect customer-service operations | TBD | TBD | Establish continuity and rollback planning |
+| R-004 | SAP integration dependencies may delay testing | TBD | TBD | Confirm API responsibilities and test environment access |
 
-This is particularly useful before using chained outputs in formal project documentation.
+**Human checkpoint:** Validate risk causes, likelihood, impact, proximity, and accountable owners before approving the register.
 
----
+### Example Output — Stage 3: Risk Response Plan
 
-# Agile / Scrum Considerations
+| Risk ID | Preventive Action | Trigger | Contingency |
+|---|---|---|---|
+| R-001 | Agree identity-provider certification plan | Certification forecast threatens test start | Assess resequencing and alternative testing |
+| R-002 | Conduct data profiling and reconciliation planning | Data quality fails agreed readiness criteria | Assess cleansing and migration-plan changes |
+| R-003 | Define cutover and operational-continuity approach | Readiness criteria are not met | Assess postponement or approved rollback |
 
-Example chain:
+**Management interpretation:** The three risks are proposed for active attention based on potential milestone and business-continuity impact. Final prioritization requires verified scoring and proximity information.
 
-```text
-Sprint / Release Data
-↓
-Delivery Risks
-↓
-Dependency Analysis
-↓
-Release Forecast
-↓
-Stakeholder Update
-```
+**Human checkpoint:** Confirm action ownership, feasible trigger thresholds, escalation arrangements, and whether contingency measures are authorized.
 
-Avoid using AI to replace:
+### Example Output — Stage 4: Weekly Project Status Report
 
-- Product Owner decisions,
-- team estimation,
-- retrospective discussion.
+The original project description does not contain current-week progress or delivery results. A valid report must make that limitation visible.
 
----
+| Report Area | Current Position |
+|---|---|
+| Overall RAG | Insufficient evidence |
+| Progress this week | Not provided |
+| Confirmed completed milestones | Not provided |
+| R-001 Identity-provider risk | Assessment required |
+| R-002 Data-migration risk | Assessment required |
+| R-003 Operational-continuity risk | Assessment required |
+| Current corrective actions | Not provided |
+| Decisions required | Confirm risk ownership and delivery readiness evidence |
 
-# Kanban Considerations
+**Executive Summary**
 
-Example:
+The Enterprise CRM Replacement project has a target go-live of 30 September 2027 and a budget of €2.5 million. The preliminary risk analysis highlights integration, data migration, and operational-continuity exposures. However, no current-week performance evidence has been supplied. The Project Manager must obtain milestone, testing, supplier, and risk updates before assigning an official RAG status or presenting delivery progress.
 
-```text
-Flow Metrics
-↓
-Bottleneck Analysis
-↓
-Root Cause
-↓
-Policy Improvement
-↓
-Service Review Commentary
-```
+**Next-week information priorities:** Obtain the latest integration plan, data-quality assessment, cutover readiness position, and supplier delivery update. These are proposed information-gathering activities, not confirmed delivery commitments.
 
----
+### Cross-Document Consistency Review
 
-# Predictive Considerations
+| Item | Earlier Output | Later Output | Assessment |
+|---|---|---|---|
+| Project budget | €2.5M | €2.5M | Consistent |
+| Target go-live | 30 Sep 2027 | 30 Sep 2027 | Consistent |
+| Identity-provider dependency | Project Brief | R-001 / Status Report | Traceable |
+| Data migration | Risk R-002 | Response Plan / Status Report | Traceable |
+| Continuity requirement | Project Brief | R-003 | Traceable |
+| Risk scores | Not validated | Not asserted | Appropriate |
+| Current project RAG | Not provided | Insufficient evidence | Appropriate |
 
-Example:
+### Management Decisions
 
-```text
-Schedule Data
-↓
-Variance Analysis
-↓
-Critical Dependency Review
-↓
-Recovery Options
-↓
-Steering Committee Decision
-```
+1. **Validate the baseline:** Confirm approved scope, budget, milestones, and integration responsibilities before using the project brief as a reference.
+2. **Prioritize material risks:** Assess likelihood, impact, proximity, and recovery difficulty rather than relying on generic AI scoring.
+3. **Approve response ownership:** Assign accountable roles and validate contingency actions before implementation.
+4. **Control reporting quality:** Require current project evidence before assigning RAG status, declaring progress, or communicating management decisions.
 
----
+### Applied Quality Review
 
-# Hybrid Considerations
+**Quality verdict: REVISE**
 
-Combine:
+**Findings:** The workflow preserves project context and maintains consistent risk identifiers. Risks are linked to response planning and management reporting without converting hypothetical assessments into confirmed facts.
 
-```text
-Delivery data
-+
-Formal project governance
-```
+**Required corrections:** Validate the initial project scope, approve risk assessments and response owners, and supply current weekly progress information.
 
-Example:
+**Approval blockers:** Unconfirmed risk prioritization, incomplete ownership, and missing performance evidence for an official weekly report.
 
-```text
-Sprint / Flow Evidence
-↓
-Project Milestone Impact
-↓
-Management Options
-↓
-Governance Decision
-```
+**Governance:** Supports PMI-aligned planning, risk management, performance monitoring, stakeholder communication, decision-making, and project assurance.
 
----
+### Other Reusable Chains
 
-# Confidentiality
+The same controlled approach can support additional project-management workflows:
 
-The more steps a chained conversation contains, the more project information may accumulate in the AI context.
+| Workflow | Connected Deliverables |
+|---|---|
+| Scope and Change | Requirements → Scope Gap Analysis → Impact Assessment → Steering Decision Paper |
+| Issue Management | Issue → Root Cause Analysis → Recovery Plan → Stakeholder Update |
+| Supplier Evaluation | RFQ Requirements → Supplier Response Review → Clarifications → Procurement Recommendation |
+| Project Initiation | Project Brief → Stakeholder Matrix → RACI → Risk Register → Communication Plan |
+| Release Readiness | Release Scope → Readiness Review → Go / No-Go Assessment → Communication |
+| Data-Informed Reporting | KPI Validation → Trend Analysis → Management Commentary → Actions |
 
-Before starting a chain, consider whether it includes:
+**Core governance principle:** Each major AI-generated deliverable should be reviewed before it informs the next one. Long workflows should include periodic context refreshes and final reconciliation.
 
-- confidential financial data,
-- personal information,
-- security vulnerabilities,
-- contract information,
-- customer data,
-- commercially sensitive vendor information.
-
-Use anonymised or approved environments where necessary.
-
----
-
-# Quality Checklist
-
-Before using chain prompting, confirm:
-
-- [ ] Tasks are logically connected
-- [ ] Shared context is clearly defined
-- [ ] Each step has a clear output
-- [ ] Important outputs are reviewed before reuse
-- [ ] Assumptions are identified
-- [ ] Facts are not silently changed
-- [ ] Context corrections are made explicitly
-- [ ] IDs are used where helpful
-- [ ] Long chains include checkpoints
-- [ ] Final outputs are reconciled
-- [ ] Sensitive information is handled appropriately
-
----
-
-# Key Principle
-
-Chain prompting is not:
-
-```text
-Ask AI many questions.
-```
-
-It is:
-
-```text
-Design a controlled sequence where each validated output
-becomes structured input to the next management task.
-```
-
-That is what turns individual prompts into an **AI-assisted project-management workflow**.
-
----
-
-# Prompt Metadata
-
-```text
-Prompt ID: AIWF-001
-Category: Advanced AI Workflows
-Version: 1.0
-Status: Draft
-Owner: Project Manager / PMO
-Reviewer: Project Manager
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial chain-prompting workflow |
+AI can accelerate project documentation and analysis, but it cannot validate facts independently, authorize decisions, or replace accountable project governance. Use approved environments or anonymized information for confidential financial, contractual, security, supplier, or customer data.

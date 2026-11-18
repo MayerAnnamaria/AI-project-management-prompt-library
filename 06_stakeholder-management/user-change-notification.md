@@ -1,893 +1,432 @@
 # User Change Notification
 
-## Purpose
+**Prompt ID:** STAKE-003 | **Category:** Stakeholder Management | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to create a clear, plain-language notification for users, employees, customers, or business teams who will be affected by an upcoming IT change.
+## 1. Ready-to-Use Prompt
 
-Typical situations include:
+**Purpose:** Communicate upcoming IT changes in clear, actionable language so affected users understand the timing, impact, required actions, and available support.
 
-- system go-live,
-- platform migration,
-- planned downtime,
-- changed login process,
-- new business process,
-- new application rollout,
-- data migration,
-- service interruption,
-- feature retirement,
-- cutover activity.
+**Use case:** Prepare notifications for system launches, platform migrations, planned downtime, login changes, process updates, feature retirement, and other user-facing technology changes.
 
-The objective is to tell affected people:
+Copy the prompt and replace the placeholders with your project information.
 
-- what is changing,
-- why it is changing,
-- when it will happen,
-- how they will be affected,
-- what they need to do,
-- and where they can get help.
-
-The communication should reduce uncertainty without creating unrealistic expectations.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Deployment / Release / Cutover / Change / Migration
-
-**Project type:**  
-Software implementation / SaaS / ERP / Cloud / Infrastructure / Digital Transformation
-
-**Primary user:**  
-Project Manager / Change Lead / Communications Lead / Product Owner
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-Before any material user-facing change
-
----
-
-# Prompt
-
-```text id="user-notification-01"
+```text
 ROLE
 
-You are an experienced IT Project Manager and Change Communications
-specialist preparing a user notification for an upcoming technology
-change.
+You are a Senior IT Project Manager and Change Communications
+Specialist experienced in software deployment, organizational
+change, service transition, and stakeholder communication.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Change type: [GO-LIVE / MIGRATION / DOWNTIME / PROCESS CHANGE]
+Target audience: [USER GROUPS]
+Change description: [WHAT IS CHANGING]
+Business reason: [WHY THE CHANGE IS REQUIRED]
+
+SCHEDULE
+
+Change date: [EXACT DATE]
+Start time: [TIME / TIME ZONE]
+Expected completion: [TIME / TIME ZONE]
+Preparation deadline: [IF APPLICABLE]
+Confirmed timing: [YES / NO]
+
+USER IMPACT
+
+Affected services: [LIST]
+Expected disruption: [DETAILS]
+New functionality / process: [DETAILS]
+Known limitations: [DETAILS]
+Data or access implications: [DETAILS]
+
+USER ACTIONS
+
+Required before change: [LIST / NONE]
+Required during change: [LIST / NONE]
+Required after change: [LIST / NONE]
+
+SUPPORT AND GOVERNANCE
+
+Support contact / channel: [DETAILS]
+Support availability: [HOURS]
+Training / guide / FAQ: [VERIFIED LINK / REFERENCE]
+Communication owner: [ROLE]
+Approval status: [APPROVED / PENDING]
+Audience languages / locations: [IF RELEVANT]
 
 TASK
 
-Write a clear, professional, plain-language notification for the
-affected users described below.
+Create a concise, user-friendly change notification
+that clearly explains what is happening and what
+affected users need to do.
 
-CHANGE CONTEXT
+STEP 1 — IDENTIFY ESSENTIAL INFORMATION
 
-Project:
-[PROJECT NAME]
+1. State what is changing and why.
+2. Explain the exact change date, time,
+   duration, and relevant time zone.
+3. Identify affected users, services, and workflows.
+4. Distinguish confirmed impact from potential disruption.
+5. Include known limitations without minimizing their effect.
 
-Audience:
-[WHO WILL RECEIVE THE MESSAGE]
+STEP 2 — DEFINE USER ACTIONS
 
-Change:
-[WHAT IS CHANGING]
+6. Specify required actions before, during,
+   and after the change.
+7. Highlight preparation deadlines.
+8. State "No action required" when appropriate.
+9. Explain what users should expect after the change.
+10. Provide verified support and training information.
 
-Reason:
-[WHY]
+STEP 3 — ADAPT COMMUNICATION
 
-Date / Time:
-[WHEN]
+11. Use plain language suitable for the audience.
+12. Remove unnecessary technical jargon.
+13. Prioritize practical user impact over project background.
+14. Where appropriate, prepare separate versions for:
+    - End users
+    - Business managers
+    - System administrators
+    - Support teams
+    - External customers or partners
+15. Adjust communication detail to the level of impact:
+    - Low: Short notification
+    - Medium: Notification and instructions
+    - High: Notification, training, manager engagement,
+      and coordinated support
 
-Expected duration:
-[IF APPLICABLE]
+STEP 4 — PLAN COMMUNICATION AND FOLLOW-UP
 
-Expected user impact:
-[DETAILS]
+16. Recommend a proportionate notification cadence:
+    - Early awareness
+    - Detailed preparation
+    - Final reminder
+    - Go-live confirmation
+    - Post-change update
+17. Confirm support readiness before distribution.
+18. Identify how user questions and concerns are handled.
+19. Recommend accessible formats and validated translations
+    where required.
+20. Identify unresolved information that must be confirmed
+    before publication.
 
-Actions users must take:
-[DETAILS]
+RULES
 
-What users should expect:
-[DETAILS]
-
-Known limitations:
-[DETAILS]
-
-Support contact:
-[CONTACT / SUPPORT CHANNEL]
-
-Additional information:
-[LINK / DOCUMENT / FAQ IF APPLICABLE]
-
-OUTPUT REQUIREMENTS
-
-The communication must:
-
-- use plain language,
-- avoid unnecessary technical jargon,
-- explain the change clearly,
-- explain expected impact honestly,
-- avoid over-promising,
-- clearly state user actions,
-- provide support / contact information,
-- remain concise.
+- Do not invent dates, service availability, contacts,
+  migration guarantees, or support commitments.
+- Do not promise a disruption-free implementation.
+- Do not describe unapproved dates as confirmed.
+- Do not minimize known downtime or user impact.
+- Use exact dates and time zones where appropriate.
+- Keep language professional, direct, and accessible.
+- Exclude unnecessary internal or confidential information.
 
 OUTPUT FORMAT
 
-1. Subject
-2. Opening
-3. What Is Changing
-4. When It Will Happen
-5. What This Means for You
-6. What You Need to Do
-7. Support / Questions
-8. Professional Close
+1. USER NOTIFICATION — READY TO SEND
+
+Subject: [SPECIFIC CHANGE AND DATE]
+
+Hello [AUDIENCE],
+
+[What is changing and why]
+
+[When the change will happen]
+
+[What this means for users]
+
+[Actions required and deadlines]
+
+[Known limitations and what to expect]
+
+[Support and contact information]
+
+Kind regards,
+[AUTHORIZED PROJECT TEAM]
+
+2. USER ACTION CHECKLIST
+
+Timing | Required Action |
+Deadline | Affected Group
+
+3. COMMUNICATION PLAN
+
+Audience | Message Purpose |
+Channel | Proposed Timing |
+Responsible Role
+
+4. SUPPORT AND READINESS CHECK
+
+Requirement | Current Status |
+Owner | Action Required
+
+5. USER QUESTIONS AND CONCERNS
+
+Likely Question | Approved Answer /
+Information Required | Support Route
+
+6. PUBLICATION QUALITY CHECK
+
+Information Gap | User Impact |
+Required Validation | Approval Owner
+
+MANAGEMENT SUMMARY
+
+- Main user impact
+- Critical preparation actions
+- Communication timing
+- Known limitations
+- Support readiness
+- Approval blockers
+
+Use concise Markdown tables.
+Separate the user-facing message from internal planning.
+Mark unconfirmed information as "Requires verification".
 ```
 
 ---
 
-# Core Communication Principle
+## 2. Quality Check
 
-Use:
+Use this independent review before distributing the notification.
 
-```text id="change-notification-flow"
-What
-↓
-Why
-↓
-When
-↓
-Impact
-↓
-User Action
-↓
-Support
-```
+```text
+QUALITY CHECK
 
-A user should not have to search through the message to understand what is expected.
+Act as a Senior IT Communications and PMO Quality Reviewer.
 
----
+Review the draft notification against the approved
+change details and intended audience.
 
-# 1. Subject
+Verify:
 
-The subject should tell users exactly what the communication concerns.
+1. Clarity: Users immediately understand what is changing.
+2. Timing: Dates, time zones, deadlines, and
+   expected duration are accurate.
+3. Impact: Service disruption, workflow changes,
+   and known limitations are explained honestly.
+4. Actions: Users know exactly what they must do
+   and when.
+5. Accuracy: No unverified commitments or
+   unsupported guarantees are included.
+6. Audience: Content and detail match the
+   intended recipients.
+7. Support: Contact routes, training,
+   and support availability are confirmed.
+8. Accessibility: Wording, formatting,
+   translations, and channels are appropriate.
+9. Governance: Relevant communication,
+   business, and service approvals are identified.
+10. Usability: The message is concise,
+    easy to scan, and free from unnecessary jargon.
 
-### Weak
+OUTPUT
 
-```text id="notification-subject-weak"
-Important Update
-```
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Unverified Information: [GAPS]
+Publication blockers: [CRITICAL ITEMS]
 
-### Better
-
-```text id="notification-subject-good"
-CRM Upgrade — Planned Service Interruption on 18 November
-```
-
-Or:
-
-```text id="notification-subject-example"
-New Login Process Starts Monday — Action Required
-```
-
----
-
-# 2. Opening
-
-State the change directly.
-
-Example:
-
-```text id="notification-opening"
-We are upgrading the Customer Portal on Saturday, 18 November.
-During the upgrade, the portal will be unavailable between
-18:00 and 22:00 CET.
-```
-
-Avoid unnecessary project background before explaining the user impact.
-
----
-
-# 3. Explain What Is Changing
-
-Keep the explanation concise.
-
-Example:
-
-```text id="notification-change-example"
-The current login process will be replaced with the organisation's
-single sign-on service.
-
-After the change, employees will use their normal corporate account
-to access the application.
+Do not invent organizational commitments,
+confirmed dates, system guarantees, or support details.
 ```
 
 ---
 
-# Avoid Technical Jargon
+## 3. Practical IT Use Case
 
-Avoid:
+### CRM Replacement — Go-Live and User Preparation
 
-```text id="notification-jargon"
-The IdP federation will migrate from legacy SAML authentication to
-the enterprise OIDC implementation.
-```
+**Scenario:** A company is replacing its legacy CRM system. Customer Service employees must complete open customer-record updates before the existing application becomes read-only for weekend data migration.
 
-unless the audience is technical.
+The Project Manager must communicate the transition, expected limitations, and support arrangements in clear language before go-live.
 
-For general users prefer:
+### Project Context
 
-```text id="notification-plain"
-The way you sign in is changing.
+| Attribute | Details |
+|---|---|
+| Project | CRM System Replacement |
+| Phase | Deployment / Cutover |
+| Audience | Customer Service Employees |
+| Go-live | 23 November 2026, 07:00 CET |
+| Legacy CRM read-only | 20 November 2026, 18:00 CET |
+| User preparation deadline | 20 November 2026, 17:00 CET |
+| Change | New CRM replaces existing application |
+| Main concern | Business continuity and user readiness |
+| Support | Dedicated hypercare channel from go-live |
 
-From Monday, you will use your normal company login rather than a
-separate application password.
-```
+### Example Input
 
----
-
-# 4. Explain When
-
-Be precise about:
-
-```text id="notification-timing"
-Date
-
-Start time
-
-Expected completion
-
-Affected time zone
-
-Any preparation deadline
-```
-
-Example:
-
-> The upgrade will begin at 18:00 CET on Saturday, 18 November and is expected to finish by 22:00 CET.
-
----
-
-# Timing Rule
-
-Use absolute dates where possible.
-
-Avoid:
-
-```text id="notification-date-weak"
-Next Friday
-```
-
-Prefer:
-
-```text id="notification-date-good"
-Friday, 20 November
-```
-
-This is especially important for international teams and forwarded messages.
-
----
-
-# 5. Explain the User Impact
-
-Tell users what they should realistically expect.
-
-Possible impacts:
-
-```text id="notification-impact"
-Temporary service unavailability
-
-Login change
-
-Reduced functionality
-
-Slower service
-
-New workflow
-
-Required password reset
-
-Different screen or navigation
-
-Delayed processing
-
-Read-only period
-```
-
----
-
-# Example
-
-```text id="notification-impact-example"
-During the maintenance window you will not be able to create,
-update, or view customer records.
-
-Any work already saved before the maintenance window will remain
-available after the service returns.
-```
-
-Only include the second statement if it has been confirmed.
-
----
-
-# Be Honest About Disruption
-
-Do not minimise a known impact.
-
-### Weak
-
-```text id="notification-minimise"
-You may notice a very small interruption.
-```
-
-when the system will be unavailable for four hours.
-
-### Better
-
-```text id="notification-honest"
-The application will be unavailable during the four-hour
-maintenance window.
-```
-
----
-
-# 6. User Actions
-
-State clearly whether action is required.
-
-Use:
-
-```text id="notification-user-action"
-ACTION REQUIRED
-```
-
-where appropriate.
-
-Example:
-
-```text id="notification-action-example"
-Before Friday:
-
-1. Save any unfinished work.
-2. Log out of the application before 18:00.
-3. Do not schedule customer-data updates during the maintenance
-   window.
-```
-
----
-
-# No Action Required
-
-If users do not need to do anything, say so.
-
-Example:
-
-> No action is required before the upgrade.
-
-This prevents unnecessary questions.
-
----
-
-# 7. Support Information
-
-Provide:
-
-```text id="notification-support"
-Support channel
-
-Support hours
-
-Contact method
-
-Escalation route where appropriate
-
-FAQ / guide
-```
-
-Example:
-
-> If you experience problems after the upgrade, contact the IT Service Desk through [support channel].
-
----
-
-# Support Readiness
-
-Do not send a large-scale change notification before confirming that support teams know:
-
-- what is changing,
-- when,
-- known issues,
-- troubleshooting steps,
-- escalation contacts.
-
----
-
-# Example Input
-
-```text id="notification-example-input"
-Project:
-CRM Replacement
+```text
+Project: CRM System Replacement
 
 Audience:
 Customer Service employees
 
 Change:
-New CRM system will replace the existing application.
+New CRM replaces the current application.
 
 Go-live:
-Monday, 23 November at 07:00 CET.
+Monday, 23 November 2026 at 07:00 CET.
 
-Impact:
-Old system becomes read-only from Friday 20 November at 18:00.
+Legacy system:
+Read-only from Friday, 20 November
+at 18:00 CET.
 
 Data migration:
-Runs during the weekend.
+Scheduled during the weekend.
 
-User action:
-Complete open customer updates before Friday 17:00.
-Do not enter updates after this deadline.
+Required user action:
+Complete and save all open customer-record
+updates before Friday, 20 November at 17:00 CET.
+
+Do not enter further updates after the deadline.
 
 Training:
-Mandatory training has already been scheduled.
+Mandatory employee training has been scheduled.
 
 Support:
-Hypercare support channel available from Monday.
+Dedicated hypercare channel available from Monday.
 
 Known limitation:
-Historical attachments older than five years will be migrated during
-the first week after launch.
+Historical attachments older than five years
+will be migrated during the first week after launch.
+
+Exact support contact:
+Not provided.
+
+Communication approval:
+Pending.
 ```
 
----
+### Example Output — User Change Notification
 
-# Example Output
+#### 1. User Notification — Ready to Send
 
-## Subject
-
-**CRM Go-Live on 23 November — Important Information and Action Required**
+**Subject: New CRM Goes Live on 23 November — Action Required Before Friday**
 
 Hello,
 
-The new CRM system will go live on **Monday, 23 November at 07:00 CET**.
+The new CRM system is scheduled to go live on **Monday, 23 November 2026, at 07:00 CET**, replacing the current application.
 
-As part of the transition, the current CRM will become read-only from **Friday, 20 November at 18:00 CET** while customer data is migrated to the new platform.
+The transition will take place over the weekend, when customer data will be migrated to the new system.
 
-### What you need to do
+**What is changing?**
 
-Please complete and save any open customer-record updates by **17:00 CET on Friday, 20 November**.
+The current CRM will become read-only from **Friday, 20 November, at 18:00 CET**. From that point, you will no longer be able to update customer records in the existing application.
 
-After this deadline, please do not attempt to make further updates in the current CRM.
+**What do you need to do?**
 
-### What to expect
+Please complete and save all open customer-record updates by **17:00 CET on Friday, 20 November**.
 
-From Monday morning, you will use the new CRM for customer-service activities.
+Do not attempt to enter further updates after this deadline.
 
-Historical attachments older than five years may not be immediately available at launch and will continue to be migrated during the first week.
+**What should you expect after go-live?**
 
-### Support
+From Monday morning, you will use the new CRM for your customer-service activities.
 
-A dedicated hypercare support channel will be available from Monday for questions or technical issues.
+Historical attachments older than five years will not all be available immediately at launch. Their migration is scheduled to continue during the first week.
+
+Mandatory training has already been scheduled to help you prepare for the new system.
+
+**Support**
+
+A dedicated hypercare support channel will be available from Monday to assist with questions or technical issues.
+
+The exact support contact will be confirmed before this notification is distributed.
 
 Thank you for your cooperation during the transition.
 
 Kind regards,  
-[Project Team]
+[CRM Project Team]
 
----
+*Draft status: Pending communication approval and confirmation of the support contact.*
 
-# Prompt 2 — Plain-Language Review
+#### 2. User Action Checklist
 
-```text id="notification-plain-review"
-ROLE
-
-You are a communications editor reviewing an IT project
-notification for non-technical users.
-
-TASK
-
-Review the message below.
-
-[PASTE MESSAGE]
-
-Identify:
-
-- technical jargon,
-- unclear wording,
-- missing user actions,
-- unclear dates,
-- vague impact statements,
-- unnecessary project terminology,
-- over-promising.
-
-OUTPUT FORMAT
-
-Original Wording
-Issue
-Recommended Plain-Language Version
-```
-
----
-
-# Prompt 3 — User Perspective Review
-
-```text id="notification-user-review"
-ROLE
-
-You are an employee receiving the notification below without
-detailed knowledge of the project.
-
-TASK
-
-Review the communication from the user's perspective.
-
-[PASTE MESSAGE]
-
-Answer:
-
-1. Do I understand what is changing?
-2. Do I understand when?
-3. Do I understand how I am affected?
-4. Do I know what I need to do?
-5. Do I know where to get help?
-6. What questions would I still have?
-```
-
-This is a useful final quality check before distribution.
-
----
-
-# Prompt 4 — Executive / Manager Version
-
-Managers may need additional context.
-
-```text id="notification-manager"
-ROLE
-
-You are an IT Project Manager preparing a manager briefing for
-an upcoming system change.
-
-TASK
-
-Convert the user notification below into a concise manager briefing.
-
-[PASTE MESSAGE]
-
-Include:
-
-Change
-Business impact
-Timing
-Team action required
-Known risk
-Support arrangements
-Manager responsibilities
-```
-
----
-
-# Notification Timing
-
-Where possible, communicate early enough for affected users to prepare.
-
-Use a staged approach for major changes:
-
-```text id="notification-timing-flow"
-Early Awareness
-↓
-Detailed Preparation
-↓
-Final Reminder
-↓
-Go-Live Communication
-↓
-Post-Go-Live Update
-```
-
-Do not rely only on a last-minute notification.
-
----
-
-# Example Communication Cadence
-
-For a major system launch:
-
-```text id="notification-cadence"
-4 weeks before
-→ Awareness
-
-2 weeks before
-→ Training / preparation
-
-3–5 days before
-→ Final instructions
-
-Day before
-→ Reminder
-
-Go-live day
-→ Launch confirmation
-
-Post-go-live
-→ Known issues / support update
-```
-
-The exact cadence should match project scale and organisational needs.
-
----
-
-# Audience Segmentation
-
-Different users may require different messages.
-
-Examples:
-
-```text id="notification-audience-segments"
-End Users
-
-Managers
-
-System Administrators
-
-Support Teams
-
-External Customers
-
-Vendors
-
-Business Partners
-```
-
-Do not send the same technical detail to every audience automatically.
-
----
-
-# Impact-Based Communication
-
-A stakeholder whose work changes significantly needs more information than someone experiencing only a brief outage.
-
-Use:
-
-```text id="notification-impact-engagement"
-Low Impact
-→ Simple notification
-
-Medium Impact
-→ Notification + guide
-
-High Impact
-→ Notification + training + manager engagement + support
-```
-
----
-
-# Multilingual Communication
-
-Where users work in multiple languages:
-
-```text id="notification-language"
-Define the official source version.
-
-Translate approved content.
-
-Validate technical terminology.
-
-Keep dates and actions consistent across versions.
-
-Provide the same support route.
-```
-
-Do not rely on automatic translation for high-impact communications without appropriate review.
-
----
-
-# Accessibility
-
-Consider:
-
-- readable language,
-- accessible document formats,
-- descriptive links,
-- captions for supporting videos,
-- accessible training materials.
-
----
-
-# User Concern Management
-
-Users may reply with questions or concerns.
-
-Define:
-
-```text id="notification-concerns"
-Where questions go
-
-Who owns responses
-
-How common questions become FAQs
-
-How material concerns are escalated
-```
-
----
-
-# Avoid Over-Promising
-
-Avoid:
-
-```text id="notification-overpromise"
-There will be no disruption.
-
-The migration will be completely seamless.
-
-You will not experience any issues.
-```
-
-unless this can genuinely be guaranteed.
-
-Prefer:
-
-```text id="notification-realistic"
-We have planned the migration to minimise disruption.
-
-Support will be available if you experience issues after go-live.
-```
-
----
-
-# Agile / Scrum Considerations
-
-For frequent product releases:
-
-- avoid excessive communication for minor internal changes,
-- highlight user-impacting changes,
-- use release notes where appropriate,
-- communicate material changes separately.
-
----
-
-# Kanban / Service Considerations
-
-For service changes, notifications may relate to:
-
-- maintenance,
-- service interruption,
-- new request processes,
-- SLA changes,
-- support-channel changes.
-
----
-
-# Predictive Considerations
-
-Large implementation programmes may require structured change communications linked to:
-
-- milestones,
-- training,
-- cutover,
-- operational readiness,
-- go-live.
-
----
-
-# Hybrid Considerations
-
-Use lightweight release communication for routine delivery while maintaining formal communication for material business changes.
-
----
-
-# Communication Quality Checklist
-
-Before distribution, confirm:
-
-- [ ] Audience is correct
-- [ ] Subject is specific
-- [ ] Change is clear
-- [ ] Reason is understandable
-- [ ] Date and time are precise
-- [ ] Time zone is provided where required
-- [ ] User impact is honest
-- [ ] Required action is explicit
-- [ ] Deadline is explicit
-- [ ] Support route is provided
-- [ ] Known limitations are included
-- [ ] Technical jargon has been removed
-- [ ] Claims are accurate
-- [ ] No unrealistic promises are made
-- [ ] Support team is prepared
-- [ ] Translation is reviewed where required
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- stakeholder engagement,
-- communication,
-- organisational change,
-- transition,
-- governance.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- stakeholders,
-- communication,
-- delivery,
-- value.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Material user communications should be reviewed by the appropriate:
-
-- Project Manager
-- Change Lead
-- Business Owner
-- Communications team
-- Service Management
-- Legal / Compliance where applicable
-
-AI can help create clear and consistent wording.
-
-It should not independently determine what commitments the organisation should make to users.
-
----
-
-# Confidentiality
-
-Do not include confidential internal project information in broad user communications.
-
-Avoid unnecessarily exposing:
-
-- internal disputes,
-- security vulnerabilities,
-- vendor problems,
-- confidential commercial details,
-- personal information.
-
-Communicate what the audience needs to know.
-
----
-
-# Prompt Metadata
-
-```text id="notification-metadata"
-Prompt ID: STAKE-003
-Category: Stakeholder Management
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Change Lead
-Reviewer: Business Owner / Communications
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Timing | Required Action | Affected Group |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT user-change notification framework |
+| Before 20 Nov, 17:00 CET | Complete and save open customer updates | Customer Service |
+| After 20 Nov, 17:00 CET | Do not enter further updates | Customer Service |
+| From 20 Nov, 18:00 CET | Legacy CRM becomes read-only | All CRM users |
+| Weekend, 21–22 Nov | Data migration | Project / Technical Teams |
+| 23 Nov, 07:00 CET | Begin using new CRM | Customer Service |
+| After go-live | Use hypercare support for issues | All affected users |
+
+#### 3. Communication Plan
+
+| Audience | Message Purpose | Recommended Timing | Proposed Owner |
+|---|---|---|---|
+| Customer Service Employees | Change awareness and preparation | Before cutover | Change Lead |
+| Team Managers | Confirm team readiness | Before preparation deadline | Business Owner |
+| IT Service Desk | Prepare support procedures | Before go-live | Service Manager |
+| Employees | Final action reminder | Before 20 November | Change Lead |
+| All CRM Users | Go-live confirmation | After verified availability | Project Team |
+| Affected Users | Known issues and support update | After go-live | Service Manager |
+
+The exact communication cadence should be agreed with the business and communications teams.
+
+#### 4. Support and Readiness Check
+
+| Requirement | Current Status | Required Action |
+|---|---|---|
+| Go-live schedule | Provided | Confirm approved release schedule |
+| User action deadline | Provided | Verify against cutover plan |
+| Training | Scheduled | Confirm attendance and material availability |
+| Hypercare support | Planned | Confirm channel, staffing, and hours |
+| Historical attachments | Delayed migration planned | Confirm user-facing limitation |
+| Service Desk readiness | Not provided | Brief support personnel |
+| Notification approval | Pending | Obtain authorized sign-off |
+
+#### 5. User Questions and Concerns
+
+| Likely Question | Response / Required Information |
+|---|---|
+| When will the new CRM be available? | Scheduled for 23 November at 07:00 CET |
+| Can I update the old CRM during the weekend? | No. It will be read-only from 20 November at 18:00 CET |
+| What happens to unfinished customer updates? | Complete and save them by 20 November at 17:00 CET; handling of unfinished changes requires confirmation |
+| Will all old attachments be available immediately? | No. Attachments older than five years are scheduled to migrate during the first week |
+| Where can I report an issue? | Dedicated hypercare channel; exact contact must be confirmed |
+| What if the migration takes longer? | Contingency communication and revised access timing must be confirmed by the project team |
+
+#### 6. Publication Quality Check
+
+| Item | Assessment | Required Correction |
+|---|---|---|
+| Change description | Clear | None |
+| User actions | Clear | None |
+| Key dates | Provided | Confirm release approval |
+| Service limitations | Explicit | Validate migration commitment |
+| Support contact | Missing | Add verified channel |
+| Support availability | Not confirmed | Confirm operating hours |
+| Communication approval | Pending | Obtain sign-off |
+| Contingency messaging | Not provided | Confirm delay communication process |
+
+### Management Decisions
+
+1. **Cutover readiness:** Confirm that the release plan and user preparation deadlines are approved.
+2. **Support readiness:** Validate the hypercare channel, staffing, availability, and escalation process before notification.
+3. **Business communication:** Approve the user message and ensure managers understand their responsibilities.
+4. **Contingency:** Prepare a communication approach if go-live timing or data availability changes.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The communication clearly explains the system change, cutover timeline, required user actions, and known attachment limitation. However, the support contact, service hours, notification approval, and contingency instructions remain unconfirmed.
+
+**Required corrections:**
+- Confirm the release schedule and cutover dates.
+- Provide the verified support contact and availability.
+- Validate the historical attachment migration statement.
+- Confirm the contingency communication process.
+- Obtain final communication approval.
+
+**Publication blockers:** Missing support details and pending authorized approval.
+
+**Governance:** Supports PMI-aligned stakeholder communication, organizational change, operational readiness, deployment planning, and project governance.
+
+AI-assisted notifications should be reviewed by authorized project and business stakeholders. They must not introduce unsupported service guarantees, unapproved delivery commitments, or confidential information.

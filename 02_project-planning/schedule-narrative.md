@@ -1,482 +1,338 @@
 # Schedule Narrative
 
-## Purpose
+**Prompt ID:** PLAN-002 | **Category:** Project Planning | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert project milestones, delivery dates, dependencies, and planning data into a concise professional schedule narrative.
+## 1. Ready-to-Use Prompt
 
-The narrative should explain:
+**Purpose:** Translate project schedule data into a clear management narrative explaining delivery logic, milestone dependencies, schedule risks, and required decisions.
 
-- overall delivery timing,
-- major phases or workstreams,
-- key milestones,
-- critical dependencies,
-- sequencing logic,
-- schedule risks,
-- and recovery considerations.
+**Use case:** Prepare schedule commentary for weekly project status reports, steering committee reviews, release planning, or recovery discussions when milestones or dependencies are at risk.
 
-The objective is not to repeat a Gantt chart in prose.
+Copy the prompt and replace the placeholders with your project information.
 
-The objective is to explain the **logic behind the schedule**.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery
-
-**Project type:**  
-Software implementation / Digital transformation / Data project / Infrastructure / ERP / System migration / Hybrid programme
-
-**Primary user:**  
-Project Manager / Project Coordinator / Delivery Manager / PMO
-
-**Delivery approach:**  
-Predictive / Hybrid / Agile where milestone-based reporting is required
-
-**Recommended frequency:**  
-At baseline planning, major re-planning events, and governance reporting
-
----
-
-# Prompt
-
-```text id="schedule-01"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, project planning, dependency management,
-delivery governance, and executive reporting.
+You are a Senior IT Project Manager specializing in software delivery,
+schedule management, dependency analysis, delivery forecasting,
+risk management, and executive reporting.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Planned start: [DATE]
+Target completion: [DATE]
+Major phases / workstreams: [LIST]
+Milestones and planned dates: [LIST]
+Actual / forecast milestone dates: [IF AVAILABLE]
+Internal dependencies: [LIST]
+External dependencies: [LIST]
+Schedule constraints: [LIST]
+Current schedule status: [ON TRACK / AT RISK / DELAYED / UNKNOWN]
+Known variances: [DETAILS]
+Recovery actions: [IF AVAILABLE]
+Schedule baseline: [APPROVED / DRAFT / NOT DEFINED]
 
 TASK
 
-Write a professional schedule narrative from the project planning
-information below.
+Create a professional Schedule Narrative from the available information.
 
-PROJECT CONTEXT
+1. Summarize the overall timeline, delivery status, and target completion.
+2. Explain major phases, workstreams, and milestone sequencing.
+3. Identify dependencies influencing milestone achievement.
+4. Explain parallel activities, handoffs, and coordination requirements.
+5. Identify the critical path only where sufficient schedule
+   logic and duration data are available; otherwise flag
+   potentially critical dependencies.
+6. Assess milestone variances against the available baseline.
+7. Identify schedule risks, causes, impacts, and early warning indicators.
+8. Assess constraints, external dependencies, and approval lead times.
+9. Evaluate recovery options, including re-sequencing,
+   parallel delivery, resource adjustments, or scope changes.
+10. Identify risks, trade-offs, and approval requirements
+    associated with proposed recovery actions.
+11. Classify schedule health as GREEN, AMBER, or RED,
+    supported by available evidence.
+12. Recommend management actions and decisions required
+    to protect or revise the delivery commitments.
 
-Project:
-[PROJECT NAME]
-
-Business objective:
-[BUSINESS OBJECTIVE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Planned start:
-[DATE]
-
-Target completion:
-[DATE]
-
-Major phases / workstreams:
-[LIST]
-
-Key milestones:
-[LIST WITH DATES]
-
-Critical dependencies:
-[LIST]
-
-External dependencies:
-[LIST]
-
-Known schedule risks:
-[LIST]
-
-Known constraints:
-[LIST]
-
-Current schedule status:
-[ON TRACK / AT RISK / DELAYED]
-
-Known variance:
-[DETAILS]
-
-Recovery actions:
-[IF AVAILABLE]
+Explain why dates and dependencies matter.
+Do not simply repeat a milestone list.
+Do not invent dates, durations, schedule float, or recovery capacity.
+Distinguish confirmed plans from forecasts and assumptions.
+Adapt the narrative to the stated delivery approach.
 
 OUTPUT FORMAT
 
-Write a professional schedule narrative covering:
+1. SCHEDULE NARRATIVE
+   Write concise management commentary covering:
+   - Overall timeline and delivery status
+   - Major phases and milestones
+   - Sequencing and parallel work
+   - Critical dependencies
+   - Current variances and risks
+   - Recovery approach and required decisions
 
-1. Overall timeline
-2. Major phases or workstreams
-3. Key milestones
-4. Sequencing logic
-5. Critical dependencies
-6. Areas of overlap or parallel delivery
-7. Current schedule risk
-8. Recovery or mitigation approach
-9. Key decisions required
+2. MILESTONE STATUS
+   Milestone | Baseline Date | Forecast Date |
+   Variance | Status | Owner
 
-Use concise professional language suitable for:
+3. CRITICAL DEPENDENCIES
+   Dependency | Required By | Owner |
+   Current Status | Impact if Late
 
-- project governance,
-- steering committee reporting,
-- PMO review,
-- sponsor communication.
+4. SCHEDULE RISKS
+   Risk | Cause | Potential Impact |
+   Early Warning Indicator | Mitigation | Owner
+
+5. SCHEDULE HEALTH
+   GREEN: Major milestones achievable under the current plan.
+   AMBER: Delivery remains potentially achievable but requires
+          active mitigation or resolution of material dependencies.
+   RED: Current commitments are not achievable without
+        significant intervention or formal change.
+
+   Provide Status | Rationale | Confidence.
+
+   If evidence is insufficient, report "Not assessable"
+   rather than assigning an unsupported health status.
+
+6. RECOVERY OPTIONS
+   Option | Expected Benefit | Risk / Trade-Off |
+   Decision Owner | Recommendation
+
+7. MANAGEMENT DECISIONS
+   Decision Required | Priority | Proposed Owner |
+   Required By | Expected Outcome
+
+Use concise Markdown tables.
+Mark missing information as "Not yet defined".
+Label unapproved recovery actions and revised dates as proposed.
 ```
 
 ---
 
-# Schedule Narrative Principles
+## 2. Quality Check
 
-A good schedule narrative should explain **why the dates matter**.
+Apply this control after generating the Schedule Narrative.
 
-Avoid simply writing:
+```text
+QUALITY CHECK
 
-```text id="schedule-weak"
-Requirements finish in March.
-Development finishes in June.
-Testing finishes in August.
-Go-live is in September.
+Act as a Senior QA Manager and review the Schedule Narrative.
+
+Verify:
+
+1. Accuracy: Dates, milestone sequences, and variances are consistent
+   with the provided schedule data.
+2. Completeness: Major milestones, dependencies, risks,
+   recovery options, and management decisions are covered.
+3. Schedule Logic: Dependencies, parallel activities, and
+   potentially critical delivery paths are explained correctly.
+4. Evidence: Baselines, forecasts, schedule health, and
+   critical-path claims are supported by available information.
+5. Risk: Material schedule threats and early warning indicators
+   are identified.
+6. Feasibility: Recovery recommendations consider capacity,
+   quality, cost, dependencies, and approval requirements.
+7. Governance: Re-baselining, scope changes, and delivery
+   commitments are subject to appropriate authorization.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [UNRESOLVED CRITICAL ITEMS]
+
+Do not invent dates, float, dependencies, or recovery capacity.
+Flag schedule conclusions requiring stakeholder validation.
 ```
 
-Prefer:
-
-```text id="schedule-strong"
-Requirements and solution design are planned to complete by the end
-of March, enabling the core development phase to begin in April.
-
-Integration work will overlap with configuration from May onward,
-with system integration testing dependent on completion of the
-CRM and identity-management interfaces.
-
-UAT is planned for August and remains dependent on successful SIT
-completion and business-user availability.
-
-The September go-live therefore remains primarily exposed to
-integration readiness and UAT completion.
-```
-
 ---
 
-# Critical Path / Critical Dependency Logic
+## 3. Practical IT Use Case
 
-Where applicable, identify the chain of activities that directly affects the target completion date.
+### Software Development — API Integration Delay Before Release
 
-For IT projects, this may include:
+**Scenario:** A software team is developing new reporting functionality for a web application. Frontend development is progressing as planned, but an API integration delay is threatening the start of system integration testing (SIT).
 
-```text id="schedule-critical"
-Requirements approval
-↓
-Solution design
-↓
-Build / configuration
-↓
-Integration
-↓
-System testing
-↓
-UAT
-↓
-Production readiness
-↓
-Go-live
-```
+The Project Manager must explain the schedule implications to stakeholders and recommend recovery actions before the planned release.
 
-However, do not automatically assume that every project follows this sequence.
+### Project Context
 
-Use the actual delivery context.
+| Attribute | Details |
+|---|---|
+| Project | Web Application Reporting Enhancement |
+| Phase | Development / Integration |
+| Delivery approach | Scrum with release milestones |
+| Planned start | 1 March 2027 |
+| Target release | 30 June 2027 |
+| Current reporting date | 10 May 2027 |
+| Team | 4 Developers, 2 QA Engineers, 1 Product Owner, 1 Project Manager |
+| Critical dependency | Backend reporting API |
+| Known issue | API completion forecast two weeks later than planned |
+| Management decision | Determine whether the release date remains achievable and identify recovery actions |
 
----
+### Example Input
 
-# Delivery-Approach Considerations
+```text
+Project: Web Application Reporting Enhancement
 
-## Predictive
+Business objective:
+Deliver enhanced reporting functionality to business users.
 
-The narrative may focus on:
-
-- baseline dates,
-- critical path,
-- milestone variance,
-- schedule float,
-- sequencing,
-- recovery planning.
-
-## Agile / Scrum
-
-Focus on:
-
-- release roadmap,
-- Sprint or iteration cadence,
-- major release goals,
-- cross-team dependencies,
-- backlog readiness,
-- integration milestones.
-
-Avoid treating Sprint plans as fixed long-term commitments.
-
-## Kanban
-
-Do not force flow-based delivery into a traditional milestone narrative.
-
-Where relevant, focus on:
-
-- service delivery expectations,
-- major external commitments,
-- flow constraints,
-- blocked work,
-- lead-time trends,
-- delivery forecasts.
-
-## Hybrid
-
-Explain the relationship between:
-
-- governance milestones,
-- iterative delivery,
-- release cadence,
-- vendor commitments,
-- regulatory or business deadlines.
-
----
-
-# Dependency Analysis
-
-For major dependencies, provide:
-
-| Dependency | Required By | Owner | Current Status | Schedule Impact if Late |
-|---|---|---|---|---|
-
-Possible dependency types:
-
-- Business
-- Technical
-- Vendor
-- Security
-- Data
-- Infrastructure
-- Regulatory
-- Environment
-- Resource
-
----
-
-# Schedule Risk Review
-
-After writing the narrative, identify the main threats to schedule performance.
-
-Use:
-
-| Schedule Risk | Cause | Potential Impact | Early Warning Indicator | Mitigation | Owner |
-|---|---|---|---|---|---|
-
-Focus on risks that can affect major milestones or delivery commitments.
-
----
-
-# Example Input
-
-```text id="schedule-example-input"
-Project:
-CRM Replacement
-
-Delivery Approach:
-Hybrid
-
-Planned Start:
-1 February 2027
-
-Target Go-Live:
-1 October 2027
+Delivery approach: Scrum
+Planned start: 1 March 2027
+Target release: 30 June 2027
+Reporting date: 10 May 2027
 
 Milestones:
-Requirements approval — 31 March
-Solution design approval — 30 April
-Configuration complete — 30 June
-System Integration Testing complete — 31 July
-UAT complete — 31 August
-Production readiness approval — 20 September
-Go-live — 1 October
+Requirements approval — 15 March (completed)
+Frontend development — 30 April (completed)
+Backend API completion — 15 May (forecast 29 May)
+System Integration Testing — 16 May to 5 June
+User Acceptance Testing — 8 June to 19 June
+Release readiness approval — 25 June
+Production release — 30 June
 
 Dependencies:
-CRM vendor configuration
-Customer data migration
-Telephony integration
-Security approval
-Business-user availability for UAT
+- Frontend integration requires the reporting API.
+- SIT requires integrated functionality.
+- UAT requires completion of relevant integration tests.
+- Production release requires UAT and release readiness approval.
 
-Known Risk:
-Data cleansing is two weeks behind plan.
+Known schedule risk:
+Backend API completion is forecast two weeks late.
 
-Constraint:
-Security review requires four weeks.
+Constraints:
+- QA team has limited availability.
+- Release target is linked to a business reporting cycle.
+- Additional development capacity is not confirmed.
+
+Current status:
+At risk.
+
+Recovery options under consideration:
+- Prioritize critical API endpoints.
+- Prepare integration tests using mocks.
+- Review opportunities for parallel testing.
+- Defer non-critical reporting features, subject to approval.
 ```
 
----
+### Example Output — Schedule Narrative
 
-# Example Output
+#### 1. Schedule Narrative
 
-## Schedule Narrative
+The Web Application Reporting Enhancement project is scheduled for delivery between **1 March and 30 June 2027**, with the production release aligned to the business reporting cycle.
 
-The CRM replacement programme is planned to run from February to October 2027, with production deployment targeted for 1 October.
+Requirements approval and frontend development are complete. However, backend API completion is now forecast for **29 May**, compared with the planned date of **15 May**, creating a 14-calendar-day variance.
 
-Requirements approval is planned for the end of March, followed by solution-design approval at the end of April. Configuration and integration activities will proceed through June, with System Integration Testing scheduled for July.
+System Integration Testing was scheduled to begin on 16 May. Because integrated functionality depends on the reporting API, the forecast delay threatens the original testing window.
 
-UAT is planned for August and is dependent on successful completion of integration testing, sufficiently migrated test data, and business-user availability. Production readiness activities will then run through September, including final security approval and operational preparation.
+Preparation of test data, integration test cases, and mock-based testing may proceed in parallel, subject to technical feasibility. However, these activities cannot fully replace testing against the completed production-intended API.
 
-The main schedule risk is currently associated with data cleansing, which is approximately two weeks behind plan. If this delay affects migration readiness for SIT or UAT, the October go-live could be placed at risk. The recovery plan should therefore prioritise data-quality remediation and confirm whether migration preparation can proceed in parallel with remaining cleansing activities.
+UAT is planned for 8–19 June, followed by release readiness approval on 25 June. The available schedule leaves limited time to absorb additional integration or testing delays.
 
----
+**Schedule assessment:** AMBER — the June release may remain achievable, but only if the integration impact is contained and an evidence-based recovery plan is agreed.
 
-# Schedule Health Classification
+The immediate priority is to validate API readiness, reassess the testing sequence, and confirm whether critical functionality can be completed without compromising release quality.
 
-After the narrative, classify schedule health:
+#### 2. Milestone Status
 
-```text id="schedule-health"
-GREEN
-Major milestones achievable with current plan.
+| Milestone | Baseline Date | Forecast Date | Variance | Status | Proposed Owner |
+|---|---|---|---|---|---|
+| Requirements approval | 15 Mar | 15 Mar | 0 days | Complete | Product Owner |
+| Frontend development | 30 Apr | 30 Apr | 0 days | Complete | Development Lead |
+| Backend API completion | 15 May | 29 May | +14 calendar days | Delayed forecast | Backend Lead |
+| SIT completion | 5 Jun | TBD | Not assessable | At risk | QA Lead |
+| UAT completion | 19 Jun | TBD | Not assessable | At risk | Product Owner |
+| Release readiness approval | 25 Jun | TBD | Not assessable | At risk | Authorized approver TBD |
+| Production release | 30 Jun | TBD | Not assessable | At risk | Release authority TBD |
 
-AMBER
-Milestones remain achievable but require active management,
-recovery actions, or resolution of material dependencies.
+*The milestone dates are supplied planning dates; formal baseline approval and proposed ownership require confirmation.*
 
-RED
-Current plan is no longer achievable without re-baselining,
-scope change, additional capacity, or governance intervention.
-```
+#### 3. Critical Dependencies
 
-Provide the status and one-sentence rationale.
+| Dependency | Required By | Proposed Owner | Current Status | Impact if Late |
+|---|---|---|---|---|
+| Backend reporting API | SIT start | Backend Lead | Forecast delayed | Integrated testing cannot begin as planned |
+| API integration | SIT completion | Development Lead | At risk | Testing window may be compressed |
+| SIT completion | UAT start | QA Lead | At risk | UAT start may be delayed |
+| Business-user availability | UAT period | Product Owner | Not confirmed | UAT completion may slip |
+| Release readiness approval | 25 Jun | TBD | Pending | Production release cannot proceed without approval |
 
----
+The backend API is a potentially critical schedule dependency. A formal critical-path assessment requires validated activity relationships, durations, and available float.
 
-# Recovery Analysis
+#### 4. Schedule Risks
 
-If the project is delayed or at risk, assess possible recovery options.
+| Risk | Cause | Potential Impact | Early Warning Indicator | Mitigation | Proposed Owner |
+|---|---|---|---|---|---|
+| API delivery delay | Backend development behind plan | SIT delay | Critical endpoints incomplete | Prioritize API functionality | Backend Lead |
+| Compressed testing | Reduced available SIT window | Undetected defects | Falling test completion rate | Re-sequence eligible tests | QA Lead |
+| UAT delay | Late SIT completion | Release approval delay | UAT entry criteria not met | Confirm UAT readiness plan | Product Owner |
+| Resource constraint | Limited QA capacity | Testing backlog | Growing unexecuted test cases | Review capacity and priorities | Project Manager |
+| Release quality risk | Accelerated delivery | Production defects | Unresolved critical defects | Maintain release quality gates | QA Lead |
 
-Examples:
+#### 5. Schedule Health
 
-```text id="schedule-recovery"
-Parallelise eligible activities
-Re-sequence work
-Reduce dependency waiting time
-Add temporary capacity
-Prioritise critical deliverables
-Defer non-critical scope
-Accelerate vendor decisions
-Resolve approval bottlenecks
-Change release sequencing
-```
+| Assessment | Result |
+|---|---|
+| Schedule status | AMBER |
+| Primary concern | API completion forecast 14 calendar days late |
+| Milestone exposure | SIT, UAT, release readiness |
+| Recovery feasibility | Not yet validated |
+| Assessment confidence | Limited — downstream forecasts and float unavailable |
 
-For each recovery option identify:
+**Rationale:** The release target has not yet been demonstrated to be unachievable, but the known integration delay threatens the testing sequence and requires immediate mitigation.
 
-| Option | Potential Benefit | Risk / Trade-Off | Decision Owner |
-|---|---|---|---|
+#### 6. Recovery Options
 
-Do not recommend acceleration without identifying the corresponding risk.
+| Option | Potential Benefit | Risk / Trade-Off | Proposed Decision Owner | Recommendation |
+|---|---|---|---|---|
+| Prioritize critical API endpoints | Enables earlier integration of essential functionality | Remaining functionality may be delayed | Product Owner / Development Lead | Assess feasibility |
+| Prepare tests using mocks | Reduces testing preparation time | Does not replace real integration validation | QA Lead | Proceed where appropriate |
+| Parallelize eligible testing | Reduces sequential waiting | Requires coordination and sufficient QA capacity | QA Lead | Validate capacity |
+| Add temporary development capacity | May improve delivery throughput | Onboarding overhead and additional cost | Project Sponsor | Assess only if justified |
+| Defer non-critical features | Protects essential release scope | Reduces delivered functionality | Product Owner / Authorized Approver | Consider through scope governance |
 
----
+Recovery actions must not bypass mandatory testing, security review, or release approval.
 
-# Quality Review
+#### 7. Management Decisions
 
-Before finalising the schedule narrative, verify:
+| Decision Required | Priority | Proposed Owner | Required By | Expected Outcome |
+|---|---|---|---|---|
+| Confirm API delivery forecast | High | Backend Lead | Immediately | Reliable integration date |
+| Reassess SIT and UAT sequencing | High | QA Lead / Project Manager | Before revised test planning | Updated delivery forecast |
+| Validate testing capacity | High | Project Manager | Before recovery commitment | Feasible recovery plan |
+| Review potential scope deferral | High | Product Owner | Before release scope decision | Agreed essential functionality |
+| Confirm release feasibility | High | Authorized Release Authority | Before release readiness approval | Evidence-based go/no-go decision |
 
-- [ ] Dates are internally consistent
-- [ ] Major milestones are included
-- [ ] Dependencies are explicit
-- [ ] Schedule risks are visible
-- [ ] Assumptions are not presented as facts
-- [ ] Parallel work is explained
-- [ ] Critical delivery logic is understandable
-- [ ] Variances are clearly stated
-- [ ] Recovery actions are realistic
-- [ ] Decision requirements are visible
+### Management Decisions
 
----
+1. **Integration priority:** Confirm the API completion forecast and whether critical endpoints can be delivered earlier.
+2. **Testing feasibility:** Validate the revised SIT and UAT schedule without reducing mandatory quality controls.
+3. **Recovery approach:** Select feasible mitigation measures based on capacity, cost, and delivery risk.
+4. **Release governance:** Confirm whether the 30 June release remains achievable or requires a formally approved change.
 
-# Standards / Framework Alignment
+### Applied Quality Review
 
-## PMI / PMP Relevance
+**Quality verdict: REVISE**
 
-Relevant themes may include:
+**Findings:** The narrative identifies the API delay and its likely downstream effects. However, the recovery feasibility, revised testing dates, activity float, and release approval authority remain unconfirmed.
 
-- schedule management,
-- planning,
-- dependency management,
-- forecasting,
-- risk management,
-- stakeholder communication,
-- governance.
+**Required corrections:**
+- Validate the revised API completion estimate.
+- Recalculate SIT and UAT forecasts using actual dependencies and capacity.
+- Confirm business-user and QA availability.
+- Assess recovery options against quality and cost constraints.
+- Confirm release decision authority and any change-control requirements.
 
-## PMBOK Relevance
+**Approval blockers:** Unvalidated recovery schedule, incomplete downstream milestone forecasts, and unconfirmed release authority.
 
-This prompt supports:
+**Governance:** This prompt supports relevant PMI-aligned practices in schedule planning, milestone control, dependency management, forecasting, risk management, and project governance.
 
-- planning,
-- schedule,
-- delivery,
-- measurement,
-- risk,
-- governance.
-
-## Delivery Framework
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
-The level of schedule detail should match the delivery method.
-
----
-
-# Human Review Required
-
-Validate the narrative with relevant stakeholders, including:
-
-- Project Manager
-- Delivery Lead
-- Technical Lead
-- Product Owner where relevant
-- QA Lead
-- Vendor leads
-- PMO
-- Business Owner where business milestones are affected
-
-AI-generated schedule commentary should never replace the approved schedule or source planning data.
-
----
-
-# Confidentiality
-
-Do not include:
-
-- confidential contract dates where restricted,
-- commercially sensitive vendor commitments,
-- protected financial information,
-- security-sensitive deployment information,
-- personal data.
-
-Use anonymised dates or project names where required.
-
----
-
-# Prompt Metadata
-
-```text id="schedule-metadata"
-Prompt ID: PLAN-002
-Category: Project Planning
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Delivery Lead / PMO
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Low
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT schedule narrative framework |
+The Schedule Narrative is a management reporting artifact, not a replacement for the approved project schedule. Delivery forecasts, recovery actions, and changed commitments require validation by the Project Manager, Delivery Lead, QA Lead, and relevant governance authorities. Protect confidential project, contractual, financial, and security-sensitive information.

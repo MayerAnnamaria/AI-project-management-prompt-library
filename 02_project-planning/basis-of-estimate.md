@@ -1,666 +1,374 @@
 # Basis of Estimate
 
-## Purpose
+**Prompt ID:** PLAN-004 | **Category:** Project Planning | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert project cost data, vendor estimates, resource assumptions, and contingency into a professional Basis of Estimate.
+## 1. Ready-to-Use Prompt
 
-The objective is to explain:
+**Purpose:** Establish a transparent, evidence-based cost estimate to support project budgeting, financial risk management, and investment decisions.
 
-- how the estimate was created,
-- what information it is based on,
-- which assumptions affect the estimate,
-- what is included,
-- what is excluded,
-- why contingency has been applied,
-- and where financial uncertainty remains.
+**Use case:** Evaluate cost assumptions, vendor quotations, contingency, and budget completeness when preparing funding requests, revising estimates, or reviewing major scope changes.
 
-A strong Basis of Estimate should make the project budget easier to review, challenge, update, and govern.
+Copy the prompt and replace the placeholders with your project information.
 
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Business Case / Budget Approval
-
-**Project type:**  
-Software implementation / Digital transformation / Data project / Cloud migration / Infrastructure / ERP / Product initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / PMO / Cost Owner / Finance Business Partner
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At initial budgeting, major re-estimation points, scope changes, and governance reviews
-
----
-
-# Prompt
-
-```text id="boe-01"
+```text
 ROLE
 
-You are a senior IT Project Manager with experience in project
-budgeting, vendor management, resource planning, commercial
-governance, and international software delivery.
+You are a Senior IT Project Manager specializing in project
+cost estimation, resource planning, vendor management,
+financial risk management, and project governance.
 
-TASK
+CONTEXT
 
-Create a professional Basis of Estimate from the project cost
-information below.
-
-PROJECT CONTEXT
-
-Project:
-[PROJECT NAME]
-
-Business objective:
-[OBJECTIVE]
-
-Current phase:
-[PHASE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Estimate maturity:
-[EARLY / PRELIMINARY / DEVELOPED / BASELINED]
-
-Scope maturity:
-[DETAILS]
-
-Target completion:
-[DATE]
-
-Currency:
-[CURRENCY]
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Estimate maturity: [EARLY / PRELIMINARY / DEVELOPED / BASELINED]
+Scope maturity: [DETAILS]
+Target completion: [DATE]
+Currency: [CURRENCY]
 
 COST DATA
 
-Internal labour:
-[VALUE / ASSUMPTIONS]
-
-External development:
-[VALUE]
-
-Software licences:
-[VALUE]
-
-Cloud / infrastructure:
-[VALUE]
-
-Integration costs:
-[VALUE]
-
-Data migration:
-[VALUE]
-
-Testing / QA:
-[VALUE]
-
-Security / compliance:
-[VALUE]
-
-Training / change management:
-[VALUE]
-
-Vendor / consultancy costs:
-[VALUE]
-
-Project management / PMO:
-[VALUE]
-
-Operational transition:
-[VALUE]
-
-Contingency:
-[VALUE / PERCENTAGE]
-
-Other:
-[VALUE]
-
-Total estimated budget:
-[VALUE]
+Internal labour: [VALUE / BASIS]
+External development: [VALUE]
+Software licences: [VALUE]
+Cloud / infrastructure: [VALUE]
+Integrations: [VALUE]
+Data migration: [VALUE]
+Testing / QA: [VALUE]
+Security / compliance: [VALUE]
+Training / change management: [VALUE]
+Vendor / consultancy: [VALUE]
+Project management / PMO: [VALUE]
+Operational transition: [VALUE]
+Contingency: [VALUE / %]
+Other costs: [VALUE]
+Total estimated budget: [VALUE]
 
 ESTIMATING BASIS
 
-[HISTORICAL DATA / VENDOR QUOTATIONS / RATE CARDS /
-EXPERT ESTIMATE / BENCHMARK / BOTTOM-UP ESTIMATE / OTHER]
-
-KNOWN ASSUMPTIONS
-
-[LIST]
-
-KNOWN EXCLUSIONS
-
-[LIST]
-
-KNOWN FINANCIAL RISKS
-
-[LIST]
-
-OUTPUT FORMAT
-
-Create a professional Basis of Estimate with:
-
-1. Estimate Overview
-2. Estimating Methodology
-3. Cost Composition
-4. Key Assumptions
-5. Contingency Rationale
-6. Exclusions
-7. Financial Risks and Uncertainty
-8. Estimate Maturity
-9. Recommended Management Actions
-```
-
----
-
-# Estimating Methodology
-
-The prompt should identify which estimating methods support each major cost category.
-
-Possible methods include:
-
-```text id="boe-methods"
-Vendor quotation
-Internal rate card
-Historical project data
-Benchmark estimate
-Expert judgement
-Bottom-up estimate
-Parametric estimate
-Analogous estimate
-Contracted rate
-Capacity-based forecast
-```
-
-Do not imply that all cost values have the same level of confidence.
-
----
-
-# Cost Confidence Review
-
-For each major cost area, provide:
-
-| Cost Area | Estimate | Estimating Basis | Confidence | Main Uncertainty |
-|---|---:|---|---|---|
-
-Recommended confidence scale:
-
-```text id="boe-confidence"
-High
-Medium
-Low
-```
-
-Example:
-
-| Cost Area | Estimate | Basis | Confidence | Main Uncertainty |
-|---|---:|---|---|---|
-| CRM licences | €180,000 | Vendor quotation | High | User-volume change |
-| Development | €420,000 | Vendor rate card + effort estimate | Medium | Requirements maturity |
-| Data migration | €120,000 | Expert estimate | Low | Unknown data quality |
-
----
-
-# Key Assumptions
-
-Every material financial assumption should be explicit.
-
-Examples:
-
-```text id="boe-assumptions"
-Team size remains stable.
-Vendor day rates remain unchanged.
-Existing cloud infrastructure can be reused.
-No major source-system redesign is required.
-Data cleansing remains within planned effort.
-Required licences are available under current enterprise agreements.
-Business users are available for UAT.
-No additional regulatory requirements emerge.
-```
-
-For each assumption provide:
-
-| Assumption | Cost Impact if Incorrect | Validation Owner | Review Date |
-|---|---|---|---|
-
----
-
-# Contingency Rationale
-
-Contingency should not appear as an unexplained percentage.
-
-Explain what uncertainty it is intended to cover.
-
-Possible drivers include:
-
-- immature requirements,
-- uncertain integration effort,
-- incomplete architecture,
-- unknown data quality,
-- vendor uncertainty,
-- resource availability,
-- security requirements,
-- changing scope,
-- regulatory uncertainty,
-- schedule compression.
-
-Use:
-
-```text id="boe-contingency"
-CONTINGENCY REVIEW
-
-Current contingency:
-[VALUE / %]
-
-Primary uncertainty drivers:
-[LIST]
-
-Estimate maturity:
-[LEVEL]
-
-Scope maturity:
-[LEVEL]
-
-Recommendation:
-[RETAIN / REVIEW / REDUCE / INCREASE / REASSESS]
-
-Rationale:
-[EXPLANATION]
-```
-
-Do not recommend a contingency percentage without supporting project evidence.
-
----
-
-# Exclusions
-
-Explicit exclusions help prevent future budget misunderstandings.
-
-Examples may include:
-
-```text id="boe-exclusions"
-Post-go-live operating costs
-Future feature development
-Additional hardware not yet identified
-Third-party change requests
-New regulatory requirements
-Business-as-usual staffing
-Extended hypercare
-Unplanned data remediation
-Additional licences caused by user growth
-```
-
-For every exclusion, consider whether it represents:
-
-- accepted out-of-scope cost,
-- future project cost,
-- operational cost,
-- or unresolved financial risk.
-
----
-
-# Example Input
-
-```text id="boe-example-input"
-Project:
-CRM Replacement
-
-Current Phase:
-Solution Design
-
-Delivery Approach:
-Hybrid
-
-Estimate Maturity:
-Preliminary
-
-Currency:
-EUR
-
-Costs:
-Internal project team — €300,000
-Implementation vendor — €620,000
-CRM licences — €180,000
-Data migration vendor — €140,000
-Integration development — €160,000
-Testing — €90,000
-Training and change management — €70,000
-Cloud infrastructure — €40,000
-Contingency — €160,000
-
-Total:
-€1,760,000
-
-Estimating Basis:
-Implementation vendor quotation
-Internal rate cards
-CRM licence quotation
-Expert estimate for integrations and migration
-
-Assumptions:
-Customer data quality is acceptable.
-Existing identity platform can be reused.
-No major custom CRM development is required.
-
-Exclusions:
-Post-go-live operating support after hypercare.
-Future CRM enhancements.
-Additional third-party licences.
-```
-
----
-
-# Example Output Excerpt
-
-## Estimate Overview
-
-The preliminary project estimate is €1.76 million and includes implementation, internal delivery resources, software licensing, data migration, integrations, testing, training, cloud infrastructure, and contingency.
-
-The estimate is currently based on a combination of vendor quotations, internal resource rates, and expert estimates. Confidence therefore varies across cost categories.
-
-## Key Uncertainty
-
-The highest financial uncertainty currently relates to data migration and integration effort because both depend on technical discovery and data-quality findings that are not yet complete.
-
-## Contingency
-
-The current contingency should be reviewed against the unresolved integration and data-migration risks before budget approval. It should not be treated as available delivery budget for additional scope.
-
----
-
-# Budget Gap Analysis
-
-After generating the Basis of Estimate, review the budget for missing cost areas.
-
-```text id="boe-gap"
-ROLE
-
-You are a senior IT Project Manager performing a budget
-completeness review.
+Methods: [VENDOR QUOTES / RATE CARDS / HISTORICAL DATA /
+EXPERT JUDGMENT / BOTTOM-UP / PARAMETRIC / ANALOGOUS /
+CAPACITY-BASED / OTHER]
+
+Known assumptions: [LIST]
+Known exclusions: [LIST]
+Financial risks: [LIST]
+Cost drivers: [LIST]
+Approval requirements: [IF KNOWN]
 
 TASK
 
-Review the Basis of Estimate below and identify likely missing
-or insufficiently defined cost categories.
+Create a professional Basis of Estimate from the available information.
 
-[PASTE BASIS OF ESTIMATE]
+1. Summarize the estimated budget, scope, maturity, and cost basis.
+2. Identify the estimating method supporting each major cost category.
+3. Validate cost calculations and reconcile totals, identifying
+   missing, duplicated, or insufficiently defined cost areas.
+4. Assess estimate confidence (High / Medium / Low) and uncertainty.
+5. Document material financial assumptions, validation needs,
+   and potential impacts if assumptions are incorrect.
+6. Evaluate contingency against identified risks, scope maturity,
+   and uncertainty; recommend retaining or reassessing it.
+7. Identify exclusions and classify potential future,
+   operational, or unresolved project costs.
+8. Analyze key cost drivers and scenarios affecting the forecast.
+9. Identify financial risks, vendor dependencies, currency exposure,
+   and potential budget overruns.
+10. Adapt estimates to the delivery approach and distinguish
+    committed costs from forecasts and uncertain future scope.
+11. Identify missing financial information and required validation.
+12. Recommend management actions, approval requirements,
+    and decisions before budget authorization.
 
-Check for:
-
-- licences,
-- cloud costs,
-- environments,
-- infrastructure,
-- data migration,
-- integrations,
-- security,
-- testing,
-- test data,
-- vendor management,
-- training,
-- business change,
-- deployment,
-- hypercare,
-- support transition,
-- contingency,
-- project management,
-- PMO,
-- travel for international teams,
-- currency exposure,
-- taxes where relevant.
+Do not invent costs, rates, percentages, or financial assumptions.
+Do not recommend unsupported contingency levels.
+Distinguish confirmed, estimated, and unverified financial data.
 
 OUTPUT FORMAT
 
-Missing / Unclear Cost
-Why It May Be Required
-Potential Financial Impact
-Clarification Required
-Owner
-Priority
+1. ESTIMATE OVERVIEW
+   Project | Scope | Estimate Maturity | Currency |
+   Base Cost | Contingency | Total Estimate
+
+2. ESTIMATING METHODOLOGY
+   Cost Area | Method | Source / Evidence | Confidence
+
+3. COST COMPOSITION & CONFIDENCE
+   Cost Area | Estimate | Basis | Confidence | Main Uncertainty
+   Include a reconciled total.
+
+4. KEY ASSUMPTIONS
+   Assumption | Cost Impact if Incorrect |
+   Validation Owner | Review Date
+
+5. CONTINGENCY REVIEW
+   Amount / % | Uncertainty Drivers | Adequacy Assessment |
+   Recommendation | Rationale
+
+6. EXCLUSIONS & BUDGET GAPS
+   Exclusion / Missing Cost | Classification |
+   Potential Impact | Required Clarification | Owner | Priority
+
+7. FINANCIAL RISKS & COST DRIVERS
+   Risk / Driver | Change Scenario | Potential Cost Impact |
+   Recommended Response | Owner
+
+8. ESTIMATE MATURITY
+   Scope Maturity | Confidence | Missing Evidence |
+   Recommended Re-estimation Trigger
+
+9. MANAGEMENT ACTIONS
+   Action / Decision | Priority | Proposed Owner |
+   Required Evidence | Approval Authority | Target Date
+
+MANAGEMENT SUMMARY
+
+- Total estimate and reconciliation status
+- Three most significant financial uncertainties
+- Contingency recommendation
+- Missing costs and approval blockers
+- Decisions required before budget approval
+
+Use concise Markdown tables.
+Mark unknown values as "Not yet defined".
+Label proposed owners, forecasts, and approvals as unconfirmed.
 ```
 
 ---
 
-# Cost Driver Analysis
+## 2. Quality Check
 
-Identify the factors most likely to move the estimate.
+Apply this control after generating the Basis of Estimate.
+
+```text
+QUALITY CHECK
+
+Act as a Senior QA Manager and review the Basis of Estimate.
+
+Verify:
+
+1. Accuracy: Calculations, subtotals, contingency, and totals reconcile.
+2. Completeness: Relevant cost categories, exclusions, taxes,
+   currency exposure, and financial dependencies are assessed.
+3. Evidence: Estimating methods, sources, assumptions, and
+   confidence levels are documented and justified.
+4. Risk: Major cost drivers, uncertainties, and contingency
+   rationale are identified without unsupported precision.
+5. Consistency: Scope, resource assumptions, delivery approach,
+   cost forecasts, and estimate maturity are aligned.
+6. Governance: Budget decisions, approval requirements,
+   and accountable stakeholders are identified.
+7. Actionability: Financial gaps have clear corrective actions,
+   priorities, and proposed owners.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
 
 Provide:
+- Findings requiring correction
+- Required corrective actions
+- Budget approval blockers
 
-| Cost Driver | Current Assumption | Change Scenario | Potential Impact | Owner |
-|---|---|---|---|---|
-
-Typical IT cost drivers include:
-
-- delivery duration,
-- vendor effort,
-- number of integrations,
-- data volume,
-- data quality,
-- number of environments,
-- licence volumes,
-- cloud consumption,
-- testing effort,
-- security requirements,
-- amount of customisation.
-
----
-
-# Agile / Scrum Considerations
-
-Where relevant, estimate at the appropriate level.
-
-Possible inputs include:
-
-- stable team cost,
-- expected delivery duration,
-- vendor capacity,
-- release horizon,
-- product roadmap,
-- cloud and licence costs.
-
-Avoid pretending that every future backlog item can be estimated precisely at project initiation.
-
-Instead, distinguish between:
-
-```text id="boe-agile"
-Committed / understood cost
-Forecast cost
-Uncertain future scope
-Contingency
+Do not invent costs, calculations, contractual terms, or approvals.
+Flag financial conclusions requiring independent validation.
 ```
 
 ---
 
-# Kanban Considerations
+## 3. Practical IT Use Case
 
-For flow-based delivery, cost forecasting may consider:
+### Cloud Infrastructure Migration — Budget Approval
 
-- stable team capacity,
-- throughput,
-- service demand,
-- vendor capacity,
-- operational cost,
-- expected delivery horizon.
+**Scenario:** A company plans to migrate business applications from on-premises infrastructure to a cloud platform. The Project Manager must consolidate cost estimates, evaluate vendor and infrastructure assumptions, and determine whether the budget is sufficiently reliable for approval.
 
-Do not convert every work item into a detailed upfront estimate where continuous flow is the actual delivery model.
+### Project Context
 
----
+| Attribute | Details |
+|---|---|
+| Project | Cloud Infrastructure Migration |
+| Phase | Solution Design |
+| Delivery approach | Hybrid |
+| Estimate maturity | Preliminary |
+| Target completion | 30 September 2027 |
+| Currency | EUR |
+| Estimated budget | €580,000 |
+| Key dependencies | Migration vendor, network connectivity, security approval, cloud capacity |
+| Management decision | Determine whether the estimate supports preliminary budget approval |
 
-# Predictive Considerations
+### Example Input
 
-The Basis of Estimate may link directly to:
+```text
+Project: Cloud Infrastructure Migration
+Business objective: Migrate business applications to a cloud platform.
+Project phase: Solution Design
+Delivery approach: Hybrid
+Estimate maturity: Preliminary
+Target completion: 30 September 2027
+Currency: EUR
 
-- WBS,
-- work packages,
-- schedule,
-- resource plan,
-- procurement plan,
-- cost baseline.
+Costs:
+Internal project team: €120,000
+External migration vendor: €210,000
+Cloud infrastructure: €75,000
+Security and compliance: €45,000
+Testing and validation: €40,000
+Training and transition: €30,000
+Contingency: €60,000
 
-Ensure that cost categories can be traced back to approved project scope.
+Total estimated budget: €580,000
 
----
+Estimating basis:
+- Internal labour: Internal rate cards and planned effort
+- Migration vendor: Preliminary vendor quotation
+- Cloud infrastructure: Preliminary consumption forecast
+- Security and testing: Expert estimates
+- Training: Internal planning estimate
 
-# Hybrid Considerations
+Known assumptions:
+- Existing applications are compatible with the cloud platform.
+- Migration can be completed without major application redesign.
+- Network connectivity is sufficient.
+- Cloud consumption remains within forecast levels.
 
-For hybrid projects, separate:
+Known exclusions:
+- Post-migration operational support
+- Future application modernization
+- Additional third-party software licences
 
-```text id="boe-hybrid"
-Fixed costs
-+
-Capacity-based delivery costs
-+
-Variable vendor costs
-+
-Contingency
+Known financial risks:
+- Application compatibility issues
+- Higher-than-expected cloud consumption
+- Additional migration effort
+- Security remediation requirements
 ```
 
-This often provides a clearer financial model than treating every element as fixed.
+### Example Output — Basis of Estimate
 
----
+#### 1. Estimate Overview
 
-# Quality Review
+The preliminary estimate is **€580,000**, covering internal resources, vendor migration services, cloud infrastructure, security, testing, training, and contingency.
 
-Before using the estimate for governance or budget approval, confirm:
+| Component | Amount |
+|---|---:|
+| Base estimated cost | €520,000 |
+| Contingency | €60,000 |
+| **Total estimate** | **€580,000** |
 
-- [ ] Estimate methodology is documented
-- [ ] Scope assumptions are visible
-- [ ] Cost categories are complete
-- [ ] Exclusions are explicit
-- [ ] Vendor estimates are identifiable
-- [ ] Contingency has a rationale
-- [ ] Estimate confidence is visible
-- [ ] Financial risks are identified
-- [ ] Unverified values are clearly labelled
-- [ ] The total reconciles with the underlying cost data
+**Reconciliation:** PASS — supplied cost categories sum to the stated total. Cost completeness remains subject to review.
 
----
+#### 2. Estimating Methodology
 
-# Governance Review
-
-For significant budgets, identify:
-
-```text id="boe-governance"
-Decision required
-Decision owner
-Budget threshold
-Approval level
-Required evidence
-Decision date
-```
-
-Examples:
-
-- approve preliminary budget,
-- approve contingency usage,
-- approve vendor contract,
-- approve additional scope,
-- re-baseline project budget.
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- estimating,
-- financial management,
-- planning,
-- risk,
-- procurement,
-- governance,
-- business value.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- finance,
-- planning,
-- risk,
-- scope,
-- governance,
-- delivery.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Validate the Basis of Estimate with relevant stakeholders, including:
-
-- Project Manager
-- Finance
-- Project Sponsor
-- Procurement
-- Delivery Lead
-- Technical Lead
-- Product Owner where relevant
-- Vendor Manager
-- PMO
-
-AI can structure and challenge estimate logic.
-
-It cannot validate whether a quoted amount, contractual rate, or financial assumption is correct unless verified source data is provided.
-
----
-
-# Confidentiality
-
-Cost information may be commercially sensitive.
-
-Do not enter into public AI tools:
-
-- confidential vendor rates,
-- contract pricing,
-- salary information,
-- protected commercial terms,
-- confidential budgets,
-- procurement-sensitive information.
-
-Use anonymised or scaled values where necessary.
-
----
-
-# Prompt Metadata
-
-```text id="boe-metadata"
-Prompt ID: PLAN-004
-Category: Project Planning
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Finance / Sponsor / PMO
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Cost Area | Estimating Method | Confidence |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT Basis of Estimate framework |
+| Internal labour | Rate card and planned effort | Medium (provisional) |
+| Migration vendor | Preliminary quotation | Medium (provisional) |
+| Cloud infrastructure | Consumption forecast | Low (provisional) |
+| Security and testing | Expert estimate | Low (provisional) |
+| Training | Internal planning estimate | Low (provisional) |
+
+*Confidence assessments are illustrative and require supporting evidence.*
+
+#### 3. Cost Composition & Confidence
+
+| Cost Area | Estimate | Basis | Main Uncertainty |
+|---|---:|---|---|
+| Internal labour | €120,000 | Planned effort | Resource availability |
+| Migration vendor | €210,000 | Preliminary quote | Final scope and contract |
+| Cloud infrastructure | €75,000 | Consumption forecast | Actual usage |
+| Security / compliance | €45,000 | Expert estimate | Remediation effort |
+| Testing | €40,000 | Expert estimate | Compatibility defects |
+| Training / transition | €30,000 | Planning estimate | Training needs |
+| Contingency | €60,000 | Proposed allowance | Risk exposure |
+| **Total** | **€580,000** | | |
+
+#### 4. Key Assumptions
+
+| Assumption | Cost Impact if Incorrect | Proposed Validation Owner | Review Date |
+|---|---|---|---|
+| Applications are cloud-compatible | Additional development and testing | Solution Architect | TBD |
+| No major redesign is needed | Increased vendor and internal labour costs | Technical Lead | TBD |
+| Network capacity is sufficient | Additional infrastructure investment | Infrastructure Lead | TBD |
+| Cloud usage follows forecast | Higher operational and project costs | Cloud Architect | TBD |
+
+#### 5. Contingency Review
+
+| Item | Assessment |
+|---|---|
+| Current contingency | €60,000 |
+| Percentage of base cost | 11.5% |
+| Primary uncertainties | Migration complexity, cloud usage, security remediation |
+| Adequacy | Not yet validated |
+| Recommendation | Reassess before budget approval |
+
+**Rationale:** The contingency cannot be confirmed as sufficient until application compatibility, vendor scope, and cloud consumption assumptions are validated.
+
+#### 6. Exclusions & Budget Gaps
+
+| Exclusion / Gap | Classification | Potential Impact | Required Clarification | Priority |
+|---|---|---|---|---|
+| Post-migration support | Operational cost | Future operating budget | Confirm support funding | High |
+| Application modernization | Future project cost | Additional investment | Confirm scope boundary | High |
+| Third-party licences | Excluded / unresolved cost | Potential licence expenditure | Validate licence requirements | High |
+| Data transfer and egress | Unassessed cost | Additional cloud charges | Confirm consumption model | Medium |
+| Taxes and currency exposure | Unassessed financial factor | Potential budget variance | Confirm pricing basis | Medium |
+
+#### 7. Financial Risks & Cost Drivers
+
+| Risk / Driver | Change Scenario | Potential Impact | Proposed Response |
+|---|---|---|---|
+| Application compatibility | Redesign becomes necessary | Additional effort and cost | Complete compatibility assessment |
+| Cloud consumption | Usage exceeds forecast | Higher recurring costs | Validate usage assumptions |
+| Vendor scope | Additional migration work required | Contract cost increase | Confirm scope and change control |
+| Security remediation | New vulnerabilities identified | Additional implementation cost | Complete security assessment |
+
+*Financial impacts have not been quantified because supporting estimates are unavailable.*
+
+#### 8. Estimate Maturity
+
+| Assessment Area | Status |
+|---|---|
+| Estimate maturity | Preliminary |
+| Scope maturity | Not confirmed |
+| Overall confidence | Not validated |
+| Missing evidence | Final vendor quotation, compatibility assessment, cloud usage model |
+| Re-estimation trigger | Completion of technical discovery or material scope change |
+
+#### 9. Recommended Management Actions
+
+| Action / Decision | Priority | Proposed Owner | Required Evidence | Target Date |
+|---|---|---|---|---|
+| Validate migration complexity | High | Solution Architect | Compatibility assessment | TBD |
+| Confirm vendor costs | High | Vendor Manager | Final quotation | TBD |
+| Validate cloud forecast | High | Cloud Architect | Consumption model | TBD |
+| Reassess contingency | High | Project Manager / Finance | Updated risk and cost analysis | TBD |
+| Confirm budget authority | High | Project Sponsor | Funding approval requirements | TBD |
+
+All proposed owners and deadlines require confirmation.
+
+### Management Decisions
+
+1. **Budget reliability:** Validate vendor pricing, application compatibility, and cloud consumption before approving the estimate as a delivery cost baseline.
+2. **Contingency:** Review the €60,000 allowance against the documented financial risks and estimate maturity.
+3. **Cost completeness:** Confirm funding treatment for operational support, additional licences, and unassessed infrastructure costs.
+4. **Governance:** Establish financial approval authority, re-estimation triggers, and budget change-control requirements.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The cost breakdown reconciles to €580,000, but overall estimate confidence is not established. Several cost assumptions remain unverified, and exclusions may create additional financial commitments.
+
+**Required corrections:**
+- Validate the vendor quotation and technical scope.
+- Confirm cloud consumption assumptions and additional cost categories.
+- Assess financial risks and contingency adequacy.
+- Establish budget approval authority and confirm accountable owners.
+
+**Budget approval blockers:** Unverified estimate confidence, incomplete cost coverage, and unresolved financial risks.
+
+**Governance:** This prompt supports relevant PMI-aligned practices in cost estimation, planning, uncertainty management, procurement, financial control, and project governance.
+
+The Basis of Estimate is a financial decision-support artifact. Finance, Procurement, the Project Sponsor, and relevant technical stakeholders must validate material assumptions and costs before formal budget approval. Protect confidential rates, commercial terms, financial information, and supplier pricing.

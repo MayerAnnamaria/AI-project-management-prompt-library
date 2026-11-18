@@ -1,201 +1,253 @@
 # Project AI Use Policy
 
-## Purpose
+**Prompt ID:** AIGOV-003 | **Category:** AI Governance | **Version:** 1.1 | **Status:** Draft
 
-This policy defines how generative AI may be used on the project.
+## 1. Ready-to-Use Prompt
 
-AI may support project work, but it does not replace professional judgement, project governance, or human approval.
+**Purpose:** Establish clear rules for the authorized, secure, and accountable use of generative AI in IT project delivery.
 
----
+**When to use:** At project initiation, during team onboarding, or before introducing AI into project reporting, documentation, analysis, or stakeholder communication.
 
-# 1. Approved Uses
+### Copy-and-Paste Prompt
 
-AI may be used for activities such as:
+```text
+ROLE
 
-- drafting non-sensitive project content,
-- summarising information,
-- structuring meeting notes,
-- brainstorming risks or options,
-- improving wording,
-- reviewing documents for clarity or gaps,
-- preparing first drafts of reports or communications.
+You are a Senior IT Project Manager and AI Governance
+Specialist experienced in information security,
+project assurance, and responsible AI adoption.
 
-Use only tools approved by the organisation or project.
+PROJECT INPUTS
 
----
+Project: [PROJECT NAME / ANONYMIZED DESCRIPTION]
+AI tools approved: [LIST / NOT CONFIRMED]
+Permitted AI activities: [LIST / NOT DEFINED]
+Data classification rules: [POLICY REFERENCE]
+Restricted information: [DATA CATEGORIES]
+Required reviewers: [ROLES]
+Approval authority: [ROLE / NOT CONFIRMED]
+Applicable organizational policies: [REFERENCES]
+Languages used: [IF RELEVANT]
 
-# 2. Prohibited Uses
+TASK
 
-Do not enter sensitive project information into unapproved or public AI tools.
+Create or review a practical Project AI Use Policy
+aligned with the provided organizational requirements.
 
-This includes:
+1. APPROVED USE
 
-- client or customer names,
-- project identifiers,
-- personal data,
-- contract values or rates,
-- commercially sensitive information,
-- confidential strategy,
-- security-sensitive information,
-- passwords, API keys, or credentials,
-- NDA-protected material.
+Identify permitted activities, such as:
+- Drafting non-sensitive documents
+- Summarizing approved information
+- Structuring meeting notes
+- Brainstorming risks and options
+- Improving wording and readability
+- Reviewing documents for gaps
+- Preparing draft reports and communications
 
-Where possible, anonymise project context.
+Distinguish approved uses from proposed uses.
 
----
+2. CONFIDENTIALITY AND RESTRICTIONS
 
-# 3. Human Review
+- Require an approved AI environment.
+- Identify restricted personal, commercial,
+  contractual, and security-related information.
+- Prohibit sharing credentials, passwords,
+  API keys, tokens, and production secrets.
+- Apply data minimization and appropriate redaction.
+- Do not assume anonymization authorizes disclosure.
 
-All AI-generated project content must be reviewed before use.
+3. HUMAN REVIEW AND QUALITY
 
-The reviewer must verify:
+Require verification of:
+- Facts, dates, and calculations
+- Project milestones and responsibilities
+- Technical and contractual claims
+- Assumptions and recommendations
+- Consistency with approved project records
 
-- facts,
-- dates,
-- numbers,
-- calculations,
-- assumptions,
-- technical statements,
-- contractual references,
-- recommendations.
+4. APPROVAL AND ACCOUNTABILITY
 
-AI output must not be treated as automatically correct.
+- Define who may use AI for project work.
+- Identify required reviewers and decision owners.
+- Require specialist review for high-impact outputs.
+- Keep formal approvals within project governance.
+- Do not allow AI to authorize contractual,
+  financial, security, or release decisions.
 
----
+5. LANGUAGE AND TRANSLATION
 
-# 4. Approval
+- Allow AI-assisted translation where authorized.
+- Require review of material translations.
+- Verify technical terminology, deadlines,
+  responsibilities, and contractual wording.
+- Maintain consistency across language versions.
 
-AI does not provide formal approval.
+6. POLICY CONTROLS
 
-Project documents remain subject to the normal project governance and approval process.
+Identify:
+- Unapproved AI tools or use cases
+- Restricted or incorrectly shared information
+- Missing validation evidence
+- Unclear reviewer or approval authority
+- Required escalation or corrective actions
 
-```text id="ai-policy-approval"
-AI
-Supports
+RULES
 
-Project Team
-Reviews
+- Do not invent organizational permissions.
+- Do not claim a tool is approved without evidence.
+- Do not override existing security or privacy policies.
+- Do not treat AI-generated content as verified fact.
+- Do not imply AI review constitutes formal approval.
+- Mark missing requirements as "To be confirmed".
 
-Authorised Stakeholder
-Approves
+OUTPUT FORMAT
+
+1. PROJECT AI USE POLICY
+
+Policy Area | Rule | Responsible Role
+
+Include:
+- Permitted AI uses
+- Restricted information
+- Human verification
+- Specialist review
+- Translation controls
+- Decision authority
+
+2. GOVERNANCE GAPS
+
+Gap | Risk | Required Action | Proposed Owner
+
+3. IMPLEMENTATION CHECKLIST
+
+Control | Verification Required | Status
+
+4. MANAGEMENT RECOMMENDATION
+
+Policy Readiness:
+READY FOR HUMAN REVIEW / REVISE / BLOCKED
+
+Required Approvals:
+[ROLES]
+
+Outstanding Decisions:
+[LIST]
 ```
 
----
+### How to Use
 
-# 5. Quality Standards
+1. **Confirm requirements:** Identify approved AI tools, permitted data classifications, and existing organizational policies.
+2. **Complete the prompt:** Enter project-level rules and responsibilities without disclosing restricted information.
+3. **Generate the policy:** Review the proposed rules, exceptions, and governance gaps.
+4. **Validate:** Obtain relevant Information Security, Privacy, Legal, or PMO review.
+5. **Approve and communicate:** Publish only the authorized policy and explain the applicable requirements to project team members.
 
-Before using AI-assisted content:
-
-- verify important information against the original source,
-- remove unsupported assumptions,
-- check that actions have clear owners and deadlines,
-- ensure wording is appropriate for the intended audience,
-- confirm that the content reflects the actual project position.
-
-For high-impact documents, specialist review may also be required.
-
-Examples:
-
-- Legal / Commercial
-- Information Security
-- Finance
-- Architecture
-- Compliance
+**Important:** An AI-generated policy is a draft. It does not itself authorize the use of AI tools or the processing of confidential information.
 
 ---
 
-# 6. Language and Translation
+## 2. Quality Check
 
-AI may assist with translation or multilingual drafting.
+Use this independent prompt before approving or distributing the Project AI Use Policy.
 
-However:
+```text
+ROLE
 
-- important translations must be reviewed,
-- technical and contractual terminology must be checked,
-- dates, commitments, and responsibilities must remain consistent across languages.
+You are an independent Senior PMO and AI Governance
+Quality Assurance Manager.
 
-AI translation should not be treated as professionally validated automatically.
+TASK
 
----
+Review the proposed Project AI Use Policy against
+the supplied organizational requirements.
 
-# Confidentiality Principle
+INPUT
 
-Use:
+[PASTE POLICY AND APPROVED REQUIREMENTS]
 
-```text id="ai-policy-confidentiality"
-Minimum Necessary Information
-+
-Approved AI Environment
-+
-Human Review
+CHECK
+
+1. APPROVED USE
+   Are permitted tools, activities, and users clear?
+
+2. CONFIDENTIALITY
+   Are data restrictions and minimization rules explicit?
+
+3. CREDENTIAL SECURITY
+   Are passwords, keys, tokens, and secrets prohibited?
+
+4. ACCURACY
+   Does the policy require factual verification
+   of AI-generated project content?
+
+5. HUMAN OVERSIGHT
+   Are review responsibilities clearly assigned?
+
+6. DECISION AUTHORITY
+   Are formal approvals reserved for
+   authorized stakeholders?
+
+7. HIGH-IMPACT USE
+   Are contractual, financial, security,
+   and release-related outputs subject
+   to appropriate specialist review?
+
+8. TRANSLATION
+   Are material multilingual communications
+   subject to verification?
+
+9. POLICY CONSISTENCY
+   Does the document align with supplied
+   organizational security and governance policies?
+
+10. PRACTICAL USABILITY
+    Can project team members understand
+    what is allowed, prohibited, and required?
+
+OUTPUT FORMAT
+
+Quality Verdict: PASS / REVISE
+
+Finding | Evidence / Gap |
+Risk | Required Correction | Priority
+
+Approval Blockers:
+[LIST]
+
+Required Human Review:
+[ROLES]
+
+Final Recommendation:
+READY FOR HUMAN APPROVAL / NOT READY
+
+Do not invent permissions, policy requirements,
+review evidence, or organizational approvals.
 ```
 
----
+### Final Quality Checklist
 
-# Responsibility Principle
-
-Responsible AI use is:
-
-```text id="ai-policy-flow"
-Protect
-↓
-Prompt
-↓
-Review
-↓
-Verify
-↓
-Approve
-```
-
-Not:
-
-```text id="ai-policy-bad"
-Prompt
-↓
-Copy
-↓
-Send
-```
+- [ ] Approved AI tools and permitted uses defined
+- [ ] Data classification and confidentiality rules included
+- [ ] Credentials and secrets prohibited
+- [ ] Output verification requirements established
+- [ ] Specialist review defined for high-impact outputs
+- [ ] Human decision and approval authority clear
+- [ ] Translation controls included where relevant
+- [ ] Policy aligned with organizational requirements
+- [ ] Relevant stakeholders have approved the policy
 
 ---
 
-# Team Responsibilities
+**Governance Principle:** AI may support project drafting, analysis, communication, and document review. Project teams remain responsible for appropriate use and validation, while formal decisions and approvals remain with authorized stakeholders.
 
-Every team member should understand:
+**Document Owner:** Project Manager / AI Governance  
+**Reviewers:** PMO / Information Security / Legal, as applicable  
+**Risk Level:** Context-dependent
 
-- which AI tools are approved,
-- what information may be entered,
-- what information is prohibited,
-- when anonymisation is required,
-- who reviews AI-generated content,
-- who provides final approval.
-
----
-
-# Key Principle
-
-> AI supports project-management work.  
-> Human professionals remain accountable for the final output and decisions.
-
----
-
-# Prompt Metadata
-
-```text id="ai-policy-metadata"
-Prompt ID: AIGOV-003
-Category: AI Governance
-Version: 1.0
-Status: Draft
-Owner: Project Manager / AI Governance
-Reviewer: PMO / Information Security / Legal where applicable
-Risk Level: High
-```
-
----
-
-# Version History
+### Version History
 
 | Version | Change |
 |---|---|
-| 1.0 | Initial project AI use policy |
+| 1.0 | Initial Project AI Use Policy |
+| 1.1 | Reorganized into a reusable policy prompt, usage instructions, and independent quality check |

@@ -1,710 +1,317 @@
 # Risk Response Plan
 
-## Purpose
+**Prompt ID:** RISK-004 | **Category:** Risk & Issue Management | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert prioritised project risks into specific, owned, and time-bound response actions.
+## 1. Ready-to-Use Prompt
 
-The objective is to move from:
+**Purpose:** Convert prioritized project risks into specific, owned, time-bound actions that reduce exposure and establish clear contingency and escalation procedures.
 
-> We know this risk exists.
+**Use case:** Develop risk responses when software integrations, testing, resources, vendors, or release dependencies threaten agreed IT project objectives.
 
-to:
+Copy the prompt and replace the placeholders with your project information.
 
-> We know what we will do, who will do it, when action is required, and what happens if the risk materialises.
-
-A strong risk response plan should define:
-
-- response strategy,
-- preventive actions,
-- trigger points,
-- contingency actions,
-- ownership,
-- deadlines,
-- and expected residual exposure.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery / Testing / Deployment
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Product initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / Risk Manager / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-After qualitative risk analysis and during formal risk reviews
-
----
-
-# Prompt
-
-```text id="risk-response-01"
+```text id="n8f2aa"
 ROLE
 
-You are a senior IT Project Manager and risk-management specialist
-experienced in international software delivery, digital transformation,
-vendor management, project governance, and technology risk.
+You are a Senior IT Project Manager and Risk Management Specialist
+experienced in software delivery, technical dependencies,
+risk response planning, vendor coordination, and governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target milestone: [DATE / MILESTONE]
+Prioritized risks: [PASTE RISK REGISTER]
+Current risk ratings: [VALUES]
+Risk tolerance: [APPROVED THRESHOLDS / UNKNOWN]
+Existing mitigation: [ACTIONS / NONE]
+Known constraints: [LIST]
+Available resources: [ROLES / CAPACITY]
+Approval authority: [ROLES / UNKNOWN]
+Review date: [DATE]
 
 TASK
 
-Create a detailed risk response plan for the highest-priority
-project risks listed below.
-
-PROJECT CONTEXT
-
-Project:
-[PROJECT NAME]
-
-Current phase:
-[PHASE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Target milestone:
-[MILESTONE / DATE]
-
-Risk tolerance:
-[IF KNOWN]
-
-TOP RISKS
-
-[PASTE PRIORITISED RISKS]
-
-For each risk provide:
-
-Risk ID
-Risk Description
-Current Rating
-Response Strategy
-Specific Preventive Actions
-Trigger Point
-Contingency Plan
-Residual Likelihood
-Residual Impact
-Residual Score
-Residual Rating
-Risk Owner
-Action Owner
-Action Deadline
-Review Date
-Escalation Required?
-```
-
----
-
-# Response Strategies
-
-Use the response strategy that best fits the risk.
-
-Possible strategies include:
-
-```text id="b1r6ik"
-Avoid
-Mitigate
-Transfer / Share
-Accept
-Escalate
-```
-
-Do not assign a strategy only because it sounds appropriate.
-
-Explain why the strategy fits the specific risk.
-
----
-
-# Avoid
-
-Change the project approach so the threat no longer exists.
-
-Example:
-
-```text id="c2m6p3"
-Risk:
-Legacy authentication platform may not support the required
-security standard.
-
-Avoidance:
-Use the organisation's approved identity platform instead of
-extending the legacy authentication solution.
-```
-
----
-
-# Mitigate
-
-Reduce either:
-
-- likelihood,
-- impact,
-- or both.
-
-Example:
-
-```text id="s323hb"
-Risk:
-External API delivery may miss the integration-testing window.
-
-Mitigation:
-1. Agree API specification freeze by 15 May.
-2. Complete interface mock by 20 May.
-3. Run weekly dependency review with the supplier.
-4. Escalate any milestone variance greater than five working days.
-```
-
----
-
-# Transfer / Share
-
-Move or share responsibility for part of the exposure where appropriate.
-
-Examples may include:
-
-- contractual supplier responsibility,
-- insurance,
-- specialist provider,
-- shared delivery ownership.
-
-Transfer does not mean the Project Manager stops monitoring the risk.
-
----
-
-# Accept
-
-Accept the risk when:
-
-- exposure is within tolerance,
-- mitigation would cost more than the expected impact,
-- or no practical response exists.
-
-Acceptance should still define:
-
-```text id="v1g8ji"
-Reason for acceptance
-Risk owner
-Trigger
-Contingency
-Review date
-```
-
----
-
-# Escalate
-
-Escalate when the response requires authority outside the project team's control.
-
-Examples:
-
-```text id="d1k0r7"
-Additional budget required
-Committed milestone must change
-Risk acceptance exceeds PM authority
-Strategic vendor intervention required
-Security exception required
-Scope decision required
-Regulatory exposure exists
-```
-
----
-
-# Specific Response Actions
-
-Each significant risk should have concrete actions.
-
-### Weak
-
-```text id="7dq03l"
-Monitor vendor closely.
-```
-
-### Better
-
-```text id="8hk7is"
-Require the vendor to submit a recovery plan by Friday,
-including revised milestone dates, additional capacity options,
-and named owners for each overdue deliverable.
-```
-
-### Weak
-
-```text id="3mgavh"
-Track testing.
-```
-
-### Better
-
-```text id="8866xr"
-Review critical-defect ageing every business day and escalate
-any Severity 1 defect remaining unresolved for more than 48 hours.
-```
-
----
-
-# Action Quality Rule
-
-A response action should ideally define:
-
-```text id="rsbts1"
-Action
-Owner
-Deadline
-Expected Risk Reduction
-Evidence of Completion
-```
-
-Example:
-
-| Action | Owner | Deadline | Expected Effect |
-|---|---|---|---|
-| Complete API compatibility PoC | Integration Lead | 20 May | Reduce likelihood of integration failure |
-| Confirm UAT resources | Business Owner | 1 Aug | Reduce likelihood of testing delay |
-| Complete security pre-review | Security Lead | 15 Aug | Reduce release approval risk |
-
----
-
-# Trigger Points
-
-A trigger is an observable condition indicating that the risk is becoming more likely or that contingency action should begin.
-
-Examples:
-
-```text id="30hcd8"
-Vendor milestone more than 5 working days late
-
-Critical defect count remains above threshold 10 days before UAT
-
-Business tester availability below agreed minimum
-
-Security evidence not submitted before review deadline
-
-Cycle time exceeds agreed threshold for three consecutive periods
-
-Data reconciliation failure exceeds agreed tolerance
-```
-
-Trigger points should be measurable where possible.
-
----
-
-# Preventive Action vs Trigger vs Contingency
-
-Keep these three concepts separate.
-
-## Preventive Action
-
-Taken now to reduce exposure.
-
-## Trigger
-
-Evidence that the risk is approaching or has crossed a threshold.
-
-## Contingency
-
-Action activated when the trigger occurs or the risk materialises.
-
-Example:
-
-```text id="37xkvj"
-Risk:
-Identity-provider certification delay.
-
-Preventive Action:
-Hold weekly certification checkpoint and complete test evidence early.
-
-Trigger:
-Certification milestone slips by more than five working days.
-
-Contingency:
-Use approved mock identity service for non-production integration
-testing while certification is completed.
-```
-
----
-
-# Residual Risk
-
-After defining the response, estimate remaining exposure.
-
-Use:
-
-| Risk | Initial Rating | Response | Residual Rating | Rationale |
-|---|---|---|---|---|
-
-Do not automatically reduce the rating simply because actions exist.
-
-Only reduce exposure when the planned response can reasonably change likelihood or impact.
-
----
-
-# Example Input
-
-```text id="risk-response-input"
-Project:
-Customer Portal
-
-Current Phase:
-Integration Testing
-
-Target Go-Live:
-30 September 2027
-
-R-01
-External identity provider may miss API certification.
-Rating: High
-
-R-02
-Critical integration defects may remain unresolved before UAT.
-Rating: High
-
-R-03
-Business users may not be available for UAT.
-Rating: High
-
-R-04
-Security approval may not complete before release.
-Rating: High
-
-R-05
-Data migration reconciliation may exceed agreed tolerance.
-Rating: High
-```
-
----
-
-# Example Output Excerpt
-
-| Risk | Strategy | Preventive Action | Trigger | Contingency | Owner |
-|---|---|---|---|---|---|
-| API certification delay | Mitigate | Agree recovery plan and develop mock service | >5-day milestone slip | Continue eligible SIT using mock service | Integration Lead |
-| UAT resource shortage | Mitigate | Confirm named testers and backups | <80% tester allocation confirmed | Reduce UAT scope to critical processes and escalate capacity | Business Owner |
-| Security approval delay | Mitigate | Submit evidence early and conduct pre-review | Evidence incomplete at review start | Escalate release decision and evaluate revised deployment date | Security Lead |
-
----
-
-# Prompt 2 — Response Quality Audit
-
-After creating the response plan, run a second review.
-
-```text id="5q2ld3"
-ROLE
-
-You are a senior project risk manager performing a quality review
-of a project risk response plan.
-
-TASK
-
-Review the response plan below and identify weak or generic actions.
-
-[PASTE RESPONSE PLAN]
-
-Flag actions such as:
-
-- monitor closely,
-- keep under review,
-- communicate regularly,
-- track progress,
-- follow up with vendor,
-- manage proactively,
-
-unless they contain a specific action, owner, threshold, and timeframe.
+Create an actionable Risk Response Plan for the priority risks.
+
+STEP 1 — RESPONSE STRATEGY
+
+1. Select and justify an appropriate response:
+   - Avoid: Eliminate the threat by changing the approach.
+   - Mitigate: Reduce likelihood and/or impact.
+   - Transfer / Share: Allocate part of the exposure
+     through a suitable agreement or arrangement.
+   - Accept: Retain exposure within authorized tolerance.
+   - Escalate: Refer decisions beyond project authority.
+
+2. Assess response feasibility, dependencies, resource
+   requirements, costs, and delivery-model implications.
+
+STEP 2 — PREVENTIVE ACTIONS AND CONTINGENCY
+
+3. Define specific preventive actions with:
+   - Action and intended result
+   - Risk Owner and Action Owner
+   - Deadline
+   - Expected risk reduction
+   - Evidence of completion
+
+4. Identify measurable early warning indicators
+   and contingency activation triggers.
+5. Define contingency actions if the risk materializes.
+6. Identify interconnected risks requiring coordinated responses.
+
+STEP 3 — RESIDUAL EXPOSURE AND ESCALATION
+
+7. Compare initial and expected residual likelihood,
+   impact, score, and rating.
+8. Distinguish forecast residual exposure from verified
+   exposure after mitigation has been implemented.
+9. Identify escalation triggers, decision authority,
+   and approval requirements.
+10. Define monitoring, response-effectiveness checks,
+    and review dates.
+
+Avoid generic actions such as "monitor closely"
+or "follow up regularly" without measurable outputs.
+
+Do not invent deadlines, approved thresholds, resources,
+contractual commitments, or mitigation effectiveness.
+
+Do not mark risk acceptance as approved unless
+authorization is explicitly provided.
 
 OUTPUT FORMAT
 
-Risk
-Weak Action
-Why It Is Insufficient
-Replacement Action
-Owner
-Deadline
-Expected Risk Reduction
+1. RISK RESPONSE PLAN
+
+Risk ID | Current Rating | Strategy | Rationale |
+Preventive Action | Trigger | Contingency |
+Risk Owner | Action Owner | Deadline | Review Date
+
+2. ACTION TRACKER
+
+Action | Expected Risk Reduction | Owner |
+Due Date | Completion Evidence | Status
+
+3. DEPENDENCY-BASED RESPONSES
+
+Related Risks | Common Dependency | Coordinated Action |
+Coordination Owner | Escalation Trigger
+
+4. RESIDUAL RISK ASSESSMENT
+
+Risk ID | Initial L / I / Score / Rating |
+Mitigation Status | Forecast Residual L / I / Score / Rating |
+Verified Residual Exposure | Evidence |
+Acceptable Against Approved Tolerance?
+
+5. ESCALATION AND DECISIONS
+
+Risk ID | Escalation Trigger | Decision Required |
+Decision Owner | Decision Deadline | Impact if Delayed
+
+6. MANAGEMENT SUMMARY
+
+- Highest-priority response actions
+- Critical dependencies and contingencies
+- Residual exposure and evidence gaps
+- Decisions requiring authorization
+- Immediate management priorities
+
+Use concise Markdown tables.
+Mark missing information as "Not yet defined".
+Clearly label unapproved actions and forecast residual scores.
 ```
 
 ---
 
-# Management Test
+## 2. Quality Check
 
-For every High or Critical risk, ask:
+Apply this independent review after generating the Risk Response Plan.
 
-```text id="c54t2z"
-What are we doing now?
+```text id="q6fr11"
+QUALITY CHECK
 
-Who owns it?
+Act as a Senior QA Manager reviewing the Risk Response Plan.
 
-When must it happen?
+Verify:
 
-How will we know whether it worked?
+1. Coverage: Each priority risk has an appropriate response strategy.
+2. Actionability: Actions specify owners, deadlines,
+   measurable outcomes, and completion evidence.
+3. Prevention: Preventive actions, triggers, and
+   contingency responses are clearly distinguished.
+4. Feasibility: Cost, capacity, technical dependencies,
+   and delivery constraints are considered.
+5. Residual Risk: Score reductions are justified;
+   forecast and verified exposure are separated.
+6. Governance: Escalation, risk acceptance,
+   and funding decisions follow approved authority.
+7. Monitoring: Response effectiveness can be verified
+   and unsuccessful responses can be revised.
 
-What event triggers escalation?
+OUTPUT
 
-What will we do if the risk still materialises?
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Identify vague actions and replace them with specific,
+measurable recommendations.
+Do not invent approval, capacity, or effectiveness evidence.
 ```
-
-If these questions cannot be answered, the response plan is incomplete.
 
 ---
 
-# Dependency-Based Response Planning
+## 3. Practical IT Use Case
 
-Some risks cannot be managed independently.
+### Software Development — Third-Party API Capacity Risk
 
-Example:
+**Scenario:** An IT team is implementing automated customer notifications using an external email API. Initial development is progressing, but expected notification volume may exceed the provider's current API rate limit during peak periods.
 
-```text id="nyycgm"
-Vendor API delay
-↓
-Integration delay
-↓
-SIT delay
-↓
-UAT compression
-↓
-Go-live risk
+The Project Manager must establish preventive controls, contingency options, and escalation procedures before production release.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Customer Notification Automation |
+| Phase | Development / Integration Testing |
+| Delivery approach | Scrum |
+| Target release | 30 September 2027 |
+| Systems | Web Application, Notification Service, Email API |
+| External dependency | Third-party Email Provider |
+| Key risk | API capacity may be insufficient during peak demand |
+| Management decision | Approve a capacity-validation and fallback approach before go-live |
+
+### Example Input
+
+```text id="k2rsa4"
+Project: Customer Notification Automation
+
+Business objective:
+Automate customer email notifications for application events.
+
+Phase: Development / Integration Testing
+Delivery approach: Scrum
+Target release: 30 September 2027
+
+Risk ID: R-03
+Risk statement:
+If peak notification volume exceeds the email provider's
+rate limit, messages may be delayed or rejected,
+affecting customer communication.
+
+Current likelihood: 4 — Likely
+Current impact: 4 — Major
+Current score: 16 — High
+
+Known information:
+- Current provider limit: 100 requests/minute.
+- Peak demand forecast: 180 requests/minute.
+- Load testing has not yet been completed.
+- Message queuing is technically possible.
+- Higher provider capacity may require additional cost.
+
+Risk Owner: Technical Lead
+Action Owners: Backend Developer / QA Lead
+
+Risk tolerance: Not formally defined.
+Target mitigation deadline: Not yet agreed.
+Approval authority: Not yet confirmed.
 ```
 
-In these cases, create coordinated actions across the risk chain rather than isolated responses.
+### Example Output — Risk Response Plan
 
-Provide:
+#### 1. Risk Response Plan
 
-| Risk Chain | Preventive Action | Coordination Owner | Escalation Trigger |
+| Field | Proposed Response |
+|---|---|
+| Risk ID | R-03 |
+| Current exposure | 4 × 4 = 16 — High |
+| Response strategy | Mitigate |
+| Rationale | Reduce the likelihood of delayed or rejected messages before release |
+| Preventive action | Validate API capacity, implement controlled queuing and retry behavior, and perform load testing |
+| Early warning | Request volume approaching the approved operating threshold |
+| Contingency | Activate an approved rate-limiting or capacity-expansion approach |
+| Risk Owner | Technical Lead |
+| Action Owners | Backend Developer / QA Lead |
+| Deadline | TBD — before release readiness |
+| Review date | TBD |
+
+The current forecast exceeds the stated provider limit by 80 requests per minute. The team must validate actual usage patterns, provider enforcement, and queueing behavior before deciding on the final technical response.
+
+#### 2. Action Tracker
+
+| Action | Expected Risk Reduction | Proposed Owner | Due Date | Completion Evidence |
+|---|---|---|---|---|
+| Validate provider limits | Reduce capacity uncertainty | Technical Lead | TBD | Confirmed provider limits |
+| Implement queueing and retry controls | Reduce message rejection and loss | Backend Developer | TBD | Technical test evidence |
+| Perform peak-load testing | Validate processing behavior | QA Lead | TBD | Approved load-test results |
+| Evaluate higher API capacity | Establish fallback feasibility | Project Manager / Vendor Lead | TBD | Commercial and technical assessment |
+| Define alert thresholds | Enable early detection | Technical Lead | TBD | Monitoring configuration evidence |
+
+Implementation remains subject to technical review and approval.
+
+#### 3. Dependency-Based Responses
+
+| Related Risks | Common Dependency | Coordinated Action | Proposed Owner | Escalation Trigger |
+|---|---|---|---|---|
+| API capacity / Message delays | Provider request limits | Coordinate queuing and capacity validation | Technical Lead | Load tests fail agreed criteria |
+| API capacity / Release readiness | Third-party API | Confirm acceptable throughput before release | Project Manager | Release acceptance at risk |
+| Provider capacity / Cost | Commercial API plan | Review upgrade cost and authority | Project Manager | Additional funding required |
+
+#### 4. Residual Risk Assessment
+
+| Measure | Assessment |
+|---|---|
+| Initial likelihood | 4 |
+| Initial impact | 4 |
+| Initial score / rating | 16 — High |
+| Mitigation status | Proposed |
+| Forecast residual likelihood | Not assessed |
+| Forecast residual impact | Not assessed |
+| Verified residual exposure | Not assessed |
+| Effectiveness evidence | Load testing and monitoring results required |
+| Residual exposure acceptable? | Undetermined — tolerance not defined |
+
+**Management interpretation:** Queuing and retry controls may reduce message loss, but they do not necessarily eliminate delivery delays. Residual risk must be evaluated against agreed delivery-time and reliability requirements.
+
+#### 5. Escalation and Decisions
+
+| Trigger | Decision Required | Proposed Decision Owner | Deadline |
 |---|---|---|---|
+| Load tests fail acceptance criteria | Approve technical recovery approach | Technical Lead / authorized authority | Before release approval |
+| Additional provider capacity required | Approve commercial change | Budget approver TBD | Before procurement commitment |
+| Required notification performance cannot be met | Reassess release readiness | Authorized release approver TBD | Before go-live |
 
----
+### Management Decisions
 
-# Agile / Scrum Considerations
+1. **Technical mitigation:** Confirm whether queuing, retry handling, and provider capacity are sufficient for expected demand.
+2. **Quality assurance:** Approve measurable load-test acceptance criteria and monitoring thresholds.
+3. **Commercial contingency:** Evaluate a higher-capacity API plan and identify the authorized budget approver.
+4. **Release governance:** Require evidence of acceptable notification performance before approving production deployment.
 
-Risk responses may be implemented through:
+### Applied Quality Review
 
-- backlog prioritisation,
-- technical spikes,
-- dependency removal,
-- incremental delivery,
-- additional testing,
-- earlier stakeholder feedback,
-- release-scope adjustment.
+**Quality verdict: REVISE**
 
-Do not assume a long formal mitigation plan is always the best response.
+**Findings:** The response strategy addresses the known API limitation and defines actionable mitigation and contingency options. However, load-test acceptance criteria, action deadlines, commercial approval, and verified residual risk remain unresolved.
 
-Some Agile risks can be reduced by obtaining evidence sooner.
+**Required corrections:**
+- Confirm expected peak volume and provider limits.
+- Define measurable delivery-performance thresholds.
+- Assign and approve mitigation deadlines.
+- Validate queueing and retry behavior through testing.
+- Establish contingency and release approval authority.
+- Reassess residual exposure using test evidence.
 
----
+**Approval blockers:** Unverified performance capacity, undefined risk tolerance, and unconfirmed funding and release authority.
 
-# Kanban Considerations
+**Governance:** Supports PMI-aligned risk response planning, ownership, contingency management, monitoring, and escalation.
 
-Where flow data identifies emerging risk, responses may include:
-
-- reducing WIP,
-- resolving blocked work,
-- changing replenishment priorities,
-- removing bottlenecks,
-- adjusting policies,
-- swarming on ageing work.
-
-Example:
-
-```text id="2b7xr7"
-Risk Signal:
-Work item age is increasing rapidly in integration review.
-
-Response:
-Stop starting lower-priority integration work and prioritise
-completion of ageing items until WIP returns below the agreed limit.
-```
-
----
-
-# Predictive Considerations
-
-Responses may involve:
-
-- schedule recovery,
-- resequencing,
-- contingency use,
-- procurement intervention,
-- resource adjustment,
-- formal change request.
-
----
-
-# Hybrid Considerations
-
-Use the response mechanism that best fits the actual risk.
-
-Example:
-
-```text id="6yy7bi"
-Project-level risk:
-Managed through formal governance.
-
-Delivery-level mitigation:
-Implemented through backlog reprioritisation or flow changes.
-```
-
----
-
-# Escalation Criteria
-
-Escalate when:
-
-```text id="0pjt55"
-Residual risk remains above tolerance.
-
-Required response exceeds project authority.
-
-Additional funding is required.
-
-Committed milestone is threatened.
-
-Risk affects multiple workstreams.
-
-Security or compliance exposure is material.
-
-Vendor intervention requires executive authority.
-
-Business decision is overdue.
-```
-
----
-
-# Response Effectiveness Review
-
-At each risk review, ask:
-
-```text id="yho5if"
-Has the action been completed?
-
-Did it reduce likelihood?
-
-Did it reduce impact?
-
-Has the trigger been reached?
-
-Has the residual risk changed?
-
-Is contingency still viable?
-
-Does the owner have sufficient authority?
-
-Should the response strategy change?
-```
-
----
-
-# Quality Checklist
-
-Before accepting the response plan, confirm:
-
-- [ ] Every priority risk has a response strategy
-- [ ] Actions are specific
-- [ ] Actions have owners
-- [ ] Actions have deadlines
-- [ ] Triggers are defined
-- [ ] Contingency actions exist where required
-- [ ] Residual exposure is assessed
-- [ ] Generic “monitoring” actions have been replaced
-- [ ] Dependencies are considered
-- [ ] Escalation criteria are explicit
-- [ ] Response effectiveness can be measured
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- risk response planning,
-- mitigation,
-- contingency planning,
-- risk ownership,
-- monitoring,
-- escalation,
-- governance.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- risk,
-- planning,
-- delivery,
-- governance,
-- measurement.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Review material responses with:
-
-- Risk Owner
-- Project Manager
-- Technical or business experts
-- Vendor leads where relevant
-- Sponsor / Steering Committee where escalation is required
-
-AI may help structure response alternatives.
-
-It should not accept residual risk or approve expenditure on behalf of accountable stakeholders.
-
----
-
-# Confidentiality
-
-Risk responses may reveal sensitive information.
-
-Protect:
-
-- security weaknesses,
-- vendor performance concerns,
-- contract positions,
-- confidential budget exposure,
-- personal performance information,
-- customer information.
-
-Use anonymised data where required.
-
----
-
-# Prompt Metadata
-
-```text id="2n9qx5"
-Prompt ID: RISK-004
-Category: Risk & Issue Management
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Risk Manager
-Reviewer: Risk Owners / PMO / Sponsor
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT risk-response planning framework |
+Risk responses and residual risk acceptance require validation by accountable technical, business, and governance stakeholders. Do not expose confidential architecture, vendor contracts, security information, or customer data in public AI tools.

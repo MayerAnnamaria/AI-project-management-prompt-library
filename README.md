@@ -11,7 +11,7 @@ A practical library of **AI-assisted prompts and workflows for IT project manage
 | **[Framework](00_framework/)** | Prompt design, reusable templates, quality principles |
 | **[Project Initiation](01_project-initiation/)** | Charter, project brief, scope, objectives, assumptions |
 | **[Project Planning](02_project-planning/)** | WBS, RACI, scheduling, estimates, procurement, communication |
-| **[Risk & Issue Management](03_risk-issue-management/)** | Risk identification, analysis, response planning, issue tracking |
+| **[Risk & Issue Management](03_risk-issue-management)** | Risk identification, analysis, response planning, issue tracking |
 | **[Reporting & Communication](04_reporting-communication/)** | Status reports, steering papers, dashboards, meeting minutes |
 | **[Commercial & Governance](05_commercial-governance/)** | Contract review, changes, scope gaps, supplier evaluation, close-out |
 | **[Stakeholder Management](06_stakeholder-management/)** | Stakeholder analysis, engagement, change communication, feedback |

@@ -1,839 +1,333 @@
 # Difficult Stakeholder Communication
 
-## Purpose
+**Prompt ID:** REPORT-005 | **Category:** Reporting & Communication | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to draft professional communication for difficult project situations where the message must be:
+## 1. Ready-to-Use Prompt
 
-- factual,
-- clear,
-- firm,
-- constructive,
-- and relationship-aware.
+**Purpose:** Communicate difficult project situations clearly and assertively while protecting stakeholder relationships, maintaining accountability, and supporting timely decisions.
 
-Typical situations include:
+**Use case:** Draft professional emails or escalation messages when project delays, unresolved dependencies, vendor commitments, scope conflicts, or overdue decisions require stakeholder action.
 
-- schedule delay,
-- missed vendor commitments,
-- unresolved dependencies,
-- quality concerns,
-- budget pressure,
-- scope conflict,
-- resource shortages,
-- late decisions,
-- security or compliance concerns.
+Copy the prompt and replace the placeholders with your project information.
 
-The objective is to communicate the problem without becoming:
-
-- defensive,
-- emotional,
-- accusatory,
-- vague,
-- or unnecessarily confrontational.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery / Testing / Deployment / Hypercare
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Multi-vendor programme
-
-**Primary user:**  
-Project Manager / Delivery Manager / Programme Manager / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-As required
-
----
-
-# Prompt
-
-```text id="stakeholder-01"
+```text id="r5stake"
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, stakeholder management, vendor governance,
-executive communication, and difficult project conversations.
+You are a Senior IT Project Manager specializing in stakeholder
+management, executive communication, conflict resolution,
+vendor governance, and project escalation.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Project phase: [PHASE]
+Recipient / stakeholder: [ROLE]
+Relationship: [COLLABORATIVE / FORMAL / TENSE / ESCALATED]
+Communication type: [EMAIL / VENDOR ESCALATION /
+EXECUTIVE ESCALATION / DECISION FOLLOW-UP]
+Situation: [WHAT HAS OCCURRED]
+Known facts and dates: [DETAILS]
+Original commitment: [IF APPLICABLE]
+Current project impact: [SCHEDULE / COST / QUALITY / SCOPE]
+Actions already taken: [LIST]
+Recovery measures: [LIST]
+Action or decision required: [DETAILS]
+Decision owner: [ROLE]
+Required deadline: [DATE / TIME / TIME ZONE]
+Impact if delayed: [DETAILS]
+Governance / contractual requirements: [IF RELEVANT]
 
 TASK
 
-Draft a professional communication for the stakeholder situation below.
+Draft professional, factual, and action-oriented communication.
 
-PROJECT CONTEXT
+STEP 1 — STRUCTURE THE MESSAGE
 
-Project:
-[PROJECT NAME]
+1. Create a subject that clearly identifies the situation
+   and required action.
+2. State the purpose immediately.
+3. Explain what was expected, what occurred, and the
+   current status using verified facts.
+4. Describe the actual or potential project impact
+   without exaggeration or speculation.
+5. Summarize actions already taken and recovery measures.
+6. Specify the required decision, deliverable, or response.
+7. State the deadline, why it matters, and the consequences
+   of further delay.
+8. Close constructively and reinforce accountability.
 
-Current phase:
-[PHASE]
+STEP 2 — ADAPT TO THE SITUATION
+
+- Vendor escalation:
+  Reference missed commitments, previous recovery actions,
+  required deliverables, and contractual considerations.
+
+- Overdue stakeholder decision:
+  Explain the outstanding decision, affected dependency,
+  required deadline, and escalation path.
+
+- Executive escalation:
+  Focus on business impact, mitigation, decision required,
+  decision authority, and urgency. Maximum 150 words.
+
+- Internal stakeholder conflict:
+  Focus on shared objectives, facts, responsibilities,
+  and required resolution rather than personal criticism.
+
+STEP 3 — APPLY COMMUNICATION STANDARDS
+
+9. Use the sequence:
+   FACTS → IMPACT → ACTION → DECISION → DEADLINE.
+10. Maintain a firm, professional, constructive tone.
+11. Avoid blame, emotional language, and unnecessary
+    defensiveness.
+12. Separate confirmed facts from assumptions and forecasts.
+13. Make requests specific and measurable.
+14. Escalate proportionately to the project impact.
+15. Verify contractual references and formal notice
+    requirements before including them.
+
+Do not invent facts, commitments, dates, contractual clauses,
+approval authority, or consequences.
+
+Do not present an ordinary project email as a formal legal notice.
+
+OUTPUT FORMAT
+
+1. READY-TO-SEND MESSAGE
+
+Subject: [CLEAR SUBJECT]
+
+[PROFESSIONAL GREETING]
+
+[FACTUAL SITUATION AND IMPACT]
+
+[MANAGEMENT / RECOVERY ACTIONS]
+
+[EXPLICIT ACTION OR DECISION REQUIRED]
+
+[DEADLINE AND CONSEQUENCE]
+
+[PROFESSIONAL CLOSE]
+
+2. EXECUTIVE ESCALATION SUMMARY
+
+Issue | Current Impact | Actions Taken |
+Decision / Support Required | Decision Owner |
+Deadline | Impact if Delayed
+
+Maximum 150 words.
+
+3. COMMUNICATION REVIEW
+
+Potential Misunderstanding | Recipient Concern |
+Recommended Clarification
+
+4. MANAGEMENT FOLLOW-UP
+
+Action Required | Owner | Deadline |
+Escalation Trigger | Next Follow-Up
+
+Keep the ready-to-send message concise.
+Use paragraphs rather than excessive bullet points.
+Include only confirmed information.
+```
+
+---
+
+## 2. Quality Check
+
+Apply this independent review before sending the communication.
+
+```text id="stakeqa5"
+QUALITY CHECK
+
+Act as a Senior QA Manager and Stakeholder Communication Reviewer.
+
+Review the message from both the Project Manager's
+and the recipient's perspectives.
+
+Verify:
+
+1. Accuracy: Facts, dates, commitments, and impacts
+   are supported by the provided information.
+2. Clarity: The situation and required response are
+   immediately understandable.
+3. Tone: Communication is firm, constructive,
+   non-defensive, and free from unnecessary blame.
+4. Accountability: Required actions, decision owners,
+   and deadlines are explicit.
+5. Proportionality: Project impacts and escalation
+   consequences are not exaggerated.
+6. Recipient Perspective: Likely questions,
+   objections, or misunderstandings are addressed.
+7. Governance: Escalation authority and contractual
+   references are appropriate and verified.
+8. Actionability: The recipient knows what to do next.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Recipient Concerns: [LIKELY QUESTIONS / OBJECTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
+
+If needed, provide a revised ready-to-send message.
+
+Do not invent facts, contractual obligations,
+organizational authority, or stakeholder commitments.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### Software Development — Overdue Product Owner Decision
+
+**Scenario:** A development team is implementing a reporting feature for an internal business application. The Product Owner has not confirmed the acceptance criteria for a key feature, preventing developers from finalizing implementation and QA from preparing reliable test cases.
+
+The Project Manager must request a decision without creating unnecessary conflict.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Web Application Reporting Enhancement |
+| Phase | Development |
+| Delivery approach | Scrum |
+| Stakeholder | Product Owner |
+| Current issue | Outstanding acceptance criteria decision |
+| Impact | Development clarification and test preparation delayed |
+| Communication type | Internal stakeholder follow-up |
+| Management objective | Obtain an actionable decision and protect the delivery plan |
+
+### Example Input
+
+```text id="stakeex5"
+Project: Web Application Reporting Enhancement
+
+Project phase: Development
+Delivery approach: Scrum
 
 Stakeholder:
-[ROLE / ORGANISATION]
+Product Owner
 
 Relationship:
-[COLLABORATIVE / FORMAL / TENSE / ESCALATED]
+Collaborative
 
 Situation:
-[DESCRIBE WHAT HAS HAPPENED]
+Acceptance criteria for the Excel export feature
+have not been finalized.
 
-Known facts:
-[FACTS]
+Original decision deadline:
+12 May 2027
 
-Current impact:
-[SCHEDULE / COST / SCOPE / QUALITY / RISK / BUSINESS]
+Current date:
+17 May 2027
+
+Outstanding decision:
+Confirm whether exports must support
+up to 5,000 rows or 20,000 rows.
+
+Known impact:
+- Developers cannot finalize the export implementation.
+- QA cannot approve the final test scenarios.
+- The unresolved requirement may affect the sprint goal.
 
 Actions already taken:
-[LIST]
+- Developers documented both implementation options.
+- QA identified test coverage implications.
+- The Project Manager recorded the dependency in Jira.
 
-Recovery measures:
-[LIST]
-
-Action required from stakeholder:
-[LIST]
+Required from Product Owner:
+Confirm the required export limit
+or authorize a short decision meeting.
 
 Required deadline:
-[DATE]
+18 May 2027, 12:00 CEST.
 
-Governance / contractual considerations:
-[IF RELEVANT]
-
-OUTPUT FORMAT
-
-Structure the communication as:
-
-1. Reference / Subject
-2. Purpose
-3. Factual Situation
-4. Project Impact
-5. Current Management / Recovery Action
-6. Action Required from Recipient
-7. Deadline / Consequence of Delay
-8. Professional Close
-
-TONE
-
-Professional
-Factual
-Confident
-Constructive
-Non-defensive
-Non-emotional
+Impact if delayed:
+The team may need to re-plan affected Sprint work.
 ```
 
----
+### Example Output — Stakeholder Communication
 
-# Communication Principle
+#### 1. Ready-to-Send Message
 
-Use:
+**Subject:** Reporting Enhancement — Excel Export Requirements Decision Needed by 18 May
 
-```text id="stakeholder-flow"
-Facts
-↓
-Impact
-↓
-Action
-↓
-Decision / Response Required
-↓
-Deadline
-```
+Dear Product Owner,
 
-Avoid:
+I am following up on the outstanding acceptance criteria for the Excel export feature, originally scheduled for confirmation on 12 May.
 
-```text id="stakeholder-avoid-flow"
-Emotion
-↓
-Blame
-↓
-Long explanation
-↓
-Unclear request
-```
+The development and QA teams require a decision on whether the export must support up to 5,000 or 20,000 rows. Without this clarification, the implementation cannot be finalized and the corresponding test scenarios remain incomplete, potentially affecting the current Sprint Goal.
 
----
+The team has documented both implementation options and their testing implications, and the dependency is tracked in Jira.
 
-# 1. Subject / Reference
+Could you please confirm the required export limit by **18 May at 12:00 CEST**? Alternatively, we can arrange a short decision meeting to review the options and agree on the appropriate requirement.
 
-The subject should make the purpose immediately clear.
+If the decision remains outstanding, we will need to reassess the affected Sprint work and communicate any resulting delivery impact.
 
-### Weak
-
-```text id="stakeholder-subject-weak"
-Project Update
-```
-
-### Better
-
-```text id="stakeholder-subject-better"
-Customer Portal — Identity Integration Delay and Required Recovery Action
-```
-
-Or:
-
-```text id="stakeholder-subject-example"
-CRM Migration — Schedule Impact and Decision Required by 15 August
-```
-
----
-
-# 2. Opening
-
-State the purpose directly.
-
-Example:
-
-```text id="stakeholder-opening"
-I am writing to formally notify you of a delay affecting the
-identity-integration workstream and to confirm the recovery actions
-required to protect the planned UAT start.
-```
-
-Avoid overly apologetic openings unless an apology is genuinely appropriate.
-
----
-
-# 3. Factual Description
-
-Describe:
-
-```text id="stakeholder-facts"
-What happened
-When
-What was expected
-What actually occurred
-Current status
-```
-
-Use evidence.
-
-Example:
-
-> The API certification milestone was due on 5 June. As of 15 June, certification remains incomplete, resulting in a ten-working-day variance against the agreed plan.
-
-Avoid:
-
-> Your team keeps delaying everything.
-
----
-
-# 4. Impact
-
-Explain the project consequence.
-
-Possible areas:
-
-```text id="stakeholder-impact"
-Schedule
-Scope
-Cost
-Testing
-Quality
-Security
-Operations
-Business readiness
-Customer impact
-```
-
-Example:
-
-> The current delay prevents production-equivalent authentication testing and creates a direct dependency risk to the planned UAT start.
-
----
-
-# Impact Without Exaggeration
-
-Do not claim:
-
-> The entire project will fail.
-
-when the evidence only supports:
-
-> The current delay may affect the UAT start unless recovery action is completed by 20 June.
-
-Use proportionate language.
-
----
-
-# 5. Recovery Measures
-
-Explain what the project team is already doing.
-
-Examples:
-
-```text id="stakeholder-recovery"
-Use temporary mock service
-Re-sequence unaffected activities
-Add technical review capacity
-Accelerate defect resolution
-Prepare parallel validation
-Increase review cadence
-```
-
-This demonstrates management control rather than passive escalation.
-
----
-
-# 6. Action Required
-
-Be explicit.
-
-### Weak
-
-```text id="stakeholder-action-weak"
-Please provide an update.
-```
-
-### Better
-
-```text id="stakeholder-action-better"
-Please provide by 17:00 CET on Thursday:
-
-1. confirmed certification date,
-2. recovery plan,
-3. named action owners,
-4. any additional support required from our team.
-```
-
----
-
-# 7. Deadline and Consequence of Delay
-
-Use:
-
-```text id="stakeholder-deadline"
-Required by:
-[DATE / TIME]
-
-Reason:
-[WHY THIS DATE MATTERS]
-
-Impact if Delayed:
-[PROJECT IMPACT]
-```
-
-Example:
-
-> A confirmed recovery plan is required by Thursday because any further delay beyond Friday will reduce the available contingency before UAT.
-
----
-
-# Tone Rules
-
-The tone should be:
-
-```text id="stakeholder-tone"
-Firm without being aggressive
-Confident without being dismissive
-Factual without being cold
-Constructive without hiding impact
-```
-
----
-
-# Avoid Emotional Language
-
-Avoid:
-
-```text id="stakeholder-emotional"
-unacceptable
-disappointing
-frustrating
-careless
-your failure
-your mistake
-you always
-you never
-```
-
-unless the organisational context genuinely requires stronger formal language.
-
-Prefer:
-
-```text id="stakeholder-factual-alternative"
-The agreed milestone has not been met.
-
-The current position creates a material schedule risk.
-
-The recovery plan remains outstanding.
-
-Management intervention is now required.
-```
-
----
-
-# Example Input
-
-```text id="stakeholder-example-input"
-Project:
-Customer Portal
-
-Stakeholder:
-External identity provider
-
-Relationship:
-Professional but increasingly tense
-
-Situation:
-API certification is 10 working days late.
-
-Expected Date:
-5 June
-
-Current Date:
-15 June
-
-Impact:
-Production-equivalent authentication testing cannot complete.
-UAT start may slip.
-
-Actions Taken:
-Mock service implemented.
-Internal team re-sequenced testing.
-
-Required from Vendor:
-Confirmed certification date.
-Recovery plan.
-Named owners.
-
-Deadline:
-Thursday 17:00 CET.
-```
-
----
-
-# Example Output
-
-## Subject
-
-**Customer Portal — Identity Certification Delay and Recovery Action Required**
-
-Dear [Name],
-
-I am writing to formally confirm the current impact of the delayed identity-certification milestone and the recovery actions required to protect the planned UAT start.
-
-The certification milestone was due on 5 June and remains incomplete as of 15 June, representing a ten-working-day variance against the agreed plan. As a result, production-equivalent authentication testing cannot yet be completed, creating a direct dependency risk to the UAT schedule.
-
-To reduce the current impact, the project team has implemented the approved mock authentication service and re-sequenced eligible integration testing. These measures are protecting part of the test schedule but do not remove the need for completed certification.
-
-Please provide by **17:00 CET on Thursday**:
-
-1. confirmed certification completion date,
-2. detailed recovery plan,
-3. named owners for all outstanding actions,
-4. any support required from our project team.
-
-A further delay beyond the current recovery window may affect the planned UAT start and will require escalation through project governance.
-
-Thank you for your prompt attention to this matter.
+Thank you for your support in resolving this dependency.
 
 Kind regards,  
-[Project Manager]
+Project Manager
 
----
+#### 2. Executive Escalation Summary
 
-# Prompt 2 — Recipient Perspective Review
+*Use only if the decision remains unresolved and material project impact is confirmed.*
 
-Before sending an important message:
+| Field | Summary |
+|---|---|
+| Issue | Acceptance criteria for Excel export remain unconfirmed |
+| Current impact | Implementation and QA preparation cannot be finalized |
+| Actions taken | Technical options documented; dependency recorded in Jira |
+| Decision required | Confirm the required export capacity |
+| Decision owner | Product Owner |
+| Deadline | 18 May 2027, 12:00 CEST |
+| Impact if delayed | Potential Sprint replanning and delivery impact |
 
-```text id="stakeholder-review"
-ROLE
+**Escalation recommendation:** First seek resolution through normal Product Owner and Scrum Team collaboration. Escalate only if the unresolved decision threatens a material commitment or requires authority beyond the team.
 
-You are the recipient of the project communication below.
+#### 3. Communication Review
 
-TASK
-
-Review the message from the recipient's perspective.
-
-[PASTE MESSAGE]
-
-Identify:
-
-- questions I would ask,
-- statements that lack evidence,
-- unclear requests,
-- unnecessary defensiveness,
-- language that may damage the relationship,
-- missing deadlines,
-- missing project impact,
-- possible misunderstandings.
-
-OUTPUT FORMAT
-
-Finding
-Recipient Reaction
-Why It Matters
-Recommended Improvement
-```
-
-This second-pass review is especially useful for sensitive communications.
-
----
-
-# Prompt 3 — Executive Escalation Version
-
-```text id="stakeholder-exec"
-ROLE
-
-You are a senior Project Manager preparing an executive escalation.
-
-TASK
-
-Convert the communication below into a concise executive escalation.
-
-[PASTE MESSAGE]
-
-OUTPUT FORMAT
-
-Issue
-Current Impact
-Actions Taken
-Decision / Support Required
-Owner
-Deadline
-Impact if Delayed
-
-Maximum length:
-150 words
-```
-
----
-
-# Prompt 4 — Vendor Escalation
-
-```text id="stakeholder-vendor"
-ROLE
-
-You are a senior IT Project Manager escalating repeated vendor
-delivery failure.
-
-TASK
-
-Draft a professional vendor escalation using the evidence below.
-
-CONTEXT
-
-Vendor:
-[VENDOR]
-
-Commitment:
-[COMMITMENT]
-
-Original due date:
-[DATE]
-
-Current status:
-[STATUS]
-
-Previous recovery commitments:
-[DETAILS]
-
-Impact:
-[DETAILS]
-
-Required recovery:
-[DETAILS]
-
-OUTPUT FORMAT
-
-1. Current Position
-2. Missed Commitment
-3. Project Impact
-4. Previous Recovery Actions
-5. Required Recovery Plan
-6. Escalation Requirement
-7. Deadline
-```
-
----
-
-# Prompt 5 — Late Stakeholder Decision
-
-```text id="stakeholder-late-decision"
-ROLE
-
-You are a senior Project Manager following up on an overdue
-governance decision.
-
-TASK
-
-Draft a concise, professional escalation.
-
-CONTEXT
-
-Decision required:
-[DECISION]
-
-Decision owner:
-[OWNER]
-
-Original deadline:
-[DATE]
-
-Current impact:
-[IMPACT]
-
-Next dependency:
-[DEPENDENCY]
-
-OUTPUT FORMAT
-
-State:
-
-- decision required,
-- why it is overdue,
-- current impact,
-- new final deadline,
-- consequence if not received.
-```
-
----
-
-# Difficult Internal Stakeholder
-
-The same principles apply internally.
-
-Examples:
-
-- business team does not provide UAT resources,
-- architecture decision remains unresolved,
-- security approval is delayed,
-- sponsor decision is overdue,
-- competing departments disagree on scope.
-
-Use facts and governance rather than personal criticism.
-
----
-
-# Example
-
-Instead of:
-
-> The business team is not cooperating.
-
-Use:
-
-> Six of the eight required UAT testers remain unconfirmed. Unless named resources are confirmed by 20 August, the current UAT plan will no longer be achievable.
-
----
-
-# Communication Under Pressure
-
-Before sending, check:
-
-```text id="stakeholder-pressure"
-Am I stating facts?
-
-Am I separating facts from assumptions?
-
-Have I explained impact?
-
-Have I explained what we are doing?
-
-Is the required action explicit?
-
-Is the deadline explicit?
-
-Is escalation proportionate?
-
-Would I be comfortable seeing this message forwarded to senior management?
-```
-
----
-
-# Agile / Scrum Considerations
-
-Do not escalate routine delivery disagreements unnecessarily.
-
-Many issues should first be handled through:
-
-- Product Owner discussion,
-- team collaboration,
-- backlog clarification,
-- dependency resolution.
-
-Escalate when:
-
-- authority is insufficient,
-- external commitments are threatened,
-- decisions exceed team authority,
-- material risk exists.
-
----
-
-# Kanban Considerations
-
-Evidence may include:
-
-- ageing blocked work,
-- repeated SLE breaches,
-- growing WIP,
-- persistent external dependencies.
-
-Example:
-
-> Three integration items have remained blocked for more than eight working days awaiting external approval, and the resulting work-item ageing now threatens the release forecast.
-
----
-
-# Predictive Considerations
-
-Communication may reference:
-
-- milestone variance,
-- baseline commitments,
-- critical-path impact,
-- formal change control,
-- recovery plans.
-
----
-
-# Hybrid Considerations
-
-Combine formal governance with evidence from the actual delivery system.
-
-Example:
-
-```text id="stakeholder-hybrid"
-Delivery evidence
-↓
-Project impact
-↓
-Required action
-↓
-Governance escalation
-```
-
----
-
-# Contractual / Legal Communications
-
-If the communication has contractual or legal significance:
-
-- verify contractual references,
-- involve Legal or Procurement where appropriate,
-- preserve required notice periods,
-- avoid invented clause references,
-- distinguish project-management communication from formal legal notice.
-
-AI-generated wording should not be treated as legal advice.
-
----
-
-# Quality Checklist
-
-Before sending, confirm:
-
-- [ ] Subject clearly states the purpose
-- [ ] Facts are accurate
-- [ ] Dates are accurate
-- [ ] Impact is proportionate
-- [ ] Tone is professional
-- [ ] No unnecessary blame is included
-- [ ] Recovery actions are visible
-- [ ] Required action is explicit
-- [ ] Owner is clear
-- [ ] Deadline is clear
-- [ ] Consequence of delay is clear
-- [ ] Escalation is proportionate
-- [ ] Contractual statements have been verified where relevant
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- stakeholder engagement,
-- communication,
-- conflict management,
-- governance,
-- leadership,
-- issue management,
-- escalation.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- stakeholders,
-- governance,
-- delivery,
-- risk,
-- communication,
-- leadership.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Sensitive stakeholder communication should be reviewed where appropriate by:
-
-- Project Manager
-- Programme Manager
-- Sponsor
-- Procurement
-- Legal
-- Vendor Management
-- Security
-
-The more contractual, financial, political, or reputational the communication becomes, the more important human review is.
-
----
-
-# Confidentiality
-
-Sensitive communications may contain:
-
-- commercial positions,
-- contractual information,
-- vendor performance concerns,
-- employee information,
-- security issues,
-- internal governance discussions.
-
-Use anonymised information in public AI tools where required.
-
----
-
-# Prompt Metadata
-
-```text id="stakeholder-metadata"
-Prompt ID: REPORT-005
-Category: Reporting & Communication
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: PMO / Sponsor / Legal where applicable
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Potential Misunderstanding | Recipient Concern | Recommended Clarification |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial difficult stakeholder communication framework |
+| Why is the decision urgent? | Deadline appears arbitrary | Explain the dependency on implementation and testing |
+| What decision is required? | Technical options may be unclear | Present both supported export limits |
+| Is the Product Owner being blamed? | Message may feel accusatory | Focus on the unresolved requirement, not individual responsibility |
+| What happens if no decision is made? | Consequences may be unclear | Explain that affected Sprint work may require replanning |
+
+#### 4. Management Follow-Up
+
+| Action | Proposed Owner | Deadline | Escalation Trigger |
+|---|---|---|---|
+| Confirm export acceptance criteria | Product Owner | 18 May, 12:00 | Decision remains outstanding |
+| Update Jira requirements | Product Owner / BA | After confirmation | Accepted criteria unavailable |
+| Finalize technical implementation | Development Lead | TBD | Clarification not received |
+| Finalize test scenarios | QA Lead | TBD | Acceptance criteria remain unclear |
+| Assess Sprint impact | Scrum Team | At next coordination point | Sprint Goal becomes threatened |
+
+### Management Decisions
+
+1. **Requirement clarification:** Confirm the expected export limit and acceptance criteria.
+2. **Delivery coordination:** Update the backlog and testing documentation once the decision is available.
+3. **Schedule management:** Assess whether the outstanding dependency affects the Sprint Goal or release forecast.
+4. **Escalation:** Involve higher-level governance only if the decision cannot be resolved within the team's authority and a material commitment is at risk.
+
+### Applied Quality Review
+
+**Quality verdict: PASS**
+
+**Findings:** The message identifies the outstanding decision, its delivery impact, supporting actions, and response deadline. The tone remains constructive and avoids personal criticism. Escalation is conditional rather than unnecessarily immediate.
+
+**Required corrections:** None identified for the illustrative scenario. Before sending, verify the dates, technical options, intended recipient, and response deadline against the actual project records.
+
+**Recipient concerns:** The Product Owner may need a concise explanation of the technical and business differences between the two export limits.
+
+**Approval blockers:** None established from the supplied example.
+
+**Governance:** This framework supports PMI-aligned stakeholder engagement, communication management, issue resolution, leadership, and project governance.
+
+Sensitive communications involving contractual obligations, financial exposure, security incidents, or formal disputes require appropriate human review. AI-generated drafts do not replace authorized contractual notices or legal advice. Protect confidential project, vendor, employee, and security-sensitive information.

@@ -1,781 +1,353 @@
 # Project Meeting Minutes
 
-## Purpose
+**Prompt ID:** REPORT-006 | **Category:** Reporting & Communication | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert rough meeting notes into structured, professional project minutes.
+## 1. Ready-to-Use Prompt
 
-The goal is to create a clear record of:
+**Purpose:** Convert unstructured project meeting notes into accurate, concise, and actionable records of discussions, decisions, responsibilities, and unresolved dependencies.
 
-- what was discussed,
-- what was decided,
-- what actions were agreed,
-- who owns each action,
-- when actions are due,
-- and what remains unresolved.
+**Use case:** Document weekly IT delivery meetings, project status reviews, vendor coordination meetings, testing reviews, or steering committee discussions where decisions and follow-up actions require clear ownership.
 
-The objective is not to produce a transcript.
+Copy the prompt and replace the placeholders with your meeting information.
 
-The objective is to create a concise, reliable project record.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery / Testing / Deployment / Hypercare
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Product initiative
-
-**Primary user:**  
-Project Manager / Project Coordinator / Delivery Manager / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-After formal project meetings
-
----
-
-# Prompt
-
-```text id="minutes-01"
+```text id="minutes01"
 ROLE
 
-You are an experienced IT Project Manager / Project Coordinator
-converting rough meeting notes into formal project minutes.
+You are a Senior IT Project Manager and Project Coordinator
+experienced in software delivery, stakeholder communication,
+meeting documentation, action tracking, and governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Meeting type: [DELIVERY / TESTING / VENDOR / GOVERNANCE / OTHER]
+Meeting date: [DATE]
+Time / time zone: [IF KNOWN]
+Location / platform: [IF KNOWN]
+Chair: [NAME / ROLE]
+Participants: [LIST]
+Apologies: [IF APPLICABLE]
+Minutes prepared by: [NAME / ROLE]
+Previous actions: [PASTE IF AVAILABLE]
+Raw meeting notes: [PASTE NOTES]
+Next meeting: [IF KNOWN]
+Reporting date: [DATE, FOR ACTION FOLLOW-UP]
+Documentation level: [FORMAL / STANDARD / BRIEF]
 
 TASK
 
-Convert the notes below into clear, structured, professional
-meeting minutes.
+Create structured Project Meeting Minutes from the supplied notes.
 
-Do not invent decisions, owners, deadlines, or facts that are
-not supported by the notes.
+STEP 1 — STRUCTURE THE MEETING RECORD
 
-MEETING DETAILS
+1. Capture meeting details without inventing missing information.
+2. Summarize previous actions, including status and outstanding work.
+3. Organize discussion into concise, numbered agenda topics.
+4. Distinguish factual updates, proposals, decisions,
+   and unresolved questions.
+5. Extract only decisions explicitly agreed during the meeting.
+6. Record decision authority, conditions, and effective dates
+   where supported by the notes.
 
-Meeting type:
-[TYPE]
+STEP 2 — EXTRACT ACTIONS AND DEPENDENCIES
 
-Project:
-[PROJECT NAME]
+7. Identify specific follow-up actions and expected outputs.
+8. Record Action Owner, Due Date, Priority, and Status
+   only where supported by available information.
+9. Flag missing owners or deadlines as "To be confirmed".
+10. Capture new risks, existing issues, blockers,
+    dependencies, and required decisions separately.
+11. Identify actions that are overdue, blocked, or due
+    within the next seven days where dates are available.
 
-Date:
-[DATE]
+STEP 3 — SUPPORT PROJECT GOVERNANCE
 
-Chair:
-[NAME / ROLE]
+12. Identify material decisions for the central Decision Log.
+13. Identify actions for the project Action Tracker.
+14. Identify risks, issues, and dependencies for the RAID register.
+15. Highlight unresolved items requiring management attention.
+16. Record the next meeting and required inputs where known.
 
-Participants:
-[LIST]
+Do not invent decisions, agreements, ownership, dates,
+priorities, approvals, or action completion.
 
-Apologies:
-[IF APPLICABLE]
+Keep discussion summaries factual, neutral, and concise.
+Do not create a transcript.
 
-RAW NOTES
+Adapt documentation detail to meeting importance:
+- Formal governance: decisions, approvals, risks, escalations.
+- Delivery coordination: progress, blockers, dependencies, actions.
+- Working sessions: concise decision and action summary.
 
-[PASTE ROUGH NOTES EXACTLY AS CAPTURED]
+For Agile teams, avoid duplicating Jira or Scrum event records
+unless material decisions or cross-team commitments require capture.
 
 OUTPUT FORMAT
 
-1. Meeting Details
-2. Previous Actions Update
-3. Agenda Items Discussed
-4. Decisions Made
-5. New Action Items
-6. Risks / Issues / Dependencies Identified
-7. Next Meeting Details
+1. MEETING DETAILS
+
+Meeting | Project | Date | Time | Platform |
+Chair | Participants | Apologies | Minutes Prepared By
+
+2. PREVIOUS ACTIONS
+
+Action ID | Action | Owner | Original Due Date |
+Status | Comment
+
+3. AGENDA ITEMS DISCUSSED
+
+Topic | Key Discussion | Project Impact |
+Unresolved Point
+
+4. DECISIONS MADE
+
+Decision ID | Decision | Decision Owner |
+Effective Date | Conditions
+
+5. NEW ACTION ITEMS
+
+Action ID | Action | Expected Output |
+Owner | Due Date | Priority | Status
+
+6. RISKS, ISSUES, AND DEPENDENCIES
+
+Type | Description | Project Impact |
+Owner | Required Follow-Up
+
+7. ACTION FOLLOW-UP
+
+Action | Owner | Due Date | Status |
+Concern | Required Follow-Up
+
+8. NEXT MEETING
+
+Date | Time | Purpose | Required Inputs
+
+9. GOVERNANCE UPDATE
+
+Record Type | Item | Target Register |
+Required Update | Proposed Owner
+
+MANAGEMENT SUMMARY
+
+- Key decisions
+- Critical actions and deadlines
+- Open blockers and dependencies
+- Items requiring escalation or confirmation
+
+Use concise Markdown tables.
+Mark unavailable details as "Not provided".
+Do not infer agreement from discussion alone.
 ```
 
 ---
 
-# 1. Meeting Details
+## 2. Quality Check
 
-Provide:
+Apply this independent review before distributing the minutes.
 
-```text id="minutes-details"
-Meeting:
-Project:
-Date:
-Time:
-Location / Platform:
-Chair:
+```text id="minutesqa"
+QUALITY CHECK
+
+Act as a Senior PMO Quality Assurance Manager.
+
+Review the meeting minutes against the original notes.
+
+Verify:
+
+1. Accuracy: Facts, dates, participants, and statuses
+   match the available source information.
+2. Decisions: Agreed decisions are distinguished from
+   proposals, opinions, and discussion.
+3. Actions: Follow-ups are specific, with supported owners,
+   deadlines, and expected outputs.
+4. Completeness: Material discussion points, unresolved
+   questions, blockers, risks, and dependencies are captured.
+5. Traceability: Decision IDs, Action IDs, and references
+   support follow-up and central register updates.
+6. Consistency: No conflicting deadlines, action statuses,
+   or unsupported completion claims.
+7. Governance: Important decisions and actions are identified
+   for the relevant project registers.
+8. Professionalism: Minutes are concise, neutral,
+   and free from personal interpretation.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Confirmation Required: [MISSING OWNERS / DATES / DECISIONS]
+
+Do not invent decisions, actions, deadlines, or approvals.
+Flag ambiguous statements for meeting-chair confirmation.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### Software Development — Weekly Delivery Coordination Meeting
+
+**Scenario:** A software team is preparing a reporting feature for production release. During the weekly coordination meeting, the Project Manager reviews development progress, open defects, integration dependencies, and testing readiness.
+
+The objective is to convert rough notes into a structured record that supports Jira tracking, responsibility assignment, and release management.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Web Application Reporting Enhancement |
+| Meeting type | Weekly Delivery Coordination |
+| Delivery approach | Scrum |
+| Phase | Development / Testing |
+| Participants | Project Manager, Product Owner, Development Lead, QA Lead |
+| Tools | Jira, Confluence, Microsoft Teams |
+| Main concerns | API integration, open defects, testing readiness |
+| Management objective | Confirm decisions, owners, and delivery dependencies |
+
+### Example Input
+
+```text id="minutesinput"
+Project: Web Application Reporting Enhancement
+
+Meeting: Weekly Delivery Coordination
+Date: 7 June 2027
+Time: 10:00–10:30
+Platform: Microsoft Teams
+Chair: Project Manager
+
 Participants:
-Apologies:
-Minutes prepared by:
+PM, Product Owner, Development Lead, QA Lead
+
+Previous actions:
+A-01 API specification review — Development Lead — complete
+A-02 Regression test plan — QA Lead — still in progress
+
+Rough notes:
+
+- Reporting API integration mostly done.
+- 2 defects open in Jira, one Severity 1.
+- Development Lead expects fix by Wednesday 9 June.
+- QA says regression testing can continue on unaffected features.
+- PO wants UAT to start on 14 June.
+- QA says UAT should not start with the Sev1 defect open.
+- Team agreed: UAT start depends on Sev1 resolution and retest.
+- Development Lead to provide fix by 9 June.
+- QA Lead to retest by 11 June if fix available.
+- PM to update release readiness status after retest.
+- Next meeting Monday 14 June at 10:00.
 ```
 
-Do not invent missing details.
+### Example Output — Project Meeting Minutes
 
-Use:
+#### 1. Meeting Details
 
-> Not provided
+| Field | Details |
+|---|---|
+| Meeting | Weekly Delivery Coordination |
+| Project | Web Application Reporting Enhancement |
+| Date | 7 June 2027 |
+| Time | 10:00–10:30 |
+| Platform | Microsoft Teams |
+| Chair | Project Manager |
+| Participants | Project Manager, Product Owner, Development Lead, QA Lead |
+| Minutes prepared by | Not provided |
 
-where necessary.
+#### 2. Previous Actions
 
----
-
-# 2. Previous Actions Update
-
-Provide:
-
-| Action | Owner | Original Due Date | Status | Comment |
+| Action ID | Action | Owner | Due Date | Status |
 |---|---|---|---|---|
+| A-01 | Review API specification | Development Lead | Not provided | Complete |
+| A-02 | Prepare regression test plan | QA Lead | Not provided | In Progress |
 
-Suggested statuses:
+#### 3. Agenda Items Discussed
 
-```text id="minutes-action-status"
-Open
-In Progress
-Complete
-Overdue
-Blocked
-Deferred
-```
-
-Do not mark an action complete unless the notes support it.
-
----
-
-# 3. Agenda Items Discussed
-
-Summarise topics in numbered sections.
-
-Example:
-
-```text id="minutes-agenda-example"
-1. Integration Status
-2. Data Migration
-3. Testing Readiness
-4. Security Review
-5. Vendor Dependencies
-6. Release Planning
-```
-
-For each item capture:
-
-- key facts,
-- relevant discussion,
-- impact,
-- unresolved points.
-
-Avoid writing every conversational detail.
-
----
-
-# Discussion vs Decision
-
-Keep these separate.
-
-### Discussion
-
-> The team reviewed the remaining integration defects and discussed the impact on the planned UAT start.
-
-### Decision
-
-> Decision: UAT will not start until both Severity 1 defects are resolved and retested.
-
-A statement should only appear under **Decisions Made** if the notes clearly show that a decision was agreed.
-
----
-
-# 4. Decisions Made
-
-Provide a numbered list.
-
-Example:
-
-```text id="minutes-decisions"
-D-01:
-UAT entry criteria will require zero open Severity 1 defects.
-
-D-02:
-The project will continue using the mock authentication service
-until production certification is completed.
-```
-
-Where useful include:
-
-| Decision ID | Decision | Decision Owner | Effective Date |
+| Topic | Key Discussion | Project Impact | Unresolved Point |
 |---|---|---|---|
+| API integration | Integration substantially completed | Final readiness requires confirmation | Remaining integration work |
+| Open defects | Two defects open, including one Severity 1 | Testing and UAT readiness affected | Critical defect resolution |
+| Regression testing | Unaffected features can continue testing | Some test progress maintained | Final completion forecast |
+| UAT readiness | Product Owner requested 14 June start | UAT depends on successful retesting | Critical defect closure |
 
----
+#### 4. Decisions Made
 
-# Decision Recording Rule
+| Decision ID | Decision | Decision Owner | Effective Date | Conditions |
+|---|---|---|---|---|
+| D-01 | UAT start is conditional on resolution and successful retesting of the Severity 1 defect | Not confirmed | Before UAT | Severity 1 fix and retest completed |
 
-A strong decision record should capture:
+The notes establish that the team agreed on this condition; they do not establish formal UAT approval authority.
 
-```text id="minutes-decision-rule"
-What was decided
-Who had authority
-When it applies
-Any conditions
-```
+#### 5. New Action Items
 
-Avoid vague wording:
-
-```text id="minutes-decision-weak"
-The team discussed release timing.
-```
-
-Prefer:
-
-```text id="minutes-decision-good"
-Decision:
-The release remains scheduled for 30 September, subject to security
-approval being completed by 20 September.
-```
-
----
-
-# 5. New Action Items
-
-Provide:
-
-| Action ID | Action | Owner | Due Date | Priority | Status |
+| Action ID | Action | Expected Output | Owner | Due Date | Status |
 |---|---|---|---|---|---|
+| A-03 | Provide fix for Severity 1 defect | Corrected build | Development Lead | 9 June 2027 | Open |
+| A-04 | Retest Severity 1 defect, subject to fix availability | Verified test result | QA Lead | 11 June 2027 | Open |
+| A-05 | Update release readiness status after retest | Updated project status | Project Manager | After retest | Open |
 
-Use specific action wording.
+Priorities were not explicitly assigned during the meeting.
 
-### Weak
+#### 6. Risks, Issues, and Dependencies
 
-```text id="minutes-action-weak"
-Follow up on testing.
-```
-
-### Better
-
-```text id="minutes-action-good"
-QA Lead to confirm retest completion for both Severity 1 defects
-by 16 June.
-```
-
----
-
-# Action Quality Rule
-
-Each action should ideally contain:
-
-```text id="minutes-action-rule"
-Action
-Owner
-Deadline
-Expected Output
-```
-
-If the notes do not contain an owner or date, flag:
-
-```text id="minutes-action-gap"
-Owner:
-To be confirmed
-
-Due Date:
-To be confirmed
-```
-
-Do not guess.
-
----
-
-# 6. Risks / Issues / Dependencies Identified
-
-Capture material items raised during the meeting.
-
-Provide:
-
-| Type | Description | Impact | Owner | Next Action |
+| Type | Description | Project Impact | Proposed Owner | Required Follow-Up |
 |---|---|---|---|---|
+| Issue | One Severity 1 defect remains open | UAT readiness blocked | Development Lead | Fix and retest |
+| Dependency | QA retesting depends on fix availability | Retest could be delayed | QA Lead | Confirm corrected build |
+| Risk | UAT may not start on 14 June if retesting is unsuccessful | Release schedule exposure | Project Manager | Reassess UAT readiness |
+| Dependency | Final release readiness depends on test outcome | Approval timing affected | Project Manager | Update status after retest |
 
-Type may be:
+#### 7. Action Follow-Up
 
-```text id="minutes-type"
-Risk
-Issue
-Dependency
-Blocker
-Decision Dependency
-```
-
-This helps connect meeting discussion to the RAID process.
-
----
-
-# 7. Next Meeting Details
-
-Provide:
-
-```text id="minutes-next"
-Next Meeting:
-Date:
-Time:
-Purpose:
-Required Inputs:
-```
-
-If not known, state:
-
-> To be confirmed.
-
----
-
-# Example Input
-
-```text id="minutes-example-input"
-Meeting:
-Integration Coordination
-
-Project:
-Customer Portal
-
-Chair:
-Project Manager
-
-attendees - PM, integration lead, QA lead, vendor lead, product owner
-
-previous action - vendor recovery plan done, API certification still open
-
-integration - mock service working, identity certification expected Friday
-
-QA - 2 sev1 defects last week, one fixed and retested, one still open
-
-PO - business wants UAT to start Monday if possible
-
-QA says cannot recommend UAT while sev1 defect still open
-
-agreed - no UAT start until sev1 closed and retested
-
-vendor lead to confirm certification Friday by 2pm
-
-QA lead to retest defect by Monday 10am if fix delivered Friday
-
-PM to update sponsor if either item slips
-
-next meeting Monday 11am
-```
-
----
-
-# Example Output
-
-## Meeting Details
-
-**Meeting:** Integration Coordination  
-**Project:** Customer Portal  
-**Chair:** Project Manager  
-**Participants:** Project Manager, Integration Lead, QA Lead, Vendor Lead, Product Owner
-
----
-
-## Previous Actions Update
-
-| Action | Owner | Status |
-|---|---|---|
-| Submit vendor recovery plan | Vendor | Complete |
-| Complete API certification | Vendor | Open |
-
----
-
-## Agenda Items Discussed
-
-### 1. Identity Certification
-
-The mock authentication service is operational. Production certification remains outstanding and is currently expected on Friday.
-
-### 2. Critical Defects
-
-Of the two Severity 1 defects previously open, one has been fixed and successfully retested. One remains unresolved.
-
-### 3. UAT Readiness
-
-The Product Owner requested a Monday UAT start. QA advised that UAT should not begin while a Severity 1 defect remains open.
-
----
-
-## Decisions Made
-
-**D-01:** UAT will not start until the remaining Severity 1 defect has been resolved and successfully retested.
-
----
-
-## New Actions
-
-| Action | Owner | Due Date | Priority |
-|---|---|---|---|
-| Confirm API certification status | Vendor Lead | Friday 14:00 | High |
-| Retest remaining Severity 1 defect, subject to fix delivery | QA Lead | Monday 10:00 | Critical |
-| Escalate to Sponsor if either dependency slips | Project Manager | As required | High |
-
----
-
-## Risks / Dependencies
-
-| Type | Description | Impact |
-|---|---|---|
-| Dependency | API certification remains outstanding | Integration completion risk |
-| Issue | One Severity 1 defect remains open | UAT cannot start |
-
----
-
-## Next Meeting
-
-**Monday, 11:00**
-
-Purpose: Review UAT readiness and outstanding integration dependencies.
-
----
-
-# Prompt 2 — Minutes Quality Review
-
-```text id="minutes-review"
-ROLE
-
-You are a PMO Lead reviewing formal project meeting minutes.
-
-TASK
-
-Review the minutes below.
-
-[PASTE MINUTES]
-
-Check for:
-
-- decisions hidden in discussion text,
-- actions without owners,
-- actions without deadlines,
-- vague action wording,
-- unsupported conclusions,
-- inconsistent dates,
-- unresolved dependencies,
-- risks or issues that should be captured formally.
-
-OUTPUT FORMAT
-
-Finding
-Why It Matters
-Recommended Correction
-Priority
-```
-
----
-
-# Prompt 3 — Extract Decisions and Actions
-
-For long meetings:
-
-```text id="minutes-extract"
-ROLE
-
-You are an IT Project Coordinator reviewing meeting notes.
-
-TASK
-
-Extract only decisions and actions from the notes below.
-
-[PASTE NOTES]
-
-OUTPUT FORMAT
-
-DECISIONS
-
-Decision ID
-Decision
-Decision Owner
-Condition
-
-ACTIONS
-
-Action ID
-Action
-Owner
-Due Date
-Priority
-```
-
-Do not infer missing information.
-
----
-
-# Prompt 4 — Action Follow-Up
-
-Use meeting minutes to create an action follow-up list.
-
-```text id="minutes-followup"
-ROLE
-
-You are a Project Manager reviewing open actions from recent
-meeting minutes.
-
-TASK
-
-Identify:
-
-- overdue actions,
-- actions due in the next 7 days,
-- blocked actions,
-- actions without owners,
-- actions without deadlines.
-
-OUTPUT FORMAT
-
-Action
-Owner
-Due Date
-Status
-Concern
-Required Follow-Up
-```
-
----
-
-# Meeting Minutes Principles
-
-Minutes should be:
-
-```text id="minutes-principles"
-Accurate
-Concise
-Neutral
-Action-oriented
-Traceable
-Easy to review
-```
-
-Minutes should not be:
-
-```text id="minutes-avoid"
-A transcript
-A personal opinion
-A rewrite of every sentence spoken
-A place to add decisions that were never agreed
-```
-
----
-
-# Formal vs Informal Meetings
-
-Not every meeting requires detailed formal minutes.
-
-## Formal Governance Meeting
-
-Capture:
-
-- decisions,
-- approvals,
-- risks,
-- escalations,
-- actions,
-- deadlines.
-
-## Delivery Coordination Meeting
-
-Focus on:
-
-- blockers,
-- dependencies,
-- decisions,
-- actions.
-
-## Working Session
-
-A short action and decision summary may be sufficient.
-
-Use documentation effort proportional to governance importance.
-
----
-
-# Agile / Scrum Considerations
-
-Do not create unnecessary formal minutes for every Scrum event.
-
-For example, Daily Scrum normally does not need formal meeting minutes.
-
-Formal capture may still be useful for:
-
-- cross-team decisions,
-- governance decisions,
-- major dependencies,
-- external vendor commitments,
-- release decisions.
-
----
-
-# Kanban Considerations
-
-Where relevant, meeting output may capture:
-
-- blocked items,
-- ageing work,
-- dependency actions,
-- WIP policy decisions,
-- service-delivery decisions.
-
-The board remains the operational source of work status where applicable; minutes should capture important decisions and commitments rather than duplicate the board.
-
----
-
-# Predictive Considerations
-
-Formal minutes may be particularly important for:
-
-- milestone reviews,
-- change-control meetings,
-- vendor reviews,
-- risk reviews,
-- steering committees.
-
----
-
-# Hybrid Considerations
-
-Keep formal governance records where required while allowing delivery teams to use lighter-weight documentation for routine coordination.
-
----
-
-# Decision Log Integration
-
-After the meeting, material decisions should be transferred to the project decision log.
-
-Example:
-
-| Decision ID | Meeting | Decision | Date | Owner |
+| Action | Owner | Due Date | Status | Required Follow-Up |
 |---|---|---|---|---|
+| Complete regression plan | QA Lead | Not provided | In Progress | Confirm completion date |
+| Deliver critical defect fix | Development Lead | 9 June | Open | Verify availability |
+| Retest critical defect | QA Lead | 11 June | Open | Record results in Jira |
+| Update readiness status | Project Manager | After retest | Open | Communicate outcome |
 
-This prevents important decisions from becoming difficult to find across multiple sets of meeting minutes.
+#### 8. Next Meeting
 
----
+| Field | Details |
+|---|---|
+| Date | 14 June 2027 |
+| Time | 10:00 |
+| Purpose | Review defect resolution and UAT readiness |
+| Required inputs | Defect fix status, QA retest evidence, updated readiness assessment |
 
-# Action Log Integration
+The meeting purpose and required inputs are proposed based on the discussion; they were not explicitly agreed in the notes.
 
-Likewise, project-critical actions should feed the central action tracker.
+#### 9. Governance Update
 
-Use:
+| Record Type | Item | Target Register | Required Update | Proposed Owner |
+|---|---|---|---|---|
+| Decision | D-01 UAT entry condition | Decision Log | Record and validate decision authority | Project Manager |
+| Action | A-03 Critical defect fix | Jira / Action Tracker | Track fix completion | Development Lead |
+| Action | A-04 Defect retesting | Jira / Action Tracker | Record test outcome | QA Lead |
+| Issue | Open Severity 1 defect | Issue Log / Jira | Maintain status and impact | Project Manager |
+| Risk | Potential UAT delay | Risk Register | Assess likelihood and schedule impact | Project Manager |
 
-```text id="minutes-integration"
-Meeting Minutes
-↓
-Decision Log
-+
-Action Log
-+
-Risk / Issue Register where relevant
-```
+### Management Decisions
 
-Meeting minutes should not become an isolated information repository.
+1. **Defect resolution:** Confirm that the Severity 1 fix is delivered by 9 June and successfully retested by 11 June.
+2. **UAT readiness:** Validate the agreed testing condition and obtain formal UAT start authorization where required.
+3. **Release reporting:** Update project status based on verified defect and testing evidence.
+4. **Governance:** Transfer material decisions, actions, issues, and risks into their authoritative project registers.
 
----
+### Applied Quality Review
 
-# Quality Checklist
+**Quality verdict: REVISE**
 
-Before distributing minutes, confirm:
+**Findings:** The minutes capture the main topics, confirmed UAT condition, and action ownership. However, decision authority, the regression-plan deadline, and some proposed next-meeting details require clarification.
 
-- [ ] Meeting details are correct
-- [ ] Participants are correct
-- [ ] Previous actions are updated
-- [ ] Discussion is concise
-- [ ] Decisions are clearly separated
-- [ ] Actions are specific
-- [ ] Owners are assigned where known
-- [ ] Deadlines are recorded where known
-- [ ] Missing information is not invented
-- [ ] Risks and issues are identified
-- [ ] Dependencies are visible
-- [ ] Next meeting information is included where known
-- [ ] Important decisions are transferred to the decision log
-- [ ] Critical actions are transferred to the action tracker
+**Required corrections:**
+- Confirm who is authorized to approve UAT start.
+- Obtain the missing regression test plan deadline.
+- Validate proposed meeting purpose and preparation inputs.
+- Confirm that the meeting chair agrees with the final decision record.
 
----
+**Confirmation Required:** Formal UAT approval authority and outstanding action deadline.
 
-# Standards / Framework Alignment
+**Governance:** This template supports PMI-aligned stakeholder communication, decision management, issue tracking, and project governance.
 
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- communication,
-- stakeholder engagement,
-- governance,
-- action tracking,
-- decision management,
-- issue and risk management.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- stakeholders,
-- governance,
-- delivery,
-- team coordination,
-- communication.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Before formal distribution, confirm:
-
-- decisions accurately reflect what was agreed,
-- actions have correct owners,
-- deadlines are accurate,
-- sensitive information is appropriate for the distribution list.
-
-AI can structure rough notes.
-
-It should not invent decisions or agreements that did not occur.
-
----
-
-# Confidentiality
-
-Meeting notes may contain sensitive information.
-
-Protect:
-
-- commercial discussions,
-- vendor performance concerns,
-- security issues,
-- employee information,
-- customer information,
-- confidential decisions.
-
-Use anonymised information in public AI tools where required.
-
----
-
-# Prompt Metadata
-
-```text id="minutes-metadata"
-Prompt ID: REPORT-006
-Category: Reporting & Communication
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Project Coordinator
-Reviewer: Meeting Chair
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Low
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT meeting-minutes framework |
+Meeting minutes are an official project record only after the appropriate review and distribution process. AI-generated minutes do not establish decisions or commitments beyond what participants actually agreed. Protect confidential project, employee, vendor, customer, and security-sensitive information.

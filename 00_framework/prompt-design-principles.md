@@ -292,8 +292,4 @@ Before publishing a reusable prompt, confirm:
 
 ## Key Principle
 
-A professional AI prompt should consistently produce outputs that are:
-
-**Relevant → Evidence-Based → Structured → Actionable → Reviewable → Governable**
-
 **Measure prompt quality by the usefulness of the management decisions it supports—not by prompt length or complexity.**

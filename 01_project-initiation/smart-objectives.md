@@ -1,422 +1,249 @@
 # SMART Project Objectives
 
-## Purpose
+**Prompt ID:** INIT-005 | **Category:** Project Initiation | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to convert high-level project goals into clear, measurable, and accountable SMART objectives.
+## 1. Ready-to-Use Prompt
 
-SMART objectives help connect:
+**Purpose:** Translate strategic project goals into measurable, accountable objectives that align delivery performance with business value.
 
-- business value,
-- project scope,
-- success criteria,
-- delivery priorities,
-- KPIs,
-- ownership,
-- and governance.
+**Use case:** Define or revise success measures, KPI targets, and accountable ownership when initiating a project, establishing a delivery baseline, or reviewing major scope changes.
 
-The objective is not only to define what the project will deliver, but also how success will be measured.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Planning
-
-**Project type:**  
-Software development / System implementation / Digital transformation / Data project / Process improvement / Product initiative
-
-**Primary user:**  
-Project Manager / Project Coordinator / Delivery Manager / PMO / Business Analyst / Product Owner
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At initiation and after major strategic or scope changes
-
----
-
-# Prompt
+Copy the prompt and replace the placeholders with your project information.
 
 ```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, digital transformation, stakeholder management,
-business analysis, and project governance.
+You are a Senior IT Project Manager specializing in software delivery,
+business analysis, performance measurement, benefits realization,
+and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business problem: [PROBLEM]
+Strategic purpose: [BUSINESS OBJECTIVE]
+Expected benefits: [BENEFITS]
+Target completion: [DATE]
+Budget: [BUDGET OR RANGE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Stakeholders: [ROLES]
+Expected outcomes: [LIST]
+Known success criteria and KPIs: [LIST]
+Current performance baselines: [METRICS, IF AVAILABLE]
+Dependencies: [LIST]
+Constraints: [LIST]
 
 TASK
 
-Create SMART project objectives for the project described below.
+Define five SMART project objectives aligned with business value.
 
-PROJECT CONTEXT
+1. Make each objective Specific, Measurable, Achievable,
+   Relevant, and Time-bound.
+2. Distinguish project outputs from business, operational,
+   quality, and flow/delivery outcomes.
+3. Link each objective to an expected business benefit.
+4. Define measurable indicators, baselines, targets, and deadlines.
+5. Assess target feasibility against budget, capacity, and constraints.
+6. Identify accountable owners and unresolved ownership.
+7. Highlight objectives dependent on unapproved scope or requirements.
+8. Identify critical vendor, technical, and stakeholder dependencies.
+9. Assess risks that could prevent objective achievement.
+10. Flag conflicting objectives, unsupported targets, and missing data.
+11. Replace vague goals with measurable statements where evidence allows.
+12. Identify objectives requiring stakeholder approval.
 
-Project:
-[PROJECT NAME]
-
-Business problem:
-[BUSINESS PROBLEM]
-
-Strategic purpose:
-[WHY THE PROJECT EXISTS]
-
-Expected business value:
-[EXPECTED BENEFITS]
-
-Target completion:
-[DATE]
-
-Budget:
-[BUDGET OR RANGE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Key stakeholders:
-[LIST]
-
-Expected business outcomes:
-[LIST]
-
-Known constraints:
-[LIST]
-
-Known dependencies:
-[LIST]
-
-Known success criteria:
-[LIST]
+Do not invent targets, baselines, dates, or ownership.
+Use "Target to be confirmed" where evidence is insufficient.
+Clearly distinguish proposed measures from approved commitments.
 
 OUTPUT FORMAT
 
-Create 5 SMART project objectives.
+TABLE 1 — SMART OBJECTIVES
 
-For each objective provide:
-
-1. Objective statement
-2. Specific outcome
-3. Measurement method
-4. Target value
-5. Target date
-6. Accountable owner
-7. Related business benefit
-8. Primary dependency
-9. Key risk to achievement
-```
-
----
-
-# SMART Quality Criteria
-
-Each objective should be:
-
-## Specific
-
-The objective should clearly describe what must be achieved.
-
-## Measurable
-
-The result should be objectively measurable.
-
-## Achievable
-
-The target should be realistic given the available time, budget, resources, and constraints.
-
-## Relevant
-
-The objective should directly support the project's business purpose.
-
-## Time-Bound
-
-The objective should have a defined target date or review period.
-
----
-
-# Analysis Rules
-
-When creating the objectives:
-
-1. Do not invent unsupported targets.
-2. Flag missing baselines.
-3. Identify objectives that depend on unresolved scope.
-4. Identify objectives that rely heavily on vendors or external teams.
-5. Separate project outputs from business outcomes.
-6. Avoid vague language such as:
-   - improve significantly,
-   - enhance user experience,
-   - optimise processes,
-   - increase efficiency,
-   - deliver high quality.
-7. Convert vague goals into measurable outcomes where the available information allows.
-8. If a measurable target is missing, state:
-   **Target to be confirmed.**
-9. Identify dependencies that may prevent achievement.
-10. Highlight objectives that conflict with project constraints.
-
----
-
-# Delivery-Approach Considerations
-
-Use only where relevant.
-
-## Agile / Scrum
-
-Consider:
-
-- product goals,
-- incremental value delivery,
-- release objectives,
-- user outcomes,
-- Product Owner accountability,
-- measurable acceptance criteria.
-
-## Kanban
-
-Consider:
-
-- service-level objectives,
-- flow improvement,
-- lead time,
-- cycle time,
-- throughput,
-- service quality,
-- operational outcomes.
-
-## Predictive
-
-Consider:
-
-- milestone achievement,
-- planned benefits,
-- schedule commitments,
-- budget commitments,
-- formal acceptance criteria.
-
-## Hybrid
-
-Consider both fixed business commitments and iterative or flow-based delivery outcomes.
-
----
-
-# Example Input
-
-```text
-Project:
-Customer Self-Service Portal
-
-Business Problem:
-Customer Service receives a high volume of manual account-management requests.
-
-Strategic Purpose:
-Reduce operational workload and improve customer access to routine services.
-
-Expected Business Value:
-Lower service cost
-Faster customer response times
-Higher digital adoption
-
-Target Completion:
-30 September 2027
-
-Budget:
-€750,000
-
-Delivery Approach:
-Hybrid Agile
-
-Known Constraints:
-External development vendor
-Legacy CRM API
-Fixed September launch target
-
-Expected Outcomes:
-More customer requests handled digitally
-Lower email volume
-Improved service response
-```
-
----
-
-# Example Output
-
-| Objective | Measurement | Target | Date | Owner |
-|---|---|---|---|---|
-| Launch the customer portal | Production deployment completed and approved | Successful go-live | 30 Sep 2027 | Project Manager |
-| Increase digital handling of eligible requests | Share of eligible requests completed online | Target to be confirmed | 6 months after go-live | Customer Operations |
-| Reduce manual service workload | Volume of eligible email requests | Target to be confirmed | 6 months after go-live | Customer Service Manager |
-| Achieve production quality readiness | Open Severity 1 defects | 0 at go-live | Before release | QA Lead |
-| Achieve operational readiness | Training, support model, and procedures approved | 100% complete | Before go-live | Operations Lead |
-
----
-
-# Objective Quality Review
-
-After creating the objectives, review each one.
-
-Provide:
-
-| Objective | SMART Rating | Weakness | Recommended Improvement |
-|---|---|---|---|
-
-Use:
-
-```text
-Strong
-Acceptable
-Needs Clarification
-Not SMART
-```
-
----
-
-# Output vs Outcome Check
+ID | Objective | Specific Outcome | KPI / Measurement |
+Baseline | Target | Target Date | Accountable Owner |
+Business Benefit | Primary Dependency | Key Risk | Objective Type
 
 Classify each objective as:
+- Project Output
+- Business Outcome
+- Operational Outcome
+- Quality Outcome
+- Flow / Delivery Outcome
 
-```text
-Project Output
-Business Outcome
-Operational Outcome
-Quality Outcome
-Flow / Delivery Outcome
+TABLE 2 — SMART ASSESSMENT
+
+Objective ID | Specific | Measurable | Achievable |
+Relevant | Time-bound | Overall Rating |
+Required Improvement
+
+Ratings:
+Strong / Acceptable / Needs Clarification / Not SMART
+
+TABLE 3 — DEPENDENCY REVIEW
+
+Objective ID | Primary Dependency | Dependency Owner |
+Risk if Dependency Fails | Recommended Action
+
+MANAGEMENT SUMMARY
+
+1. Objectives requiring clarification or approval
+2. Missing baselines, targets, or ownership
+3. Critical dependencies and achievement risks
+4. Potential conflicts with project constraints
+5. Recommended management decisions
+
+Use concise Markdown tables.
+Mark missing information explicitly.
+Do not present proposed targets as approved commitments.
 ```
 
-Example:
+---
 
-| Objective | Type |
+## 2. Quality Check
+
+Apply this quality control after generating the SMART objectives.
+
+```text
+QUALITY CHECK
+
+Act as a Senior QA Manager and review the SMART objectives.
+
+Verify:
+
+1. Completeness: Five objectives and all required analyses are present.
+2. SMART Compliance: Each objective has a specific outcome,
+   measurable indicator, feasible target, business relevance,
+   and defined timeframe, or is flagged for clarification.
+3. Evidence: Baselines, targets, deadlines, and ownership are supported
+   by available information or clearly marked as unconfirmed.
+4. Alignment: Objectives support business value and distinguish
+   project outputs from business outcomes.
+5. Dependencies: Critical risks, constraints, and external
+   dependencies are identified.
+6. Governance: Accountability, required approvals, and unresolved
+   decisions are visible.
+7. Actionability: Recommended improvements are specific and feasible.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+
+Do not invent missing targets, metrics, owners, or approvals.
+Flag objectives requiring stakeholder validation.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### Data Warehouse and BI Reporting Implementation
+
+**Scenario:** A company is implementing a centralized data warehouse and Power BI reporting solution to replace fragmented departmental reports. The Project Manager must translate broad goals such as improving data quality and accelerating reporting into measurable objectives before the delivery plan is approved.
+
+### Project Context
+
+| Attribute | Details |
 |---|---|
-| Deploy CRM to production | Project Output |
-| Reduce customer response time | Business Outcome |
-| Train support team | Operational Outcome |
-| Achieve zero Severity 1 defects | Quality Outcome |
-| Reduce average cycle time | Flow / Delivery Outcome |
+| Project | Enterprise Data Warehouse & BI Reporting |
+| Phase | Initiation / Planning |
+| Delivery approach | Hybrid |
+| Target completion | 30 September 2027 |
+| Budget | €400,000 (planning estimate) |
+| Data sources | CRM, ERP, financial reporting systems |
+| Key stakeholders | Finance, Sales, IT, Data Engineering, BI Team |
+| Dependencies | Data access, ETL pipelines, data quality, business validation |
+| Management decision | Agree measurable delivery objectives, reporting KPIs, and accountable owners |
 
-A strong project should normally include more than delivery-only objectives.
-
----
-
-# Dependency Review
-
-For each objective, identify:
+### Example Input
 
 ```text
-Objective
-Primary Dependency
-Dependency Owner
-Risk if Dependency Fails
+Project: Enterprise Data Warehouse & BI Reporting
+
+Business problem:
+Finance and Sales rely on manual Excel reporting.
+Data is fragmented across CRM, ERP, and financial systems.
+Reports contain inconsistencies and require repeated reconciliation.
+
+Strategic purpose:
+Establish a centralized, reliable reporting environment.
+
+Expected business value:
+- Reduce manual reporting effort.
+- Improve data consistency.
+- Accelerate management reporting.
+- Increase access to standardized KPIs.
+
+Target completion: 30 September 2027
+Budget: €400,000 (planning estimate)
+Delivery approach: Hybrid
+
+Known information:
+- Current monthly reporting takes approximately 5 working days.
+- Target reporting time: 2 working days.
+- CRM and ERP integrations are required.
+- Power BI dashboards are planned.
+- Data quality baseline has not been established.
+- Business KPI definitions require stakeholder approval.
+- Data Engineering resources are shared with other projects.
+- Project ownership and success criteria require confirmation.
 ```
 
-This prevents objectives from being treated as isolated targets.
+### Example Output — SMART Objectives
 
----
+The following table is a concise illustration of the required output. Missing targets and owners are explicitly identified rather than invented.
 
-# Quality Checklist
+| ID | Objective | KPI / Measurement | Target | Date | Proposed Owner | Type |
+|---|---|---|---|---|---|---|
+| O-01 | Implement the centralized reporting platform | Approved production deployment | Successful release | 30 Sep 2027 | IT Project Manager | Project Output |
+| O-02 | Reduce monthly reporting time | Working days per reporting cycle | 5 → 2 days | TBD | Finance Lead | Business Outcome |
+| O-03 | Improve data quality | Percentage of records meeting approved quality rules | Target to be confirmed | TBD | Data Lead | Quality Outcome |
+| O-04 | Standardize management reporting | Percentage of priority KPIs with approved definitions | Target to be confirmed | TBD | Business Owner | Operational Outcome |
+| O-05 | Reduce manual reporting activities | Manual reporting hours per month | Target to be confirmed | TBD | Finance Lead | Business Outcome |
 
-Before approving the objectives, confirm:
+*Proposed owners require confirmation. The completion date does not automatically establish deadlines for post-implementation business benefits.*
 
-- [ ] Every objective supports the business case
-- [ ] Every objective is measurable
-- [ ] Every objective has an accountable owner
-- [ ] Every objective has a target date
-- [ ] Targets are evidence-based
-- [ ] Outputs and outcomes are both represented
-- [ ] Dependencies are visible
-- [ ] Key risks are visible
-- [ ] Vague wording has been removed
-- [ ] Unsupported figures have not been invented
+### SMART Assessment
 
----
+| Objective | Rating | Weakness | Required Improvement |
+|---|---|---|---|
+| O-01 | Acceptable | Scope and acceptance criteria not finalized | Confirm release acceptance criteria |
+| O-02 | Needs Clarification | Deadline and feasibility not established | Confirm measurement period and delivery feasibility |
+| O-03 | Not SMART | Baseline, target, and deadline missing | Perform data profiling and agree target |
+| O-04 | Not SMART | Priority KPI list and target undefined | Approve KPI definitions and coverage target |
+| O-05 | Not SMART | Baseline, target, and deadline missing | Measure current effort and agree reduction |
 
-# Standards / Framework Alignment
+### Dependency Review
 
-## PMI / PMP Relevance
+| Objective | Primary Dependency | Proposed Dependency Owner | Risk if Dependency Fails |
+|---|---|---|---|
+| O-01 | CRM/ERP integration readiness | Data Engineering Lead | Deployment delay |
+| O-02 | Automated reporting availability | BI Lead | Reporting-time target not achieved |
+| O-03 | Source data quality | Data Lead | Unreliable analytical outputs |
+| O-04 | Business KPI approval | Business Owner | Inconsistent management reporting |
+| O-05 | Manual process assessment | Finance Lead | Benefits cannot be measured |
 
-Relevant themes may include:
+### Management Decisions
 
-- business value,
-- benefits realization,
-- stakeholder alignment,
-- planning,
-- measurement,
-- accountability,
-- delivery objectives.
+1. **Reporting performance:** Confirm whether reducing reporting time from five to two working days is feasible and agree on the measurement period.
+2. **Data quality:** Establish a baseline and approve measurable quality thresholds before committing to improvement targets.
+3. **Business alignment:** Approve KPI definitions, reporting scope, and the criteria for successful adoption.
+4. **Accountability:** Confirm objective owners, dependency owners, and benefit measurement responsibilities.
 
-## PMBOK Relevance
+### Applied Quality Review
 
-This prompt supports:
+**Quality verdict: REVISE**
 
-- value delivery,
-- planning,
-- measurement,
-- stakeholders,
-- governance,
-- accountability.
+**Findings:** The project has a defined business purpose and a measurable reporting-time target. However, several objectives lack validated baselines, target values, deadlines, and confirmed ownership.
 
-## Delivery Framework
+**Required corrections:**
+- Confirm the reporting-time target and measurement period.
+- Establish data quality and manual-effort baselines.
+- Approve KPI coverage and data quality targets.
+- Confirm accountable owners and validate delivery feasibility.
 
-Framework-neutral.
+**Governance:** This prompt supports relevant PMI-aligned practices in value delivery, objectives management, benefits realization, performance measurement, stakeholder accountability, and project governance.
 
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Validate project objectives with:
-
-- Project Sponsor
-- Business Owner
-- Product Owner where relevant
-- Finance where financial benefits are involved
-- IT leadership where technical commitments are involved
-- Operations where post-launch benefits are expected
-
-The sponsor and business owner should confirm that the objectives represent the agreed definition of project success.
-
----
-
-# Confidentiality
-
-Do not include:
-
-- confidential financial targets,
-- sensitive customer information,
-- personal data,
-- proprietary commercial targets,
-- protected contract information,
-- security-sensitive information.
-
-Use anonymised values where required.
-
----
-
-# Prompt Metadata
-
-```text
-Prompt ID: INIT-005
-Category: Project Initiation
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Sponsor / Business Owner
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Low
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial SMART objectives framework |
+SMART objectives require validation by the Project Sponsor, Business Owner, and relevant delivery stakeholders before becoming approved project commitments. Protect confidential financial, operational, personal, and commercially sensitive information.

@@ -1,68 +1,35 @@
 # Qualitative Risk Analysis
 
-## Purpose
+**Prompt ID:** RISK-003 | **Category:** Risk & Issue Management | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to assess and prioritise identified project risks using a consistent qualitative scoring model.
+## 1. Ready-to-Use Prompt
 
-The objective is to determine:
+**Purpose:** Assess and prioritize project risks using consistent qualitative scoring to support mitigation, monitoring, escalation, and informed management decisions.
 
-- which risks require immediate management attention,
-- which risks can be monitored,
-- where mitigation should be prioritised,
-- and whether residual exposure remains acceptable after planned responses.
+**Use case:** Evaluate technical, delivery, vendor, security, and resource risks during project planning, milestone reviews, or release preparation when management must prioritize limited mitigation resources.
 
-Qualitative risk analysis should support management judgement, not replace it.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Planning / Delivery / Testing / Deployment
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Product initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / Risk Manager / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-After risk identification and during regular risk reviews
-
----
-
-# Prompt
+Copy the prompt and replace the placeholders with your project information.
 
 ```text
 ROLE
 
-You are a senior IT Project Manager and risk-management specialist
-experienced in international software delivery, digital transformation,
-project governance, and technology risk.
+You are a Senior IT Project Manager and Risk Management Specialist
+experienced in software delivery, qualitative risk assessment,
+dependency management, mitigation planning, and project governance.
 
-TASK
+CONTEXT
 
-Perform a qualitative risk analysis on the project risk list below.
-
-PROJECT CONTEXT
-
-Project:
-[PROJECT NAME]
-
-Current phase:
-[PHASE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Target milestone:
-[DATE / MILESTONE]
-
-Risk tolerance:
-[IF KNOWN]
+Project: [PROJECT NAME]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target milestone: [DATE / MILESTONE]
+Assessment date: [DATE]
+Risk tolerance: [APPROVED THRESHOLDS / NOT DEFINED]
+Risk owners: [ROLES]
+Known dependencies: [LIST]
+Available risk evidence: [DATA / STATUS / HISTORICAL INFORMATION]
+Existing mitigation actions: [LIST / NONE]
+Risk register: [PASTE IDENTIFIED RISKS]
 
 SCORING MODEL
 
@@ -80,8 +47,7 @@ Impact:
 4 = Major
 5 = Severe
 
-Risk Score:
-Likelihood × Impact
+Risk Score = Likelihood × Impact
 
 Risk Rating:
 1–4 = Low
@@ -89,562 +55,338 @@ Risk Rating:
 10–16 = High
 17–25 = Critical
 
-RISK LIST
-
-[PASTE UNSCORED RISKS]
-
-OUTPUT FORMAT
-
-Provide:
-
-Risk ID
-Risk Description
-Likelihood
-Impact
-Risk Score
-Risk Rating
-Risk Proximity
-Primary Impact Area
-Priority Rank
-Scoring Rationale
-Recommended Management Focus
-
-Then provide:
-
-1. Highest-priority risks
-2. Overall risk profile
-3. Immediate management actions
-4. Risks requiring escalation
-5. Information gaps affecting confidence in the scores
-```
-
----
-
-# Scoring Principles
-
-Risk scoring should be evidence-based.
-
-Do not assign scores only because a risk sounds serious.
-
-Consider:
-
-```text
-Historical evidence
-Current project data
-Dependency status
-Vendor performance
-Schedule proximity
-Technical complexity
-Available mitigation
-Recovery capability
-Stakeholder impact
-Security / compliance exposure
-```
-
-Where evidence is insufficient, state that confidence in the score is limited.
-
----
-
-# Likelihood Assessment
-
-Use:
-
-```text
-1 — Rare
-Event is highly unusual in the current project context.
-
-2 — Unlikely
-Event could occur but current evidence suggests low probability.
-
-3 — Possible
-Event could reasonably occur.
-
-4 — Likely
-Current indicators suggest the event is more likely than not.
-
-5 — Very Likely
-Strong indicators suggest the event is expected unless action is taken.
-```
-
----
-
-# Impact Assessment
-
-Do not assess impact only against schedule.
-
-Consider:
-
-```text
-Schedule
-Budget
-Scope
-Quality
-Security
-Compliance
-Operations
-Customer
-Reputation
-Business Value
-```
-
-The overall impact rating should reflect the most material credible consequence.
-
----
-
-# Example
-
-```text
-Risk:
-Business users may not be available for UAT.
-
-Likelihood:
-4 — Likely
-
-Impact:
-4 — Major
-
-Score:
-16
-
-Rating:
-High
-
-Rationale:
-Business availability has not yet been confirmed, and UAT sits
-directly on the path to the committed release date.
-```
-
----
-
-# Risk Proximity
-
-Add proximity to improve prioritisation.
-
-Use:
-
-```text
-Immediate:
-Less than 2 weeks
-
-Near-term:
-2–6 weeks
-
-Medium-term:
-6–12 weeks
-
-Long-term:
-More than 12 weeks
-```
-
-A High risk that may materialise next week may require more attention than a Critical risk that is several months away and already well controlled.
-
----
-
-# Priority Ranking
-
-Do not rank risks solely by score.
-
-Consider:
-
-```text
-Risk Score
-+
-Proximity
-+
-Dependency Impact
-+
-Recovery Difficulty
-+
-Business Impact
-+
-Security / Compliance Exposure
-+
-Decision Urgency
-```
-
-Example:
-
-| Risk | Score | Proximity | Priority |
-|---|---:|---|---|
-| UAT resource shortage | 12 | Immediate | 1 |
-| Vendor API delay | 16 | Near-term | 2 |
-| Cloud cost increase | 12 | Long-term | 4 |
-
----
-
-# Heat Map Commentary
-
-After scoring, provide a concise management interpretation.
-
-Include:
-
-```text
-Which risks are concentrated in High / Critical zones?
-
-Which risk categories dominate?
-
-Are several risks linked to the same dependency?
-
-Which risks require governance attention?
-
-Where is management intervention most urgent?
-```
-
-Example:
-
-> The current risk profile is dominated by integration, testing, and vendor dependencies. The highest management priority should be the identity-provider delay because it affects multiple downstream activities and has limited schedule recovery time.
-
----
-
-# Heat Map Summary
-
-Present the current distribution:
-
-| Rating | Number of Risks | Management Approach |
-|---|---:|---|
-| Critical | X | Immediate escalation / response |
-| High | X | Active mitigation and frequent review |
-| Medium | X | Monitor and manage |
-| Low | X | Periodic review |
-
-This is a summary, not a substitute for the detailed register.
-
----
-
-# Prompt 2 — Residual Risk Analysis
-
-After mitigation actions are defined, re-score the risk.
-
-```text
-ROLE
-
-You are a senior project risk manager assessing residual project risk.
+Risk Proximity:
+Immediate = Less than 2 weeks
+Near-term = 2–6 weeks
+Medium-term = 6–12 weeks
+Long-term = More than 12 weeks
+
+Scoring Confidence:
+High / Medium / Low
+
+Use this scoring model unless an approved organizational
+risk methodology is provided.
 
 TASK
 
-Re-score the risks below assuming the listed mitigation actions
-have been fully implemented.
+Perform qualitative risk analysis and recommend management priorities.
 
-For each risk compare:
+STEP 1 — INITIAL RISK ASSESSMENT
 
-- inherent / pre-mitigation risk,
-- mitigation actions,
-- residual likelihood,
-- residual impact,
-- residual score,
-- residual rating.
+1. Confirm each risk describes an uncertain future event,
+   not an issue that has already occurred.
+2. Assess likelihood using available evidence and project indicators.
+3. Assess impact against schedule, cost, scope, quality,
+   security, compliance, operations, and business value.
+4. Calculate risk scores and apply the defined rating thresholds.
+5. Assess proximity to the potential risk event.
+6. Document scoring rationale, evidence, and confidence levels.
+7. Identify missing information affecting assessment reliability.
+
+STEP 2 — PRIORITIZATION AND RESPONSE
+
+8. Rank risks using score, proximity, dependency impact,
+   recovery difficulty, business exposure, and decision urgency.
+9. Identify concentrations of High and Critical risks,
+   shared dependencies, and potential cascading impacts.
+10. Recommend proportionate mitigation, monitoring,
+    or escalation actions with proposed owners.
+11. Identify risks exceeding organizational tolerance,
+    threatening milestones, or requiring management authority.
+
+STEP 3 — RESIDUAL RISK REVIEW
+
+12. Distinguish initial exposure from residual exposure.
+13. Assess whether mitigation actions are planned,
+    implemented, and demonstrated effective.
+14. Re-score residual likelihood and impact only when
+    supported by evidence of mitigation effectiveness.
+15. Where mitigation is not implemented, distinguish
+    forecast residual exposure from verified residual exposure.
+16. Assess residual acceptability against approved risk tolerance.
+17. Identify further actions, monitoring needs,
+    and formal risk acceptance decisions.
+
+Do not invent probabilities, scoring evidence, or risk tolerance.
+Do not reduce scores simply because mitigation is planned.
+Flag unsupported assessments for expert validation.
+Do not classify a risk as accepted without authorized approval.
 
 OUTPUT FORMAT
 
-Risk
-Initial Rating
-Mitigation
-Residual Likelihood
-Residual Impact
-Residual Score
-Residual Rating
-Residual Exposure Acceptable?
-Further Action Required?
+1. QUALITATIVE RISK REGISTER
+
+Risk ID | Risk Description | Likelihood | Impact |
+Score | Rating | Proximity | Primary Impact Area |
+Priority Rank | Confidence | Scoring Rationale |
+Recommended Management Focus
+
+2. RISK PROFILE SUMMARY
+
+Rating | Number of Risks | Management Approach
+
+Provide commentary on:
+- High and Critical risk concentrations
+- Shared dependencies and cascading exposure
+- Most urgent management priorities
+
+3. MITIGATION AND ESCALATION
+
+Risk ID | Recommended Response | Proposed Owner |
+Required By | Escalation Trigger | Decision Required
+
+4. RESIDUAL RISK ASSESSMENT
+
+Risk ID | Initial Score / Rating | Mitigation Status |
+Mitigation Evidence | Residual Likelihood | Residual Impact |
+Residual Score / Rating | Exposure Acceptable? |
+Further Action
+
+Clearly distinguish forecast residual risk from
+verified post-mitigation residual risk.
+
+5. SCORING CONFIDENCE
+
+Risk ID | Confidence | Missing Evidence |
+Required Validation | Proposed Owner
+
+6. MANAGEMENT SUMMARY
+
+- Five highest-priority risks
+- Overall risk exposure
+- Immediate mitigation and escalation requirements
+- Residual risks requiring management attention
+- Recommended decisions and next review actions
+
+Use concise Markdown tables.
+Mark unsupported scores as "Not assessed".
+Label proposed actions and ownership as unconfirmed.
 ```
 
 ---
 
-# Inherent vs Residual Risk
+## 2. Quality Check
 
-## Inherent Risk
-
-Exposure before planned mitigation.
-
-## Residual Risk
-
-Exposure remaining after mitigation is implemented.
-
-Example:
+Apply this quality control after generating the Qualitative Risk Analysis.
 
 ```text
-Initial:
-Likelihood 4 × Impact 5 = 20 Critical
+QUALITY CHECK
 
-After mitigation:
-Likelihood 2 × Impact 5 = 10 High
+Act as a Senior QA Manager and review the risk analysis.
+
+Verify:
+
+1. Validity: Each risk describes an uncertain event,
+   not an issue that has already occurred.
+2. Accuracy: Likelihood, impact, scores, and ratings
+   follow the defined scoring model.
+3. Evidence: Scoring rationale, confidence,
+   assumptions, and information gaps are explicit.
+4. Prioritization: Rankings consider proximity,
+   dependencies, recovery difficulty, and business impact.
+5. Completeness: Major project risk categories
+   and shared dependencies are assessed.
+6. Mitigation: Recommended actions address risk causes
+   or consequences and have proposed owners.
+7. Residual Risk: Forecast exposure is distinguished
+   from verified mitigation effectiveness.
+8. Governance: Escalation, risk tolerance, and
+   acceptance authority are correctly addressed.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Escalation / Acceptance Blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Do not invent scoring evidence, risk thresholds,
+mitigation effectiveness, or approvals.
+Flag assessments requiring expert validation.
 ```
-
-The impact may remain severe even when mitigation significantly reduces likelihood.
 
 ---
 
-# Mitigation Effectiveness Review
+## 3. Practical IT Use Case
 
-Do not automatically reduce scores because actions exist.
+### Software Development — Release Risk Assessment
 
-Ask:
+**Scenario:** A software development team is preparing for integration testing and a planned production release. Several technical and operational uncertainties could affect the schedule, including API readiness, defects, business-user availability, and security approval.
+
+The Project Manager must prioritize mitigation actions and determine which risks require management intervention.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Web Application Reporting Enhancement |
+| Phase | Development / Integration |
+| Delivery approach | Scrum |
+| Assessment date | 17 May 2027 |
+| Target release | 30 June 2027 |
+| Team | Developers, QA, Product Owner, Project Manager |
+| Critical milestones | SIT, UAT, Security Approval, Production Release |
+| Risk tolerance | Not formally defined |
+| Management decision | Prioritize mitigation and identify release risks requiring escalation |
+
+### Example Input
 
 ```text
-Has the mitigation actually been implemented?
+Project: Web Application Reporting Enhancement
 
-Is there evidence that it is effective?
+Business objective:
+Deliver enhanced reporting functionality by 30 June 2027.
 
-Has likelihood genuinely changed?
+Current phase: Development / Integration
+Delivery approach: Scrum
+Assessment date: 17 May 2027
 
-Has impact genuinely changed?
+Upcoming milestones:
+- SIT completion: 5 June
+- UAT completion: 19 June
+- Release readiness: 25 June
+- Production release: 30 June
 
-Is the action preventive or only reactive?
+Known information:
+
+R-01 — API Integration
+The reporting API is not yet integration-ready.
+The integration team forecasts completion on 29 May,
+leaving limited time before SIT completion.
+
+R-02 — UAT Availability
+Business users have not confirmed their availability
+for the planned UAT window.
+
+R-03 — Critical Defects
+Two major reporting defects remain open.
+The team has not confirmed whether additional
+release-blocking defects will be identified.
+
+R-04 — Security Approval
+The application security review is scheduled,
+but approval has not yet been received.
+
+R-05 — QA Capacity
+The QA team is also supporting another release.
+Available capacity for regression testing is uncertain.
+
+Existing mitigation:
+- Developers are prioritizing API endpoints.
+- QA is preparing integration test cases.
+- The Product Owner has requested UAT availability confirmation.
+
+Risk tolerance:
+Not formally defined.
+
+Assessment requirement:
+Use the supplied 5×5 qualitative scoring model.
+Identify scoring uncertainty and proposed escalation actions.
 ```
 
-Only reduce the residual score when there is a defensible reason.
+### Example Output — Qualitative Risk Analysis
 
----
+The scores below are **illustrative expert judgments**, not measured probabilities. They require validation by the relevant risk owners.
 
-# Example Input
+#### 1. Qualitative Risk Register
 
-```text
-R-01
-External identity provider may miss API certification.
+| Risk ID | Risk Description | L | I | Score | Rating | Proximity | Priority |
+|---|---|---:|---:|---:|---|---|---:|
+| R-01 | API may not be ready for SIT completion | 4 | 4 | 16 | High | Immediate | 1 |
+| R-02 | Business users may be unavailable for UAT | 4 | 4 | 16 | High | Near-term | 2 |
+| R-03 | Critical defects may remain at release readiness | 3 | 5 | 15 | High | Near-term | 3 |
+| R-04 | Security approval may be delayed | 3 | 5 | 15 | High | Medium-term | 4 |
+| R-05 | Limited QA capacity may delay regression testing | 3 | 4 | 12 | High | Immediate | 5 |
 
-R-02
-Business users may not be available for UAT.
+**Primary impact areas and scoring rationale**
 
-R-03
-Critical integration defects may remain unresolved before release.
+| Risk | Primary Impact | Confidence | Scoring Rationale |
+|---|---|---|---|
+| R-01 | Schedule / Integration | Medium | API forecast leaves limited SIT time |
+| R-02 | Schedule / Business Acceptance | Low | UAT resource commitments are unconfirmed |
+| R-03 | Quality / Release | Low | Open defects exist; future defect exposure is uncertain |
+| R-04 | Security / Release | Low | Approval is pending; completion probability is unknown |
+| R-05 | Capacity / Testing | Low | QA resources are shared and availability is unvalidated |
 
-R-04
-Data migration quality may be below the agreed acceptance threshold.
+The current API readiness problem should also be checked for an existing issue record. The risk assessment addresses the uncertain downstream consequence; confirmed delays or blockers must be managed as issues.
 
-R-05
-Security approval may not complete before go-live.
-```
+#### 2. Risk Profile Summary
 
----
+| Rating | Number of Risks | Management Approach |
+|---|---:|---|
+| Critical | 0 | Immediate escalation if identified |
+| High | 5 | Active mitigation and frequent review |
+| Medium | 0 | Monitor and manage |
+| Low | 0 | Periodic review |
 
-# Example Output
+**Management interpretation:** The illustrative profile is concentrated in integration, testing, and release-readiness exposure. API readiness and QA capacity require immediate attention because they may affect SIT, while unresolved business availability threatens UAT.
 
-| Risk | L | I | Score | Rating | Priority |
-|---|---:|---:|---:|---|---:|
-| Identity-provider delay | 4 | 4 | 16 | High | 1 |
-| UAT availability | 4 | 4 | 16 | High | 2 |
-| Integration defects | 3 | 5 | 15 | High | 3 |
-| Data migration quality | 3 | 4 | 12 | High | 4 |
-| Security approval delay | 3 | 5 | 15 | High | 5 |
+A potential cascading dependency is:
 
-Priority order should then be explained using proximity and dependency impact, not only numerical score.
+`API Readiness → SIT Completion → UAT Readiness → Release Approval`
 
----
+The ranking considers event proximity and downstream impact, not numerical scores alone.
 
-# Scoring Confidence
+#### 3. Mitigation and Escalation
 
-For each risk, optionally assign:
+| Risk | Recommended Response | Proposed Owner | Required By | Escalation Trigger |
+|---|---|---|---|---|
+| R-01 | Confirm endpoint readiness and integration recovery plan | Development Lead | Before SIT decision | API delivery threatens SIT |
+| R-02 | Secure UAT resource commitments | Product Owner | Before UAT | Required users remain unavailable |
+| R-03 | Prioritize release-critical defect resolution | QA / Development Leads | Before readiness review | Mandatory release criteria at risk |
+| R-04 | Confirm security review dependencies and approval forecast | Security Lead | Before release approval | Security clearance threatens release |
+| R-05 | Assess QA capacity and reallocate work if approved | Project Manager / QA Lead | Before regression execution | Testing cannot meet required coverage |
 
-```text
-High confidence
-Medium confidence
-Low confidence
-```
+**Escalation authority:** Not yet defined. Any decision to change scope, increase capacity, accept residual exposure, or revise the release date requires appropriate authorization.
 
-Low confidence may result from:
+#### 4. Residual Risk Assessment
 
-- missing data,
-- unclear dependencies,
-- unvalidated assumptions,
-- unreliable vendor information,
-- insufficient historical evidence.
+Mitigation activities are either planned or in progress. No verified mitigation effectiveness has been provided, so lower residual scores cannot yet be justified.
 
-Use:
+| Risk | Initial Rating | Mitigation Status | Verified Residual Rating | Further Action |
+|---|---|---|---|---|
+| R-01 | High (16) | Prioritization in progress | Not assessed | Verify API readiness and test results |
+| R-02 | High (16) | Availability requested | Not assessed | Obtain confirmed UAT allocation |
+| R-03 | High (15) | Resolution planning required | Not assessed | Verify fixes and test evidence |
+| R-04 | High (15) | Security review scheduled | Not assessed | Obtain security decision |
+| R-05 | High (12) | Capacity assessment required | Not assessed | Validate available QA capacity |
 
-| Risk | Score | Confidence | Missing Evidence |
-|---|---:|---|---|
+**Residual exposure acceptability:** Not determined. Risk tolerance has not been approved, and mitigation effectiveness has not been demonstrated.
 
----
+#### 5. Scoring Confidence
 
-# Agile / Scrum Considerations
+| Risk | Confidence | Missing Evidence | Proposed Validation Owner |
+|---|---|---|---|
+| R-01 | Medium | API completion evidence and SIT impact | Development Lead |
+| R-02 | Low | Confirmed business-user allocation | Product Owner |
+| R-03 | Low | Defect trends, severity, and resolution forecast | QA Lead |
+| R-04 | Low | Security review outcome and remaining actions | Security Lead |
+| R-05 | Low | QA capacity and regression effort forecast | QA Lead |
 
-Useful evidence may include:
+Risk ratings should be reviewed when these data become available.
 
-- backlog volatility,
-- team capacity,
-- blocked items,
-- defect trends,
-- release dependencies,
-- technical debt,
-- Sprint / iteration performance.
+### Management Decisions
 
-Do not treat iteration-level variation automatically as project risk.
+1. **Integration:** Confirm whether the API forecast supports the planned SIT completion milestone and approve any necessary recovery actions.
+2. **Testing capacity:** Validate QA and business-user availability before committing to SIT and UAT completion dates.
+3. **Release readiness:** Agree on critical defect and security approval requirements for the go/no-go decision.
+4. **Risk governance:** Define risk tolerance, escalation authority, and conditions for accepting residual exposure.
 
----
+### Applied Quality Review
 
-# Kanban Considerations
+**Quality verdict: REVISE**
 
-Flow metrics may support qualitative assessment.
+**Findings:** The analysis provides consistent scoring calculations, identifies shared schedule dependencies, and prioritizes management action. However, most scores rely on limited evidence, mitigation effectiveness is unverified, and organizational risk tolerance is undefined.
 
-Examples:
+**Required corrections:**
+- Validate likelihood and impact assessments with risk owners.
+- Confirm API, QA, UAT, and security readiness evidence.
+- Establish documented escalation and risk acceptance authority.
+- Reassess risk ratings when material new evidence is available.
+- Evaluate residual exposure only after mitigation effectiveness is verified.
 
-```text
-WIP increasing
-Cycle time worsening
-Work item age increasing
-Throughput declining
-Repeated blocked work
-SLE breaches increasing
-```
+**Escalation / Acceptance Blockers:** Undefined risk tolerance, insufficient evidence for several scores, and unverified mitigation effectiveness.
 
-These signals may justify revisiting likelihood or proximity.
+**Governance:** This prompt supports PMI-aligned practices in qualitative risk assessment, prioritization, uncertainty management, response planning, monitoring, and escalation.
 
----
-
-# Predictive Considerations
-
-Relevant evidence may include:
-
-- critical-path exposure,
-- milestone variance,
-- procurement delay,
-- schedule float,
-- budget tolerance,
-- resource availability.
-
----
-
-# Hybrid Considerations
-
-Combine formal project risk scoring with delivery-level evidence.
-
-Example:
-
-```text
-Delivery signal
-↓
-Risk reassessment
-↓
-Updated score
-↓
-Management action
-↓
-Governance escalation if required
-```
-
----
-
-# Escalation Review
-
-Flag risks where:
-
-```text
-Rating is Critical
-Risk exceeds agreed tolerance
-Risk threatens a committed milestone
-Security or compliance exposure is material
-Mitigation exceeds PM authority
-Risk affects several workstreams
-Residual exposure remains High or Critical
-```
-
----
-
-# Quality Checklist
-
-Before accepting the analysis, confirm:
-
-- [ ] Risks have been clearly defined
-- [ ] Likelihood is justified
-- [ ] Impact is justified
-- [ ] Score calculation is correct
-- [ ] Priority is not based only on score
-- [ ] Proximity is considered
-- [ ] Dependencies are considered
-- [ ] Confidence in scoring is visible
-- [ ] Residual risk is assessed separately
-- [ ] Mitigation effectiveness is evidenced
-- [ ] Escalation thresholds are considered
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- qualitative risk analysis,
-- uncertainty,
-- prioritisation,
-- risk responses,
-- monitoring,
-- governance,
-- escalation.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- risk,
-- planning,
-- measurement,
-- governance,
-- delivery.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Risk scoring should be reviewed with:
-
-- Risk Owner
-- Project Manager
-- relevant technical or business experts
-- PMO / Risk function where applicable
-- Sponsor where risk exceeds tolerance
-
-AI can structure and challenge scoring logic.
-
-It should not independently determine organisational risk appetite or final risk acceptance.
-
----
-
-# Confidentiality
-
-Avoid exposing:
-
-- security vulnerabilities,
-- confidential commercial exposure,
-- supplier financial concerns,
-- personal performance information,
-- sensitive customer or regulatory information.
-
-Anonymise project data where required.
-
----
-
-# Prompt Metadata
-
-```text
-Prompt ID: RISK-003
-Category: Risk & Issue Management
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Risk Manager
-Reviewer: Risk Owners / PMO
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial qualitative risk-analysis framework |
+The analysis is a management decision-support artifact. Risk scores and residual exposure require validation by accountable risk owners, technical experts, and authorized governance stakeholders. Protect confidential project, security, customer, vendor, and commercially sensitive information.

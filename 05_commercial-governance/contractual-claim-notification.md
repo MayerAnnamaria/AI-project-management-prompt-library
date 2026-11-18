@@ -1,927 +1,457 @@
 # Contractual Claim / Formal Notification
 
-## Purpose
+**Prompt ID:** COMM-002 | **Category:** Commercial & Project Governance | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to prepare a structured contractual notification when an event may create:
+## 1. Ready-to-Use Prompt
 
-- schedule impact,
-- additional cost,
-- scope impact,
-- resource impact,
-- or another contractual consequence.
+**Purpose:** Prepare factual, evidence-based contractual notifications that document delivery events, potential impacts, mitigation measures, and requested actions for commercial and legal review.
 
-Typical IT examples may include:
+**Use case:** Draft formal notifications when delayed dependencies, unavailable environments, missed approvals, scope changes, or supplier performance issues may affect contractual commitments.
 
-- customer-caused delay,
-- delayed access or environment availability,
-- late approval,
-- scope expansion,
-- dependency failure,
-- delayed third-party integration,
-- additional work outside the agreed scope,
-- suspension or interruption,
-- vendor-caused milestone delay.
+Copy the prompt and replace the placeholders with your project information.
 
-The purpose is to create a **factual and traceable draft for commercial and legal review**.
-
-It is not a substitute for legal advice.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Contracting / Delivery / Change / Escalation
-
-**Project type:**  
-Software implementation / SaaS / ERP / Cloud / Outsourcing / Managed Service / Digital Transformation
-
-**Primary user:**  
-Project Manager / Delivery Manager / Commercial Manager / Vendor Manager
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-When a contract-relevant event occurs
-
----
-
-# Prompt
-
-```text id="claim-notice-01"
+```text
 ROLE
 
-You are a senior IT Commercial and Project Management specialist
-experienced in software delivery, technology contracts, vendor
-management, commercial governance, and formal project correspondence.
+You are a Senior IT Project Manager and Commercial Management
+Specialist experienced in software implementation, supplier
+contracts, change control, contractual correspondence,
+and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Contract / version: [NAME / VERSION]
+Contract type: [SOFTWARE / SAAS / CLOUD / OUTSOURCING / OTHER]
+Customer: [PARTY]
+Supplier: [PARTY]
+Current phase: [PHASE]
+Delivery approach: [PREDICTIVE / AGILE / KANBAN / HYBRID]
+
+Relevant contractual clauses: [PASTE EXACT WORDING]
+Notice requirements: [PASTE VERIFIED REQUIREMENTS]
+Authorized notice sender: [ROLE / UNKNOWN]
+Contractual recipient: [ROLE / UNKNOWN]
+Required delivery method: [METHOD / UNKNOWN]
+
+EVENT DETAILS
+
+Event: [DESCRIPTION]
+Contractual / planned commitment: [DETAILS]
+Original required date: [DATE]
+Actual date / current status: [DETAILS]
+Date event occurred: [DATE]
+Date project became aware: [DATE]
+Previous notices: [DETAILS / NONE]
+
+IMPACT AND EVIDENCE
+
+Schedule impact: [DETAILS]
+Cost / resource impact: [DETAILS]
+Scope / quality impact: [DETAILS]
+Affected dependencies: [LIST]
+Potential concurrent causes: [IF RELEVANT]
+Supporting evidence: [LIST]
+Mitigation already implemented: [LIST]
+Remaining recovery actions: [LIST]
+
+REQUESTED OUTCOME
+
+Action / relief requested: [DETAILS]
+Response deadline: [DATE / UNKNOWN]
+Commercial / legal review status: [STATUS]
 
 TASK
 
-Draft a formal contractual notification based only on the facts
-provided below.
+Prepare a factual contractual notification draft and
+identify the checks required before formal issuance.
 
-Do not invent contractual rights, clause references, notice periods,
-entitlements, or remedies.
+STEP 1 — VERIFY CONTRACTUAL REQUIREMENTS
 
-CONTRACT CONTEXT
+1. Identify relevant clauses and their explicit requirements.
+2. Extract notice triggers, periods, recipients, delivery
+   methods, and required supporting information.
+3. Verify event, awareness, and notice dates.
+4. Flag missing contractual wording, definitions,
+   or notice requirements for Legal review.
+5. Do not infer entitlement or contractual breach
+   from the occurrence of a project delay alone.
 
-Project:
-[PROJECT NAME]
+STEP 2 — DOCUMENT EVENT AND IMPACT
 
-Contract:
-[CONTRACT NAME / TYPE]
+6. Describe the event using verified facts and chronology.
+7. Distinguish:
+   - Planned commitments
+   - Actual events
+   - Confirmed impacts
+   - Forecast impacts
+   - Unverified assumptions
+8. Link the event to affected activities and dependencies.
+9. Assess schedule, cost, resource, scope, and quality
+   impacts only where evidence exists.
+10. Identify potential concurrent causes or alternative
+    explanations requiring investigation.
+11. Document mitigation and recovery actions already taken.
 
-Customer:
-[PARTY]
+STEP 3 — PREPARE FORMAL COMMUNICATION
 
-Supplier:
-[PARTY]
+12. Draft a precise, professional notification containing:
+    - Subject and reference
+    - Purpose of notice
+    - Verified contractual basis
+    - Factual event description
+    - Chronology
+    - Supported project impact
+    - Mitigation actions
+    - Action or relief requested
+    - Supporting evidence
+    - Next steps and professional close
+13. State the requested response and deadline clearly.
+14. Identify whether the matter requires formal change control.
+15. Include reservations of rights or legal wording only
+    when supplied or approved by qualified Legal counsel.
 
-Relevant clause(s):
-[PASTE VERIFIED CLAUSE REFERENCES]
+STEP 4 — VALIDATE BEFORE ISSUE
 
-Notice requirements:
-[PASTE VERIFIED REQUIREMENTS]
+16. Challenge the draft from the counterparty's perspective.
+17. Identify missing evidence, disputed causation,
+    chronology gaps, and unsupported assertions.
+18. Prepare a notice-tracking record.
+19. List required commercial and legal approvals.
+20. Recommend follow-up actions after issuance.
 
-Event:
-[DESCRIBE EVENT]
+RULES
 
-Date event occurred:
-[DATE]
-
-Date project became aware:
-[DATE]
-
-Previous notice:
-[DETAILS / NONE]
-
-Schedule impact:
-[DETAILS]
-
-Cost impact:
-[DETAILS]
-
-Scope impact:
-[DETAILS]
-
-Evidence:
-[LIST]
-
-Mitigation / recovery actions:
-[LIST]
-
-Remedy / relief being requested:
-[DETAILS]
+- Do not invent contractual rights, remedies,
+  notice periods, clauses, liability, or damages.
+- Do not present a forecast as a confirmed impact.
+- Distinguish delays to individual activities from
+  delays to the overall project or critical path.
+- Do not assume that a notification automatically
+  approves a change request or commercial claim.
+- Use formal, neutral, precise, non-adversarial language.
+- Mark missing legal or contractual requirements
+  as "Requires verification".
 
 OUTPUT FORMAT
 
-Draft a formal notification with:
+1. FORMAL NOTIFICATION DRAFT
 
-1. Reference and Subject
-2. Purpose of Notice
-3. Relevant Contractual Basis
-4. Factual Description of Event
-5. Chronology
-6. Current Impact
-7. Mitigation / Recovery Actions
-8. Relief / Action Requested
-9. Supporting Evidence
-10. Reservation / Next Steps where appropriate
-11. Professional Close
+Subject: [EVENT AND PROJECT REFERENCE]
 
-Tone:
-Formal
-Contractual
-Factual
-Non-adversarial
-Precise
+Dear [AUTHORIZED RECIPIENT],
+
+[Purpose and verified contractual basis]
+
+[Factual description and chronology]
+
+[Current and forecast project impact]
+
+[Mitigation and recovery actions]
+
+[Explicit request and response deadline]
+
+[Supporting evidence and next steps]
+
+Kind regards,
+[AUTHORIZED SENDER]
+
+2. EVENT CHRONOLOGY
+
+Date | Event | Supporting Evidence |
+Confirmed / Unverified
+
+3. IMPACT AND CAUSATION REVIEW
+
+Affected Activity | Event / Cause |
+Confirmed Impact | Forecast Impact |
+Evidence | Alternative Causes
+
+4. SUPPORTING EVIDENCE REGISTER
+
+Evidence ID | Document / Record |
+Date | Relevance | Availability
+
+5. CONTRACTUAL NOTICE CHECK
+
+Requirement | Contract Reference |
+Verified Position | Gap / Required Action
+
+Include:
+- Notice trigger and deadline
+- Recipient and authorized sender
+- Delivery method
+- Supporting documents
+- Receipt / delivery evidence
+
+6. CLAIM AND CHANGE-CONTROL FOLLOW-UP
+
+Action | Proposed Owner | Deadline |
+Required Evidence | Approval / Decision
+
+7. MANAGEMENT SUMMARY
+
+- Verified event and current impact
+- Potential contractual significance
+- Evidence and causation gaps
+- Required legal / commercial review
+- Issuance readiness and next steps
+
+Use concise Markdown tables.
+Clearly distinguish draft wording from approved notices.
 ```
 
 ---
 
-# Core Principle
+## 2. Quality Check
 
-Use:
+Run this independent review before any formal notification is issued.
 
-```text id="claim-flow"
-Contract Requirement
-↓
-Event
-↓
-Evidence
-↓
-Impact
-↓
-Mitigation
-↓
-Relief / Action Requested
-```
+```text
+QUALITY CHECK
 
-Avoid:
+Act as an independent Senior Commercial Assurance
+and QA Manager reviewing a contractual notification.
 
-```text id="claim-bad-flow"
-Complaint
-↓
-Blame
-↓
-Unsupported entitlement
-↓
-Aggressive demand
-```
+Review the draft against the contract and project evidence.
 
----
+Verify:
 
-# 1. Reference and Subject
+1. Contractual Accuracy:
+   Clauses, obligations, notice conditions, and recipients
+   are supported by the supplied agreement.
 
-Use a precise subject.
+2. Timing:
+   Event date, awareness date, notice period, deadline,
+   and delivery requirements are verified.
 
-### Weak
+3. Evidence:
+   Statements are supported by contemporaneous records,
+   with missing documents identified.
 
-```text id="claim-subject-weak"
-Project Delay
-```
+4. Causation:
+   The event is linked to specific project impacts.
+   Concurrent causes and alternative explanations
+   have been considered.
 
-### Better
+5. Commercial Accuracy:
+   Costs, delays, and requested relief are supported
+   or explicitly marked as provisional.
 
-```text id="claim-subject-good"
-Formal Notice — Customer Access Delay Affecting System Integration Milestone
-```
+6. Mitigation:
+   Recovery actions and their actual effects
+   are represented accurately.
 
-Or:
+7. Communication:
+   The tone is formal, precise, factual,
+   and free from unsupported allegations.
 
-```text id="claim-subject-example"
-Contractual Notice — Additional Scope and Associated Schedule / Cost Impact
-```
+8. Governance:
+   Required Legal / Commercial approval and
+   change-control procedures are identified.
 
-Where a verified clause applies:
+9. Counterparty Review:
+   Likely objections, evidence gaps, and
+   disputed assumptions are highlighted.
 
-```text id="claim-subject-clause"
-Formal Notice under Clause [X] — [EVENT]
-```
+OUTPUT
 
-Never invent the clause number.
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Counterparty Challenges: [POTENTIAL OBJECTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
 
----
+Do not infer entitlement, liability, contractual breach,
+or legal effect without qualified professional review.
 
-# 2. Purpose of Notice
-
-State why the communication is being issued.
-
-Example:
-
-```text id="claim-purpose"
-This notice is issued to formally record the delay to the integration
-workstream arising from the late provision of the required production-
-equivalent test environment and to notify the Customer of the current
-schedule impact.
-```
-
-Avoid unnecessary background in the opening.
-
----
-
-# 3. Contractual Basis
-
-Reference only verified clauses.
-
-Use:
-
-```text id="claim-basis"
-Relevant Clause:
-[CLAUSE]
-
-Requirement:
-[PLAIN-LANGUAGE SUMMARY BASED ON CLAUSE]
-
-Notice Requirement:
-[IF VERIFIED]
-```
-
-Do not state:
-
-> We are automatically entitled to compensation.
-
-unless qualified legal/commercial review confirms this.
-
-Prefer:
-
-> Based on the current contractual assessment, this event may give rise to relief under Clause [X], subject to the applicable contractual requirements and formal review.
-
----
-
-# 4. Factual Description
-
-State:
-
-```text id="claim-facts"
-What was required
-Who was responsible
-Required date
-Actual position
-Date discovered
-Current status
-```
-
-Example:
-
-> The Customer was due to provide access to the production-equivalent integration environment by 10 May. Access was provided on 24 May, creating a fourteen-calendar-day delay to the planned start of end-to-end integration testing.
-
-Keep the language factual.
-
----
-
-# 5. Chronology
-
-Use a chronological table.
-
-| Date | Event | Evidence / Reference |
-|---|---|---|
-| 10 May | Contractual / planned environment date | Approved project plan |
-| 11 May | Delay raised in project meeting | Meeting minutes |
-| 14 May | Formal follow-up issued | Email reference |
-| 24 May | Access provided | Access confirmation |
-
-This strengthens traceability.
-
----
-
-# 6. Impact Assessment
-
-Assess only supported impact.
-
-Possible dimensions:
-
-```text id="claim-impact"
-Schedule
-Cost
-Resource
-Scope
-Testing
-Release
-Operations
-Commercial
-```
-
-Provide:
-
-| Impact Area | Current Assessment | Evidence |
-|---|---|---|
-
----
-
-# Schedule Impact
-
-Explain:
-
-```text id="claim-schedule"
-Affected activity
-
-Original date
-
-Current / forecast date
-
-Duration of impact
-
-Downstream dependency
-
-Recovery potential
-```
-
-Example:
-
-> The delayed environment availability prevented end-to-end testing from starting for ten working days. The current forecast shows a five-working-day impact to the UAT start after partial recovery through resequencing.
-
----
-
-# Cost Impact
-
-Where relevant:
-
-```text id="claim-cost"
-Additional vendor effort
-
-Extended resource mobilisation
-
-Additional cloud / environment cost
-
-Rework
-
-Idle time
-
-Acceleration cost
-```
-
-If cost is not yet known:
-
-> Cost impact is currently under assessment and will be provided when supporting evidence is available.
-
-Do not fabricate values.
-
----
-
-# 7. Mitigation and Recovery
-
-Demonstrate reasonable management action.
-
-Examples:
-
-```text id="claim-mitigation"
-Re-sequenced unaffected work
-
-Used mock services
-
-Reallocated internal resources
-
-Conducted parallel testing
-
-Added recovery checkpoints
-
-Requested accelerated approval
-```
-
-Example:
-
-> The project team has resequenced eligible integration activities and continued testing through the approved mock environment to reduce the schedule impact.
-
----
-
-# 8. Relief / Action Requested
-
-Be explicit.
-
-Possible requests include:
-
-```text id="claim-request"
-Confirm revised milestone
-
-Approve schedule adjustment
-
-Approve change request
-
-Acknowledge event
-
-Provide missing dependency
-
-Approve additional cost
-
-Confirm responsibility
-
-Attend commercial review
-```
-
-Example:
-
-```text id="claim-request-example"
-The Supplier requests formal acknowledgement of the event and
-agreement to review the resulting schedule impact through the
-contractual change-control process.
+Do not declare a notice valid or timely without
+verified contractual requirements.
 ```
 
 ---
 
-# Specificity Rule
+## 3. Practical IT Use Case
 
-### Weak
+### CRM Implementation — Delayed Integration Environment
 
-```text id="claim-request-weak"
-Please advise.
-```
+**Scenario:** A software supplier is implementing a CRM system. The customer-provided integration environment becomes available later than planned, delaying end-to-end testing and potentially affecting UAT.
 
-### Better
+The Project Manager must document the event, preserve relevant evidence, and prepare a notification for Commercial and Legal review.
 
-```text id="claim-request-good"
-Please confirm by 18 June whether the Customer accepts the proposed
-five-working-day revision to the UAT milestone so that the integrated
-project schedule can be updated.
-```
+### Project Context
 
----
+| Attribute | Details |
+|---|---|
+| Project | CRM System Implementation |
+| Phase | System Integration Testing |
+| Contract | Software Implementation Agreement |
+| Event | Delayed integration environment |
+| Planned availability | 10 May 2027 |
+| Actual availability | 24 May 2027 |
+| Reported testing impact | 10 working days |
+| Forecast UAT impact | 5 working days |
+| Requested outcome | Event acknowledgment and schedule impact review |
+| Governance requirement | Verified notice procedure and formal change control |
 
-# 9. Evidence
+### Example Input
 
-Reference supporting records.
+```text
+Project: CRM System Implementation
 
-Possible evidence:
+Contract: Software Implementation Agreement
+Customer: CRM Implementation Customer
+Supplier: CRM Implementation Vendor
 
-```text id="claim-evidence"
-Approved schedule
-Contract clause
-Meeting minutes
-Email correspondence
-Decision log
-Access records
-System logs
-Timesheets
-Vendor quotations
-Change request
-Test records
-```
-
-Use:
-
-| Evidence ID | Description | Date |
-|---|---|---|
-
----
-
-# Evidence Principle
-
-A contractual position is stronger when supported by contemporaneous project records.
-
-This makes disciplined project documentation commercially important.
-
----
-
-# 10. Notice Period Check
-
-Before issuing any formal notification, confirm:
-
-```text id="claim-notice-check"
-What event triggered the notice?
-
-When did the event occur?
-
-When did the project become aware?
-
-What notice period applies?
-
-Who must receive the notice?
-
-What delivery method is contractually required?
-
-Is acknowledgement required?
-
-Is evidence of delivery retained?
-```
-
-Do not rely on AI to calculate a legal deadline unless the applicable clause and dates have been verified.
-
----
-
-# Formal Notice Tracker
-
-For complex contracts maintain:
-
-| Notice ID | Event | Clause | Trigger Date | Notice Deadline | Date Issued | Recipient | Delivery Evidence | Status |
-|---|---|---|---|---|---|---|---|---|
-
-This reduces the risk of missing contractual procedures.
-
----
-
-# Example Input
-
-```text id="claim-example-input"
-Project:
-CRM Implementation
-
-Contract:
-Software Implementation Agreement
-
-Event:
-Customer production-equivalent integration environment was provided
-late.
-
-Required Date:
-10 May
-
-Actual Date:
-24 May
-
-Impact:
-Integration testing started 10 working days late.
-
-Recovery:
-Team used mock services and resequenced unaffected tests.
-
-Current Forecast:
-5 working days impact to UAT.
-
-Relevant Clause:
+Relevant clause:
 Clause 8.3 — Customer Dependencies
 
-Notice Requirement:
-Written notice within 10 business days of becoming aware of the
-dependency delay.
+Exact clause wording:
+Not provided.
+
+Reported notice requirement:
+Written notification within 10 business days
+of becoming aware of a dependency delay.
+
+Event:
+Production-equivalent integration environment
+was provided later than planned.
+
+Required availability: 10 May 2027
+Actual availability: 24 May 2027
+Awareness date: Not confirmed
+
+Reported impact:
+- Integration testing started 10 working days late.
+- Forecast UAT delay: 5 working days.
+- Additional cost: Under assessment.
+
+Mitigation:
+- Mock services used for eligible testing.
+- Unaffected activities re-sequenced.
 
 Evidence:
-Approved schedule
-Environment request log
-Meeting minutes
-Access confirmation
+- Approved project schedule
+- Environment request log
+- Project meeting minutes
+- Environment access confirmation
 
-Requested Action:
-Acknowledge event and review schedule adjustment through formal
-change control.
+Requested action:
+Customer acknowledgment and formal review
+of the proposed schedule adjustment.
+
+Legal review:
+Not yet completed.
 ```
 
----
+### Example Output — Contractual Notification Package
 
-# Example Output
+#### 1. Formal Notification Draft
 
-## Subject
+**Subject: CRM Implementation — Notification of Delayed Integration Environment Availability**
 
-**Formal Notice — Delay in Customer Integration Environment Availability**
+Dear [Authorized Customer Representative],
 
-Dear [Name],
+We are writing to record the delayed availability of the production-equivalent integration environment required for the CRM implementation project.
 
-This notice is issued in relation to the delayed availability of the production-equivalent integration environment required for the CRM implementation project.
+According to the current project records, the environment was planned to be available on 10 May 2027 but became accessible on 24 May 2027.
 
-Under Clause 8.3 of the Agreement, the Customer is responsible for providing the identified project dependencies in accordance with the agreed delivery schedule. The environment was required by 10 May and became available on 24 May.
+The project team reports that this affected the start of end-to-end integration testing by ten working days. Following the use of mock services and re-sequencing of unaffected activities, the current project forecast indicates a potential five-working-day impact on UAT.
 
-The delay prevented the planned start of end-to-end integration testing. Following resequencing and use of the approved mock environment, the current forecast indicates a five-working-day impact to the planned UAT start.
+The team is continuing recovery activities to minimize downstream disruption. We request acknowledgment of the reported event and a joint review of the resulting schedule impact through the applicable project change-control process.
 
-The project team continues to implement recovery actions to minimise the schedule impact. We request formal acknowledgement of the event and confirmation that the resulting schedule impact will be reviewed through the contractual change-control process.
+Supporting evidence includes the approved schedule, environment request history, meeting records, and access confirmation.
 
-Supporting project records, including the approved schedule, environment request history, and access confirmation, are available for review.
+Please confirm the appropriate representative and proposed review arrangements so that the schedule assessment can be progressed.
 
 Kind regards,  
-[Project Manager]
+[Authorized Supplier Representative]
 
----
+*Draft status: For Commercial and Legal review only. The contractual clause wording, notice deadline, recipient, and issuance method must be verified before this draft is treated as a formal contractual notice.*
 
-# Prompt 2 — Claim / Notice Quality Review
+#### 2. Event Chronology
 
-```text id="claim-review"
-ROLE
+| Date | Event | Evidence | Status |
+|---|---|---|---|
+| 10 May 2027 | Planned environment availability | Approved schedule | Reported |
+| TBD | Delay identified by project team | Request log / minutes | Requires verification |
+| 24 May 2027 | Environment access provided | Access confirmation | Reported |
+| TBD | Recovery and impact assessment | Updated schedule | Requires validation |
 
-You are an independent IT Commercial Manager reviewing a draft
-contractual notification.
+#### 3. Impact and Causation Review
 
-TASK
-
-Review the draft below.
-
-[PASTE DRAFT]
-
-Check for:
-
-- unsupported entitlement statements,
-- incorrect or unsupported clause references,
-- missing notice dates,
-- missing evidence,
-- unclear chronology,
-- unquantified impact,
-- unsupported cost claims,
-- emotional or adversarial language,
-- unclear requested action,
-- missing deadline.
-
-OUTPUT FORMAT
-
-Finding
-Why It Matters
-Required Correction
-Reviewer
-Priority
-```
-
----
-
-# Prompt 3 — Counterparty Challenge
-
-```text id="claim-counterparty"
-ROLE
-
-You represent the contractual counterparty receiving the
-notification below.
-
-TASK
-
-Challenge the notification.
-
-[PASTE DRAFT]
-
-Identify:
-
-- facts that may be disputed,
-- missing evidence,
-- alternative causation,
-- mitigation questions,
-- chronology gaps,
-- unsupported entitlement,
-- unclear impact calculations.
-
-Do not invent contract terms.
-
-OUTPUT FORMAT
-
-Challenge
-Basis
-Evidence Required
-Potential Weakness
-Recommended Response Preparation
-```
-
-This helps identify weaknesses before formal issue.
-
----
-
-# Causation Review
-
-For significant claims, distinguish:
-
-```text id="claim-causation"
-Event
-↓
-Affected Activity
-↓
-Actual Delay / Cost
-↓
-Downstream Impact
-```
-
-Do not assume:
-
-```text id="claim-causation-bad"
-Event occurred
-=
-Entire project delay
-```
-
-The impact should be supported by evidence.
-
----
-
-# Concurrent Causes
-
-Where more than one factor may have contributed:
-
-```text id="claim-concurrency"
-Customer dependency delay
-+
-Supplier defect
-+
-Resource shortage
-```
-
-flag this for commercial / legal review.
-
-Do not present a single cause as definitive when evidence shows multiple contributing factors.
-
----
-
-# Change-Control Integration
-
-A formal notification does not automatically replace project change control.
-
-Where applicable:
-
-```text id="claim-change-flow"
-Event
-↓
-Notice
-↓
-Impact Assessment
-↓
-Change Request
-↓
-Commercial Review
-↓
-Approval / Rejection
-↓
-Baseline Update
-```
-
----
-
-# Agile / Scrum Considerations
-
-Adaptive delivery does not remove contractual requirements.
-
-Potential contract-relevant events may include:
-
-- customer dependencies,
-- unavailable Product Owner decisions,
-- agreed release commitments,
-- supplier capacity commitments,
-- scope outside agreed commercial boundaries.
-
-Distinguish normal backlog reprioritisation from a contractual change.
-
----
-
-# Kanban / Managed Service Considerations
-
-Potential evidence may include:
-
-- SLA breaches,
-- work-item ageing,
-- blocked service requests,
-- response-time data,
-- throughput history.
-
-Use operational metrics as evidence only when contractually relevant.
-
----
-
-# Predictive Considerations
-
-Formal claims may link closely to:
-
-- baseline milestones,
-- critical path,
-- contractual dates,
-- change control,
-- resource or cost impact.
-
----
-
-# Hybrid Considerations
-
-Separate:
-
-```text id="claim-hybrid"
-Adaptive delivery change
-```
-
-from:
-
-```text id="claim-hybrid-contract"
-Commercial / contractual change
-```
-
-Not every delivery adjustment requires a contractual claim.
-
----
-
-# Writing Rules
-
-Use:
-
-```text id="claim-writing-rules"
-Professional
-Factual
-Specific
-Traceable
-Non-adversarial
-Evidence-based
-```
-
-Avoid:
-
-```text id="claim-writing-avoid"
-Clearly your fault
-
-We demand
-
-This is completely unacceptable
-
-You have caused the entire project delay
-
-As everyone knows
-```
-
-unless such wording has been intentionally approved by Legal / Commercial.
-
----
-
-# Quality Checklist
-
-Before issuing a formal notice, confirm:
-
-- [ ] Contract version is correct
-- [ ] Clause references are verified
-- [ ] Event date is correct
-- [ ] Awareness date is correct
-- [ ] Notice deadline is verified
-- [ ] Correct recipient is identified
-- [ ] Required delivery method is verified
-- [ ] Facts are evidence-based
-- [ ] Chronology is clear
-- [ ] Impact is supported
-- [ ] Mitigation is recorded
-- [ ] Relief requested is explicit
-- [ ] No unsupported legal entitlement is claimed
-- [ ] Commercial / Legal review completed where required
-- [ ] Delivery evidence will be retained
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- procurement,
-- change management,
-- schedule,
-- cost,
-- risk,
-- stakeholder communication,
-- governance.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Formal contractual notifications should normally be reviewed by the appropriate:
-
-- Legal team,
-- Commercial Manager,
-- Procurement,
-- Project Manager,
-- Programme Manager,
-- Vendor Manager.
-
-AI can help structure the draft and identify missing information.
-
-It should not determine legal entitlement, contractual liability, or final claim strategy.
-
----
-
-# Confidentiality
-
-Formal claims may contain highly sensitive information.
-
-Protect:
-
-- pricing,
-- legal positions,
-- contract clauses,
-- commercial negotiations,
-- dispute strategy,
-- vendor performance information,
-- customer information.
-
-Do not paste confidential contract or dispute material into public AI tools unless organisational policy permits it.
-
----
-
-# Prompt Metadata
-
-```text id="claim-metadata"
-Prompt ID: COMM-002
-Category: Commercial & Project Governance
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Commercial Manager
-Reviewer: Legal / Procurement
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Area | Current Assessment | Evidence Required |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT contractual claim / formal notification framework |
+| Environment | Available 14 calendar days after planned date | Access log |
+| Integration testing | Started 10 working days later than planned | Test schedule / execution record |
+| UAT | Forecast five-working-day impact | Dependency and recovery analysis |
+| Cost | Under assessment | Timesheets / cost records |
+| Mitigation | Mock services and re-sequencing reported | Test and planning records |
+| Concurrent causes | Not assessed | Defect, resource, and schedule history |
+
+**Management concern:** A late environment does not automatically establish the same amount of delay to the overall project. The downstream impact requires a defensible dependency and recovery analysis.
+
+#### 4. Supporting Evidence Register
+
+| ID | Evidence | Relevance | Availability |
+|---|---|---|---|
+| E-01 | Approved schedule | Baseline environment date | Referenced |
+| E-02 | Environment request log | Requests and timing | Referenced |
+| E-03 | Meeting minutes | Awareness and escalation history | Referenced |
+| E-04 | Access confirmation | Actual availability date | Referenced |
+| E-05 | Updated project forecast | Claimed UAT impact | Not provided |
+| E-06 | Resource / cost evidence | Potential additional cost | Not provided |
+
+A referenced document must be checked before it is treated as verified evidence.
+
+#### 5. Contractual Notice Check
+
+| Requirement | Current Position | Required Action |
+|---|---|---|
+| Contract clause | Clause 8.3 reported | Review exact wording |
+| Notice trigger | Environment delay | Verify contractual definition |
+| Awareness date | Unknown | Confirm from records |
+| Notice period | Reported as 10 business days | Verify wording and calculation |
+| Recipient | Unknown | Confirm contractual notice recipient |
+| Delivery method | Unknown | Check notice provisions |
+| Authorized sender | Unknown | Confirm delegated authority |
+| Delivery evidence | Not available | Retain proof after issuance |
+
+**Issuance readiness: Not confirmed.**
+
+The notice deadline cannot be reliably determined without the awareness date, verified contract provisions, and applicable business-day rules.
+
+#### 6. Claim and Change-Control Follow-Up
+
+| Action | Proposed Owner | Timing | Required Evidence |
+|---|---|---|---|
+| Verify Clause 8.3 and notice provisions | Legal / Commercial Manager | Before issuance | Contract extract |
+| Confirm awareness date | Project Manager | Before deadline calculation | Event records |
+| Validate testing and UAT impacts | Project Planner / Test Lead | Before impact submission | Schedule analysis |
+| Assess additional costs | Commercial Manager | Before any cost claim | Financial evidence |
+| Approve notification wording | Authorized Legal / Commercial reviewer | Before issuance | Reviewed draft |
+| Track notice issuance | Contract Administrator | On authorized issuance | Delivery confirmation |
+| Process schedule adjustment | Project Manager | After impact review | Change-control decision |
+
+### Management Decisions
+
+1. **Notice compliance:** Verify the contract's notice requirements and applicable deadline immediately.
+2. **Evidence:** Confirm event chronology and support the reported testing delay with project records.
+3. **Commercial position:** Assess whether additional cost or schedule relief may be available, without assuming entitlement.
+4. **Governance:** Obtain Legal and Commercial approval before formal issuance and manage any proposed baseline change through authorized change control.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The draft presents the reported event, project impact, mitigation actions, and requested review in a factual, non-adversarial manner. However, the exact contractual basis, awareness date, authorized recipient, notice method, and causation evidence are incomplete.
+
+**Required corrections:** Verify contract wording and notice timing; validate schedule effects and supporting records; assess possible concurrent causes; obtain authorized review before issuance.
+
+**Counterparty challenges:** Whether the environment delay caused the entire testing delay, whether the UAT forecast reflects all contributing factors, and whether the notice complies with contractual procedures.
+
+**Approval blockers:** Unverified notice requirements, unknown awareness date, and missing Legal / Commercial authorization.
+
+**Governance:** Supports PMI-aligned procurement administration, schedule management, change control, risk management, documentation, and stakeholder communication.
+
+A contractual notification does not itself establish entitlement, liability, or approval of a change. Formal notices and claims require authorized commercial and legal review. Protect confidential contract provisions, pricing, dispute strategy, security information, and customer data.

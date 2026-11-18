@@ -180,15 +180,26 @@ action plan with accountable owners and escalation triggers.
 
 **Human validation:** The Project Manager and accountable technical stakeholders must confirm the actual impact and approve any change to the delivery plan.
 
-## 5. PM Governance & Quality
+## PM Governance & Quality Check
 
-Apply these controls to every AI-generated analysis:
+```text
+QUALITY REVIEW
 
-- **Evidence:** Separate confirmed facts from assumptions.
-- **Risk:** Assess relevant cost, schedule, scope, quality and security implications.
-- **Ownership:** Assign recommended actions to accountable roles.
-- **Escalation:** Identify decisions requiring management approval.
-- **Validation:** Require human review of consequential recommendations.
-- **Confidentiality:** Anonymize sensitive client, commercial and technical information.
+Act as a Senior QA Manager and review the AI-generated output before finalization.
 
-AI-generated outputs support professional judgment; they do not replace accountable project decisions.
+Verify that:
+1. Accuracy: Conclusions are evidence-based; assumptions and information gaps are clearly identified.
+2. Risk: Relevant impacts on scope, schedule, cost, quality, and security are assessed.
+3. Actionability: Recommendations are specific, feasible, prioritized, and assigned to accountable owners.
+4. Governance: Escalation triggers and decisions requiring human approval are identified.
+5. Confidentiality: Sensitive project, client, and commercial information is protected.
+
+Flag inconsistencies, unsupported claims, and missing information.
+
+OUTPUT:
+- Quality verdict: PASS / REVISE
+- Key findings requiring correction
+- Recommended improvements
+
+Do not invent missing information. Treat AI-generated recommendations as decision support, subject to human validation.
+```

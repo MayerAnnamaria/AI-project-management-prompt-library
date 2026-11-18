@@ -1,978 +1,438 @@
 # Supplier RFQ / RFP Response Review
 
-## Purpose
+**Prompt ID:** COMM-005 | **Category:** Commercial & Project Governance | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to evaluate a supplier response against the requirements defined in an RFQ, RFP, tender, or vendor-selection process.
+## 1. Ready-to-Use Prompt
 
-The review should identify:
+**Purpose:** Evaluate supplier proposals against procurement requirements to identify compliance gaps, delivery risks, commercial exposure, and clarification needs before vendor selection.
 
-- compliant requirements,
-- partial responses,
-- missing information,
-- material deviations,
-- commercial gaps,
-- technical gaps,
-- delivery risks,
-- and clarification questions.
+**Use case:** Review RFQ, RFP, tender, or supplier-selection responses for software implementation, SaaS, cloud, infrastructure, and other IT projects.
 
-The objective is not simply to determine whether a supplier submitted a response.
+Copy the prompt and replace the placeholders.
 
-The objective is to assess whether the response provides enough evidence to support an informed procurement decision.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Procurement / Vendor Selection / Contracting
-
-**Project type:**  
-Software implementation / SaaS / Cloud / ERP / Infrastructure / Data / Outsourcing / Consulting / Digital Transformation
-
-**Primary user:**  
-Project Manager / Procurement / Commercial Manager / Solution Architect / Vendor Manager
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-For every material supplier evaluation
-
----
-
-# Prompt
-
-```text id="rfq-review-01"
+```text
 ROLE
 
-You are a senior IT Project Manager and Vendor Evaluation specialist
-experienced in software procurement, supplier selection, technology
-contracts, commercial evaluation, and project delivery.
+You are a Senior IT Project Manager and Procurement Evaluation
+Specialist experienced in software delivery, supplier selection,
+technology contracts, commercial evaluation, and governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Procurement type: [RFQ / RFP / TENDER]
+Service / product: [DESCRIPTION]
+Evaluation stage: [TECHNICAL / COMMERCIAL / FINAL]
+Delivery approach: [PREDICTIVE / AGILE / KANBAN / HYBRID]
+Contract model: [FIXED PRICE / TIME & MATERIALS / OTHER]
+
+Approved evaluation criteria: [LIST]
+Mandatory requirements: [LIST]
+Desirable requirements: [LIST]
+Approved scoring weights: [IF AVAILABLE]
+Evaluation rules / disqualification criteria: [IF AVAILABLE]
+
+PROCUREMENT REQUIREMENTS
+
+[PASTE RFQ / RFP REQUIREMENTS]
+
+SUPPLIER RESPONSE
+
+[PASTE SUPPLIER PROPOSAL]
+
+OPTIONAL ADDITIONAL SUPPLIERS
+
+[PASTE OTHER RESPONSES IF COMPARISON IS REQUIRED]
 
 TASK
 
-Review the supplier response against the stated RFQ / RFP requirements.
+Evaluate the supplier response against the stated requirements.
 
-Do not assume missing information is compliant.
+STEP 1 — REQUIREMENTS COMPLIANCE
 
-Do not invent supplier capabilities or evidence.
+1. Map each requirement to the corresponding supplier response.
+2. Classify compliance as:
+   - Compliant
+   - Partially Compliant
+   - Non-Compliant
+   - Not Provided
+   - Requires Clarification
+3. Distinguish mandatory requirements from desirable criteria.
+4. Verify supporting evidence rather than accepting unsupported claims.
+5. Identify deviations, incomplete responses, and missing information.
 
-PROCUREMENT CONTEXT
+STEP 2 — TECHNICAL AND DELIVERY EVALUATION
 
-Project:
-[PROJECT NAME]
+6. Assess relevant technical requirements:
+   - Architecture and integrations
+   - APIs and data migration
+   - Performance and scalability
+   - Security and compliance
+   - Testing and deployment
+   - Support and operational readiness
+7. Evaluate delivery methodology, milestones,
+   mobilization, resources, and dependencies.
+8. Distinguish named and committed personnel
+   from illustrative resource profiles.
+9. Identify third-party and subcontractor dependencies.
+10. Assess alignment between the proposed delivery approach
+    and commercial commitments.
 
-Procurement type:
-[RFQ / RFP / TENDER / VENDOR SELECTION]
+STEP 3 — COMMERCIAL EVALUATION
 
-Service / product:
-[DESCRIPTION]
+11. Review:
+    - Implementation and recurring costs
+    - Licensing, cloud, and third-party fees
+    - Support and maintenance
+    - Change rates and resource rates
+    - Taxes, travel, and other relevant costs
+12. Extract supplier assumptions and exclusions.
+13. Identify potential hidden costs and scope gaps.
+14. Assess the three most material commercial risks.
+15. Flag costs requiring clarification without assuming
+    that missing items are necessarily additional charges.
 
-Evaluation stage:
-[TECHNICAL / COMMERCIAL / FINAL]
+STEP 4 — PROCUREMENT RECOMMENDATION
 
-WHAT WE REQUESTED
+16. Generate specific clarification questions linked
+    to individual requirements and evidence gaps.
+17. Identify the highest-priority technical, commercial,
+    security, and delivery risks.
+18. Apply approved scoring and weights where supplied.
+19. If multiple proposals are provided, compare suppliers
+    against identical criteria and evidence standards.
+20. Recommend one outcome:
+    - Accept for next evaluation stage
+    - Accept with conditions
+    - Request clarification before progressing
+    - Reject
 
-[PASTE REQUIREMENTS]
+Explain the recommendation using documented evidence
+and applicable procurement rules.
 
-WHAT THE SUPPLIER PROVIDED
+RULES
 
-[PASTE RESPONSE]
+- Do not assume missing information is compliant.
+- Do not invent supplier capabilities, certifications,
+  resource commitments, costs, or performance evidence.
+- Do not invent scoring weights or mandatory requirements.
+- Apply evaluation criteria consistently across suppliers.
+- Distinguish supplier claims from verified evidence.
+- Do not recommend rejection solely because a response
+  is incomplete unless procurement rules justify it.
+- Identify matters requiring technical, commercial,
+  security, or procurement validation.
 
 OUTPUT FORMAT
 
-Provide:
+1. EXECUTIVE ASSESSMENT
 
-1. Executive Assessment
-2. Compliance Gap Table
-3. Technical Gaps
-4. Commercial Gaps
-5. Delivery / Resource Gaps
-6. Security / Compliance Gaps
-7. Clarification Questions
-8. Top Risks
-9. Recommendation
+Overall Compliance | Main Strengths |
+Material Gaps | Procurement Risk |
+Recommendation
 
-Recommendation options:
+2. COMPLIANCE MATRIX
 
-- Accept for next evaluation stage
-- Accept with conditions
-- Request clarification before progressing
-- Reject
-```
+Requirement ID | Requirement | Mandatory / Desirable |
+Supplier Response | Evidence | Compliance Status |
+Gap / Clarification
 
----
+3. TECHNICAL AND SECURITY REVIEW
 
-# 1. Executive Assessment
+Area | Requirement | Supplier Evidence |
+Assessment | Delivery / Security Risk
 
-Summarise:
+4. COMMERCIAL EVALUATION
 
-```text id="rfq-exec"
-Overall compliance
+Commercial Item | Supplier Position |
+Assumption / Exclusion | Potential Exposure |
+Clarification Required
 
-Strongest areas
+5. DELIVERY AND RESOURCE REVIEW
 
-Most significant gaps
+Required Role / Capability | Supplier Proposal |
+Availability | Evidence | Gap / Risk
 
-Whether missing information is material
+6. KEY SUPPLIER RISKS
 
-Overall recommendation
-```
+Risk | Supporting Evidence | Potential Impact |
+Mitigation / Clarification | Priority
 
-Example:
+7. CLARIFICATION QUESTIONS
 
-> The supplier demonstrates relevant platform experience and has provided a commercially complete pricing proposal. However, the submission is incomplete in three material areas: resource availability, migration methodology, and security evidence. Clarification should be completed before commercial evaluation proceeds.
+ID | Requirement | Question |
+Evidence Requested | Priority
 
----
+8. SUPPLIER COMPARISON (IF APPLICABLE)
 
-# 2. Compliance Gap Table
-
-Use:
-
-| Requirement | Requested | Supplier Response | Status | Gap / Concern | Clarification Required |
-|---|---|---|---|---|---|
-
-Suggested statuses:
-
-```text id="rfq-status"
-Compliant
-Partially Compliant
-Non-Compliant
-Not Provided
-Requires Clarification
-```
-
-Do not mark an item compliant where evidence is missing.
-
----
-
-# Example
-
-| Requirement | Requested | Supplier Response | Status |
-|---|---|---|---|
-| Relevant experience | 3 comparable implementations | 2 examples provided | Partially Compliant |
-| Named PM | Required | CV provided | Compliant |
-| Delivery plan | Required | Not submitted | Not Provided |
-| Security certification | Required | Certificate expired | Non-Compliant |
-
----
-
-# 3. Technical Review
-
-Assess areas such as:
-
-```text id="rfq-technical"
-Solution architecture
-
-Integration approach
-
-API capability
-
-Data migration
-
-Performance
-
-Scalability
-
-Security architecture
-
-Environments
-
-Testing approach
-
-Deployment
-
-Monitoring
-
-Support
-```
-
-Use:
-
-| Technical Area | Requirement | Supplier Evidence | Assessment | Risk |
-|---|---|---|---|---|
-
----
-
-# Technical Evidence Rule
-
-Do not accept statements such as:
-
-```text id="rfq-technical-weak"
-"Our solution is scalable."
-```
-
-without supporting detail where evidence was requested.
-
-Ask:
-
-```text id="rfq-technical-questions"
-What scale has been demonstrated?
-
-Under what load?
-
-What architecture supports scalability?
-
-What evidence is available?
-
-What limits apply?
-```
-
----
-
-# 4. Commercial Review
-
-Assess:
-
-```text id="rfq-commercial"
-Pricing model
-
-Licence costs
-
-Implementation cost
-
-Recurring fees
-
-Third-party costs
-
-Cloud costs
-
-Support costs
-
-Rate cards
-
-Change rates
-
-Travel
-
-Taxes
-
-Assumptions
-
-Exclusions
-```
-
-Provide:
-
-| Commercial Item | Requirement | Supplier Position | Gap | Risk |
-|---|---|---|---|---|
-
----
-
-# Hidden Cost Review
-
-Look for potential costs not clearly included.
-
-Examples:
-
-```text id="rfq-hidden-cost"
-Additional environments
-
-API usage fees
-
-Data storage
-
-Cloud consumption
-
-Premium support
-
-Training
-
-Travel
-
-Third-party licences
-
-Migration tools
-
-Post-go-live support
-
-Additional users
-```
-
-Flag these as questions, not assumed costs.
-
----
-
-# 5. Delivery / Resource Review
-
-Assess:
-
-```text id="rfq-delivery"
-Delivery methodology
-
-Mobilisation date
-
-Project plan
-
-Team structure
-
-Named resources
-
-Availability
-
-Dependencies
-
-Milestones
-
-Governance
-
-Escalation model
-```
-
-Example questions:
-
-```text id="rfq-delivery-questions"
-Are named resources committed or illustrative?
-
-When are they available?
-
-How many parallel projects are they supporting?
-
-Who replaces key resources if unavailable?
-
-Who owns delivery escalation?
-```
-
----
-
-# Resource Compliance Table
-
-| Required Role | Supplier Proposal | Availability | Experience | Status |
-|---|---|---|---|---|
-
-Possible roles:
-
-```text id="rfq-roles"
-Project Manager
-Solution Architect
-Business Analyst
-Technical Lead
-Developers
-Data Specialist
-QA Lead
-Security Specialist
-Change Lead
-Support Lead
-```
-
----
-
-# 6. Security / Compliance Review
-
-Where relevant evaluate:
-
-```text id="rfq-security"
-Security certifications
-
-Data protection
-
-Data residency
-
-Access controls
-
-Encryption
-
-Incident management
-
-Vulnerability management
-
-Subprocessors
-
-Business continuity
-
-Disaster recovery
-
-Audit rights
-```
-
-Do not infer compliance from generic statements.
-
-Example:
-
-> “We follow industry-standard security” should not automatically be treated as evidence of a specific security requirement.
-
----
-
-# 7. Clarification Questions
-
-Clarification questions should be:
-
-```text id="rfq-clarification-principles"
-Specific
-Evidence-oriented
-Neutral
-Linked to a stated requirement
-```
-
-### Weak
-
-```text id="rfq-question-weak"
-Can you provide more detail?
-```
-
-### Better
-
-```text id="rfq-question-good"
-Please confirm the named Solution Architect who would be allocated
-to the project, their expected allocation percentage, and their
-availability from the planned mobilisation date.
-```
-
----
-
-# Clarification Table
-
-| ID | Requirement | Clarification Question | Why Required | Priority |
-|---|---|---|---|---|
-
----
-
-# 8. Top Procurement Risks
-
-Identify the most material risks in the response.
-
-Possible examples:
-
-```text id="rfq-risks"
-Unclear scope assumptions
-
-Insufficient resource capacity
-
-Unproven technical capability
-
-Incomplete migration approach
-
-Hidden recurring cost
-
-Security non-compliance
-
-Vendor lock-in
-
-Unrealistic timeline
-
-Weak support model
-
-Excessive dependency on subcontractors
-```
-
-Provide:
-
-| Risk | Evidence | Potential Impact | Clarification / Mitigation |
-|---|---|---|---|
-
----
-
-# Top 3 Commercial Traps
-
-After the review, run:
-
-```text id="rfq-commercial-traps"
-ROLE
-
-You are a senior IT Commercial Manager.
-
-TASK
-
-From the supplier response below, identify the three highest-risk
-commercial gaps that could later create:
-
-- change requests,
-- cost escalation,
-- delivery dispute,
-- acceptance dispute,
-- vendor lock-in.
-
-For each provide:
-
-Risk
-Supplier Position
-Why It Matters
-Potential Future Dispute
-Recommended Clarification Before Contract
-```
-
----
-
-# 9. Recommendation
-
-Use one of:
-
-```text id="rfq-recommendations"
-Accept for next evaluation stage
-
-Accept with conditions
-
-Request clarification before progressing
-
-Reject
-```
-
-Explain the recommendation.
-
-Example:
-
-```text id="rfq-recommendation-example"
-Recommendation:
-Request clarification before progressing.
-
-Reason:
-The supplier meets the core functional and commercial requirements,
-but material gaps remain in migration planning, named resource
-availability, and security evidence.
-
-Progression should depend on satisfactory resolution of these items.
-```
-
----
-
-# Recommendation Rule
-
-Do not recommend rejection merely because the response is imperfect.
-
-Ask:
-
-```text id="rfq-recommendation-test"
-Is the gap material?
-
-Can it be clarified?
-
-Does it breach a mandatory requirement?
-
-Does it create unacceptable risk?
-
-Does procurement policy allow conditional progression?
-```
-
----
-
-# Example Input
-
-```text id="rfq-example-input"
-Project:
-CRM Replacement
-
-Requested:
-
-- fixed implementation price
-- detailed migration methodology
-- 3 comparable CRM projects
-- named PM and Solution Architect
-- project plan
-- EU data residency
-- ISO 27001 certification
-- 12 months post-go-live support
-- detailed technical compliance matrix
-
-Supplier response:
-
-- fixed implementation price: €920,000
-- migration approach: 2-page summary
-- 2 CRM references
-- PM CV provided
-- no named Solution Architect
-- high-level 8-month timeline
-- EU hosting confirmed
-- ISO 27001 certificate provided
-- support proposal included for 6 months
-- compliance matrix 80% complete
-```
-
----
-
-# Example Compliance Review
-
-| Requirement | Supplier Response | Status | Gap |
-|---|---|---|---|
-| Fixed price | €920k | Compliant | None |
-| Migration methodology | Brief summary | Partial | Detailed reconciliation / cutover approach missing |
-| 3 references | 2 provided | Partial | One reference missing |
-| Solution Architect | Not named | Not Provided | Resource risk |
-| EU residency | Confirmed | Compliant | Verify contract wording |
-| 12-month support | 6 months | Non-Compliant | Support period below requirement |
-| Compliance matrix | 80% complete | Partial | Remaining items require clarification |
-
----
-
-# Prompt 2 — Supplier Response Quality Review
-
-```text id="rfq-quality-review"
-ROLE
-
-You are an independent Procurement and PMO reviewer.
-
-TASK
-
-Review the supplier evaluation below.
-
-[PASTE EVALUATION]
-
-Check for:
-
-- requirements incorrectly marked compliant,
-- missing evidence,
-- inconsistent scoring,
-- unsupported conclusions,
-- supplier assumptions treated as commitments,
-- commercially material gaps,
-- bias in recommendation.
-
-OUTPUT FORMAT
-
-Finding
-Evidence
-Why It Matters
-Recommended Correction
-Priority
-```
-
----
-
-# Prompt 3 — Compare Multiple Suppliers
-
-```text id="rfq-comparison"
-ROLE
-
-You are a senior IT Procurement Evaluation Lead.
-
-TASK
-
-Compare the supplier responses below against the same requirements.
-
-SUPPLIER A
-[PASTE]
-
-SUPPLIER B
-[PASTE]
-
-SUPPLIER C
-[PASTE]
-
-OUTPUT FORMAT
-
-Requirement
-Supplier A
-Supplier B
-Supplier C
+Criterion | Approved Weight |
+Supplier A | Supplier B | Supplier C |
 Evaluation Comment
 
-Then provide:
+9. RECOMMENDATION
 
-1. Technical strengths
-2. Commercial strengths
-3. Key risks
-4. Clarifications required
-5. Recommended shortlist
+Recommended Outcome | Supporting Rationale |
+Conditions | Outstanding Evidence |
+Approval Required
+
+MANAGEMENT SUMMARY
+
+- Supplier suitability
+- Mandatory compliance gaps
+- Main commercial and delivery exposure
+- Required clarifications
+- Recommended next procurement action
+
+Use concise Markdown tables.
+Mark missing information as "Not Provided".
+Do not create unsupported supplier rankings.
 ```
-
-Do not invent scoring weights unless they have been provided.
 
 ---
 
-# Weighted Evaluation
+## 2. Quality Check
 
-Where approved weights exist:
+Apply this independent review before finalizing the supplier evaluation.
 
-| Criterion | Weight | Supplier Score | Weighted Score |
-|---|---:|---:|---:|
+```text
+QUALITY CHECK
 
-Possible criteria:
+Act as an independent Senior Procurement and PMO
+Quality Assurance Manager.
 
-```text id="rfq-weighting"
-Technical fit
-Relevant experience
-Delivery capability
-Commercial
-Security
-Support
-Implementation team
+Review the supplier evaluation against the original
+RFQ / RFP and supplier response.
+
+Verify:
+
+1. Traceability: Every assessment links to a stated
+   requirement and supporting evidence.
+2. Compliance: Missing or partial responses are not
+   incorrectly classified as compliant.
+3. Mandatory Requirements: Potential disqualification
+   conditions are identified and applied consistently.
+4. Technical Assessment: Claims of capability, security,
+   scalability, and implementation experience are supported.
+5. Commercial Accuracy: Pricing, assumptions, exclusions,
+   and recurring costs are represented correctly.
+6. Delivery Feasibility: Resources, milestones, methods,
+   and dependencies are assessed.
+7. Fairness: Evaluation criteria and approved weights
+   are applied consistently without supplier bias.
+8. Recommendation: The proposed outcome reflects
+   evidence, materiality, and procurement rules.
+9. Governance: Outstanding clarifications and required
+   approvals are explicitly identified.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Do not invent scoring weights, evaluation evidence,
+supplier commitments, or procurement decisions.
 ```
-
-Use only approved evaluation criteria and weights.
 
 ---
 
-# Mandatory vs Desirable Requirements
+## 3. Practical IT Use Case
 
-Separate:
+### CRM Implementation — Supplier Proposal Evaluation
 
-```text id="rfq-mandatory"
-Mandatory
-Failure may prevent progression.
+**Scenario:** A company is selecting a supplier for a CRM replacement project. The procurement team has received a proposal that includes a fixed implementation price and relevant experience, but several technical, delivery, and commercial requirements are incompletely addressed.
+
+The Project Manager must identify material gaps before recommending progression to the next procurement stage.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | CRM System Replacement |
+| Phase | Procurement / Vendor Selection |
+| Procurement type | Request for Proposal |
+| Delivery model | Hybrid |
+| Contract model | Fixed Price |
+| Supplier | CRM Implementation Vendor |
+| Proposed price | €920,000 |
+| Key concern | Migration, resources, and support coverage |
+| Management objective | Determine whether the proposal is sufficiently complete to progress |
+
+### Example Input
+
+```text
+Project: CRM System Replacement
+
+Procurement type: RFP
+Contract model: Fixed Price
+
+MANDATORY / DESIRABLE CLASSIFICATION
+Not provided.
+
+REQUESTED REQUIREMENTS
+
+R-01 Fixed implementation price
+R-02 Detailed data migration methodology
+R-03 Three comparable CRM project references
+R-04 Named Project Manager and Solution Architect
+R-05 Detailed project delivery plan
+R-06 EU data residency
+R-07 ISO 27001 certification
+R-08 Twelve months post-go-live support
+R-09 Complete technical compliance matrix
+
+SUPPLIER RESPONSE
+
+R-01 Fixed implementation price: €920,000
+R-02 Migration approach: Two-page summary
+R-03 Two CRM project references provided
+R-04 Project Manager CV provided;
+     Solution Architect not named
+R-05 High-level eight-month timeline
+R-06 EU hosting confirmed
+R-07 ISO 27001 certificate provided
+R-08 Six months support proposed
+R-09 Technical compliance matrix 80% complete
+
+Approved scoring weights:
+Not provided.
+
+Supplier assumptions and exclusions:
+Not provided.
 ```
 
-from:
+### Example Output — Supplier Evaluation
 
-```text id="rfq-desirable"
-Desirable
-Contributes to comparative evaluation.
-```
+#### 1. Executive Assessment
 
-This avoids rejecting a supplier for a non-mandatory preference.
+The supplier has submitted a fixed implementation price of €920,000 and evidence of relevant CRM experience. However, the proposal contains material gaps in migration planning, resource commitments, delivery planning, and post-go-live support.
 
----
+The supplier also provides fewer project references than requested and an incomplete technical compliance matrix.
 
-# Bid Assumption Review
+**Recommendation: Request clarification before progressing.**
 
-Suppliers often include assumptions that materially affect price or delivery.
+Mandatory compliance and formal eligibility must be confirmed against the approved procurement rules.
 
-Extract:
+#### 2. Compliance Matrix
 
-| Supplier Assumption | Impact if Incorrect | Customer Action Required | Risk |
+| ID | Requirement | Supplier Response | Status | Gap |
+|---|---|---|---|---|
+| R-01 | Fixed price | €920,000 | Compliant | Detailed scope and cost coverage not verified |
+| R-02 | Detailed migration methodology | Two-page summary | Partially Compliant | Migration and reconciliation detail missing |
+| R-03 | Three project references | Two provided | Partially Compliant | One reference missing |
+| R-04 | Named PM and Architect | PM CV only | Partially Compliant | Solution Architect not named |
+| R-05 | Detailed project plan | Eight-month summary | Partially Compliant | Milestones and dependencies missing |
+| R-06 | EU data residency | EU hosting confirmed | Requires Clarification | Contractual and technical evidence needed |
+| R-07 | ISO 27001 certification | Certificate provided | Requires Clarification | Validity and applicable scope require verification |
+| R-08 | Twelve months support | Six months offered | Non-Compliant | Support term below requirement |
+| R-09 | Full compliance matrix | 80% complete | Partially Compliant | Remaining requirements unanswered |
+
+Classification reflects only the information supplied, not a completed procurement verification.
+
+#### 3. Technical and Security Review
+
+| Area | Supplier Evidence | Assessment | Risk |
 |---|---|---|---|
-
-Examples:
-
-```text id="rfq-assumptions"
-Customer provides clean data
-
-Customer supplies API access
-
-Business SMEs available
-
-No weekend work required
-
-One migration cycle only
-
-Existing licences sufficient
-```
-
----
-
-# Exclusion Review
-
-Extract supplier exclusions separately.
-
-Example:
-
-```text id="rfq-exclusions"
-Data cleansing excluded.
-
-Third-party API changes excluded.
-
-Penetration testing excluded.
-
-Training beyond two sessions excluded.
-```
-
-Ask whether each exclusion is:
-
-- acceptable,
-- priced elsewhere,
-- or a scope gap.
-
----
-
-# Vendor Dependency Review
-
-Identify:
-
-```text id="rfq-vendor-dependencies"
-Subcontractors
-
-Cloud providers
-
-Software manufacturers
-
-Specialist resources
-
-Offshore teams
-
-Third-party licences
-```
-
-Ask:
-
-> Which important deliverables depend on a third party not directly controlled by the bidder?
-
----
-
-# Agile / Scrum Considerations
-
-Where suppliers propose Agile delivery, review:
-
-- team structure,
-- Product Owner assumptions,
-- backlog ownership,
-- capacity model,
-- release planning,
-- Definition of Done,
-- commercial treatment of changing priorities.
-
-Do not accept “Agile” as a substitute for a delivery plan.
-
----
-
-# Kanban / Managed Service Considerations
-
-For service suppliers assess:
-
-```text id="rfq-kanban"
-Service classes
-
-Capacity
-
-WIP policy
-
-SLA / SLE
-
-Response times
-
-Resolution times
-
-Escalation
-
-Reporting
-```
-
----
-
-# Predictive Considerations
-
-Where delivery is milestone-driven, evaluate:
-
-- detailed plan,
-- dependencies,
-- milestone acceptance,
-- resource loading,
-- critical path,
-- change control.
-
----
-
-# Hybrid Considerations
-
-Assess whether governance and commercial structure actually support the proposed delivery model.
-
----
-
-# Evaluation Traceability
-
-Maintain a clear chain:
-
-```text id="rfq-traceability"
-RFQ Requirement
-↓
-Supplier Response
-↓
-Evidence
-↓
-Evaluator Assessment
-↓
-Clarification
-↓
-Final Decision
-```
-
-This improves defensibility of procurement decisions.
-
----
-
-# Quality Checklist
-
-Before finalising supplier evaluation, confirm:
-
-- [ ] Every mandatory requirement is reviewed
-- [ ] Partial responses are identified
-- [ ] Missing evidence is visible
-- [ ] Assumptions are extracted
-- [ ] Exclusions are extracted
-- [ ] Commercial gaps are identified
-- [ ] Technical gaps are identified
-- [ ] Security requirements are assessed
-- [ ] Resource capability is reviewed
-- [ ] Delivery plan is reviewed
-- [ ] Clarification questions are specific
-- [ ] Recommendation is evidence-based
-- [ ] Evaluation criteria are applied consistently
-- [ ] No unsupported supplier capability is assumed
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- procurement,
-- supplier selection,
-- risk,
-- quality,
-- cost,
-- stakeholder management,
-- governance.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Supplier evaluation should involve appropriate stakeholders such as:
-
-- Procurement
-- Project Manager
-- Solution Architect
-- Security
-- Finance
-- Business Owner
-- Commercial / Legal
-- Vendor Management
-
-AI can help compare responses and identify gaps.
-
-It should not make the final supplier-selection decision independently.
-
----
-
-# Confidentiality
-
-Supplier proposals are commercially sensitive.
-
-Protect:
-
-- pricing,
-- technical architecture,
-- rate cards,
-- resource information,
-- security evidence,
-- negotiation positions,
-- proprietary supplier information.
-
-Do not upload confidential supplier submissions to public AI tools unless organisational policy permits it.
-
----
-
-# Prompt Metadata
-
-```text id="rfq-metadata"
-Prompt ID: COMM-005
-Category: Commercial & Project Governance
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Procurement
-Reviewer: Commercial / Technical / Security
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Architecture | Not provided | Requires clarification | Design feasibility unknown |
+| Integration | Not detailed | Incomplete | Scope and dependency uncertainty |
+| Data migration | Two-page summary | Insufficient detail | Migration quality and cutover risk |
+| Security certification | Certificate supplied | Verification required | Certification scope uncertain |
+| Data residency | EU hosting stated | Evidence required | Contractual protection unclear |
+| Testing | Not provided | Requires clarification | Acceptance planning uncertainty |
+
+#### 4. Commercial Evaluation
+
+| Item | Supplier Position | Potential Exposure | Clarification |
+|---|---|---|---|
+| Implementation | €920,000 fixed price | Scope assumptions may affect final cost | Confirm inclusions and exclusions |
+| Data migration | Summary only | Additional migration work may require change | Define migration boundaries |
+| Support | Six months | Additional support may have a cost | Price the requested 12 months |
+| Licensing | Not provided | Potential unpriced fees | Confirm license responsibilities |
+| Third-party services | Not provided | Possible external cost exposure | Identify third-party charges |
+| Change requests | Not provided | Unclear variation pricing | Provide change rates and process |
+
+The three most material commercial concerns are migration scope, support duration, and unspecified cost exclusions.
+
+#### 5. Delivery and Resource Review
+
+| Requirement | Supplier Proposal | Gap / Risk |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT supplier RFQ / RFP response-review framework |
+| Project Manager | CV supplied | Allocation and availability not confirmed |
+| Solution Architect | Not named | Critical design resource unconfirmed |
+| Delivery plan | Eight-month overview | Detailed milestones missing |
+| Data migration specialist | Not specified | Delivery capacity unknown |
+| Testing resources | Not specified | QA responsibility unclear |
+| Supplier dependencies | Not specified | External dependency exposure unknown |
+
+#### 6. Key Supplier Risks
+
+| Risk | Supporting Evidence | Potential Impact | Priority |
+|---|---|---|---|
+| Migration methodology incomplete | Two-page summary | Quality or cutover problems | High |
+| Solution Architect unconfirmed | No named resource | Design and mobilization delays | High |
+| Insufficient support proposal | Six instead of 12 months | Support coverage gap | High |
+| Delivery plan incomplete | High-level timeline only | Unrealistic or unclear milestones | High |
+| Technical responses missing | 80% matrix completion | Unknown compliance exposure | High |
+
+Priorities are provisional and require validation against the procurement risk criteria.
+
+#### 7. Clarification Questions
+
+| ID | Requirement | Clarification Question | Priority |
+|---|---|---|---|
+| Q-01 | Migration | Provide detailed extraction, cleansing, reconciliation, cutover, and rollback methodology | High |
+| Q-02 | Solution Architect | Confirm the named architect, experience, availability, and project allocation | High |
+| Q-03 | Support | Confirm pricing and scope for the requested 12-month support period | High |
+| Q-04 | Project plan | Provide detailed milestones, deliverables, dependencies, and resource allocation | High |
+| Q-05 | Security | Provide certificate validity, scope, and relevant security evidence | High |
+| Q-06 | Compliance | Complete all outstanding technical compliance matrix items | High |
+| Q-07 | Commercial | Identify all assumptions, exclusions, and potential additional costs | High |
+| Q-08 | References | Provide the third requested comparable CRM implementation reference | Medium |
+
+#### 8. Supplier Comparison
+
+Not applicable. Only one supplier response was provided.
+
+No weighted score or supplier ranking can be established without the approved evaluation criteria and scoring methodology.
+
+#### 9. Procurement Recommendation
+
+**Recommended outcome: Request clarification before progressing.**
+
+The supplier demonstrates some relevant capabilities, but the proposal is not sufficiently complete to support a final supplier-selection recommendation.
+
+Progression should depend on:
+
+- Resolution of material migration and delivery gaps.
+- Confirmation of the named Solution Architect and delivery capacity.
+- A compliant or formally accepted support proposal.
+- Complete technical and security evidence.
+- Clarification of commercial assumptions and exclusions.
+- Confirmation of applicable mandatory procurement criteria.
+
+### Management Decisions
+
+1. **Technical suitability:** Require evidence of migration capability, solution architecture, and testing approach.
+2. **Delivery confidence:** Confirm resource commitments and obtain a realistic implementation schedule.
+3. **Commercial completeness:** Clarify the fixed-price scope, exclusions, and twelve-month support requirement.
+4. **Procurement governance:** Determine whether the supplier may progress after clarification under the approved evaluation rules.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The evaluation identifies key compliance, technical, resource, and commercial gaps. However, mandatory requirement classifications, scoring methodology, certification validity, and detailed pricing coverage remain unverified.
+
+**Required corrections:**
+- Obtain approved mandatory-versus-desirable requirement classifications.
+- Verify supplier certification and technical evidence.
+- Complete missing procurement responses.
+- Confirm commercial assumptions and exclusions.
+- Validate the recommendation against procurement rules.
+
+**Approval blockers:** Incomplete supplier evidence, unresolved material compliance gaps, and unavailable approved evaluation criteria.
+
+**Governance:** Supports PMI-aligned procurement management, supplier selection, quality assurance, risk management, financial oversight, and project governance.
+
+AI-assisted supplier evaluations support evidence-based comparison but do not replace authorized procurement decisions. All supplier assessments, commercial conclusions, and recommendations require appropriate Procurement, Technical, Security, and Commercial review. Protect confidential pricing, rate cards, architecture, security evidence, and supplier proposals.

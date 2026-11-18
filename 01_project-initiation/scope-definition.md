@@ -1,428 +1,338 @@
 # Scope Definition and Gap Review
 
-## Purpose
+**Prompt ID:** INIT-003 | **Category:** Project Initiation | **Version:** 1.0 | **Status:** Draft
 
-Use this framework to define project scope clearly and then audit it for ambiguity, missing requirements, ownership gaps, dependencies, and delivery risk.
+## 1. Ready-to-Use Prompt
 
-The workflow has two steps:
+**Purpose:** Define and validate project scope to reduce ambiguity, scope creep, rework, and delivery risk.
 
-1. **Draft the scope**
-2. **Audit the scope**
+**Use case:** Draft or review scope boundaries, requirements, integrations, and responsibilities during project initiation, early planning, or major scope changes.
 
-The goal is to reduce:
+Copy the prompt and replace the placeholders with your project information.
 
-- scope creep,
-- conflicting stakeholder expectations,
-- unclear responsibilities,
-- missed dependencies,
-- rework,
-- and avoidable change requests.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Early Planning
-
-**Project type:**  
-Software development / System implementation / Digital transformation / Data project / Integration project / Infrastructure initiative
-
-**Primary user:**  
-Project Manager / Project Coordinator / Business Analyst / Product Owner / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At project initiation and after major scope changes
-
----
-
-# Prompt 1 — Draft the Scope
-
-```text id="scope-01"
+```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, requirements clarification, stakeholder alignment,
-cross-functional coordination, and project governance.
+You are a Senior IT Project Manager and Business Analyst specializing
+in software delivery, requirements management, scope definition,
+stakeholder alignment, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Expected business value: [BENEFITS]
+Project phase: [INITIATION / PLANNING]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Primary users: [USERS / BUSINESS UNITS]
+Systems and integrations: [LIST]
+Business processes: [LIST]
+Known requirements: [LIST]
+Dependencies: [LIST]
+Constraints: [LIST]
+Exclusions: [LIST]
+Assumptions: [LIST]
+Existing scope definition: [PASTE IF AVAILABLE]
 
 TASK
 
-Create a clear and structured scope definition for the project described below.
+Define the project scope and perform a structured gap review.
 
-PROJECT CONTEXT
+STEP 1 — SCOPE DEFINITION
 
-Project:
-[PROJECT NAME]
+1. Identify confirmed in-scope items, exclusions, and items
+   requiring stakeholder confirmation.
+2. Define key deliverables, capabilities, and system boundaries.
+3. Identify business and technical responsibilities.
+4. Document integrations, dependencies, and ownership.
+5. Record assumptions and their potential delivery impacts.
+6. Define measurable acceptance criteria where supported.
 
-Business objective:
-[BUSINESS OBJECTIVE]
+STEP 2 — SCOPE GAP REVIEW
 
-Expected business value:
-[VALUE / BENEFITS]
+7. Identify ambiguous, incomplete, or conflicting requirements.
+8. Highlight missing deliverables, interfaces, and responsibilities.
+9. Flag dependencies and integrations without accountable owners.
+10. Identify scope items likely to generate change requests.
+11. Identify missing or non-measurable acceptance criteria.
+12. Review assumptions affecting schedule, cost, or feasibility.
+13. Identify unclear boundaries between internal teams and vendors.
+14. Highlight potential exclusions requiring stakeholder decisions.
+15. Identify conflicts between business expectations and
+    technical capabilities or boundaries.
 
-Current phase:
-[INITIATION / PLANNING]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Primary users:
-[USERS / BUSINESS UNITS]
-
-Systems involved:
-[LIST]
-
-Known business processes:
-[LIST]
-
-Known requirements:
-[LIST]
-
-Known integrations:
-[LIST]
-
-Known dependencies:
-[LIST]
-
-Known constraints:
-[LIST]
-
-Known exclusions:
-[LIST]
-
-Known assumptions:
-[LIST]
+Do not invent requirements, deliverables, or scope exclusions.
+Distinguish confirmed scope from assumptions and proposals.
+Flag vague terms such as "user-friendly", "fast", or "seamless".
+Separate business outcomes from project deliverables.
+Identify decisions requiring sponsor or governance approval.
 
 OUTPUT FORMAT
 
-Create the following sections:
+PART A — SCOPE DEFINITION
 
-1. In Scope
-2. Out of Scope
-3. To Be Confirmed
-4. Key Deliverables
-5. System Interfaces
-6. Business Responsibilities
-7. Technical Responsibilities
-8. Dependencies
-9. Assumptions
-10. Acceptance Criteria
+1. IN SCOPE
+   Scope Item | Description | Owner | Acceptance Criteria | Status
 
-Use precise, unambiguous language.
+2. OUT OF SCOPE
+   Exclusion | Rationale | Approval Status
 
-Each scope item should describe one clear responsibility,
-deliverable, capability, boundary, or outcome.
+3. TO BE CONFIRMED
+   Item | Open Question | Decision Owner | Priority
+
+4. KEY DELIVERABLES
+   Deliverable | Description | Owner | Target Date
+
+5. SYSTEM INTERFACES
+   Interface | Source / Target | Responsibility | Dependency
+
+6. BUSINESS RESPONSIBILITIES
+   Activity | Business Owner | Responsibility
+
+7. TECHNICAL RESPONSIBILITIES
+   Component | Technical Owner | Responsibility
+
+8. DEPENDENCIES
+   Dependency | Impact | Owner | Required By | Status
+
+9. ASSUMPTIONS
+   Assumption | Impact if Incorrect | Validation Required | Owner
+
+10. ACCEPTANCE CRITERIA
+    Scope Item | Measurable Criterion | Validation Method | Status
+
+PART B — SCOPE GAP REVIEW
+
+GAP ANALYSIS
+Gap / Issue | Location in Scope | Delivery Risk |
+Potential Impact | Required Clarification | Proposed Owner | Priority
+
+MANAGEMENT SUMMARY
+
+1. Top five scope gaps requiring resolution
+2. High-impact dependencies and ownership gaps
+3. Potential scope creep and change-control concerns
+4. Decisions requiring stakeholder approval
+5. Recommended corrective actions
+
+Use concise Markdown tables.
+Mark missing information as "Not yet defined".
+Label proposed owners, exclusions, and commitments as unconfirmed.
 ```
 
 ---
 
-# Prompt 2 — Scope Gap Audit
+## 2. Quality Check
 
-Run this prompt after Prompt 1.
+Apply this control after generating the scope definition and gap review.
 
-```text id="scope-02"
-ROLE
+```text
+QUALITY CHECK
 
-You are a senior IT Project Manager and Business Analyst reviewing
-a project scope before detailed planning and delivery begin.
+Act as a Senior QA Manager and review the scope deliverables.
 
-TASK
+Verify:
 
-Audit the scope definition below.
+1. Completeness: All 10 scope sections and the gap analysis
+   address the available project information.
+2. Accuracy: Confirmed scope, proposals, assumptions, and
+   information gaps are clearly distinguished.
+3. Clarity: Requirements and boundaries are specific,
+   consistent, and unambiguous.
+4. Ownership: Responsibilities, interfaces, and dependencies
+   have confirmed or explicitly proposed owners.
+5. Testability: Acceptance criteria are measurable or flagged
+   for clarification.
+6. Governance: Scope changes, exclusions, and approval
+   requirements are identified.
+7. Actionability: Recommended corrections are prioritized
+   and feasible.
 
-Identify:
+OUTPUT
 
-1. Ambiguous statements
-2. Missing requirements
-3. Missing deliverables
-4. Unclear system interfaces
-5. Unclear business responsibilities
-6. Unclear technical responsibilities
-7. Dependencies without owners
-8. Scope items likely to generate future change requests
-9. Requirements without measurable acceptance criteria
-10. Items that should be explicitly out of scope
-11. Assumptions that could materially affect delivery
-12. Conflicts between business expectations and technical boundaries
+Quality verdict: PASS / REVISE
 
-SCOPE DEFINITION
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [UNRESOLVED CRITICAL ITEMS]
 
-[PASTE OUTPUT FROM PROMPT 1 HERE]
-
-OUTPUT FORMAT
-
-Provide a gap-analysis table:
-
-Gap / Issue
-Location in Scope
-Why It Is a Risk
-Potential Delivery Impact
-Recommended Clarification
-Owner
-Priority
+Do not invent missing requirements, owners, dates, or approvals.
+Flag conclusions requiring stakeholder validation.
 ```
 
 ---
 
-# Analysis Rules
+## 3. Practical IT Use Case
 
-When drafting or reviewing the scope:
+### Customer Self-Service Portal — Scope Definition and Gap Review
 
-1. Do not invent missing requirements.
-2. Separate confirmed scope from assumptions.
-3. Flag vague terms such as:
-   - appropriate,
-   - user-friendly,
-   - seamless,
-   - fast,
-   - modern,
-   - sufficient,
-   - as required.
-4. Identify responsibilities without an owner.
-5. Identify integrations without clear ownership.
-6. Flag requirements without measurable acceptance criteria.
-7. Identify dependencies that could affect timeline or cost.
-8. Highlight unclear boundaries between internal teams and vendors.
-9. Distinguish deliverables from business outcomes.
-10. Identify items that need sponsor or governance decisions.
+**Scenario:** A company plans to introduce a customer self-service portal to reduce manual support requests. Initial requirements identify core customer functions and integration needs, but acceptance criteria, technical ownership, and several scope boundaries remain unresolved.
 
----
+### Project Context
 
-# Delivery-Approach Considerations
+| Attribute | Details |
+|---|---|
+| Project | Customer Self-Service Portal |
+| Phase | Initiation / Early Planning |
+| Business objective | Reduce manual customer-service workload |
+| Systems | CRM, identity platform, billing system |
+| Integrations | CRM API, billing API |
+| Target | Before the Q4 campaign |
+| Known exclusion | Online contract cancellation |
+| Management decision | Confirm scope boundaries, integration ownership, and acceptance criteria before detailed planning |
 
-Use these only where relevant.
+### Example Input
 
-## Agile / Scrum
-
-Consider:
-
-- product boundaries,
-- backlog ownership,
-- release scope,
-- Minimum Viable Product,
-- acceptance criteria,
-- Definition of Done,
-- evolving requirements.
-
-## Kanban
-
-Consider:
-
-- service boundaries,
-- classes of service,
-- workflow ownership,
-- operational demand,
-- WIP policies,
-- continuous intake of work,
-- Service Level Expectations.
-
-## Predictive
-
-Consider:
-
-- scope baseline,
-- work packages,
-- formal acceptance,
-- milestone commitments,
-- change-control implications.
-
-## Hybrid
-
-Consider how fixed commitments interact with iterative or flow-based delivery.
-
----
-
-# Example Input
-
-```text id="scope-example-input"
-Project:
-Customer Self-Service Portal
+```text
+Project: Customer Self-Service Portal
 
 Business objective:
 Reduce manual customer-service workload.
 
 Expected value:
-Lower service cost and faster response times.
+Lower service costs and faster response times.
 
 Known requirements:
 - Customers can log in.
 - Customers can update contact details.
 - Customers can download invoices.
 - Customers can view payment status.
-- Portal should be mobile friendly.
+- Portal should be mobile-friendly.
 
-Systems involved:
-CRM
-Identity platform
-Billing system
+Systems:
+CRM, Identity Platform, Billing System
 
-Known integrations:
-CRM API
-Billing API
+Integrations:
+CRM API, Billing API
 
-Known constraints:
-Go-live must happen before Q4 campaign.
+Known constraint:
+Go-live before the Q4 campaign.
 
-Known exclusion:
-Online contract cancellation is not included.
+Confirmed exclusion:
+Online contract cancellation.
 
 Open question:
-It is not yet agreed whether customers can update bank details.
+Can customers update bank details online?
 ```
 
----
+### Example Output — Scope Definition
 
-# Example Output Excerpt
+#### 1. In Scope
 
-## In Scope
+No implementation scope has been formally approved.
 
-1. Implement secure customer authentication using the existing identity platform.
-2. Enable customers to view and update approved contact details.
-3. Enable customers to download invoices from the billing system.
-4. Display current payment status.
-5. Provide responsive browser-based access for supported mobile and desktop devices.
+| Proposed Scope Item | Description | Owner | Acceptance Criteria | Status |
+|---|---|---|---|---|
+| Customer authentication | Login using an identity platform | TBD | Authentication requirements TBD | Proposed |
+| Contact-detail updates | Allow approved customer information changes | TBD | Fields and validation rules TBD | Proposed |
+| Invoice retrieval | Access invoices through the billing system | TBD | Document access rules TBD | Proposed |
+| Payment-status visibility | Display customer payment status | TBD | Data accuracy and refresh criteria TBD | Proposed |
+| Responsive interface | Support mobile and desktop browsers | TBD | Supported devices and browsers TBD | Proposed |
 
-## Out of Scope
+#### 2. Out of Scope
 
-1. Online contract cancellation.
-2. Replacement of the existing CRM platform.
-3. Replacement of the identity platform.
-
-## To Be Confirmed
-
-1. Whether customers may update bank details.
-2. Whether payment history beyond current payment status is required.
-3. Whether customer-service agents require an administration interface.
-
----
-
-# Example Gap Analysis
-
-| Gap / Issue | Why It Is a Risk | Recommended Clarification |
+| Exclusion | Rationale | Approval Status |
 |---|---|---|
-| “Mobile friendly” is not measurable | Different teams may interpret it differently | Define supported devices, browsers, and responsive acceptance criteria |
-| Bank-detail updates unresolved | May materially affect security and scope | Sponsor and Security to confirm before design |
-| CRM API ownership not stated | Integration delay may have no accountable owner | Assign API owner and delivery date |
-| No performance requirement | Solution may work functionally but not at required scale | Define response-time and concurrent-user expectations |
+| Online contract cancellation | Explicitly excluded in project input | Stated exclusion; formal approval unconfirmed |
 
----
+No other exclusions have been confirmed.
 
-# Scope Quality Checklist
+#### 3. To Be Confirmed
 
-Before approving the scope, confirm:
+| Item | Open Question | Decision Owner | Priority |
+|---|---|---|---|
+| Bank-detail updates | Are customers permitted to change bank details? | TBD | High |
+| Payment history | Is historical information required beyond current status? | TBD | Medium |
+| Administration interface | Do support agents require additional functionality? | TBD | Medium |
 
-- [ ] In-scope items are explicit
-- [ ] Out-of-scope items are explicit
-- [ ] Unresolved items are visible
-- [ ] Deliverables are defined
-- [ ] Interfaces are identified
-- [ ] Responsibilities have owners
-- [ ] Dependencies are documented
-- [ ] Acceptance criteria are measurable
-- [ ] Vendor boundaries are clear
-- [ ] Security responsibilities are clear
-- [ ] Assumptions are visible
-- [ ] No material ambiguity remains
+#### 4. Key Deliverables
 
----
+| Deliverable | Description | Owner | Target Date |
+|---|---|---|---|
+| Customer portal (proposed) | Customer-facing self-service application | TBD | Before Q4 campaign |
+| CRM integration (proposed) | Exchange customer contact information | TBD | TBD |
+| Billing integration (proposed) | Access invoice and payment information | TBD | TBD |
 
-# Standards / Framework Alignment
+#### 5. System Interfaces
 
-## PMI / PMP Relevance
+| Interface | Source / Target | Responsibility | Dependency |
+|---|---|---|---|
+| Customer identity | Portal ↔ Identity platform | TBD | Authentication capabilities |
+| CRM API | Portal ↔ CRM | TBD | API access and data update rules |
+| Billing API | Portal ↔ Billing system | TBD | Invoice and payment-status access |
 
-Relevant themes may include:
+#### 6. Business Responsibilities
 
-- scope definition,
-- stakeholder alignment,
-- requirements management,
-- dependency management,
-- change management,
-- risk identification,
-- governance.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- scope,
-- planning,
-- stakeholders,
-- governance,
-- risk,
-- value delivery.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-The scope should be validated by relevant stakeholders, including:
-
-- Project Sponsor
-- Business Owner
-- Product Owner where relevant
-- Business Analyst
-- Solution Architect
-- Information Security
-- QA / Test Lead
-- External vendors where applicable
-
-The scope is not considered approved until accountable stakeholders confirm the boundaries.
-
----
-
-# Confidentiality
-
-Do not include:
-
-- customer personal data,
-- employee personal data,
-- credentials,
-- passwords,
-- API keys,
-- confidential supplier pricing,
-- confidential contract terms,
-- proprietary architecture,
-- security-sensitive technical details.
-
-Use anonymised project information where required.
-
----
-
-# Prompt Metadata
-
-```text id="scope-metadata"
-Prompt ID: INIT-003
-Category: Project Initiation
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Business Owner / Business Analyst / Solution Architect
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Activity | Business Owner | Responsibility |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT scope definition and gap-review workflow |
+| Scope approval | TBD | Confirm functional boundaries |
+| Customer data rules | TBD | Define permitted account updates |
+| Acceptance testing | TBD | Validate business requirements |
+
+*Responsibilities are proposed; accountable owners require confirmation.*
+
+#### 7. Technical Responsibilities
+
+| Component | Technical Owner | Responsibility |
+|---|---|---|
+| Authentication integration | TBD | Validate identity-platform capabilities |
+| CRM integration | TBD | Define API ownership and data exchange |
+| Billing integration | TBD | Confirm invoice and payment-data access |
+| Portal frontend | TBD | Implement approved responsive requirements |
+
+#### 8. Dependencies
+
+| Dependency | Impact | Owner | Required By | Status |
+|---|---|---|---|---|
+| Identity integration | Authentication feasibility | TBD | TBD | Unconfirmed |
+| CRM API readiness | Contact-detail updates | TBD | TBD | Unconfirmed |
+| Billing API readiness | Invoice and payment visibility | TBD | TBD | Unconfirmed |
+
+#### 9. Assumptions
+
+| Assumption | Impact if Incorrect | Validation Required | Owner |
+|---|---|---|---|
+| Identity platform supports portal login | Additional authentication development | Technical assessment | TBD |
+| CRM API supports contact updates | Integration changes and delays | API capability review | TBD |
+| Billing API provides required information | Additional development or integration effort | Data and API assessment | TBD |
+
+#### 10. Acceptance Criteria
+
+| Scope Item | Measurable Criterion | Validation Method | Status |
+|---|---|---|---|
+| Authentication | Successful and unsuccessful login scenarios defined and verified | Functional testing | Criteria TBD |
+| Contact updates | Approved fields update correctly and persist | Integration testing | Criteria TBD |
+| Invoice retrieval | Authorized customers can access permitted invoices | Functional and security testing | Criteria TBD |
+| Payment status | Displayed status matches the agreed source of truth | Data validation | Criteria TBD |
+| Responsive design | Portal meets agreed device and browser requirements | Cross-device testing | Criteria TBD |
+
+*These are proposed validation approaches. Final measurable thresholds and acceptance criteria require stakeholder agreement.*
+
+### Example Output — Scope Gap Review
+
+| Gap / Issue | Location in Scope | Delivery Risk | Potential Impact | Required Clarification | Proposed Owner | Priority |
+|---|---|---|---|---|---|---|
+| "Mobile-friendly" undefined | Responsive interface | Inconsistent expectations | Rework and acceptance disputes | Define supported devices, browsers, and criteria | Product Owner | High |
+| Bank-detail updates unresolved | To Be Confirmed | Scope uncertainty | Security and integration effort | Confirm business decision and security requirements | Business Owner | High |
+| CRM API ownership unclear | System Interfaces | Unmanaged dependency | Integration delay | Assign interface owner and readiness date | Technical Lead | High |
+| Performance criteria missing | Acceptance Criteria | Non-functional requirements gap | Performance issues at launch | Define response-time and load requirements | Solution Architect | High |
+| Q4 deadline undefined | Constraints | Schedule ambiguity | Planning uncertainty | Confirm campaign date and delivery commitment | Project Sponsor | High |
+
+### Management Decisions
+
+1. **Scope:** Confirm the initial release capabilities, exclusions, and bank-detail update requirements.
+2. **Ownership:** Assign accountable business and technical owners for system interfaces and dependencies.
+3. **Acceptance:** Agree measurable functional, performance, security, and device-support criteria.
+4. **Schedule:** Confirm the Q4 campaign deadline and assess integration feasibility before committing to delivery.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The proposed scope identifies the principal capabilities and integrations, but approval status, interface ownership, acceptance criteria, and the launch deadline remain insufficiently defined.
+
+**Required corrections:** Confirm scope boundaries, assign owners, define measurable acceptance criteria, and validate dependencies and the delivery date.
+
+**Approval blockers:** Unresolved critical scope decisions, missing ownership, and incomplete acceptance requirements.
+
+**Governance:** This workflow supports relevant PMI-aligned practices in scope definition, requirements management, stakeholder alignment, risk identification, and change control. Scope approval remains with accountable stakeholders. Protect confidential project, commercial, personal, and security-sensitive information.

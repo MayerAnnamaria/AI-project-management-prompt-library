@@ -1,755 +1,337 @@
 # Project Risk Register
 
-## Purpose
+**Prompt ID:** RISK-001 | **Category:** Risk & Issue Management | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to create or review a structured project risk register for an IT, software, digital transformation, data, infrastructure, or technology-enabled project.
+## 1. Ready-to-Use Prompt
 
-The register should help the Project Manager:
+**Purpose:** Identify, assess, prioritize, and monitor project risks to support proactive mitigation, accountability, and management decisions.
 
-- identify uncertainty,
-- assess exposure,
-- prioritise management attention,
-- define responses,
-- assign ownership,
-- establish early warning indicators,
-- and monitor risk over time.
+**Use case:** Create or update a risk register during software implementation, integration testing, release preparation, or milestone reviews when delivery uncertainty threatens project commitments.
 
-The objective is not to produce the longest possible risk list.
+Copy the prompt and replace the placeholders.
 
-The objective is to identify the risks that could materially affect project outcomes and make them manageable.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Planning / Delivery / Testing / Deployment
-
-**Project type:**  
-Software implementation / Digital transformation / Data / Infrastructure / ERP / Cloud / Product initiative
-
-**Primary user:**  
-Project Manager / Delivery Manager / PMO / Risk Manager
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At initiation and reviewed regularly throughout delivery
-
----
-
-# Prompt
-
-```text id="risk-01"
+```text
 ROLE
 
-You are a senior IT Project Manager and risk-management specialist
-experienced in international software delivery, digital transformation,
-third-party dependencies, project governance, and technology risk.
+You are a Senior IT Project Manager specializing in software
+delivery, risk assessment, dependency management, and governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target completion: [DATE]
+Budget: [AMOUNT / RANGE]
+Team and stakeholders: [ROLES]
+Vendors: [IF RELEVANT]
+Systems and integrations: [LIST]
+Dependencies: [LIST]
+Constraints: [LIST]
+Assumptions: [LIST]
+Known risks: [LIST]
+Known issues: [LIST]
+Risk tolerance: [APPROVED THRESHOLDS / UNKNOWN]
+Existing register: [PASTE IF AVAILABLE]
+Assessment date: [DATE]
+
+SCORING MODEL
+
+Likelihood: 1 Rare | 2 Unlikely | 3 Possible |
+            4 Likely | 5 Very Likely
+
+Impact: 1 Minimal | 2 Minor | 3 Moderate |
+        4 Major | 5 Severe
+
+Risk Score = Likelihood × Impact
+
+Rating:
+1–4 Low | 5–9 Medium | 10–16 High | 17–25 Critical
+
+Proximity:
+Immediate <2 weeks | Near-term 2–6 weeks |
+Medium-term 6–12 weeks | Long-term >12 weeks
+
+Use approved organizational scoring rules where available.
+Otherwise, treat this model as provisional.
 
 TASK
 
-Create a professional project risk register for the project described below.
+Create or update a Project Risk Register and prioritize
+the risks requiring management attention.
 
-PROJECT CONTEXT
+STEP 1 — IDENTIFICATION
 
-Project:
-[PROJECT NAME]
+1. Identify material uncertainty affecting schedule, cost,
+   scope, resources, technology, data, security, quality,
+   operations, and business outcomes.
+2. Write risks using cause–event–impact:
+   "Because of [CAUSE], [EVENT] may occur,
+   resulting in [IMPACT]."
+3. Separate future risks from existing issues.
+4. Identify related assumptions, constraints, dependencies,
+   and duplicate or unsupported statements.
+
+STEP 2 — ASSESSMENT
+
+5. Assess likelihood and impact using available evidence.
+6. Calculate scores and assign ratings consistently.
+7. Identify proximity, early warning indicators,
+   and scoring confidence.
+8. Prioritize using score, urgency, dependency impact,
+   recovery difficulty, and business exposure.
+9. Identify shared causes and cascading risks.
+
+STEP 3 — RESPONSE
+
+10. Recommend Avoid / Mitigate / Transfer or Share /
+    Accept / Escalate, as appropriate.
+11. Separate preventive mitigation from contingency actions.
+12. For High/Critical risks, specify actions, Risk Owner,
+    Action Owner, due date, and escalation trigger.
+13. Flag decisions exceeding project-level authority.
+
+STEP 4 — MONITORING
+
+14. Define review dates, status, and progress indicators.
+15. Monitor changes in exposure, proximity, and mitigation.
+16. Distinguish planned mitigation from verified residual risk.
+17. Convert materialized risks into linked issues.
+18. Identify the five highest-priority risks and recommend
+    management actions.
+
+Do not invent evidence, scores, owners, dates, or approvals.
+Mark unsupported assessments as provisional or "Not assessed".
+
+OUTPUT FORMAT
+
+1. PROJECT RISK REGISTER
+
+Risk ID | Category | Risk Statement | Cause |
+Potential Event | Potential Impact | Likelihood |
+Impact | Score | Rating | Proximity |
+Early Warning Indicator | Mitigation | Contingency |
+Risk Owner | Action Owner | Review Date | Status
+
+2. RISK PRIORITIZATION
+
+Priority | Risk ID | Current Exposure |
+Management Concern | Immediate Action |
+Decision Required | Decision Owner | Deadline
+
+3. RISK INTERDEPENDENCIES
+
+Related Risks | Common Cause | Dependency Chain |
+Cascading Impact | Recommended Action
+
+4. RISK RESPONSE AND ESCALATION
+
+Risk ID | Strategy | Preventive Action |
+Contingency Trigger / Action | Proposed Owner |
+Due Date | Escalation Trigger
+
+5. RISK MONITORING
+
+Risk ID | Rating | Proximity | Warning Status |
+Mitigation Progress | Residual Exposure | Next Review
+
+6. MANAGEMENT SUMMARY
+
+- Five highest-priority risks
+- Risk concentrations and dependencies
+- Immediate mitigation and escalation
+- Evidence and ownership gaps
+- Required management decisions
+
+Use concise Markdown tables.
+Clearly label unconfirmed assignments and assessments.
+```
+
+---
+
+## 2. Quality Check
+
+Apply this control after generating the register.
+
+```text
+QUALITY CHECK
+
+Act as a Senior QA Manager and validate the Project Risk Register.
+
+Verify:
+
+1. Validity: Risks are uncertain future events, not existing issues.
+2. Completeness: Material risks, dependencies, indicators,
+   responses, and ownership are covered.
+3. Accuracy: Cause–event–impact statements and calculations
+   follow the scoring model.
+4. Evidence: Scores, proximity, and priority are justified
+   or marked provisional.
+5. Prioritization: Business impact, urgency, dependencies,
+   and recovery difficulty are considered.
+6. Response: Mitigation and contingency are distinct,
+   actionable, and proportionate.
+7. Governance: Ownership, review dates, escalation,
+   and acceptance authority are clear or flagged.
+8. Monitoring: Risk trends and residual exposure are tracked
+   without assuming mitigation effectiveness.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Approval blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Do not invent evidence, ownership, or approvals.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### SaaS Implementation — Integration and Release Risks
+
+**Scenario:** An IT team is replacing a legacy ticketing application with a SaaS platform. The project requires identity integration, historical-data migration, workflow configuration, and UAT. The Project Manager must prioritize risks before production deployment.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | IT Service Desk SaaS Implementation |
+| Phase | Configuration / Integration |
+| Delivery approach | Hybrid |
+| Go-live target | 30 September 2027 |
+| Systems | Legacy Ticketing, SaaS Platform, Identity Provider |
+| Vendor | SaaS Implementation Partner |
+| Key dependencies | Integration, migration, UAT, release readiness |
+| Management decision | Confirm risk priorities, mitigation ownership, and escalation |
+
+### Example Input
+
+```text
+Project: IT Service Desk SaaS Implementation
 
 Business objective:
-[OBJECTIVE]
+Replace the legacy ticketing system and improve
+support-request management.
 
-Current phase:
-[PHASE]
+Phase: Configuration / Integration
+Delivery approach: Hybrid
+Go-live: 30 September 2027
 
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
+Known information:
+- Identity integration testing has not started.
+- Historical tickets contain duplicate records.
+- UAT availability is not confirmed.
+- Vendor workflow configuration is incomplete.
+- Training materials are awaiting approval.
 
-Target completion:
-[DATE]
+Existing issue:
+Duplicate records identified during data profiling.
 
-Budget:
-[BUDGET OR RANGE]
+Constraints:
+- Fixed go-live target
+- Limited IT support capacity
+- External vendor dependency
 
-Team structure:
-[DETAILS]
+Risk tolerance: Not defined.
 
-Key stakeholders:
-[LIST]
-
-External vendors:
-[LIST]
-
-Systems involved:
-[LIST]
-
-Known dependencies:
-[LIST]
-
-Known constraints:
-[LIST]
-
-Known assumptions:
-[LIST]
-
-Known risk areas:
-[LIST]
-
-OUTPUT FORMAT
-
-Create a risk register with:
-
-Risk ID
-Risk Category
-Risk Statement
-Cause
-Potential Event
-Potential Impact
-Likelihood (1-5)
-Impact (1-5)
-Risk Score
-Risk Rating
-Early Warning Indicator
-Mitigation / Preventive Action
-Contingency / Response Action
-Risk Owner
-Action Owner
-Review Date
-Status
+Task:
+Use the provisional 5×5 model and identify risks
+requiring immediate management attention.
 ```
 
----
+### Example Output — Project Risk Register
 
-# Risk Statement Structure
+All scores are **illustrative and require validation** by the relevant risk owners.
 
-Write risks using a clear cause-event-impact structure.
+#### 1. Project Risk Register
 
-Preferred format:
+| ID | Category | Risk Statement | L | I | Score | Rating |
+|---|---|---|---:|---:|---:|---|
+| R-01 | Integration | Untested identity integration may delay UAT if defects emerge. | 4 | 4 | 16 | High |
+| R-02 | Data | Inadequate duplicate remediation may cause migration acceptance failure. | 4 | 4 | 16 | High |
+| R-03 | Resources | Unavailable business testers may delay UAT. | 3 | 4 | 12 | High |
+| R-04 | Vendor | Late workflow configuration may delay testing and training. | 3 | 4 | 12 | High |
+| R-05 | Operations | Unapproved training materials may affect go-live readiness. | 3 | 3 | 9 | Medium |
 
-```text id="risk-cause-event-impact"
-Because of [CAUSE],
-there is a risk that [UNCERTAIN EVENT],
-which may result in [PROJECT IMPACT].
-```
+**Response and ownership details**
 
-### Weak
+| Risk | Early Warning | Mitigation | Contingency | Proposed Risk Owner |
+|---|---|---|---|---|
+| R-01 | Integration start slips | Validate API and test readiness | Re-sequence approved testing | IT Lead |
+| R-02 | Reconciliation failures | Cleanse and validate source data | Approved remediation plan | Data Lead |
+| R-03 | UAT slots unconfirmed | Secure user commitments | Escalate resource shortage | Business Owner |
+| R-04 | Vendor checkpoints slip | Monitor configuration delivery | Vendor recovery plan | Project Manager |
+| R-05 | Training remains unapproved | Confirm review schedule | Additional approved training | Service Desk Manager |
 
-```text id="risk-weak"
-Vendor delay.
-```
+Action owners, dates, risk proximity, and review status require confirmation.
 
-### Better
+The duplicate-record problem is already an **issue**. R-02 represents its uncertain future impact on migration acceptance.
 
-```text id="risk-better"
-Because the external identity provider has limited implementation
-capacity, there is a risk that API certification will not complete
-before the planned integration-test window, which may delay SIT
-and the downstream release schedule.
-```
+#### 2. Risk Prioritization
 
-This makes the risk easier to analyse and manage.
+| Priority | Risk | Management Concern | Immediate Action |
+|---|---|---|---|
+| 1 | R-01 | Integration could block UAT | Confirm API readiness |
+| 2 | R-02 | Migration may fail acceptance | Assess data remediation |
+| 3 | R-03 | UAT capacity uncertain | Confirm business availability |
+| 4 | R-04 | Vendor delay affects downstream work | Obtain updated forecast |
+| 5 | R-05 | Training readiness incomplete | Confirm approval plan |
 
----
+Ranking is illustrative; final priority requires proximity, dependency, and recovery evidence.
 
-# Risk Categories
+#### 3. Risk Interdependencies
 
-Use categories appropriate to the project.
-
-Possible categories include:
-
-```text id="risk-categories"
-Schedule
-Scope
-Budget
-Resources
-Technology
-Architecture
-Integration
-Data
-Security
-Quality
-Testing
-Vendor
-Procurement
-Compliance
-Operations
-Stakeholder
-Governance
-Change
-Business Readiness
-External
-```
-
-Do not force every project to contain risks in every category.
-
----
-
-# Risk Scoring
-
-Use a simple 1–5 scale unless the organisation already has an approved risk methodology.
-
-## Likelihood
-
-```text id="risk-likelihood"
-1 = Rare
-2 = Unlikely
-3 = Possible
-4 = Likely
-5 = Very Likely
-```
-
-## Impact
-
-```text id="risk-impact"
-1 = Minimal
-2 = Minor
-3 = Moderate
-4 = Major
-5 = Severe
-```
-
-## Risk Score
-
-```text id="risk-score"
-Risk Score = Likelihood × Impact
-```
-
-Example classification:
-
-```text id="risk-rating"
-1–4   = Low
-5–9   = Medium
-10–16 = High
-17–25 = Critical
-```
-
-Use the organisation's approved thresholds if they differ.
-
----
-
-# Impact Assessment
-
-Where relevant, assess impact across more than one dimension.
-
-Possible dimensions:
-
-```text id="risk-impact-dimensions"
-Schedule
-Budget
-Scope
-Quality
-Security
-Compliance
-Operations
-Customer
-Reputation
-Business Value
-```
-
-A risk may be moderate financially but critical from a security or regulatory perspective.
-
----
-
-# Early Warning Indicators
-
-Each significant risk should have an observable indicator.
-
-Examples:
-
-| Risk | Early Warning Indicator |
-|---|---|
-| Vendor delay | Milestones repeatedly missed |
-| UAT delay | Business tester availability below plan |
-| Integration risk | API defects remain unresolved near SIT |
-| Data migration risk | Data-quality exceptions exceed threshold |
-| Resource risk | Critical role vacancy remains open |
-| Release risk | Critical defects remain open near deployment |
-
-Early warning indicators help move risk management from reactive to proactive.
-
----
-
-# Risk Response Strategies
-
-Possible responses include:
-
-```text id="risk-response"
-Avoid
-Mitigate
-Transfer / Share
-Accept
-Escalate
-```
-
-The appropriate response depends on the organisation and the nature of the risk.
-
-For each High or Critical risk, require:
-
-```text id="risk-high-action"
-Preventive action
-Contingency action
-Owner
-Due date
-Escalation trigger
-```
-
----
-
-# Mitigation vs Contingency
-
-Keep these separate.
-
-## Mitigation
-
-Action taken **before** the risk materialises to reduce likelihood or impact.
-
-Example:
-
-> Complete an API compatibility proof of concept four weeks before SIT.
-
-## Contingency
-
-Action taken **if the risk occurs**.
-
-Example:
-
-> Use the approved temporary mock service to protect the SIT schedule.
-
----
-
-# Risk Owner vs Action Owner
-
-Do not automatically treat these as the same role.
-
-**Risk Owner**
-
-Accountable for monitoring and managing the overall risk.
-
-**Action Owner**
-
-Responsible for completing a specific mitigation action.
-
-Example:
-
-```text id="risk-owner-example"
-Risk:
-Security approval may delay production release.
-
-Risk Owner:
-Project Manager
-
-Action:
-Submit security evidence by 15 August.
-
-Action Owner:
-Security Lead
-```
-
----
-
-# Example Input
-
-```text id="risk-example-input"
-Project:
-Customer Portal Implementation
-
-Current Phase:
-Integration Testing
-
-Delivery Approach:
-Hybrid Agile
-
-Target Go-Live:
-30 September 2027
-
-Team:
-Internal product team
-External development vendor
-External identity provider
-
-Known Dependencies:
-Identity API certification
-CRM integration
-Security approval
-Business UAT
-
-Known Issues:
-Identity certification is 10 working days behind plan.
-Two critical integration defects remain open.
-Business tester availability for UAT is not yet confirmed.
-
-Known Constraints:
-Fixed September launch target.
-Security review requires four weeks.
-```
-
----
-
-# Example Risk Register
-
-| ID | Category | Risk | L | I | Score | Rating | Owner |
-|---|---|---|---:|---:|---:|---|---|
-| R-01 | Vendor | Identity-provider certification may miss the SIT dependency date | 4 | 4 | 16 | High | Integration Lead |
-| R-02 | Quality | Critical integration defects may remain unresolved before UAT | 3 | 5 | 15 | High | QA Lead |
-| R-03 | Resources | Insufficient business testers may delay UAT completion | 3 | 4 | 12 | High | Business Owner |
-| R-04 | Security | Security evidence may not be ready for the four-week review window | 3 | 5 | 15 | High | Security Lead |
-
----
-
-# Prompt 2 — Risk Prioritisation Review
-
-After creating the register, run a management review.
-
-```text id="risk-priority"
-ROLE
-
-You are a senior IT Project Manager reviewing the current project
-risk exposure.
-
-TASK
-
-Review the risk register below and identify the five risks requiring
-the highest level of management attention.
-
-[PASTE RISK REGISTER]
-
-Do not rank risks solely by numerical score.
-
-Also consider:
-
-- proximity,
-- dependency impact,
-- business impact,
-- security / compliance impact,
-- ability to recover,
-- cross-project impact,
-- vendor dependency,
-- decision urgency.
-
-OUTPUT FORMAT
-
-Risk
-Why Management Attention Is Required
-Current Exposure
-Immediate Action
-Decision Required
-Decision Owner
-Decision Deadline
-Escalation Trigger
-```
-
----
-
-# Risk Proximity
-
-Consider when the risk could realistically affect the project.
-
-Suggested classification:
-
-```text id="risk-proximity"
-Immediate
-< 2 weeks
-
-Near-term
-2–6 weeks
-
-Medium-term
-6–12 weeks
-
-Long-term
-> 12 weeks
-```
-
-A Medium-rated risk that may materialise tomorrow can require more attention than a High-rated risk several months away.
-
----
-
-# Risk Interdependency Review
-
-For complex projects, assess whether risks are connected.
-
-Example:
-
-```text id="risk-chain"
-Vendor API delay
-↓
-Integration testing delay
-↓
-UAT delay
-↓
-Business readiness compressed
-↓
-Go-live risk
-```
-
-Ask the AI to identify:
-
-- risk chains,
-- common root causes,
-- correlated risks,
-- risks that could trigger several other risks.
-
-This is particularly useful in enterprise projects.
-
----
-
-# Agile / Scrum Considerations
-
-Risk identification may consider:
-
-- backlog uncertainty,
-- Sprint / iteration dependencies,
-- technical debt,
-- Product Owner availability,
-- release readiness,
-- team capacity,
-- Definition of Done,
-- cross-team integration.
-
-Do not rely only on a static risk register.
-
-Risks should also be surfaced through normal delivery feedback loops.
-
----
-
-# Kanban Considerations
-
-Where Kanban is used, relevant risk signals may include:
-
-- increasing WIP,
-- ageing work,
-- blocked items,
-- cycle-time deterioration,
-- throughput decline,
-- repeated Service Level Expectation breaches,
-- bottlenecks.
-
-These metrics may act as early warning indicators for delivery risk.
-
----
-
-# Predictive Considerations
-
-Risk review may be closely linked to:
-
-- schedule milestones,
-- critical path,
-- budget,
-- procurement,
-- resource plans,
-- formal change control.
-
----
-
-# Hybrid Considerations
-
-Combine formal risk governance with delivery-level indicators.
-
-Example:
-
-```text id="risk-hybrid"
-Delivery signal
-↓
-Risk assessment
-↓
-Risk owner
-↓
-Mitigation
-↓
-Governance escalation if threshold exceeded
-```
-
----
-
-# Risk Escalation Criteria
-
-Define explicit escalation triggers where practical.
-
-Examples:
-
-```text id="risk-escalation"
-Risk rating becomes Critical.
-
-Risk threatens a committed milestone.
-
-Expected financial impact exceeds project tolerance.
-
-Security or compliance exposure exceeds accepted tolerance.
-
-Mitigation requires sponsor-level authority.
-
-Risk affects more than one workstream.
-
-Risk cannot be managed within the Project Manager's authority.
-```
-
----
-
-# Risk Review Questions
-
-During each formal review ask:
-
-```text id="risk-review-questions"
-Has likelihood changed?
-
-Has impact changed?
-
-Has proximity changed?
-
-Is the mitigation working?
-
-Has the early warning indicator been triggered?
-
-Has the risk become an issue?
-
-Has a new dependency appeared?
-
-Does the owner still have authority to manage the risk?
-
-Does the risk require escalation?
-
-Can the risk now be closed?
-```
-
----
-
-# Risk vs Issue
-
-Keep risks and issues separate.
-
-## Risk
-
-An uncertain future event.
-
-> There is a risk that the vendor may miss the API delivery date.
-
-## Issue
-
-Something that has already occurred.
-
-> The vendor has missed the API delivery date by ten working days.
-
-When a risk materialises, move it into the issue-management process rather than leaving it as an active future risk.
-
----
-
-# Quality Checklist
-
-Before accepting the risk register, confirm:
-
-- [ ] Risks describe uncertain events
-- [ ] Causes and impacts are explicit
-- [ ] Likelihood is assessed
-- [ ] Impact is assessed
-- [ ] Significant risks have owners
-- [ ] High/Critical risks have actions
-- [ ] Early warning indicators exist
-- [ ] Mitigation and contingency are separated
-- [ ] Review dates are defined
-- [ ] Risk proximity is considered
-- [ ] Dependencies are considered
-- [ ] Material risks have escalation criteria
-- [ ] Existing issues are not incorrectly recorded as risks
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- uncertainty,
-- risk identification,
-- qualitative risk analysis,
-- risk response,
-- monitoring,
-- stakeholder communication,
-- governance,
-- escalation.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- risk,
-- planning,
-- governance,
-- delivery,
-- measurement,
-- stakeholders.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Validate material risks with relevant stakeholders, including:
-
-- Project Manager
-- Risk Owner
-- Business Owner
-- Technical Lead
-- Security
-- QA
-- Vendors
-- Sponsor / Steering Committee where escalation is required
-
-AI can assist with identifying patterns and structuring risk information.
-
-It cannot determine the organisation's actual risk tolerance or accept project risk on behalf of accountable stakeholders.
-
----
-
-# Confidentiality
-
-Risk registers may contain highly sensitive information.
-
-Do not enter into public AI tools:
-
-- security vulnerabilities,
-- confidential commercial exposure,
-- vendor negotiation positions,
-- personal performance information,
-- sensitive customer information,
-- protected financial exposure.
-
-Anonymise information where required.
-
----
-
-# Prompt Metadata
-
-```text id="risk-metadata"
-Prompt ID: RISK-001
-Category: Risk & Issue Management
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: Risk Owners / PMO / Sponsor
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: High
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Related Risks | Dependency Chain | Cascading Impact |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT project risk-register framework |
+| R-01 / R-03 | Identity Integration → UAT | Delayed acceptance |
+| R-02 / R-03 | Data Remediation → Migration Validation → UAT | Testing delays |
+| R-04 / R-05 | Workflow Configuration → Training → Go-Live | Reduced readiness |
+
+Multiple risks converge on UAT and go-live, increasing the importance of coordinated mitigation.
+
+#### 4. Risk Response and Escalation
+
+| Risk | Strategy | Preventive Action | Escalation Trigger |
+|---|---|---|---|
+| R-01 | Mitigate | Confirm integration readiness | UAT milestone threatened |
+| R-02 | Mitigate | Define cleansing and reconciliation criteria | Migration acceptance at risk |
+| R-03 | Mitigate | Confirm business-user allocation | Insufficient UAT capacity |
+| R-04 | Mitigate | Establish vendor checkpoints | Configuration milestone missed |
+| R-05 | Mitigate | Approve training plan | Operational readiness threatened |
+
+Contingency actions, decision owners, and deadlines must be validated before formal adoption.
+
+#### 5. Risk Monitoring
+
+| Risk | Rating | Warning Status | Residual Exposure | Next Review |
+|---|---|---|---|---|
+| R-01 | High | Testing not started | Not assessed | Integration review |
+| R-02 | High | Duplicates identified | Not assessed | Migration review |
+| R-03 | High | Availability unconfirmed | Not assessed | UAT planning |
+| R-04 | High | Configuration incomplete | Not assessed | Vendor review |
+| R-05 | Medium | Training approval pending | Not assessed | Readiness review |
+
+No risk reduction is assumed without evidence of mitigation effectiveness.
+
+### Management Decisions
+
+1. **Integration:** Confirm API readiness and recovery options before UAT.
+2. **Data quality:** Approve migration acceptance criteria and remediation ownership.
+3. **Business readiness:** Secure UAT resources and training approvals.
+4. **Governance:** Validate scores, owners, escalation thresholds, and review dates.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** Key risks and dependencies are identified, but scores, proximity, ownership, and mitigation effectiveness remain unverified.
+
+**Required corrections:** Validate assessments with risk owners; confirm action owners, deadlines, warning thresholds, and escalation authority; track the existing data-quality issue separately.
+
+**Approval blockers:** Unconfirmed ownership, limited scoring evidence, and undefined risk tolerance.
+
+**Governance:** Supports PMI-aligned risk identification, assessment, response planning, monitoring, and escalation. Human validation and authorized risk acceptance remain mandatory. Protect confidential project, customer, vendor, and security information.

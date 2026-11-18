@@ -1,1123 +1,492 @@
 # Role Stacking — Author Then Reviewer
 
-## Purpose
+**Prompt ID:** AIWF-002 | **Category:** Advanced AI Workflows | **Version:** 1.0 | **Status:** Draft
 
-Use role stacking to improve important project-management outputs before they are sent to stakeholders.
+## 1. Ready-to-Use Prompt
 
-The workflow uses the AI twice in the same conversation:
+**Purpose:** Improve project-management documents by challenging an initial draft from the perspective of its intended recipient, decision-maker, or specialist reviewer.
 
-```text
-Role 1
-Author
-↓
-Draft
-↓
-Role 2
-Reviewer / Recipient
-↓
-Challenge
-↓
-Improved Version
-```
+**Use case:** Review executive reports, Steering Committee papers, risk escalations, change requests, vendor communications, technical proposals, and Go / No-Go recommendations before formal submission.
 
-The first role creates the document.
+Copy the master prompt, replace the placeholders, and execute the stages sequentially.
 
-The second role reviews it from the perspective of the person who will receive, approve, challenge, or act on it.
-
-The objective is to expose weaknesses **before the real stakeholder does**.
-
----
-
-## Best Used For
-
-Role stacking is especially useful for:
-
-- status reports,
-- Steering Committee papers,
-- executive updates,
-- risk escalations,
-- change requests,
-- vendor communications,
-- contractual correspondence,
-- project proposals,
-- decision papers,
-- go-live recommendations.
-
----
-
-# Core Principle
-
-Do not ask:
-
-```text
-Is this document good?
-```
-
-Instead ask:
-
-```text
-Who will read this?
-
-What will they care about?
-
-What will they challenge?
-
-What evidence will they expect?
-
-What decision are they being asked to make?
-```
-
-Then instruct the AI to review from that perspective.
-
----
-
-# Two-Role Workflow
-
-```text
-Author Role
-↓
-Create Draft
-↓
-Recipient Role
-↓
-Challenge Draft
-↓
-Identify Weaknesses
-↓
-Rewrite
-```
-
----
-
-# Step 1 — Draft as the Project Manager
+### Master Prompt — Author and Reviewer Workflow
 
 ```text
 ROLE
 
-You are a senior IT Project Manager.
+You are an experienced IT Project Manager and independent
+project assurance specialist.
 
-TASK
+You will perform three distinct roles:
 
-Draft a concise weekly project status summary for the project below.
+1. AUTHOR — Create the initial document.
+2. REVIEWER — Challenge it from the recipient's perspective.
+3. EDITOR — Address validated findings and prepare
+   the final document.
 
-PROJECT CONTEXT
-
-Project:
-Enterprise CRM Replacement
-
-Overall Status:
-Amber
-
-Current Situation:
-UAT is forecast to start five working days late because external
-identity-provider certification remains incomplete.
-
-Actions Taken:
-Mock authentication service implemented.
-Unaffected testing has been resequenced.
-Vendor escalation is active.
-
-Business Impact:
-Current production release date remains achievable but contingency
-has reduced.
-
-OUTPUT
-
-Write:
-
-1. Overall Status
-2. Current Position
-3. Main Risk
-4. Recovery Actions
-5. Decision / Support Required
-
-Keep the summary suitable for senior stakeholders.
-```
-
----
-
-# Step 2 — Switch to the Recipient Role
-
-After the first response:
-
-```text
-Now switch roles.
-
-You are the Executive Sponsor receiving this status update.
-
-You are experienced, time-constrained, and focused on:
-
-- delivery confidence,
-- business impact,
-- decision requirements,
-- evidence,
-- accountability,
-- whether the release commitment remains credible.
-
-Review the status summary you just produced.
-
-Identify:
-
-1. The three weakest points
-2. Any vague or unsupported statements
-3. Questions you would immediately ask the Project Manager
-4. Information missing for decision-making
-5. A rewritten version addressing the weaknesses
-```
-
----
-
-# Why Role Stacking Works
-
-A document can appear strong from the author's perspective while still leaving unanswered questions for the recipient.
-
-Example:
-
-```text
-Project Manager thinks:
-"The recovery plan is clear."
-
-Sponsor thinks:
-"How confident are we that the release date is still achievable?"
-```
-
-Role stacking forces the draft to survive a different perspective.
-
----
-
-# Reviewer Perspectives
-
-Choose a reviewer role that matches the actual audience.
-
----
-
-# Executive Sponsor
-
-Focus on:
-
-```text
-Business value
-Schedule
-Budget
-Major risks
-Decisions
-Accountability
-Confidence
-```
-
-Prompt:
-
-```text
-You are now the Executive Sponsor.
-
-Review this document and identify anything that prevents you from
-understanding project health or making the required decision.
-```
-
----
-
-# Steering Committee
-
-Focus on:
-
-```text
-Governance
-Options
-Trade-offs
-Recommendation
-Decision required
-Consequences
-```
-
-Prompt:
-
-```text
-You are now a Steering Committee member.
-
-You have ten minutes to review this paper before the meeting.
-
-Identify:
-
-- what is unclear,
-- what evidence is missing,
-- whether options are balanced,
-- whether the recommendation is justified,
-- whether the decision required is explicit.
-```
-
----
-
-# CFO / Finance Reviewer
-
-Focus on:
-
-```text
-Cost
-Forecast
-Commercial exposure
-Assumptions
-Contingency
-Financial impact
-```
-
-Prompt:
-
-```text
-You are now the CFO reviewing this project update.
-
-Challenge every financial statement.
-
-Identify:
-
-- unsupported cost claims,
-- missing forecast information,
-- unclear contingency,
-- unexplained variance,
-- financial risks requiring escalation.
-```
-
----
-
-# CIO / CTO
-
-Focus on:
-
-```text
-Architecture
-Technical risk
-Security
-Scalability
-Technical debt
-Operational readiness
-```
-
-Prompt:
-
-```text
-You are now the CTO reviewing this proposal.
-
-Identify:
-
-- technical assumptions,
-- architecture risk,
-- missing dependencies,
-- operational concerns,
-- technical evidence required before approval.
-```
-
----
-
-# CISO / Security Reviewer
-
-Focus on:
-
-```text
-Security risk
-Access
-Data protection
-Vulnerabilities
-Controls
-Approval evidence
-```
-
-Prompt:
-
-```text
-You are now the Information Security reviewer.
-
-Challenge the document from a security and production-readiness
-perspective.
-
-Identify anything that would prevent you from approving the release.
-```
-
----
-
-# Product Owner
-
-Focus on:
-
-```text
-Business value
-Scope
-Priorities
-Acceptance
-User outcomes
-```
-
-Prompt:
-
-```text
-You are now the Product Owner.
-
-Review this output and identify whether:
-
-- business value is clear,
-- scope assumptions are correct,
-- acceptance criteria are sufficient,
-- priorities are aligned,
-- any important user outcome is missing.
-```
-
----
-
-# Operations / Service Manager
-
-Focus on:
-
-```text
-Supportability
-Monitoring
-Incidents
-Runbooks
-Ownership
-Handover
-```
-
-Prompt:
-
-```text
-You are now the Service Manager who will operate this solution
-after go-live.
-
-Review the readiness assessment.
-
-Identify every operational question you would ask before accepting
-handover.
-```
-
----
-
-# Vendor Reviewer
-
-When communicating with a supplier:
-
-```text
-You are now the Supplier Delivery Manager receiving this escalation.
-
-Review it and identify:
-
-- allegations you would challenge,
-- evidence you would request,
-- unclear responsibilities,
-- statements that may be interpreted differently,
-- opportunities to dispute the project position.
-```
-
-This can help strengthen commercial correspondence.
-
----
-
-# Procurement / Commercial Reviewer
-
-Focus on:
-
-```text
-Scope
-Contract
-Pricing
-Assumptions
-Obligations
-Change control
-```
-
-Prompt:
-
-```text
-You are now the Commercial Manager.
-
-Review this change request and identify:
-
-- unclear scope,
-- unsupported commercial assumptions,
-- missing pricing evidence,
-- contractual ambiguity,
-- missing approvals.
-```
-
----
-
-# PMO Reviewer
-
-Focus on:
-
-```text
-Governance
-Consistency
-Evidence
-Ownership
-Dates
-Risk
-Decision traceability
-```
-
-Prompt:
-
-```text
-You are now a PMO quality reviewer.
-
-Check this document for:
-
-- inconsistent dates,
-- unclear owners,
-- missing decisions,
-- unsupported RAG status,
-- missing risks,
-- governance gaps.
-```
-
----
-
-# Business User Perspective
-
-For user-facing communication:
-
-```text
-You are an employee who will receive this system-change
-announcement.
-
-You have no technical project knowledge.
-
-Review it and answer:
-
-1. Do I understand what is changing?
-2. Do I understand when?
-3. Do I understand how it affects me?
-4. Do I know what I need to do?
-5. Do I know where to get help?
-```
-
----
-
-# Multi-Role Stacking
-
-For high-impact documents, use more than one reviewer.
-
-Example:
-
-```text
-Project Manager
-↓
-Draft
-↓
-PMO Review
-↓
-Technical Review
-↓
-Executive Review
-↓
-Final Document
-```
-
----
-
-# Example — Go-Live Decision
-
-Start with:
-
-```text
-ROLE
-
-You are a senior IT Project Manager.
-
-Create a Go / No-Go recommendation for the CRM production release.
+Keep these roles separate.
 
 CONTEXT
 
-UAT:
-Complete
+Project: [PROJECT NAME]
+Document type: [STATUS REPORT / DECISION PAPER / OTHER]
+Project phase: [PHASE]
+Delivery approach: [PREDICTIVE / AGILE / HYBRID]
 
-Critical defects:
-0
+Intended recipient: [SPONSOR / STEERING COMMITTEE /
+CFO / CTO / CISO / PRODUCT OWNER / OTHER]
 
-High defects:
-2 with approved workarounds
+Document objective: [PURPOSE]
+Decision required: [IF APPLICABLE]
+Approved project facts: [PASTE VERIFIED INFORMATION]
+Known assumptions: [LIST]
+Relevant constraints: [LIST]
+Required approval authority: [ROLE / NOT PROVIDED]
 
-Security:
-Approved
+TASK
 
-Data migration rehearsal:
-Passed
+STAGE 1 — AUTHOR
 
-Operations:
-Runbook approved
+Act as a Senior IT Project Manager.
 
-Vendor support:
-Confirmed
+Create a concise, professional document using only
+the supplied project information.
 
-Business readiness:
-95% training completion
+Ensure the draft clearly explains:
+
+1. Current situation or business problem
+2. Supporting facts and evidence
+3. Material project impact
+4. Risks and dependencies
+5. Actions taken or proposed
+6. Decisions or support required
+
+Distinguish confirmed facts from forecasts,
+assumptions, and recommendations.
 
 OUTPUT
 
-Recommendation
-Evidence
-Open Risks
-Conditions
-Decision Required
+Draft Document — Version 1
+Information Gaps
+
+Stop after Stage 1 for review.
+
+STAGE 2 — RECIPIENT REVIEW
+
+Switch roles.
+
+Act as [REVIEWER ROLE], receiving the document
+for review or decision-making.
+
+Challenge the draft independently.
+
+Assess:
+
+1. Does the document address your main concerns?
+2. Are important claims supported by evidence?
+3. Is business or operational impact clear?
+4. Are risks, assumptions, and trade-offs transparent?
+5. Is ownership and accountability defined?
+6. Are decisions and deadlines explicit?
+7. What information would prevent approval?
+8. What five questions would you ask the author?
+
+Do not automatically agree with the author's conclusions.
+
+OUTPUT
+
+Reviewer Assessment
+Three Most Material Weaknesses
+Five Likely Reviewer Questions
+Missing Evidence
+Recommended Improvements
+
+Stop after Stage 2.
+
+STAGE 3 — REVISION AND RECONCILIATION
+
+Return to the Senior IT Project Manager role.
+
+Review the recipient's findings.
+
+1. Correct substantiated weaknesses.
+2. Clarify business impact and decision requirements.
+3. Incorporate verified additional information.
+4. Preserve factual accuracy and original commitments.
+5. Identify unresolved evidence gaps.
+6. Distinguish competing stakeholder perspectives
+   where relevant.
+7. Produce a concise, decision-ready final version.
+
+Do not invent information to satisfy reviewer questions.
+
+OUTPUT
+
+Final Revised Document — Version 2
+
+REVIEW RECONCILIATION
+
+Reviewer Finding | Correction Made |
+Supporting Evidence | Remaining Gap
+
+FINAL MANAGEMENT SUMMARY
+
+- Main improvement
+- Unresolved questions
+- Decision readiness
+- Required human review
+
+RULES
+
+- Do not invent project facts, metrics, or approvals.
+- Do not assume the simulated reviewer represents
+  a real stakeholder's actual opinion.
+- Do not treat AI role-play as formal sign-off.
+- Preserve material facts during revision.
+- Highlight disagreements rather than forcing consensus.
+- Escalate legal, financial, security, or contractual
+  questions to authorized specialists.
 ```
 
-Then role stack.
+### Optional — Multi-Reviewer Challenge
 
----
-
-# Reviewer 1 — CISO
+Use this variation for high-impact or cross-functional decisions.
 
 ```text
-Now act as the CISO.
+MULTI-REVIEWER CHALLENGE
 
-Review the recommendation.
+Review the document below from three independent perspectives.
 
-What evidence would you challenge before production approval?
+DOCUMENT
+
+[PASTE DOCUMENT]
+
+REVIEWERS
+
+1. [REVIEWER A]
+2. [REVIEWER B]
+3. [REVIEWER C]
+
+For each reviewer:
+
+- Identify the primary objective.
+- Challenge the three most material weaknesses.
+- Identify missing evidence.
+- Explain relevant risks and concerns.
+- Recommend necessary corrections.
+
+Then reconcile the findings.
+
+OUTPUT
+
+Reviewer | Main Concern |
+Evidence Required | Risk | Recommendation
+
+CROSS-REVIEWER RECONCILIATION
+
+Areas of Agreement
+Conflicting Priorities
+Unresolved Trade-Offs
+Decision Options
+Required Human Approvals
+
+Do not imply that reviewers have agreed
+or approved the document.
 ```
 
----
+### Reviewer Selection Guide
 
-# Reviewer 2 — Operations
+Choose reviewers according to the actual document and its intended audience.
 
-```text
-Now act as the Service Manager.
-
-Identify anything that would prevent operational acceptance.
-```
-
----
-
-# Reviewer 3 — Sponsor
-
-```text
-Now act as the Executive Sponsor.
-
-Is there enough information here to make the Go / No-Go decision?
-
-Identify the three most important unanswered questions.
-
-Then rewrite the final recommendation.
-```
-
----
-
-# Result
-
-The document has now been challenged from:
-
-```text
-Security
-+
-Operations
-+
-Business Governance
-```
-
-This is stronger than asking the AI to simply “improve” the text.
-
----
-
-# Adversarial Review
-
-For important documents, explicitly ask the reviewer to challenge assumptions.
-
-```text
-Do not try to agree with the author.
-
-Act as a rigorous reviewer.
-
-Identify:
-
-- weak evidence,
-- unsupported assumptions,
-- contradictions,
-- vague claims,
-- missing alternatives,
-- risks being understated.
-```
-
-This helps reduce overly agreeable AI output.
-
----
-
-# Evidence Challenge
-
-Use:
-
-```text
-For every major claim in this document classify it as:
-
-Confirmed Fact
-Supported Analysis
-Assumption
-Opinion
-Unsupported Claim
-```
-
-Then ask:
-
-```text
-Which claims require additional evidence before the document should
-be issued?
-```
-
----
-
-# Question Prediction
-
-A particularly useful role-stacking prompt is:
-
-```text
-You are the recipient of this document.
-
-What are the five questions you are most likely to ask immediately
-after reading it?
-```
-
-If the questions are predictable, the document can often answer them before being sent.
-
----
-
-# Example
-
-Draft states:
-
-> The project remains on track for go-live.
-
-Reviewer asks:
-
-```text
-What evidence supports this?
-
-How much contingency remains?
-
-What are the unresolved dependencies?
-
-What would cause the date to move?
-
-What is your confidence level?
-```
-
-The revised report should address these points.
-
----
-
-# Decision-Maker Review
-
-For decision papers:
-
-```text
-You are the person being asked to approve this recommendation.
-
-Review the paper.
-
-Tell me:
-
-1. What decision am I being asked to make?
-2. Do I have enough evidence?
-3. Are alternatives clearly presented?
-4. Are trade-offs visible?
-5. What information would prevent me from approving this today?
-```
-
----
-
-# Role Stacking for Risk
-
-```text
-ROLE 1
-
-You are the Project Manager.
-
-Create a response plan for Risk R-004.
-```
-
-Then:
-
-```text
-ROLE 2
-
-You are the Risk Owner.
-
-Challenge whether the proposed actions are realistic and within
-your control.
-```
-
-Then:
-
-```text
-ROLE 3
-
-You are the PMO Risk Lead.
-
-Review whether the residual risk rating is justified.
-```
-
----
-
-# Role Stacking for Vendor Evaluation
-
-```text
-ROLE 1
-Procurement evaluator
-
-↓
-Supplier assessment
-
-ROLE 2
-Supplier
-
-↓
-Challenge the assessment
-
-ROLE 3
-Commercial reviewer
-
-↓
-Identify where evidence remains insufficient
-```
-
-This can help reduce one-sided vendor evaluations.
-
----
-
-# Role Stacking for Requirements
-
-```text
-Business Analyst
-↓
-Draft requirement
-
-Developer
-↓
-Identify technical ambiguity
-
-Tester
-↓
-Identify testability gaps
-
-Product Owner
-↓
-Confirm business intent
-```
-
----
-
-# Example Prompt
-
-```text
-ROLE 1
-
-You are a senior Business Analyst.
-
-Write acceptance criteria for the requirement below.
-
-[REQUIREMENT]
-
-After answering, wait.
-```
-
-Then:
-
-```text
-Now act as a QA Lead.
-
-Review the acceptance criteria.
-
-Identify anything that cannot be objectively tested.
-```
-
-Then:
-
-```text
-Now act as the Product Owner.
-
-Check whether the revised criteria still represent the intended
-business outcome.
-```
-
----
-
-# Role Stacking for Status Reports
-
-Recommended reviewers:
-
-```text
-Project Manager
-→ Creates
-
-PMO
-→ Checks governance
-
-Sponsor
-→ Checks decision usefulness
-```
-
----
-
-# Role Stacking for Technical Proposals
-
-Recommended reviewers:
-
-```text
-Solution Architect
-→ Creates
-
-Security
-→ Challenges risk
-
-Operations
-→ Challenges supportability
-
-Project Manager
-→ Reviews delivery impact
-```
-
----
-
-# Role Stacking for Commercial Changes
-
-Recommended reviewers:
-
-```text
-Supplier
-→ Provides proposal
-
-Project Manager
-→ Reviews scope / delivery
-
-Commercial Manager
-→ Reviews cost / contract
-
-Business Owner
-→ Reviews value
-```
-
----
-
-# Role Conflict
-
-Different reviewers may disagree.
-
-Example:
-
-```text
-Security:
-Delay release until vulnerability is resolved.
-
-Business:
-Release is commercially urgent.
-
-Operations:
-Release is supportable with a workaround.
-```
-
-Do not ask AI to hide the conflict.
-
-Instead:
-
-```text
-Summarise the competing stakeholder positions.
-
-For each provide:
-
-Objective
-Concern
-Risk
-Preferred Outcome
-
-Then identify realistic decision options and trade-offs.
-```
-
----
-
-# Role Stacking Is Not Consensus Generation
-
-The objective is not:
-
-```text
-Make every reviewer agree.
-```
-
-It is:
-
-```text
-Expose different perspectives before the decision is made.
-```
-
----
-
-# Reviewer Selection
-
-Choose reviewers based on the document.
-
-| Document | Useful Reviewer |
-|---|---|
-| Status Report | Sponsor / PMO |
-| Change Request | Commercial / Business Owner |
-| Architecture Proposal | Architect / Security / Operations |
-| Go-Live Paper | Business / Security / Operations |
-| Vendor Escalation | Supplier / Procurement |
-| Risk Response | Risk Owner / PMO |
-| User Communication | End User / Change Lead |
-| Contract Notice | Commercial / Legal |
-
----
-
-# Don't Invent Authority
-
-A simulated reviewer can identify likely concerns.
-
-It cannot provide actual approval.
-
-Example:
-
-```text
-AI acting as CISO
-≠
-Security approval
-```
-
-Similarly:
-
-```text
-AI acting as Legal Counsel
-≠
-Legal advice
-```
-
-Role stacking supports preparation.
-
-It does not replace authorised review.
-
----
-
-# Same-Conversation Workflow
-
-Keep related author/reviewer steps in the same conversation where context matters.
-
-```text
-Draft
-↓
-Reviewer
-↓
-Revision
-```
-
-However, explicitly tell the model when the role changes.
-
-Example:
-
-```text
-Stop acting as the Project Manager.
-
-Now act as the Executive Sponsor.
-```
-
-This makes the review perspective clearer.
-
----
-
-# Final Reconciliation
-
-After multiple reviewers:
-
-```text
-Return to the Project Manager role.
-
-Review all reviewer comments above.
-
-Create a final version that:
-
-- addresses material weaknesses,
-- preserves verified facts,
-- does not introduce unsupported claims,
-- makes remaining disagreements explicit.
-```
-
----
-
-# Quality Gate
-
-Before finalising an important document:
-
-```text
-Author Review
-↓
-Recipient Review
-↓
-Evidence Review
-↓
-Final Revision
-```
-
-This creates a simple AI-assisted quality gate.
-
----
-
-# Role Stacking Quality Checklist
-
-Before using the workflow, confirm:
-
-- [ ] The author role is clearly defined
-- [ ] The real audience is understood
-- [ ] Reviewer role matches the audience
-- [ ] Reviewer is instructed to challenge, not agree
-- [ ] Weak evidence is identified
-- [ ] Likely questions are predicted
-- [ ] Missing information is highlighted
-- [ ] Revision preserves verified facts
-- [ ] Reviewer comments are not treated as actual stakeholder approval
-- [ ] Human review still occurs for material decisions
-
----
-
-# Key Principle
-
-Role stacking is not:
-
-```text
-Ask AI to rewrite the same text twice.
-```
-
-It is:
-
-```text
-Draft from one professional perspective
-↓
-Challenge from another
-↓
-Strengthen the output before real-world review
-```
-
-This turns AI into both:
-
-```text
-Author
-+
-Critical Reviewer
-```
-
-while keeping the Project Manager accountable for the final output.
-
----
-
-# Prompt Metadata
-
-```text
-Prompt ID: AIWF-002
-Category: Advanced AI Workflows
-Version: 1.0
-Status: Draft
-Owner: Project Manager / PMO
-Reviewer: Project Manager
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| Reviewer | Primary Focus | Suitable Documents |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial role-stacking review workflow |
+| Executive Sponsor | Business value, delivery confidence, decisions | Status reports, executive updates |
+| Steering Committee | Options, trade-offs, governance | Decision papers, escalations |
+| CFO / Finance | Cost, forecast, contingency, financial exposure | Business cases, budget changes |
+| CTO / Architect | Technical feasibility, architecture, dependencies | Technical proposals |
+| CISO / Security | Security controls, vulnerabilities, approval evidence | Go-live and security assessments |
+| Product Owner | Business value, requirements, acceptance | Product and scope documents |
+| Operations / Service Manager | Supportability, monitoring, handover | Release readiness |
+| Supplier Delivery Manager | Delivery commitments, responsibilities, evidence | Vendor escalations |
+| Procurement / Commercial | Contract, pricing, assumptions, change control | Supplier assessments, variations |
+| PMO | Consistency, ownership, dates, traceability | Risk registers, status reports |
+| End User | Clarity, user impact, required actions, support | Change notifications |
+
+For material decisions, choose the two or three perspectives most likely to expose different risks. Additional reviewers should provide distinct value rather than duplicate the same checks.
+
+---
+
+## 2. Quality Check
+
+Use this independent quality gate after the author/reviewer process.
+
+```text
+QUALITY CHECK
+
+Act as an independent Senior PMO Quality Assurance Manager.
+
+Review:
+
+- Original document
+- Reviewer findings
+- Final revised document
+- Available supporting evidence
+
+VERIFY
+
+1. ROLE SEPARATION
+
+The reviewer challenged the draft independently
+rather than simply endorsing its conclusions.
+
+2. EVIDENCE
+
+Material claims are supported by project evidence.
+
+3. RELEVANCE
+
+Reviewer concerns reflect the actual document
+purpose and recipient's responsibilities.
+
+4. FACTUAL INTEGRITY
+
+The revision preserves verified dates, financial data,
+risk positions, commitments, and project status.
+
+5. DECISION READINESS
+
+Required decisions, options, consequences,
+and approval authority are visible.
+
+6. REVIEWER CHALLENGE
+
+Important assumptions, weak evidence,
+and alternative interpretations are identified.
+
+7. CONFLICT MANAGEMENT
+
+Different reviewer priorities are documented
+rather than artificially reconciled.
+
+8. CORRECTIVE ACTION
+
+Each material finding is addressed or explicitly
+recorded as unresolved.
+
+9. GOVERNANCE
+
+Simulated specialist reviews are not represented
+as actual stakeholder approval.
+
+10. COMMUNICATION QUALITY
+
+The final document is concise, professional,
+audience-specific, and actionable.
+
+OUTPUT
+
+Quality Verdict: PASS / REVISE
+
+FINDINGS TABLE
+
+Finding | Evidence |
+Project Impact | Correction Required |
+Priority
+
+REVIEW RECONCILIATION
+
+Reviewer Concern | Status |
+Correction | Outstanding Information
+
+FINAL ASSESSMENT
+
+Decision Readiness:
+READY / READY WITH CONDITIONS / NOT READY
+
+Approval Blockers:
+[LIST]
+
+Required Human Review:
+[ROLES]
+
+Do not invent evidence, stakeholder opinions,
+or approvals to complete the assessment.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### Enterprise CRM Replacement — Executive Status Review
+
+**Scenario:** A CRM replacement project is experiencing a testing dependency delay. The Project Manager must inform the Executive Sponsor that UAT is forecast to start five working days late while the planned production release remains achievable, although schedule contingency has reduced.
+
+The first draft explains the problem and recovery measures. The simulated Executive Sponsor then challenges whether the report contains enough evidence to support management decisions.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | Enterprise CRM Replacement |
+| Document | Executive Project Status Update |
+| Delivery approach | Hybrid |
+| Overall status | Amber |
+| Main dependency | External identity-provider certification |
+| UAT forecast | Five working days late |
+| Release outlook | Currently achievable, with reduced contingency |
+| Recovery actions | Mock authentication, test resequencing, vendor escalation |
+| Recipient | Executive Sponsor |
+| Management objective | Communicate delivery exposure and decision requirements |
+
+### Example Input
+
+```text
+PROJECT
+Enterprise CRM Replacement
+
+OVERALL STATUS
+Amber
+
+CURRENT SITUATION
+UAT is forecast to start five working days late
+because external identity-provider certification
+remains incomplete.
+
+ACTIONS TAKEN
+- Mock authentication service implemented.
+- Unaffected testing activities resequenced.
+- Vendor escalation active.
+
+BUSINESS IMPACT
+The current production release date remains
+achievable, but schedule contingency has reduced.
+
+DECISION REQUIRED
+Not provided.
+
+REMAINING CONTINGENCY
+Not quantified.
+
+CERTIFICATION COMPLETION FORECAST
+Not provided.
+```
+
+### Stage 1 — Author: Initial Executive Update
+
+**Executive Project Status — Amber**
+
+The Enterprise CRM Replacement project remains Amber because external identity-provider certification is incomplete, resulting in a forecast five-working-day delay to the start of UAT.
+
+The project team has implemented a mock authentication service, re-sequenced unaffected testing activities, and escalated the dependency to the vendor.
+
+The planned production release remains achievable, although schedule contingency has reduced.
+
+The team continues to monitor certification progress and its impact on downstream testing activities.
+
+### Stage 2 — Reviewer: Executive Sponsor Challenge
+
+The Executive Sponsor reviews the update from the perspective of delivery confidence, business impact, accountability, and decision requirements.
+
+#### Reviewer Assessment
+
+| Weakness | Executive Concern | Recommended Improvement |
+|---|---|---|
+| Release confidence unsupported | Why is the planned release still achievable? | Provide evidence of remaining contingency and recovery feasibility |
+| Certification deadline unclear | When must the dependency be resolved? | Confirm supplier forecast and latest acceptable completion date |
+| No explicit decision required | What action is expected from the Sponsor? | State any required escalation or decision, or confirm none currently requested |
+
+#### Five Likely Sponsor Questions
+
+1. How much schedule contingency remains after the forecast UAT delay?
+2. What evidence supports the statement that production release remains achievable?
+3. When is the supplier expected to complete certification?
+4. What alternative delivery options exist if certification is delayed further?
+5. What decision or intervention would be required from the Sponsor, and by when?
+
+**Reviewer conclusion:** The update communicates the immediate problem but does not provide enough evidence to establish release confidence or identify a specific executive decision.
+
+### Stage 3 — Project Manager: Revised Executive Update
+
+**Enterprise CRM Replacement — Executive Status: Amber**
+
+UAT is forecast to start **five working days late** because external identity-provider certification remains incomplete.
+
+The project team has implemented mock authentication, re-sequenced unaffected testing, and escalated the outstanding certification to the supplier.
+
+The current production release remains the planning target. However, schedule contingency has reduced, and available information does not yet quantify the remaining buffer or establish a confirmed certification completion date.
+
+**Management attention required:** Obtain the supplier's confirmed certification forecast, assess the remaining schedule contingency, and determine whether additional executive intervention is needed.
+
+**Decision status:** No specific Sponsor decision has yet been defined. The Project Manager must clarify the decision or escalation requirement before formal submission.
+
+### Review Reconciliation
+
+| Reviewer Finding | Revision Made | Remaining Gap |
+|---|---|---|
+| Release confidence unsupported | Qualified the release outlook | Quantified contingency and forecast evidence |
+| Supplier completion unclear | Made dependency uncertainty explicit | Confirmed supplier completion date |
+| Executive decision unclear | Added management attention required | Formal decision, authority, and deadline |
+
+The revised version is stronger because it makes uncertainty visible instead of presenting unsupported confidence.
+
+### Example — Multi-Reviewer Go / No-Go Challenge
+
+For a more consequential decision, role stacking can involve several reviewers with distinct responsibilities.
+
+**Illustrative readiness inputs:**
+
+| Readiness Area | Reported Status |
+|---|---|
+| UAT | Complete |
+| Critical defects | 0 |
+| High-severity defects | 2, with approved workarounds |
+| Security | Approved |
+| Migration rehearsal | Passed |
+| Operations runbook | Approved |
+| Vendor support | Confirmed |
+| User training | 95% complete |
+
+These inputs do not independently establish that production release is authorized.
+
+| Reviewer | Main Challenge | Evidence Required |
+|---|---|---|
+| CISO | Do the two high-severity defects introduce security exposure? | Defect classification and security evidence |
+| Service Manager | Can Operations support the solution and handle known issues? | Handover, monitoring, and incident procedures |
+| Executive Sponsor | Is the remaining business risk acceptable? | Impact assessment, alternatives, and accountable recommendation |
+
+**Potential conflict:** Security may require additional evidence, Operations may consider the service supportable, and the Sponsor may prioritize the committed release date.
+
+The Project Manager should document these differences and present the decision options. AI should not force simulated reviewers into agreement.
+
+### Management Decisions
+
+1. **Strengthen release confidence:** Require evidence supporting schedule feasibility rather than relying solely on an optimistic forecast.
+2. **Clarify accountability:** Obtain supplier commitments, remaining dependency dates, and appropriate escalation ownership.
+3. **Improve decision readiness:** Ensure the Executive Sponsor understands the business impact, unresolved risks, and any required intervention.
+4. **Preserve reviewer independence:** Document conflicting specialist perspectives and refer material decisions to authorized stakeholders.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The role-stacking process exposed gaps in schedule evidence, supplier commitments, and executive decision clarity. The revised report communicates those uncertainties without introducing unsupported project facts.
+
+**Required corrections:**
+- Confirm remaining schedule contingency.
+- Obtain a validated supplier certification forecast.
+- Assess the downstream impact of the delayed UAT start.
+- Establish whether a Sponsor decision is required.
+- Validate release assumptions before formal reporting.
+
+**Approval blockers:** Incomplete schedule evidence and an undefined executive decision or escalation requirement.
+
+**Governance:** Supports PMI-aligned stakeholder management, quality assurance, project communications, risk management, decision-making, and governance.
+
+### Professional Use and Limitations
+
+Role stacking helps anticipate stakeholder questions, identify competing priorities, and improve document quality. It does not reproduce the real views of an individual reviewer or substitute for specialist judgment.
+
+AI acting as a CISO does not provide security approval. AI acting as legal counsel does not replace authorized legal review. Financial, commercial, operational, and delivery decisions remain with the relevant decision authorities.
+
+For confidential documents, follow organizational AI-use policies and protect sensitive project information, supplier pricing, technical architecture, contract terms, and security details.

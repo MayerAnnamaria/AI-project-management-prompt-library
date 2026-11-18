@@ -1,751 +1,404 @@
 # Risk Identification Workshop
 
-## Purpose
+**Prompt ID:** RISK-002 | **Category:** Risk & Issue Management | **Version:** 1.0 | **Status:** Draft
 
-Use this prompt to prepare and facilitate a structured risk-identification workshop for an IT or digital project.
+## 1. Ready-to-Use Prompt
 
-The AI-generated output should be treated as a **discussion seed list**, not as the project's final risk register.
+**Purpose:** Facilitate structured, cross-functional risk identification to uncover project uncertainties, challenge assumptions, and strengthen the risk register.
 
-The objective is to:
+**Use case:** Prepare and facilitate a risk workshop before software development, integration testing, major releases, or project re-planning when delivery teams must identify emerging risks and dependencies.
 
-- help participants think broadly,
-- avoid starting from a blank page,
-- surface cross-functional risks,
-- expose assumptions and dependencies,
-- and create a stronger input for the formal risk register.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Planning / Major Replanning / Pre-Release
-
-**Project type:**  
-Software implementation / Digital transformation / Data / ERP / Infrastructure / Cloud / Multi-vendor programme
-
-**Primary user:**  
-Project Manager / Delivery Manager / Risk Facilitator / PMO
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At initiation and before major delivery or governance milestones
-
----
-
-# Prompt 1 — Generate the Workshop Seed List
+Copy the prompt and replace the placeholders with your project information.
 
 ```text
 ROLE
 
-You are a senior IT Project Manager and risk facilitator experienced
-in international software delivery, digital transformation,
-cross-functional risk management, and project governance.
+You are a Senior IT Project Manager and Risk Facilitator
+specializing in software delivery, cross-functional risk
+identification, workshop facilitation, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target completion: [DATE]
+Project team / workshop participants: [ROLES]
+Systems and integrations: [LIST]
+External vendors: [IF RELEVANT]
+Known dependencies: [LIST]
+Known assumptions: [LIST]
+Known constraints: [LIST]
+Known issues: [LIST]
+Existing risks: [LIST / REGISTER]
+Risk domains: [LIST / SELECT RELEVANT DOMAINS]
+Workshop duration: [90 MINUTES / OTHER]
+Workshop notes: [PASTE AFTER WORKSHOP, IF AVAILABLE]
 
 TASK
 
-Create a risk-identification seed list for the project described below.
+Prepare and structure a cross-functional risk-identification workshop.
 
-The list will be used as a starting point for a facilitated project
-risk workshop.
+STEP 1 — WORKSHOP PREPARATION
 
-It must prompt discussion rather than imply that all project risks
-have already been identified.
+1. Review project scope, milestones, architecture, assumptions,
+   dependencies, existing risks, and known issues.
+2. Select relevant risk domains, including where applicable:
+   - Business / Product / Requirements
+   - Architecture / Technology / Integration
+   - Data / Security / Compliance
+   - Infrastructure / Cloud
+   - Testing / Quality / Release
+   - Resources / Vendors / Schedule / Budget
+   - Operations / Stakeholders / Governance
+3. Generate 4–6 potential risks per selected domain.
+4. Express each risk using cause–event–impact wording.
+5. Provide 2–3 open-ended discussion questions per domain.
+6. Identify workshop participants and preparation materials.
+7. Treat AI-generated risks as discussion starters,
+   not confirmed project risks.
 
-PROJECT CONTEXT
+STEP 2 — WORKSHOP FACILITATION
 
-Project:
-[PROJECT NAME]
+8. Create a 90-minute workshop agenda with activities,
+   facilitation guidance, and expected participant outputs.
+9. Challenge unverified assumptions and cross-team dependencies.
+10. Encourage participants to identify additional risks
+    beyond the AI-generated seed list.
+11. Capture risks before debating mitigation solutions.
+12. Distinguish uncertain future risks from existing issues.
+13. Identify common causes, cascading effects, and
+    dependencies affecting multiple workstreams.
+14. Avoid premature scoring, ownership assignment,
+    or dismissal of potential risks.
+
+STEP 3 — WORKSHOP CONSOLIDATION
+
+15. Structure workshop findings into clear risk statements.
+16. Remove genuine duplicates without losing distinct
+    causes, events, or potential impacts.
+17. Separate confirmed workshop findings from AI suggestions
+    that participants have not validated.
+18. Identify missing evidence required for risk assessment.
+19. Propose risk owners for stakeholder confirmation.
+20. Identify cross-functional risks requiring joint review.
+21. Recommend next steps for scoring, mitigation,
+    escalation, and formal risk-register updates.
+
+Do not invent project facts, risk evidence, or approvals.
+Do not assign likelihood or impact scores during identification.
+Do not present the AI seed list as a complete risk register.
+Adapt workshop questions to the actual project and delivery approach.
+
+OUTPUT FORMAT
+
+1. WORKSHOP PREPARATION
+
+Objective | Required Input | Participants |
+Preparation Action | Owner
+
+2. RISK IDENTIFICATION SEED LIST
+
+For each selected domain provide:
+- 4–6 potential risks
+- 2–3 workshop questions
+
+Risk ID | Domain | Potential Risk (Cause–Event–Impact) |
+Affected Workstream | Discussion Focus
+
+3. WORKSHOP AGENDA
+
+Time | Activity | Purpose |
+Facilitator Action | Participant Output
+
+Default duration: 90 minutes.
+
+4. CONSOLIDATED RISK CANDIDATES
+
+Risk ID | Category | Risk Statement | Cause |
+Potential Impact | Source / Workstream |
+Proposed Owner | Evidence Required Before Scoring |
+Validation Status
+
+If workshop notes are unavailable, mark all generated
+entries as unvalidated candidates.
+
+5. CROSS-FUNCTIONAL RISK REVIEW
+
+Risk / Dependency | Affected Areas |
+Common Root Cause | Potential Cascading Impact |
+Management Concern
+
+6. FOLLOW-UP ACTIONS
+
+Action | Priority | Proposed Owner |
+Required By | Expected Outcome
+
+7. MANAGEMENT SUMMARY
+
+- Most significant potential risks and shared dependencies
+- Assumptions requiring validation
+- Current issues requiring separate management
+- Risks requiring specialist or governance attention
+- Recommended next steps for formal assessment
+
+Use concise Markdown tables.
+Mark unknown information as "Not yet defined".
+Do not treat unvalidated candidates as approved risk records.
+```
+
+---
+
+## 2. Quality Check
+
+Apply this control after generating the workshop materials and, where available, consolidating the workshop notes.
+
+```text
+QUALITY CHECK
+
+Act as a Senior QA Manager and review the risk workshop outputs.
+
+Verify:
+
+1. Completeness: Relevant risk domains, workshop questions,
+   agenda, consolidation, and follow-up actions are included.
+2. Accuracy: AI-generated candidates are distinguished
+   from participant-validated risks and actual issues.
+3. Risk Quality: Statements identify credible causes,
+   uncertain events, and potential consequences.
+4. Coverage: Technical, business, security, vendor,
+   operational, and cross-team risks are considered
+   where relevant.
+5. Facilitation: The agenda is realistic, encourages
+   participant input, and avoids premature scoring.
+6. Consolidation: Duplicates are reviewed without
+   removing materially different risks.
+7. Governance: Missing evidence, proposed owners,
+   validation responsibilities, and next steps are visible.
+8. Actionability: Findings can be transferred into
+   a formal risk assessment process.
+
+OUTPUT
+
+Quality verdict: PASS / REVISE
+Findings: [ISSUES REQUIRING CORRECTION]
+Required corrections: [CORRECTIVE ACTIONS]
+Validation Blockers: [CRITICAL UNRESOLVED ITEMS]
+
+Do not invent participant agreement, risk ratings,
+final ownership, or approval decisions.
+Flag items requiring human validation.
+```
+
+---
+
+## 3. Practical IT Use Case
+
+### E-commerce Software Development — Payment Integration Risk Workshop
+
+**Scenario:** An e-commerce team is developing a new checkout feature using an external payment gateway. Before integration testing, the Project Manager organizes a risk-identification workshop to uncover technical, security, testing, and supplier-related uncertainties that could threaten the release.
+
+### Project Context
+
+| Attribute | Details |
+|---|---|
+| Project | E-commerce Checkout Enhancement |
+| Phase | Development / Pre-Integration Testing |
+| Delivery approach | Scrum |
+| Release target | 30 September 2027 |
+| Team | Product Owner, Developers, QA Lead, Security Lead, Project Manager |
+| External dependency | Payment Gateway Provider |
+| Key systems | Web Application, Payment API, Order Management System |
+| Known concern | Payment API integration and testing readiness |
+| Management decision | Identify and validate potential delivery risks before SIT |
+
+### Example Input
+
+```text
+Project: E-commerce Checkout Enhancement
 
 Business objective:
-[OBJECTIVE]
+Improve checkout functionality and introduce
+a new external payment gateway.
 
-Current phase:
-[PHASE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Target completion:
-[DATE]
+Project phase: Development / Pre-Integration Testing
+Delivery approach: Scrum
+Target release: 30 September 2027
 
 Project team:
-[DETAILS]
+- 1 Project Manager
+- 1 Product Owner
+- 4 Developers
+- 2 QA Engineers
+- 1 Security Lead
 
-Systems involved:
-[LIST]
+External vendor:
+Payment Gateway Provider
 
-External vendors:
-[LIST]
+Systems:
+E-commerce Web Application
+Payment Gateway API
+Order Management System
 
 Known dependencies:
-[LIST]
+- Payment API integration
+- Test environment availability
+- Security review
+- Payment transaction validation
+- Business acceptance testing
 
 Known assumptions:
-[LIST]
+- Payment API documentation is complete.
+- Test environment supports required payment scenarios.
+- Payment-provider support will be available during SIT.
 
 Known constraints:
-[LIST]
+- Fixed September release target
+- Limited QA capacity
 
-Known issues:
-[LIST]
+Known issue:
+Payment-provider sandbox access has not yet been granted.
 
-Risk domains to consider:
-[LIST OR USE RELEVANT IT DOMAINS BELOW]
-
-OUTPUT FORMAT
-
-Organise the seed list by risk domain.
-
-For each domain:
-
-- provide 4–6 potential risks,
-- use open-ended cause-event-impact wording,
-- avoid assigning probability or impact scores,
-- avoid presenting the list as complete,
-- include 2–3 workshop questions that should provoke discussion.
+Workshop objective:
+Identify potential integration, security, testing,
+and release risks before SIT.
 ```
 
----
+### Example Output — Risk Identification Workshop
 
-# Suggested IT Risk Domains
+#### 1. Workshop Preparation
 
-Use only those relevant to the project.
+| Objective | Required Input | Participants | Preparation Action | Proposed Owner |
+|---|---|---|---|---|
+| Identify integration risks | API specification, interface design | Developers, Vendor Lead | Review dependencies | Technical Lead |
+| Identify testing risks | Test strategy, environments | QA Lead, Developers | Review test coverage | QA Lead |
+| Identify security risks | Security requirements | Security Lead, Architect | Review security assumptions | Security Lead |
+| Identify release risks | Roadmap, milestone plan | PM, Product Owner | Review delivery constraints | Project Manager |
 
-```text
-Business / Product
-Scope / Requirements
-Architecture
-Technology
-Integration
-Data
-Security
-Privacy / Compliance
-Infrastructure / Cloud
-Testing / Quality
-Release / Deployment
-Operations / Support
-Resources / Skills
-Vendors / Procurement
-Schedule
-Budget
-Stakeholders
-Change Management
-Governance
-External Dependencies
-```
+Participants should review known assumptions, dependencies, and existing issues before the workshop.
 
-For a smaller project, combine domains where appropriate.
+#### 2. Risk Identification Seed List
 
-For a large international programme, separate them further by workstream, platform, region, or supplier.
+The following risks are **AI-generated discussion candidates**, not validated project risks.
 
----
+**Domain A — Integration**
 
-# Risk Phrasing
-
-Use open-ended risk statements that encourage discussion.
-
-### Weak
-
-```text
-API risk.
-```
-
-### Better
-
-```text
-Risk that the external API specification changes after integration
-development has begun, creating rework and affecting the planned
-integration-testing window.
-```
-
-### Better Workshop Style
-
-```text
-Could changes to the external API specification occur after
-development begins, and if so, what would be the impact on
-integration, testing, and release timing?
-```
-
-Workshop language should encourage participants to challenge assumptions.
-
----
-
-# Example Risk Domains
-
-## Architecture
-
-Possible discussion starters:
-
-```text
-Risk that the target architecture contains unresolved design
-decisions that delay development.
-
-Risk that the proposed solution cannot meet expected transaction
-volumes without redesign.
-
-Risk that architecture dependencies between teams are not
-identified early enough.
-```
-
-Workshop questions:
-
-```text
-Which architecture decisions remain unresolved?
-
-Which technical assumptions have not yet been validated?
-
-What architectural dependency could become a late-stage blocker?
-```
-
----
-
-## Integration
-
-Possible discussion starters:
-
-```text
-Risk that external API delivery is later than required by the
-integration schedule.
-
-Risk that interface responsibilities between internal and vendor
-teams are unclear.
-
-Risk that test environments do not accurately represent production
-integration behaviour.
-```
-
-Workshop questions:
-
-```text
-Which integration dependency has the least schedule flexibility?
-
-Who owns each interface end-to-end?
-
-Which external dependency do we currently have the least control over?
-```
-
----
-
-## Data
-
-Possible discussion starters:
-
-```text
-Risk that source-data quality is lower than assumed, increasing
-migration effort.
-
-Risk that required data mappings are not approved before migration
-development begins.
-
-Risk that reconciliation criteria are not agreed before test migration.
-```
-
-Workshop questions:
-
-```text
-Which data-quality assumptions remain untested?
-
-Who owns migration acceptance?
-
-What would prevent us from proving that migrated data is correct?
-```
-
----
-
-## Security
-
-Possible discussion starters:
-
-```text
-Risk that security requirements are identified too late to be
-incorporated without significant rework.
-
-Risk that penetration testing identifies release-blocking findings
-close to deployment.
-
-Risk that a third-party supplier does not meet required security
-controls.
-```
-
-Workshop questions:
-
-```text
-Which security approvals could affect the critical delivery path?
-
-When will security evidence be available?
-
-Which security dependency sits outside the project team's control?
-```
-
----
-
-## Testing and Quality
-
-Possible discussion starters:
-
-```text
-Risk that insufficient test-environment stability reduces effective
-testing time.
-
-Risk that critical defects remain unresolved when UAT begins.
-
-Risk that acceptance criteria are too ambiguous for consistent testing.
-```
-
-Workshop questions:
-
-```text
-What could prevent us from completing meaningful testing?
-
-Which quality assumptions are currently unsupported by evidence?
-
-Where could defects escape into later stages?
-```
-
----
-
-## Vendors
-
-Possible discussion starters:
-
-```text
-Risk that a strategic vendor cannot provide the planned delivery
-capacity.
-
-Risk that supplier responsibilities are interpreted differently by
-internal and external teams.
-
-Risk that commercial change-control delays technical decisions.
-```
-
-Workshop questions:
-
-```text
-Which deliverables depend on a single supplier?
-
-What happens if the vendor misses its next major commitment?
-
-Where are contract boundaries creating delivery ambiguity?
-```
-
----
-
-# Prompt 2 — Workshop Agenda
-
-```text
-ROLE
-
-You are a senior IT Project Manager facilitating a cross-functional
-risk workshop.
-
-TASK
-
-Create a 90-minute risk-identification workshop agenda using the
-project context and seed list below.
-
-PROJECT CONTEXT
-
-[PASTE CONTEXT]
-
-RISK SEED LIST
-
-[PASTE SEED LIST]
-
-OUTPUT FORMAT
-
-Provide:
-
-Time
-Activity
-Purpose
-Facilitator Action
-Participant Output
-```
-
----
-
-# Example Workshop Agenda
-
-| Time | Activity | Purpose |
+| ID | Potential Risk | Discussion Focus |
 |---|---|---|
-| 0–10 min | Context and objectives | Align participants |
-| 10–20 min | Existing risks and assumptions | Establish baseline |
-| 20–55 min | Domain-based risk identification | Generate risks |
-| 55–70 min | Cross-team dependencies | Identify systemic risks |
-| 70–80 min | Consolidation | Remove duplication |
-| 80–90 min | Owners and next steps | Prepare for assessment |
+| A-01 | If the payment API specification changes during development, integration rework may delay SIT. | API stability |
+| A-02 | If payment-provider response behavior differs from documentation, transaction processing defects may delay testing. | Interface reliability |
+| A-03 | If error-handling responsibilities are unclear, failed payments may not be processed consistently. | Technical ownership |
+| A-04 | If payment gateway and order-management integration assumptions are incorrect, transaction reconciliation may require redesign. | Cross-system dependency |
 
-Do not spend the workshop scoring every risk before adequate identification has occurred.
+**Workshop questions:**
 
----
+- Which payment API assumptions remain unverified?
+- What happens if the provider changes an interface during development?
+- Who owns payment failures across the application and gateway?
 
-# Prompt 3 — Workshop Questions
+**Domain B — Security and Compliance**
 
-Use prompts that challenge the project from different perspectives.
-
-```text
-What assumptions are we relying on that have not been validated?
-
-What dependency could fail without us seeing it early?
-
-Where do two teams believe the other team owns the same responsibility?
-
-What important project outcome depends on a single person or supplier?
-
-What could prevent testing from starting on time?
-
-What could make the current release plan unrealistic?
-
-What security or compliance requirement may still be unknown?
-
-What could materially increase project cost?
-
-Which stakeholder decision could arrive too late?
-
-What would cause us to regret the current delivery approach?
-```
-
----
-
-# Pre-Workshop Preparation
-
-Send participants the project context and seed list in advance.
-
-Ask each domain or workstream lead to add risks specific to their area before the workshop.
-
-Recommended inputs:
-
-```text
-Current scope
-Project plan / roadmap
-Architecture overview
-Known dependencies
-Assumptions register
-Existing RAID register
-Vendor commitments
-Testing strategy
-Release plan
-Relevant metrics
-```
-
-The seed list should make preparation easier, not constrain participant thinking.
-
----
-
-# Workshop Facilitation Rules
-
-During the session:
-
-1. Capture risks before debating solutions.
-2. Avoid dismissing low-probability risks too quickly.
-3. Distinguish risks from current issues.
-4. Ask for causes and impacts.
-5. Identify cross-team dependencies.
-6. Record assumptions exposed during discussion.
-7. Avoid assigning ownership before the risk is understood.
-8. Combine duplicates only after discussion.
-9. Do not let the AI-generated seed list define the boundaries of the workshop.
-10. Encourage participants to add risks that were not anticipated.
-
----
-
-# Risk vs Issue Check
-
-Use:
-
-```text
-Has the event already happened?
-
-YES → Issue
-NO → Risk
-```
-
-Example:
-
-```text
-Risk:
-The vendor may miss the API delivery date.
-
-Issue:
-The vendor has already missed the API delivery date.
-```
-
----
-
-# Prompt 4 — Consolidate Workshop Output
-
-After the workshop:
-
-```text
-ROLE
-
-You are a senior project risk manager consolidating the output
-from a cross-functional IT risk workshop.
-
-TASK
-
-Clean and structure the workshop notes below.
-
-WORKSHOP NOTES
-
-[PASTE NOTES]
-
-Do not remove unique risks simply because they appear similar.
-
-Combine risks only where they clearly represent the same
-cause-event-impact relationship.
-
-OUTPUT FORMAT
-
-Risk ID
-Risk Category
-Risk Statement
-Cause
-Potential Impact
-Source / Workstream
-Suggested Risk Owner
-Information Required Before Scoring
-```
-
----
-
-# Cross-Functional Risk Review
-
-After consolidation, specifically look for risks that cross multiple areas.
-
-Example:
-
-```text
-Vendor delay
-↓
-Integration delay
-↓
-Testing compression
-↓
-Defect risk
-↓
-Release readiness risk
-```
-
-These are often more significant than isolated departmental risks.
-
-Provide:
-
-| Cross-Functional Risk | Affected Areas | Common Root Cause | Management Concern |
-|---|---|---|---|
-
----
-
-# Agile / Scrum Considerations
-
-Where relevant, workshop discussion may include:
-
-- backlog uncertainty,
-- Product Owner availability,
-- technical debt,
-- release dependencies,
-- cross-team dependencies,
-- Definition of Done,
-- integration frequency,
-- team capacity.
-
-Risk workshops should complement normal Agile feedback loops rather than replace them.
-
----
-
-# Kanban Considerations
-
-Use flow data as evidence during risk identification.
-
-Possible signals include:
-
-```text
-Increasing WIP
-Ageing work
-Blocked items
-Cycle-time deterioration
-Throughput decline
-Repeated SLE breaches
-Persistent bottlenecks
-```
-
-Ask:
-
-> What future delivery risk might this flow signal be warning us about?
-
-Do not treat every metric change as a risk without understanding the underlying cause.
-
----
-
-# Predictive Considerations
-
-Use planning information such as:
-
-- critical path,
-- milestone dependencies,
-- procurement lead times,
-- resource plan,
-- cost baseline,
-- scope baseline.
-
----
-
-# Hybrid Considerations
-
-Review both:
-
-```text
-Formal project commitments
-+
-Adaptive delivery signals
-```
-
-A hybrid project may have delivery flexibility while still carrying fixed external dates, budgets, or governance obligations.
-
----
-
-# Workshop Output
-
-The final workshop should produce:
-
-```text
-Candidate risks
-↓
-Consolidated risks
-↓
-Validated risk statements
-↓
-Risk scoring
-↓
-Risk responses
-↓
-Risk owners
-↓
-Risk register
-```
-
-The workshop is an input into risk management, not the final step.
-
----
-
-# Quality Checklist
-
-Before closing the workshop, confirm:
-
-- [ ] Multiple disciplines or perspectives participated
-- [ ] AI seed list was treated only as a starting point
-- [ ] New participant-generated risks were captured
-- [ ] Risks are distinct from issues
-- [ ] Causes and impacts are understandable
-- [ ] Cross-team dependencies were considered
-- [ ] Assumptions were challenged
-- [ ] Vendor risks were considered
-- [ ] Security and operational risks were considered where relevant
-- [ ] Duplicate risks were reviewed carefully
-- [ ] Follow-up actions are assigned
-- [ ] Risks requiring further evidence are identified
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- risk identification,
-- facilitation,
-- stakeholder engagement,
-- team collaboration,
-- uncertainty management,
-- dependency management,
-- governance.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- risk,
-- stakeholders,
-- planning,
-- governance,
-- delivery,
-- team collaboration.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-The workshop must remain a human collaborative process.
-
-AI can:
-
-- generate starting questions,
-- structure risk statements,
-- detect patterns,
-- consolidate notes.
-
-AI should not:
-
-- decide which risks participants are allowed to discuss,
-- independently approve risk ratings,
-- assign final risk ownership,
-- determine organisational risk tolerance.
-
----
-
-# Confidentiality
-
-Risk workshops can surface sensitive project information.
-
-Protect:
-
-- security vulnerabilities,
-- commercially sensitive vendor concerns,
-- personal performance information,
-- confidential financial exposure,
-- customer information,
-- regulatory concerns.
-
-Anonymise information before using public AI tools where required.
-
----
-
-# Prompt Metadata
-
-```text
-Prompt ID: RISK-002
-Category: Risk & Issue Management
-Version: 1.0
-Status: Draft
-Owner: Project Manager / Risk Facilitator
-Reviewer: Risk Owners / PMO
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
+| ID | Potential Risk | Discussion Focus |
 |---|---|---|
-| 1.0 | YYYY-MM-DD | Initial IT risk-identification workshop framework |
+| B-01 | If payment data handling does not meet applicable security requirements, remediation may delay approval. | Data protection |
+| B-02 | If security testing identifies critical vulnerabilities late, the release may be delayed. | Security readiness |
+| B-03 | If access permissions are incorrectly configured, unauthorized transaction access could occur. | Authorization controls |
+| B-04 | If supplier security evidence is unavailable when required, the security review may remain incomplete. | Vendor assurance |
+
+**Workshop questions:**
+
+- Which security requirements require formal approval?
+- What sensitive data will pass through the integration?
+- Which security controls depend on the payment provider?
+
+**Domain C — Testing and Release**
+
+| ID | Potential Risk | Discussion Focus |
+|---|---|---|
+| C-01 | If sandbox access remains unavailable, integration testing may start late. | Environment readiness |
+| C-02 | If transaction test scenarios are incomplete, critical defects may escape into production. | Test coverage |
+| C-03 | If QA capacity is insufficient, regression testing may not finish before release readiness. | Resource availability |
+| C-04 | If payment exception scenarios remain untested, release approval may be blocked. | Acceptance criteria |
+
+**Workshop questions:**
+
+- Which payment scenarios are not yet covered by testing?
+- How much schedule flexibility exists if SIT starts late?
+- What evidence is required before payment functionality can be released?
+
+#### 3. Workshop Agenda
+
+<text></text>
+
+| Time | Activity | Purpose | Facilitator Action | Participant Output |
+|---|---|---|---|---|
+| 0–10 min | Context and objectives | Align participants | Review scope and constraints | Shared understanding |
+| 10–20 min | Existing risks and assumptions | Establish baseline | Challenge assumptions | Open questions |
+| 20–55 min | Domain-based identification | Generate potential risks | Facilitate cross-functional discussion | Candidate risks |
+| 55–70 min | Dependency review | Identify cascading exposure | Trace cross-team impacts | Dependency risks |
+| 70–80 min | Consolidation | Review overlapping risks | Clarify causes and consequences | Refined statements |
+| 80–90 min | Actions and next steps | Prepare formal assessment | Identify evidence and validation needs | Follow-up actions |
+
+**Facilitation principle:** Capture and clarify risk statements before moving to mitigation or scoring.
+
+#### 4. Consolidated Risk Candidates
+
+No actual workshop notes have been provided. The following is an **illustrative consolidation**, not a record of completed participant decisions.
+
+| Risk ID | Category | Risk Statement | Cause | Potential Impact | Proposed Owner | Evidence Required |
+|---|---|---|---|---|---|---|
+| R-01 | Integration | API changes may require integration rework and delay SIT | Unconfirmed API stability | Schedule / Cost | Technical Lead | Provider specification and change policy |
+| R-02 | Testing | Continued sandbox unavailability may delay integration test execution | Access dependency | Schedule / Quality | QA Lead | Confirmed access date |
+| R-03 | Security | Late identification of security gaps may delay release approval | Incomplete security validation | Security / Schedule | Security Lead | Security assessment |
+| R-04 | Resources | Limited QA capacity may prevent completion of required regression tests | Competing resource demand | Schedule / Quality | QA Lead | Capacity forecast |
+| R-05 | Integration | Unclear failure-handling ownership may result in inconsistent payment processing | Cross-system responsibility gap | Quality / Operations | Technical Lead | Interface responsibility agreement |
+
+**Validation status:** All five entries are unvalidated workshop candidates.
+
+The lack of sandbox access is a current **issue**. R-02 describes the uncertain future impact if it remains unresolved, rather than treating the access failure itself as a future risk.
+
+#### 5. Cross-Functional Risk Review
+
+| Risk / Dependency | Affected Areas | Common Root Cause | Potential Cascading Impact | Management Concern |
+|---|---|---|---|---|
+| Payment API readiness | Development, Integration, QA | External dependency | Integration delay → SIT delay → Release risk | Vendor readiness |
+| Sandbox availability | Vendor, QA, Development | Missing environment access | Delayed testing → Compressed regression | Environment ownership |
+| Security approval | Security, Development, Release | Unverified controls | Remediation → Retesting → Approval delay | Release readiness |
+| QA capacity | QA, Product, Delivery | Shared resources | Reduced coverage → Defects → Acceptance risk | Delivery feasibility |
+
+#### 6. Follow-Up Actions
+
+| Action | Priority | Proposed Owner | Required By | Expected Outcome |
+|---|---|---|---|---|
+| Confirm payment sandbox access | High | Technical Lead / Vendor | Before SIT | Test environment readiness |
+| Validate API documentation | High | Development Lead | Before integration completion | Reduced technical uncertainty |
+| Review payment security requirements | High | Security Lead | Before security testing | Defined approval requirements |
+| Confirm QA capacity and coverage | High | QA Lead | Before SIT planning approval | Feasible test plan |
+| Validate and score candidate risks | High | Project Manager / Risk Owners | After workshop | Updated risk register |
+
+### Management Decisions
+
+1. **Integration readiness:** Confirm payment API and sandbox dependencies before committing to the SIT schedule.
+2. **Quality assurance:** Validate available QA capacity and test coverage for critical payment scenarios.
+3. **Security governance:** Agree on payment security and compliance requirements, assessment ownership, and approval evidence.
+4. **Risk management:** Validate candidate risks with participants, then assign ownership and conduct qualitative assessment.
+
+### Applied Quality Review
+
+**Quality verdict: REVISE**
+
+**Findings:** The workshop materials cover relevant technical, testing, security, and cross-functional risks. However, the risk candidates have not been validated by participants, supplier readiness remains unconfirmed, and the existing sandbox-access issue requires separate tracking.
+
+**Required corrections:**
+- Conduct the workshop with relevant technical and business stakeholders.
+- Validate and refine the proposed risks.
+- Confirm payment API and environment dependencies.
+- Separate the sandbox-access issue from its potential schedule consequences.
+- Assign confirmed risk owners and complete risk scoring after identification.
+
+**Validation blockers:** Missing participant validation, unresolved environment access, and unconfirmed supplier readiness.
+
+**Governance:** This framework supports PMI-aligned practices in risk identification, stakeholder engagement, facilitation, dependency management, and uncertainty management.
+
+AI-generated risk candidates are preparation materials, not an approved risk register. Risk statements, ownership, prioritization, and responses require human validation. Protect confidential technical, payment, customer, vendor, and security-sensitive information.

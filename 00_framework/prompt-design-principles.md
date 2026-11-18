@@ -2,28 +2,9 @@
 
 A practical guide for creating **clear, reusable, and decision-oriented AI prompts** for IT project management.
 
-**Core principle:** Start with the business problem, provide relevant context, define the expected output, and validate the result.
+## 1. Define the Professional Role
 
-## 1. Start With the Business Problem
-
-Every prompt should address a specific management need, risk, issue, or decision.
-
-**Avoid:**
-```text
-Create a risk table.
-```
-
-**Use:**
-```text
-Identify project risks requiring immediate escalation
-and assess whether existing mitigation actions are sufficient.
-```
-
-**Rule:** Define the decision before defining the AI task.
-
-## 2. Select the Right Professional Role
-
-Assign expertise that matches the task—not automatically the most senior title.
+Start the prompt with the expertise most relevant to the management task. Select a specialist role rather than automatically choosing the most senior title.
 
 | Role | Best Used For |
 |---|---|
@@ -45,6 +26,18 @@ software delivery, risk management, stakeholder coordination,
 and project governance.
 ```
 
+
+## 2. Start With the Business Problem
+
+Every prompt should address a specific management need, risk, issue, or decision.
+
+**Use:**
+```text
+Identify project risks requiring immediate escalation
+and assess whether existing mitigation actions are sufficient.
+```
+
+
 ## 3. Define One Clear, Specific Task
 
 Each prompt should focus on one primary management objective.
@@ -55,10 +48,6 @@ Specify:
 - **When:** Relevant timeframe or deadline.
 - **Scope:** Relevant boundaries and constraints.
 
-**Avoid:**
-```text
-Analyze this project.
-```
 
 **Use:**
 ```text

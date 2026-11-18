@@ -1,420 +1,161 @@
 # Assumptions and Constraints Register
 
-## Purpose
+**Prompt ID:** INIT-004 | **Category:** Project Initiation | **Version:** 1.2 | **Status:** Draft
 
-Use this prompt to create a structured assumptions and constraints register for an IT project.
+## 1. Ready-to-Use Prompt
 
-The objective is to make hidden dependencies and delivery limitations visible before they become project issues.
+**Purpose:** Identify and validate project assumptions and constraints to reduce uncertainty, manage dependencies, and support informed delivery decisions.
 
-An **assumption** is something believed to be true for planning purposes but not yet fully validated.
+**Use case:** IT project initiation and planning, with periodic reviews throughout delivery. Applicable to software development, digital transformation, system implementation, data, and infrastructure projects.
 
-A **constraint** is a fixed limitation that restricts how the project can be delivered.
-
----
-
-## Best Used For
-
-**Project phase:**  
-Initiation / Planning
-
-**Project type:**  
-Software development / System implementation / Digital transformation / Data project / Infrastructure project / Product initiative
-
-**Primary user:**  
-Project Manager / Project Coordinator / Delivery Manager / PMO / Business Analyst
-
-**Delivery approach:**  
-Predictive / Agile / Scrum / Kanban / Hybrid
-
-**Recommended frequency:**  
-At initiation, then reviewed throughout delivery
-
----
-
-# Prompt
+Copy the prompt and replace the placeholders with your project information.
 
 ```text
 ROLE
 
-You are a senior IT Project Manager experienced in international
-software delivery, risk management, stakeholder coordination,
-dependency management, and project governance.
+You are a Senior IT Project Manager specializing in software delivery,
+risk management, dependency management, and project governance.
+
+CONTEXT
+
+Project: [PROJECT NAME]
+Business objective: [OBJECTIVE]
+Project phase: [PHASE]
+Delivery approach: [AGILE / SCRUM / KANBAN / PREDICTIVE / HYBRID]
+Target date: [DATE]
+Budget: [BUDGET, IF RELEVANT]
+Team and stakeholders: [ROLES]
+Systems and vendors: [DETAILS]
+Known dependencies: [LIST]
+Known assumptions: [LIST]
+Known constraints: [LIST]
 
 TASK
 
-Create an assumptions and constraints register for the project described below.
+Create an assumptions and constraints register for the project.
 
-PROJECT CONTEXT
-
-Project:
-[PROJECT NAME]
-
-Business objective:
-[BUSINESS OBJECTIVE]
-
-Current phase:
-[PHASE]
-
-Delivery approach:
-[PREDICTIVE / AGILE / SCRUM / KANBAN / HYBRID]
-
-Target date:
-[DATE]
-
-Budget:
-[BUDGET OR RANGE]
-
-Team:
-[TEAM STRUCTURE]
-
-Systems involved:
-[LIST]
-
-External vendors:
-[LIST]
-
-Known dependencies:
-[LIST]
-
-Known assumptions:
-[LIST]
-
-Known limitations:
-[LIST]
+1. Do not invent project facts or present unverified information as confirmed.
+2. Distinguish assumptions from confirmed constraints.
+3. Assess assumptions affecting schedule, cost, scope, quality,
+   security, and operational readiness.
+4. Flag assumptions without assigned validation owners.
+5. Identify assumptions that should be assessed as project risks.
+6. Identify constraints requiring management attention or escalation.
+7. Highlight assumptions dependent on external vendors.
+8. Identify assumptions dependent on stakeholder availability.
+9. Flag contradictions between assumptions and known constraints.
+10. Ensure every assumption is specific, testable, and actionable.
 
 OUTPUT FORMAT
 
-Produce two tables.
+TABLE 1 — ASSUMPTIONS REGISTER
 
-TABLE 1 — ASSUMPTIONS
+ID | Assumption | Category | Impact if Incorrect |
+Validation Action | Owner | Validation Date | Status
 
-Columns:
+TABLE 2 — CONSTRAINTS REGISTER
 
-Assumption ID
-Assumption Statement
-Category
-Reason for Assumption
-Impact if Incorrect
-Validation Required
-Owner
-Validation Date
-Status
+ID | Constraint | Category | Project Impact |
+Management Approach | Owner | Review Date
 
-TABLE 2 — CONSTRAINTS
+MANAGEMENT SUMMARY
 
-Columns:
+1. Top three assumptions requiring validation
+2. Assumptions requiring risk assessment
+3. Vendor and stakeholder dependencies
+4. Constraints requiring escalation
+5. Contradictions and information gaps
+6. Recommended management actions and decisions
 
-Constraint ID
-Constraint Description
-Category
-Impact on Project
-Affected Area
-Management Approach
-Owner
-Review Date
+QUALITY CHECK
+
+Act as a Senior QA Manager and review the generated register.
+
+Verify that:
+- All 10 task requirements have been addressed.
+- Assumptions are specific, testable, and clearly distinguished
+  from confirmed constraints.
+- Relevant delivery impacts and dependencies are identified.
+- Recommended actions are feasible and have clear ownership.
+- Missing information and unsupported conclusions are flagged.
+
+Provide a quality verdict: PASS / REVISE.
+List corrections required before stakeholder approval.
+
+Do not invent missing information, owners, dates, or numerical estimates.
+Label suggested ownership and deadlines as proposals requiring confirmation.
 ```
 
 ---
 
-# Recommended Categories
+## 2. Practical IT Use Case
 
-Use only where relevant:
+### CRM Replacement — Planning and Delivery Readiness
 
-```text
-Schedule
-Budget
-Resources
-Technology
-Architecture
-Integration
-Data
-Security
-Compliance
-Vendor
-Business Availability
-Operations
-Quality
-Environment
-Governance
-```
+**Scenario:** An organization is replacing its CRM system. The Project Manager must validate critical assumptions and identify constraints that could affect the regulatory go-live date.
 
----
+| Attribute | Project Context |
+|---|---|
+| Project | CRM Replacement |
+| Phase | Planning |
+| Delivery approach | Hybrid |
+| Target go-live | 1 October 2027 |
+| Team | 1 PM, 2 BAs, 5 Developers, 2 QA Engineers, external migration vendor |
+| Management decision | Which assumptions require validation, and which constraints could jeopardize delivery? |
 
-# Analysis Rules
-
-When creating the register:
-
-1. Do not invent project facts.
-2. Separate assumptions from confirmed constraints.
-3. Identify assumptions that could affect:
-   - timeline,
-   - cost,
-   - scope,
-   - quality,
-   - security,
-   - operational readiness.
-4. Highlight assumptions without a validation owner.
-5. Identify assumptions that should be converted into risks.
-6. Identify constraints that may require escalation.
-7. Highlight vendor-dependent assumptions.
-8. Identify assumptions dependent on stakeholder availability.
-9. Flag contradictions between assumptions and known constraints.
-10. Make every assumption specific and testable.
-
----
-
-# Delivery-Approach Considerations
-
-Use only where relevant.
-
-## Agile / Scrum
-
-Consider assumptions related to:
-
-- backlog readiness,
-- Product Owner availability,
-- team capacity,
-- release goals,
-- Definition of Done,
-- stakeholder feedback availability.
-
-## Kanban
-
-Consider assumptions related to:
-
-- demand volume,
-- WIP limits,
-- workflow capacity,
-- Service Level Expectations,
-- blocked work,
-- operational intake.
-
-## Predictive
-
-Consider assumptions related to:
-
-- baseline schedule,
-- fixed scope,
-- milestone commitments,
-- resource availability,
-- procurement lead times.
-
-## Hybrid
-
-Consider both fixed governance constraints and adaptive delivery assumptions.
-
----
-
-# Example Input
+### Example Input
 
 ```text
-Project:
-CRM replacement
-
-Target go-live:
-1 October 2027
-
-Delivery approach:
-Hybrid
+Project: CRM Replacement
+Business objective: Replace the existing CRM platform
+Project phase: Planning
+Delivery approach: Hybrid
+Target go-live: 1 October 2027
 
 Team:
-1 Project Manager
-2 Business Analysts
-5 Developers
-2 QA Engineers
-External migration vendor
+- 1 Project Manager
+- 2 Business Analysts
+- 5 Developers
+- 2 QA Engineers
+- External migration vendor
 
 Known assumptions:
-- Existing customer data can be migrated without major cleansing.
+- Customer data can be migrated without major cleansing.
 - Business users will be available for UAT in August.
 - Vendor API documentation is complete.
-- Current infrastructure can support the new CRM.
+- Existing infrastructure supports the new CRM.
 
-Known constraints:
+Confirmed constraints:
 - Fixed regulatory go-live date.
 - No additional internal developers available.
-- Production deployment allowed only during weekend maintenance windows.
+- Production deployment only during weekend maintenance windows.
 - Security review requires four weeks.
 ```
 
----
+### Example Output — Assumptions Register
 
-# Example Output — Assumptions
-
-| ID | Assumption | Impact if Incorrect | Owner | Status |
+| ID | Assumption | Impact if Incorrect | Proposed Owner | Status |
 |---|---|---|---|---|
-| A-01 | Customer data can be migrated without major cleansing | Migration timeline and budget may increase | Data Lead | To Validate |
-| A-02 | Business users will be available for UAT in August | UAT and go-live may slip | Business Owner | To Validate |
-| A-03 | Vendor API documentation is complete | Integration work may be delayed | Integration Lead | To Validate |
-| A-04 | Existing infrastructure can support the new CRM | Additional infrastructure work may be required | Solution Architect | To Validate |
+| A-01 | Customer data requires no major cleansing | Migration delays and additional costs | Data Lead | To Validate |
+| A-02 | Business users are available for UAT in August | Testing and go-live at risk | Business Owner | To Validate |
+| A-03 | Vendor API documentation is complete | Integration delays | Integration Lead | To Validate |
+| A-04 | Existing infrastructure is sufficient | Additional infrastructure work | Solution Architect | To Validate |
 
----
+**Validation actions:** Profile source data, confirm UAT resource commitments, request vendor documentation approval, and assess infrastructure capacity.
 
-# Example Output — Constraints
+All owners are proposed and must be confirmed. Validation dates remain open.
 
-| ID | Constraint | Category | Project Impact | Owner |
-|---|---|---|---|---|
-| C-01 | Fixed regulatory go-live date | Schedule | Limited recovery time if delivery slips | Project Sponsor |
-| C-02 | No additional internal developers available | Resources | Reduced delivery flexibility | Engineering Manager |
-| C-03 | Weekend-only production deployment | Operations | Limits release windows | Operations Lead |
-| C-04 | Four-week security review | Security | Must be planned into delivery timeline | Security Lead |
+### Example Output — Constraints Register
 
----
+| ID | Constraint | Project Impact | Proposed Owner |
+|---|---|---|---|
+| C-01 | Fixed regulatory go-live | Limited schedule flexibility | Project Sponsor |
+| C-02 | No additional internal developers | Limited recovery capacity | Engineering Manager |
+| C-03 | Weekend-only deployment | Restricted release windows | Operations Lead |
+| C-04 | Four-week security review | Mandatory scheduling dependency | Security Lead |
 
-# Assumption-to-Risk Review
+### Management Decisions
 
-After producing the register, identify assumptions that should be converted into project risks.
+**1. Validate migration readiness**
 
-Use:
-
-| Assumption | Why It Creates Risk | Probability | Impact | Recommended Action |
-|---|---|---|---|---|
-
-Example:
-
-```text
-Assumption:
-Business users will be available for UAT.
-
-Potential Risk:
-Business availability may be lower than expected.
-
-Impact:
-Testing and go-live readiness may be delayed.
-```
-
----
-
-# Constraint Escalation Review
-
-Identify constraints that require management or governance attention.
-
-Provide:
-
-```text
-Constraint
-Why Escalation Is Required
-Decision Needed
-Decision Owner
-Decision Deadline
-```
-
----
-
-# Quality Checklist
-
-Before accepting the register, confirm:
-
-- [ ] Every assumption is testable
-- [ ] Material assumptions have owners
-- [ ] Validation dates are defined
-- [ ] Constraints are separated from risks
-- [ ] External dependencies are visible
-- [ ] High-impact assumptions are highlighted
-- [ ] Contradictions are identified
-- [ ] Review dates are included
-- [ ] Unsupported assumptions are not presented as facts
-
----
-
-# Standards / Framework Alignment
-
-## PMI / PMP Relevance
-
-Relevant themes may include:
-
-- assumptions management,
-- constraints management,
-- risk identification,
-- stakeholder alignment,
-- dependency management,
-- governance,
-- planning.
-
-## PMBOK Relevance
-
-This prompt supports:
-
-- planning,
-- uncertainty,
-- risk,
-- governance,
-- stakeholders,
-- delivery.
-
-## Delivery Framework
-
-Framework-neutral.
-
-Adaptable to:
-
-- Predictive
-- Agile
-- Scrum
-- Kanban
-- Hybrid
-
----
-
-# Human Review Required
-
-Validate the register with relevant stakeholders, including:
-
-- Project Sponsor
-- Business Owner
-- Product Owner where relevant
-- Solution Architect
-- Security Lead
-- Data Lead
-- QA Lead
-- External vendors where applicable
-
-The register should remain a living project artifact and be reviewed when:
-
-- a major milestone is reached,
-- a dependency changes,
-- a risk materialises,
-- scope changes,
-- or a major project decision is made.
-
----
-
-# Confidentiality
-
-Do not include:
-
-- customer personal data,
-- employee personal data,
-- credentials,
-- passwords,
-- API keys,
-- confidential supplier pricing,
-- confidential contract terms,
-- proprietary architecture,
-- security-sensitive information.
-
----
-
-# Prompt Metadata
-
-```text
-Prompt ID: INIT-004
-Category: Project Initiation
-Version: 1.0
-Status: Draft
-Owner: Project Manager
-Reviewer: PMO / Sponsor / Business Owner
-Project Type: IT / Digital Transformation
-Delivery Approach: Framework-neutral
-Risk Level: Medium
-AI Model Tested:
-Last Reviewed:
-```
-
----
-
-# Version History
-
-| Version | Date | Change |
-|---|---|---|
-| 1.0 | YYYY-MM-DD | Initial assumptions and constraints register |
+Conduct data profiling to confirm whether cleansing is necessary. Assess schedule and budget impacts if

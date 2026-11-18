@@ -27,7 +27,7 @@ and project governance.
 ```
 
 
-## 2. Start With the Business Problem
+## 2. Define the Business Problem and Context
 
 Every prompt should address a specific management need, risk, issue, or decision.
 

@@ -180,7 +180,7 @@ action plan with accountable owners and escalation triggers.
 
 **Human validation:** The Project Manager and accountable technical stakeholders must confirm the actual impact and approve any change to the delivery plan.
 
-## PM Governance & Quality Check
+## 5. PM Governance & Quality Check
 
 ```text
 QUALITY REVIEW

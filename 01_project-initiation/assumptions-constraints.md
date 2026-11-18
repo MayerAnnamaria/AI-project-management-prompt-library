@@ -4,9 +4,9 @@
 
 ## 1. Ready-to-Use Prompt
 
-**Purpose:** Identify and validate project assumptions and constraints to reduce uncertainty, manage dependencies, and support informed delivery decisions.
+**Purpose:** Identify assumptions and constraints that could affect project delivery, enabling proactive risk and dependency management.
 
-**Use case:** IT project initiation and planning, with periodic reviews throughout delivery. Applicable to software development, digital transformation, system implementation, data, and infrastructure projects.
+**Use case:** Project initiation, planning, and milestone reviews in IT and digital transformation projects.
 
 Copy the prompt and replace the placeholders with your project information.
 

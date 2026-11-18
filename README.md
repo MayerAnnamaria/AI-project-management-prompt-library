@@ -1,4 +1,4 @@
-# AI Project Management Prompt & Decision Framework Library
+# AI Project Management Prompt Library
 
 A practical library of **reusable AI prompts, decision frameworks, and quality assurance workflows** for IT project management.
 

@@ -1,6 +1,6 @@
 # Assumptions and Constraints Register
 
-**Prompt ID:** INIT-004 | **Category:** Project Initiation | **Version:** 1.2 | **Status:** Draft
+**Prompt ID:** INIT-001 | **Category:** Project Initiation | **Version:** 1.2 | **Status:** Draft
 
 ## 1. Ready-to-Use Prompt
 

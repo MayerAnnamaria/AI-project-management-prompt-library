@@ -1,6 +1,6 @@
 # Project Charter
 
-**Prompt ID:** INIT-001 | **Category:** Project Initiation | **Version:** 1.0 | **Status:** Draft
+**Prompt ID:** INIT-003 | **Category:** Project Initiation | **Version:** 1.0 | **Status:** Draft
 
 ## 1. Ready-to-Use Prompt
 

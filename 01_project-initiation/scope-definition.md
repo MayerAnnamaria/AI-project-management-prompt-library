@@ -1,6 +1,6 @@
 # Scope Definition and Gap Review
 
-**Prompt ID:** INIT-003 | **Category:** Project Initiation | **Version:** 1.0 | **Status:** Draft
+**Prompt ID:** INIT-004 | **Category:** Project Initiation | **Version:** 1.0 | **Status:** Draft
 
 ## 1. Ready-to-Use Prompt
 

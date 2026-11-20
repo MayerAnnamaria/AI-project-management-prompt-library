@@ -1,8 +1,12 @@
 # AI Project Management Prompt & Decision Framework Library
 
+![Version](https://img.shields.io/badge/Version-0.0.1-44AFE2)
+![Status](https://img.shields.io/badge/Status-Initial_Draft-FF9F1C)
+
 A professional library of **reusable AI prompts, management decision frameworks, and quality assurance workflows for IT project management**.
 
 Designed to support evidence-based decision-making, business value delivery, risk management, stakeholder alignment, and effective project governance across the project lifecycle.
+---
 
 The library enables Project Managers and delivery teams to:
 

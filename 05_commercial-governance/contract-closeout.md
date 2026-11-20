@@ -1,6 +1,13 @@
 # Contract Close-Out
 
-**Prompt ID:** COMM-006 | **Category:** Commercial & Project Governance | **Version:** 1.0 | **Status:** Draft
+![Version](https://img.shields.io/badge/Version-0.0.1-44AFE2)
+![Status](https://img.shields.io/badge/Status-Initial_Draft-FF9F1C)
+![Validation](https://img.shields.io/badge/Validation-Pending-lightgrey)
+
+**Prompt ID:** COMM-006 | **Category:** Commercial & Project Governance
+
+---
+
 
 ## 1. Ready-to-Use Prompt
 

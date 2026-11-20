@@ -244,3 +244,11 @@ The included examples are illustrative and should not be interpreted as independ
 These materials do not replace professional judgment, specialist expertise, or established project governance processes.
 
 > **Use AI to improve management thinking, strengthen decision quality, and support business value delivery — not to outsource professional accountability.**
+
+---
+
+<p align="center">
+  <sub>Built for AI-powered IT Project Management by
+    <a href="https://www.linkedin.com/in/mayer-annamaria/"><strong>Mayer Annamaria</strong></a>
+  </sub>
+</p>

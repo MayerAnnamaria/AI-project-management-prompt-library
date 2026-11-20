@@ -1,6 +1,12 @@
 # Prompt Design Principles
 
+![Version](https://img.shields.io/badge/Version-0.0.1-44AFE2)
+![Status](https://img.shields.io/badge/Status-Initial_Draft-FF9F1C)
+
 A practical guide for creating **clear, reusable, and decision-oriented AI prompts** for IT project management.
+
+---
+
 
 ## 1. Define the Professional Role
 

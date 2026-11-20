@@ -8,7 +8,6 @@
 
 ---
 
-
 ## 1. Ready-to-Use Prompt
 
 **Purpose:** Identify and validate project assumptions and constraints to support risk and dependency management.
